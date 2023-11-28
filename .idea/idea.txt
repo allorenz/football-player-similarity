@@ -8,3 +8,11 @@
 - load scorings into vector database 
 
 Visualization:
+- radar diagram.
+
+Data Sources.
+- Opta Stats Perform
+- Sportmonks 
+
+- they calculate perfomance of a player 
+    - https://www.api-football.com/documentation-v3#tag/Players/operation/get-players
