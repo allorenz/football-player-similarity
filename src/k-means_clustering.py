@@ -34,7 +34,7 @@ pred = kmeans.predict(target_arr)
 
 # predict target
 pred_label = label_dict[int(pred)]
-print(pred_label)
+print(f"Output of the prediction: {pred_label}")
 
 # Conclusion
 """
