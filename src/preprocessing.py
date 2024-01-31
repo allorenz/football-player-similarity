@@ -1,4 +1,5 @@
 import pandas as pd
+import spacy
 
 # Import data
 data = pd.read_csv('../data/2024/male_players.csv')
@@ -26,32 +27,45 @@ columns_to_keep = ['player_id', 'long_name', 'player_positions', 'overall',
                     'goalkeeping_reflexes', 'goalkeeping_speed']
 df = data[columns_to_keep]
 
-# encode player positions
-def assign_category(pos):
+# one hot encoding
+def assign_global_pos_offense(text):
     offense = ['RS','LS','RW','LW','ST','CF','LF','RF']
+    pos_lst = text.split(",")
+    for pos in pos_lst:
+        if pos.strip() in offense:
+            return 1
+    return 0
+
+def assign_global_pos_midfield(text):
     midfield = ['CAM','LDM','RCM','RDM','LCM','RM','LM','CDM','CM','RAM','LAM']
+    pos_lst = text.split(",")
+    for pos in pos_lst:
+        if pos.strip() in midfield:
+            return 1
+    return 0
+
+def assign_global_pos_defense(text):
     defense = ['RCB','CB','LWB','LCB','LB','RB','RWB']
+    pos_lst = text.split(",")
+    for pos in pos_lst:
+        if pos.strip() in defense:
+            return 1
+    return 0
+
+def assign_global_pos_goalkeeper(text):
     goalkeeper = ['GK']
+    pos_lst = text.split(",")
+    for pos in pos_lst:
+        if pos.strip() in goalkeeper:
+            return 1
+    return 0
 
-    pos = str(pos)
-    if pos in offense:
-        return 'offense'
-    elif pos in midfield:
-        return 'midfield'
-    elif pos in defense:
-        return 'defense'
-    elif pos in goalkeeper:
-        return 'goalkeeper'
-    else:
-        return 'unknown'
+# apply encoding TODO: player_positions
+df["Offense"] = df['player_positions'].apply(assign_global_pos_offense)
+df["Midfield"] = df['player_positions'].apply(assign_global_pos_midfield)
+df["Defense"] = df['player_positions'].apply(assign_global_pos_defense)
+df["Goalkeeper"] = df['player_positions'].apply(assign_global_pos_goalkeeper)
 
-temp = df.player_positions.str.split(',', expand=True)
-temp[0] = temp[0].apply(assign_category)
-temp[1] = temp[1].str.strip().apply(assign_category)
-temp[2] = temp[2].str.strip().apply(assign_category)
-temp[3] = temp[3].str.strip().apply(assign_category)
-enc_global_pos = pd.get_dummies(temp[[0]], dtype='int',prefix='global_position')
-all(enc_global_pos['global_position_goalkeeper'] == 0)
 
 # encode preferred foot TODO: drop preferred_foot
 enc = pd.get_dummies(df['preferred_foot'], prefix='Preferred_Foot',dtype='int')#.astype(int)
@@ -66,3 +80,5 @@ mapping = {'Low': 1, 'Medium': 2, 'High' : 3}
 enc['Work Rate Offense'] = enc['Work Rate Offense'].map(mapping)
 enc['Work Rate Defense'] = enc['Work Rate Defense'].map(mapping)
 df = pd.concat([df, enc], axis=1)
+
+df = df.drop(["player_positions","preferred_foot","work_rate"],axis=1, inplace=False)
