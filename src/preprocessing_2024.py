@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import re
 from sklearn.preprocessing import StandardScaler
 
 
@@ -104,6 +105,48 @@ df = pd.concat([df, enc], axis=1)
 df = df.drop(["work_rate"], axis=1, inplace=False)
 
 
+# check for missing values
+missing_columns = df.isna().sum()
+missing_columns[missing_columns > 0]
+
+
+# missing price and wage values. they can get scrapped
+missing_values_price_and_wage = list(df[df['value_eur'].isna()]['player_id'])
+df_to_be_scraped = pd.DataFrame(missing_values_price_and_wage, columns = ['player_id'])
+df_to_be_scraped.to_csv("../data/2024/idx_to_scrape_value_and_wage.csv", sep=';', index=False)
+
+
+# load scrapped data 
+scrapped_players = pd.read_json("../data/2024/scrapped_data.json")
+
+# clean urls and keep the idx
+pattern = re.compile(r'\d+')
+def extract_id(url):
+    match = pattern.search(url)
+    if match:
+        return match.group()
+    else:
+        return None
+
+# clean data 
+scrapped_players['id'] = scrapped_players['url'].apply(extract_id).astype(int)
+scrapped_players['value_eur'] = scrapped_players['value_eur'].apply(lambda x: x.replace('€', '') if '€' in str(x) else x)
+scrapped_players['value_eur'] = scrapped_players['value_eur'].apply(lambda x: x.replace('.', '') if '.' in str(x) else x).astype(float)
+scrapped_players['wage_eur'] = scrapped_players['wage_eur'].apply(lambda x: x.replace('€', '') if '€' in str(x) else x)
+scrapped_players['wage_eur'] = scrapped_players['wage_eur'].apply(lambda x: x.replace('.', '') if '.' in str(x) else x).astype(float)
+
+
+# keep only players with values
+scrapped_players = scrapped_players[scrapped_players['value_eur']>0].reset_index(drop=True)
+scrapped_players = scrapped_players.drop(columns=['url'], inplace=False)
+
+
+# merge scrapped data with main data set
+merged_data = pd.merge(df, scrapped_players, left_on='player_id', right_on='id', how='left', suffixes=('_t', '_scrapped'))
+df.update({'wage_eur': merged_data['wage_eur_scrapped']})
+df.update({'value_eur': merged_data['value_eur_scrapped']})
+
+
 # normalize 
 columns_to_normalize = [
     'overall','height_cm' ,'weight_kg','league_level', 'pace', 'shooting', 'passing', 'dribbling',
@@ -120,28 +163,16 @@ columns_to_normalize = [
     'goalkeeping_reflexes', 'goalkeeping_speed'
 ]
 
+
 # Standardize values
 scaler = StandardScaler()
 df[columns_to_normalize] = scaler.fit_transform(df[columns_to_normalize])
+
 
 # log transform 
 df['wage_eur'] = np.log(df['wage_eur'])
 df['value_eur'] = np.log(df['value_eur'])
 
 
-# check for missing values
-missing_columns = df.isna().sum()
-missing_columns[missing_columns > 0]
-
-
-# missing price and wage values. they can get scrapped
-missing_values_price_and_wage = list(df[df['value_eur'].isna()]['player_id'])
-df_to_be_scraped = pd.DataFrame(missing_values_price_and_wage, columns = ['player_id'])
-df_to_be_scraped.to_csv("../data/2024/idx_to_scrape_value_and_wage.csv", sep=';', index=False)
-
-
-
-display(df)
-
-# market_value = response.css("p.data-currency.data-currency-euro>span::text").get()
-# list_value_wage = response.css("p.data-currency.data-currency-euro>span::text").getall()
+# store cleaned data
+df.to_csv("../data/2024/cleaned_data.csv", sep=';', index=False)
