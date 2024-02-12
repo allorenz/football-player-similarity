@@ -25,11 +25,13 @@ class AIFCSpider(scrapy.Spider):
         
         try:
             yield {
+                'url': response.url,
                 'value_eur' : elements[0],
                 'wage_eur' : elements[1]
             }
         except: # no data found
             yield {
+                'url': response.url,
                 'value_eur' : 0,
                 'wage_eur' : 0
             }
