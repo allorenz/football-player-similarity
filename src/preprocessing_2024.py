@@ -10,7 +10,7 @@ data = data[data['fifa_version'] == 24.0]
 
 # interesting columns: league level
 data.head()
-columns_to_keep = ['player_id', 'long_name', 'player_positions', 'overall', 
+columns_to_keep = ['player_id', 'short_name', 'player_positions', 
                    'value_eur',	'wage_eur'	,'height_cm' ,'weight_kg',
                    'league_level',
                    'preferred_foot', 'weak_foot', 'skill_moves', 'international_reputation',
@@ -149,7 +149,7 @@ df.update({'value_eur': merged_data['value_eur_scrapped']})
 
 # normalize 
 columns_to_normalize = [
-    'overall','height_cm' ,'weight_kg','league_level', 'pace', 'shooting', 'passing', 'dribbling',
+    'height_cm' ,'weight_kg','league_level', 'pace', 'shooting', 'passing', 'dribbling',
     'defending', 'physic', 'attacking_crossing', 'attacking_finishing',
     'attacking_heading_accuracy', 'attacking_short_passing', 'attacking_volleys',
     'skill_dribbling', 'skill_curve', 'skill_fk_accuracy', 'skill_long_passing',
@@ -174,5 +174,6 @@ df['wage_eur'] = np.log(df['wage_eur'])
 df['value_eur'] = np.log(df['value_eur'])
 
 
+df = df.dropna()
 # store cleaned data
 df.to_csv("../data/2024/cleaned_data.csv", sep=';', index=False)
