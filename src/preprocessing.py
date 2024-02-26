@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import re
 from sklearn.preprocessing import StandardScaler
+import utils
 
 
 ### Import data
@@ -197,25 +198,5 @@ df_player_information = df_player_information.drop(['value_eur_x', 'value_eur_y'
 df_player_information = df_player_information[player_information]
 
 
-# TODO consider doing this in vector database notebook
-# create python module and apply before printing results for customers
-# add mio and k to values 
-def adjust_money_appearance(x):
-    x = int(x)
-    if(x >= 1000000):
-        x = x / 1000000
-        x = "€" + str(x) + " Mio"
-        return x
-    if(x < 1000000 and x >= 10000):
-        x = x / 1000
-        x = "€" + str(x) + "k"
-        return x
-    return "€" + str(x)
-
-
-
-df_player_information['wage_eur'] = df_player_information['wage_eur'].apply(adjust_money_appearance)
-df_player_information['value_eur'] = df_player_information['value_eur'].apply(adjust_money_appearance)
-
-
+# store player information
 df_player_information.to_csv("../data/2024/player_information.csv", sep=';', index=False)
