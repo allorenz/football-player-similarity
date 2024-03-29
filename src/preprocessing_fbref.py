@@ -1,7 +1,8 @@
 import pandas as pd
 import utils
 
-# loading the data
+
+
 def load_standard_stats():
        # goalkeeper and field players
        data = pd.read_csv('../data/fbref/standard_stats.csv')
@@ -35,8 +36,11 @@ def load_standard_stats():
        data['Matches Played'] = data['Matches Played'] .str.replace('nan', '')
        data = data.drop(columns=["MP",'Playing Time_MP'], inplace=False)
 
-       return data
+       data.to_csv('../data/fbref/cleaned/standard_stats.csv', index=False)
 
+       return data   
+
+df =  load_standard_stats()
 def load_shooting():
        # goalkeeper and field players
        data = pd.read_csv("../data/fbref/shooting.csv")
@@ -133,6 +137,7 @@ def load_defensive_actions():
 
        return data
 
+
 def load_goal_shot_creation():
        data = pd.read_csv("../data/fbref/goal_and_shot_creation.csv")
        data = data[data["Season"] == "2022-2023"]
@@ -176,6 +181,7 @@ def load_miscellaneous_stats():
 
        return data
 
+
 def load_passing():
        # goalkeeper and field players
        data = pd.read_csv("../data/fbref/passing.csv")
@@ -208,6 +214,7 @@ def load_passing():
 
        return data
 
+
 def load_playing_time():
        data = pd.read_csv("../data/fbref/playing_time.csv")
        data = data[data["Season"] == "2022-2023"]
@@ -235,6 +242,7 @@ def load_playing_time():
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        return data
+
 
 def load_possession():
        data = pd.read_csv("../data/fbref/possession.csv")
