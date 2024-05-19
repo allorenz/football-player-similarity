@@ -62,6 +62,8 @@ def load_shooting():
 
        # Clean the 'Nation' column
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       
+       data.to_csv('../data/fbref/cleaned/shooting.csv', index=False)
 
        return data
 
@@ -84,6 +86,7 @@ def load_goalkeeping():
                                           'Playing Time_MP': 'MP'})
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.to_csv('../data/fbref/cleaned/goalkeeping.csv', index=False)
 
        return data
 
@@ -108,6 +111,7 @@ def load_advanced_goalkeeping():
                                           'Unnamed: 4_level_0_90s': '90s'})
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.to_csv('../data/fbref/cleaned/advanced_goalkeeping.csv', index=False)
 
        return data
 
@@ -134,6 +138,7 @@ def load_defensive_actions():
                                    'Unnamed: 20_level_0_Err' : 'Errors'})
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.to_csv('../data/fbref/cleaned/defensive_actions.csv', index=False)
 
        return data
 
@@ -155,6 +160,7 @@ def load_goal_shot_creation():
                                    'Unnamed: 4_level_0_90s': '90s'})
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.to_csv('../data/fbref/cleaned/goal_and_shot_creation.csv', index=False)
 
        return data
 
@@ -178,6 +184,7 @@ def load_miscellaneous_stats():
                                    'Unnamed: 4_level_0_90s': '90s'})
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.to_csv('../data/fbref/cleaned/miscellaneous_stats.csv', index=False)
 
        return data
 
@@ -211,6 +218,7 @@ def load_passing():
 
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.to_csv('../data/fbref/cleaned/passing.csv', index=False)
 
        return data
 
@@ -241,6 +249,8 @@ def load_playing_time():
                                           'Unnamed: 27_level_0_PrgP': 'Progressive Passes'})
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.to_csv('../data/fbref/cleaned/passing.csv', index=False)
+       
        return data
 
 
@@ -262,4 +272,17 @@ def load_possession():
                                    'Unnamed: 4_level_0_90s': '90s'})
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.to_csv('../data/fbref/cleaned/possession.csv', index=False)
+       
        return data
+
+load_advanced_goalkeeping()
+load_defensive_actions()
+load_goal_shot_creation()
+load_goalkeeping()
+load_miscellaneous_stats()
+load_passing()
+load_playing_time()
+load_possession()
+load_shooting()
+load_standard_stats()
