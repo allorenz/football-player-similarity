@@ -7,8 +7,7 @@ def load_standard_stats():
        # goalkeeper and field players
        data = pd.read_csv('../data/fbref/standard_stats.csv')
        data = data[data["Season"] == "2022-2023"]
-
-       data.columns
+       
        columns_to_drop = ['S_e', 'L_e',
               'T_e', 'U_n', 'U_n.1', 'U_n.2', 'U_n.3', 'P_l', 'P_l.1', 'P_l.2',
               'P_l.3', 'P_e', 'P_e.1', 'P_e.2', 'P_e.3', 'P_e.4', 'P_e.5', 'P_e.6',
@@ -27,6 +26,8 @@ def load_standard_stats():
                                    'Unnamed: 4_level_0_MP': 'MP'})
 
 
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
 
        # Clean the 'Nation' column
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
@@ -36,15 +37,19 @@ def load_standard_stats():
        data['Matches Played'] = data['Matches Played'] .str.replace('nan', '')
        data = data.drop(columns=["MP",'Playing Time_MP'], inplace=False)
 
+       data.columns = data.columns.str.replace('^Performance_', '', regex=True).str.replace('^Expected_', '', regex=True).str.replace('^Progression_', '', regex=True)
+
        data.to_csv('../data/fbref/cleaned/standard_stats.csv', index=False)
 
        return data   
 
-df =  load_standard_stats()
+
 def load_shooting():
        # goalkeeper and field players
        data = pd.read_csv("../data/fbref/shooting.csv")
        data = data[data["Season"] == "2022-2023"]
+       
+
        columns_to_drop = ['S_e', 'L_e', 'T_e',
               'U_n', 'U_n.1', 'U_n.2', 'U_n.3', 'U_n.4', 'S_t', 'S_t.1', 'S_t.2',
               'S_t.3', 'S_t.4', 'S_t.5', 'S_t.6', 'S_t.7', 'S_t.8', 'S_t.9', 'S_t.10',
@@ -59,10 +64,13 @@ def load_shooting():
                                    'Unnamed: 3_level_0_Age' : 'Age', 
                                    'Unnamed: 4_level_0_MP': 'MP',
                                    'Unnamed: 4_level_0_90s': '90s'})
+       
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
 
        # Clean the 'Nation' column
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
-       
+       data.columns = data.columns.str.replace('^Standard_', '', regex=True).str.replace('^Expected_', '', regex=True)
        data.to_csv('../data/fbref/cleaned/shooting.csv', index=False)
 
        return data
@@ -71,6 +79,7 @@ def load_shooting():
 def load_goalkeeping():
        data = pd.read_csv("../data/fbref/goalkeeping.csv")
        data = data[data["Season"] == "2022-2023"]
+       
 
        columns_to_drop = ['S_e', 'L_e',
        'T_e', 'U_n', 'U_n.1', 'U_n.2', 'U_n.3', 'P_l', 'P_l.1', 'P_l.2',
@@ -85,6 +94,10 @@ def load_goalkeeping():
                                           'Unnamed: 3_level_0_Age' : 'Age', 
                                           'Playing Time_MP': 'MP'})
 
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
+       data.columns = data.columns.str.replace('^Performance_', '', regex=True)
+
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/goalkeeping.csv', index=False)
 
@@ -95,6 +108,7 @@ def load_advanced_goalkeeping():
        # goalkeeper only
        data = pd.read_csv("../data/fbref/advanced_goalkeeping.csv")
        data = data[data["Season"] == "2022-2023"]
+       
 
        columns_to_drop = ['S_e', 'L_e', 'T_e', 'U_n', 'U_n.1',
               'U_n.2', 'U_n.3', 'U_n.4', 'G_o', 'G_o.1', 'G_o.2', 'G_o.3', 'G_o.4',
@@ -110,7 +124,11 @@ def load_advanced_goalkeeping():
                                           'Unnamed: 4_level_0_MP': 'MP',
                                           'Unnamed: 4_level_0_90s': '90s'})
 
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.columns = data.columns.str.replace('^Expected_', '', regex=True).str.replace('^Crosses_', '', regex=True).str.replace('^Sweeper_', '', regex=True)
+
        data.to_csv('../data/fbref/cleaned/advanced_goalkeeping.csv', index=False)
 
        return data
@@ -120,6 +138,7 @@ def load_defensive_actions():
        # goalkeeper and field players
        data = pd.read_csv("../data/fbref/defensive_actions.csv")
        data = data[data["Season"] == "2022-2023"]
+       
 
        columns_to_drop = ['S_e', 'L_e', 'T_e', 'U_n', 'U_n.1',
               'U_n.2', 'U_n.3', 'U_n.4', 'T_a', 'T_a.1', 'T_a.2', 'T_a.3', 'T_a.4',
@@ -137,6 +156,8 @@ def load_defensive_actions():
                                    'Unnamed: 19_level_0_Clr': 'Clearances',
                                    'Unnamed: 20_level_0_Err' : 'Errors'})
 
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/defensive_actions.csv', index=False)
 
@@ -146,6 +167,7 @@ def load_defensive_actions():
 def load_goal_shot_creation():
        data = pd.read_csv("../data/fbref/goal_and_shot_creation.csv")
        data = data[data["Season"] == "2022-2023"]
+       
 
        columns_to_drop = ['S_e', 'L_e', 'T_e', 'U_n', 'U_n.1',
               'U_n.2', 'U_n.3', 'U_n.4', 'S_C', 'S_C.1', 'S_C.2', 'S_C.3', 'S_C.4',
@@ -159,6 +181,8 @@ def load_goal_shot_creation():
                                    'Unnamed: 3_level_0_Age' : 'Age', 
                                    'Unnamed: 4_level_0_90s': '90s'})
 
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/goal_and_shot_creation.csv', index=False)
 
@@ -168,6 +192,7 @@ def load_goal_shot_creation():
 def load_miscellaneous_stats():
        data = pd.read_csv("../data/fbref/miscellaneous_stats.csv")
        data = data[data["Season"] == "2022-2023"]
+       
 
 
        columns_to_drop = ['S_e', 'L_e', 'T_e',
@@ -183,7 +208,11 @@ def load_miscellaneous_stats():
                                    'Unnamed: 3_level_0_Age' : 'Age', 
                                    'Unnamed: 4_level_0_90s': '90s'})
 
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.columns = data.columns.str.replace('^Performance_', '', regex=True)
+
        data.to_csv('../data/fbref/cleaned/miscellaneous_stats.csv', index=False)
 
        return data
@@ -193,6 +222,7 @@ def load_passing():
        # goalkeeper and field players
        data = pd.read_csv("../data/fbref/passing.csv")
        data = data[data["Season"] == "2022-2023"]
+       
 
        columns_to_drop = ['S_e', 'L_e',
               'T_e', 'U_n', 'U_n.1', 'U_n.2', 'U_n.3', 'U_n.4', 'T_o', 'T_o.1',
@@ -216,7 +246,8 @@ def load_passing():
                                    'Unnamed: 26_level_0_CrsPA':'Crosses_into_Penalty_Area',
                                    'Unnamed: 27_level_0_PrgP': 'Progressive Passes'})
 
-
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/passing.csv', index=False)
 
@@ -226,6 +257,7 @@ def load_passing():
 def load_playing_time():
        data = pd.read_csv("../data/fbref/playing_time.csv")
        data = data[data["Season"] == "2022-2023"]
+       
 
        columns_to_drop = ['S_e', 'L_e', 'T_e', 'U_n', 'U_n.1',
        'U_n.2', 'U_n.3', 'P_l', 'P_l.1', 'P_l.2', 'P_l.3', 'P_l.4', 'S_t',
@@ -248,7 +280,11 @@ def load_playing_time():
                                           'Unnamed: 26_level_0_CrsPA':'Crosses_into_Penalty_Area',
                                           'Unnamed: 27_level_0_PrgP': 'Progressive Passes'})
 
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
+       data.columns = data.columns.str.replace('^Starts_', '', regex=True).str.replace('^Subs_', '', regex=True).str.replace('^Team Success_', '', regex=True).str.replace('^Team Success ', '', regex=True)
+
        data.to_csv('../data/fbref/cleaned/passing.csv', index=False)
        
        return data
@@ -257,7 +293,7 @@ def load_playing_time():
 def load_possession():
        data = pd.read_csv("../data/fbref/possession.csv")
        data = data[data["Season"] == "2022-2023"]
-
+       
        columns_to_drop = ['S_e',
               'L_e', 'T_e', 'U_n', 'U_n.1', 'U_n.2', 'U_n.3', 'U_n.4', 'T_o', 'T_o.1',
               'T_o.2', 'T_o.3', 'T_o.4', 'T_o.5', 'T_o.6', 'T_a', 'T_a.1', 'T_a.2',
@@ -271,6 +307,8 @@ def load_possession():
                                    'Unnamed: 3_level_0_Age' : 'Age', 
                                    'Unnamed: 4_level_0_90s': '90s'})
 
+       data = data[data["Player"] != "Squad Total"]
+       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/possession.csv', index=False)
        
