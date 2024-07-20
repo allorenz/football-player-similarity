@@ -1,4 +1,4 @@
-Season,League,Team,Player,Nation,Pos,Age,90s,Performance_CrdY,Performance_CrdR,Performance_2CrdY,Performance_Fls,Performance_Fld,Performance_Off,Performance_Crs,Performance_Int,Performance_TklW,Performance_PKwon,Performance_PKcon,Performance_OG,Performance_Recov,Aerial Duels_Won,Aerial Duels_Lost,Aerial Duels_Won%
+Season,League,Team,Player,Nation,Pos,Age,90s,CrdY,CrdR,2CrdY,Fls,Fld,Off,Crs,Int,TklW,PKwon,PKcon,OG,Recov,Aerial Duels_Won,Aerial Duels_Lost,Aerial Duels_Won%
 2022-2023,EPL,Manchester City,Ederson,BRA,GK,28.0,35.0,3.0,0.0,0.0,1.0,4.0,0.0,0.0,1.0,1.0,0.0,1.0,0.0,35.0,8.0,1.0,88.9
 2022-2023,EPL,Manchester City,Rodri,ESP,MF,26.0,32.3,5.0,0.0,0.0,47.0,20.0,3.0,6.0,33.0,41.0,0.0,0.0,0.0,301.0,72.0,32.0,69.2
 2022-2023,EPL,Manchester City,Erling Haaland,NOR,FW,22.0,30.8,5.0,0.0,0.0,31.0,24.0,8.0,12.0,3.0,2.0,1.0,0.0,0.0,37.0,50.0,50.0,50.0

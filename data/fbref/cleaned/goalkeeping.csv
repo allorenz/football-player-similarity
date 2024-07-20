@@ -1,4 +1,4 @@
-Season,League,Team,Player,Nation,Pos,Age,MP,Playing Time_Starts,Playing Time_Min,Playing Time_90s,Performance_GA,Performance_GA90,Performance_SoTA,Performance_Saves,Performance_Save%,Performance_W,Performance_D,Performance_L,Performance_CS,Performance_CS%,Penalty Kicks_PKatt,Penalty Kicks_PKA,Penalty Kicks_PKsv,Penalty Kicks_PKm,Penalty Kicks_Save%
+Season,League,Team,Player,Nation,Pos,Age,MP,Playing Time_Starts,Playing Time_Min,Playing Time_90s,GA,GA90,SoTA,Saves,Save%,W,D,L,CS,CS%,Penalty Kicks_PKatt,Penalty Kicks_PKA,Penalty Kicks_PKsv,Penalty Kicks_PKm,Penalty Kicks_Save%
 2022-2023,EPL,Manchester City,Ederson,BRA,GK,28.0,35.0,35.0,3150.0,35.0,32.0,0.91,77.0,46.0,62.3,26.0,4.0,5.0,11.0,31.4,3.0,3.0,0.0,0.0,0.0
 2022-2023,EPL,Manchester City,Stefan Ortega,GER,GK,29.0,3.0,3.0,270.0,3.0,1.0,0.33,15.0,14.0,93.3,2.0,1.0,0.0,2.0,66.7,0.0,0.0,0.0,0.0,
 2022-2023,EPL,Arsenal,Aaron Ramsdale,ENG,GK,24.0,38.0,38.0,3420.0,38.0,43.0,1.13,136.0,94.0,70.6,26.0,6.0,6.0,14.0,36.8,5.0,3.0,0.0,2.0,0.0
