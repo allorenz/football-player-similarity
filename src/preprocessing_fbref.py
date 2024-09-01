@@ -285,7 +285,7 @@ def load_playing_time():
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.columns = data.columns.str.replace('^Starts_', '', regex=True).str.replace('^Subs_', '', regex=True).str.replace('^Team Success_', '', regex=True).str.replace('^Team Success ', '', regex=True)
 
-       data.to_csv('../data/fbref/cleaned/passing.csv', index=False)
+       data.to_csv('../data/fbref/cleaned/playing_time.csv', index=False)
        
        return data
 
