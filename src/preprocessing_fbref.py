@@ -2,7 +2,6 @@ import pandas as pd
 import utils
 
 
-
 def load_standard_stats():
        # goalkeeper and field players
        data = pd.read_csv('../data/fbref/raw/standard_stats.csv')
@@ -23,9 +22,6 @@ def load_standard_stats():
               'Unnamed: 24_level_0_Matches']
 
        data = data.drop(columns=columns_to_drop, inplace=False)
-
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
 
        # Clean the 'Nation' column
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
@@ -62,9 +58,6 @@ def load_shooting():
        
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
-
        # Clean the 'Nation' column
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.columns = data.columns.str.replace('^Standard_', '', regex=True).str.replace('^Expected_', '', regex=True)
@@ -90,8 +83,6 @@ def load_goalkeeping():
        'P_e.14', 'U_n.4','Unnamed: 23_level_0_Matches']
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
        data.columns = data.columns.str.replace('^Performance_', '', regex=True)
 
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
@@ -119,8 +110,6 @@ def load_advanced_goalkeeping():
               'C_r.2', 'S_w', 'S_w.1', 'S_w.2', 'U_n.5','Unnamed: 30_level_0_Matches','90s']
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.columns = data.columns.str.replace('^Expected_', '', regex=True).str.replace('^Crosses_', '', regex=True).str.replace('^Sweeper_', '', regex=True)
 
@@ -150,8 +139,6 @@ def load_defensive_actions():
               'U_n.6', 'U_n.7', 'U_n.8', 'U_n.9','Unnamed: 21_level_0_Matches','90s']
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/defensive_actions.csv', index=False)
 
@@ -174,8 +161,6 @@ def load_goal_shot_creation():
               'G_C.5', 'G_C.6', 'G_C.7', 'U_n.5', 'Unnamed: 21_level_0_Matches','90s']
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/goal_and_shot_creation.csv', index=False)
 
@@ -199,9 +184,6 @@ def load_miscellaneous_stats():
               'Unnamed: 17_level_0_Matches','90s']
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.columns = data.columns.str.replace('^Performance_', '', regex=True)
 
@@ -237,8 +219,6 @@ def load_passing():
               'Unnamed: 28_level_0_Matches','90s']
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/passing.csv', index=False)
 
@@ -271,8 +251,6 @@ def load_playing_time():
        'Unnamed: 21_level_0_Matches','Playing Time_MP']
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.columns = data.columns.str.replace('^Starts_', '', regex=True).str.replace('^Subs_', '', regex=True).str.replace('^Team Success_', '', regex=True).str.replace('^Team Success ', '', regex=True)
 
@@ -298,8 +276,6 @@ def load_possession():
               'C_a.6', 'C_a.7', 'R_e', 'R_e.1', 'U_n.5', 'Unnamed: 27_level_0_Matches','90s']
        data = data.drop(columns=columns_to_drop, inplace=False)
 
-       data = data[data["Player"] != "Squad Total"]
-       data = data[data["Player"] != "Opponent Total"]
        data["Nation"] = [utils.clean_nation(nation) for nation in data["Nation"]]
        data.to_csv('../data/fbref/cleaned/possession.csv', index=False)
        
