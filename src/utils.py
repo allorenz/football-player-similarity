@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 PATH_PLAYER_STATS = '../data/fbref/player_stats.csv'
+PATH_TEAM_STATS = '../data/fbref/squad_opponent_stats.csv'
 
 
 def load_player_statistics():
@@ -22,6 +23,30 @@ def load_player_statistics():
     df_features = df[features]
 
     return df_features, df_player_info
+
+def load_team_statistics():
+    cols_to_drop = ['Nation','Pos','Global Pos']
+
+    # load 
+    df = pd.read_csv(PATH_TEAM_STATS)
+    df = df.set_index(df['Team'], drop=False)
+    df = df.fillna(0)
+
+    # fitler
+    df_squad = df[df['Status'] == 'Squad Total']
+    df_opponent = df[df['Status'] == 'Opponent Total']
+
+    # descriptive information
+    team_info_cols = ['Season', 'League', 'Team','Status',  'Age','Matches Played','Playing Time_Starts','Playing Time_Min','Playing Time_90s']
+    df_team_info_squad = df_squad[team_info_cols]
+    df_team_info_opponent = df_opponent[team_info_cols]
+
+    # features
+    features = [col for col in df.columns if col not in team_info_cols]
+    df_squad_features = df_squad[features].drop(cols_to_drop,axis=1)
+    df_opponent_features = df_opponent[features].drop(cols_to_drop,axis=1)
+
+    return df_team_info_squad, df_team_info_opponent, df_squad_features, df_opponent_features
 
 
 def get_top_k_similar_players(embeddings, query_index, player_info, top_k=10, distance_metric='cosine'):
