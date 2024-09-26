@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.optim as optim
 
 
 class Autoencoder(nn.Module):
@@ -35,6 +34,21 @@ class Autoencoder(nn.Module):
             embeddings = self.encoder(data_tensor)
         return embeddings.cpu().numpy() 
     
+
+# Define a custom weighted MSE loss function
+class WeightedMSELoss(nn.Module):
+    def __init__(self, feature_weights):
+        super(WeightedMSELoss, self).__init__()
+        self.feature_weights = torch.tensor(feature_weights, dtype=torch.float32)
+    
+    def forward(self, output, target):
+        # Compute the MSE loss
+        mse_loss = nn.MSELoss(reduction='none')(output, target)
+        # Apply the feature weights
+        weighted_loss = mse_loss * self.feature_weights
+        # Return the mean of the weighted losses
+        return weighted_loss.mean()
+
 
 def train_model(model, dataloader, criterion, optimizer, num_epochs=50):
     """
