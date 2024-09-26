@@ -2,7 +2,7 @@ import re
 import os
 import pandas as pd
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 PATH_PLAYER_STATS = '../data/fbref/player_stats.csv'
 
@@ -24,45 +24,120 @@ def load_player_statistics():
     return df_features, df_player_info
 
 
-def get_top_k_similar_players(embeddings, query_index, player_info, top_k=10):
+def get_top_k_similar_players(embeddings, query_index, player_info, top_k=10, distance_metric='cosine'):
     """
-    Compute the top-k most similar players based on cosine similarity of embeddings.
+    Compute the top-k most similar players based on cosine similarity or Euclidean distance of embeddings.
 
     Args:
         embeddings (np.ndarray): Array of player embeddings, shape (num_players, embedding_dim).
         query_index (int): Index of the player to be used as the query point.
         player_info (pd.DataFrame): DataFrame containing player information.
         top_k (int): Number of top similar players to return.
+        distance_metric (str): Metric to use for similarity, 'cosine' for cosine similarity or 'euclidean' for Euclidean distance.
 
     Returns:
-        pd.DataFrame: DataFrame of the top_k similar players with their cosine similarities.
+        pd.DataFrame: DataFrame of the top_k similar players with their distances or similarities.
     """
-    # Normalize the embeddings (L2 normalization)
-    embeddings_norm = embeddings / np.linalg.norm(embeddings, axis=1, keepdims=True)
+    # Normalize the embeddings (L2 normalization) if using cosine similarity
+    if distance_metric == 'cosine':
+        embeddings_norm = embeddings / np.linalg.norm(embeddings, axis=1, keepdims=True)
+        query_embedding = embeddings_norm[query_index]
+
+        # Compute cosine similarities between the query and the rest
+        similarities = np.dot(embeddings_norm, query_embedding)
+
+        # Sort in descending order (higher cosine similarity means more similar)
+        top_k_similar_indices = np.argsort(similarities)[::-1]
+        metric_label = 'cosine_similarity'
     
-    # Get the query player's normalized embedding
-    query_embedding = embeddings_norm[query_index]
-    
-    # Compute cosine similarities between the query and the rest
-    cosine_similarities = np.dot(embeddings_norm, query_embedding)
-    
-    # Get the top-k most similar samples (including the query player itself)
-    top_k_similar_indices = np.argsort(cosine_similarities)[::-1]  # Sort in descending order
-    
-    # Keep the top_k including the query player
+    elif distance_metric == 'euclidean':
+        query_embedding = embeddings[query_index]
+        
+        # Compute Euclidean distances between the query and the rest
+        distances = np.linalg.norm(embeddings - query_embedding, axis=1)
+
+        # Sort in ascending order (smaller Euclidean distance means more similar)
+        top_k_similar_indices = np.argsort(distances)
+        similarities = distances  # Treat distances as similarities for further usage
+        metric_label = 'euclidean_distance'
+
+    else:
+        raise ValueError("Invalid distance_metric. Use 'cosine' or 'euclidean'.")
+
+    # Get the top_k most similar players, including the query player itself
     top_k_similar_indices = top_k_similar_indices[:top_k]
-    
+
     # Extract the player information for the top-k most similar players
     top_k_df = player_info.iloc[top_k_similar_indices].copy()
-    
-    # Add cosine similarity column to the DataFrame
-    top_k_df['cosine_similarity'] = cosine_similarities[top_k_similar_indices]
-    
-    # Sort the DataFrame by cosine similarity in descending order and drop the 'unique_id' column if it exists
-    top_k_df = top_k_df.sort_values('cosine_similarity', ascending=False).drop(columns='unique_id', errors='ignore')
-    
+
+    # Add the similarity or distance column to the DataFrame
+    top_k_df[metric_label] = similarities[top_k_similar_indices]
+
+    # Sort the DataFrame by the similarity or distance in the correct order
+    if distance_metric == 'cosine':
+        top_k_df = top_k_df.sort_values(metric_label, ascending=False)  # Cosine similarity sorted descending
+    else:
+        top_k_df = top_k_df.sort_values(metric_label, ascending=True)  # Euclidean distance sorted ascending
+
+    # Optionally drop the 'unique_id' column if it exists
+    top_k_df = top_k_df.drop(columns='unique_id', errors='ignore')
+
     return top_k_df
 
+def scatterplot_top_k(df, x_col, y_col, num_labels=10, top_size=200, rest_size=100, fontsize=9, dist_measure='', title=None):
+    """
+    Creates a scatter plot with custom coloring, labels, and different sizes for top and rest observations.
+    
+    Parameters:
+    - df: pandas DataFrame containing the data.
+    - x_col: string, name of the column for the x-axis.
+    - y_col: string, name of the column for the y-axis.
+    - num_labels: int, number of points to label (default: 10).
+    - top_size: int, size of the scatter points for the first `num_labels` observations.
+    - rest_size: int, size of the scatter points for the remaining observations.
+    """
+    # Ensure num_labels is less than the length of the dataframe
+    num_labels = min(num_labels, len(df) - 1)
+
+    # Define the color map: first one purple, next num_labels orange, and the rest grey
+    colors = ['purple'] + ['orange'] * num_labels + ['grey'] * (len(df) - (num_labels + 1))
+
+    # Define sizes for top and rest
+    sizes = [top_size] * (num_labels + 1) + [rest_size] * (len(df) - (num_labels + 1))
+
+    # Ensure sizes and colors are the same length as the DataFrame
+    if len(sizes) != len(df):
+        sizes = sizes[:len(df)]  # Trim sizes list to match DataFrame length
+    if len(colors) != len(df):
+        colors = colors[:len(df)]  # Trim colors list to match DataFrame length
+
+    # Create the scatter plot
+    plt.scatter(df[x_col], df[y_col], c=colors, s=sizes)
+
+    # Label the first num_labels observations
+    for i in range(num_labels + 1):
+        plt.text(df[x_col].iloc[i], df[y_col].iloc[i], df.index[i], fontsize=fontsize)
+
+    # Set labels and title
+    plt.xlabel(x_col)
+    plt.ylabel(y_col)
+    if title is None:
+        plt.title(f'{x_col} vs {y_col} - {dist_measure}')
+    else:
+        plt.title(title)
+
+    # Show plot
+    plt.show()
+
+
+def get_feature_indices(df, selected_features):
+    if type(selected_features) is list:
+        start_idx = df.columns.get_loc(selected_features[0])
+        end_idx = df.columns.get_loc(selected_features[-1])
+        return start_idx, end_idx
+    if type(selected_features) is str:
+        idx = df.columns.get_loc(selected_features)
+        return idx
 
 # add mio and k to values 
 def adjust_money_appearance(x):
