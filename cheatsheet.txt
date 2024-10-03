@@ -1,2 +1,0 @@
-# Create environment.yml
-conda list --export > environment.yml 
