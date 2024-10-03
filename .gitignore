@@ -4,3 +4,4 @@
 .env
 cheatsheet.txt
 src/__pycache__/
+src/.DS_Store
