@@ -66,7 +66,7 @@ def get_top_k_similar_players(embeddings, query_index, player_info, top_k=10, di
     # Normalize the embeddings (L2 normalization) if using cosine similarity
     if distance_metric == 'cosine':
         embeddings_norm = embeddings / np.linalg.norm(embeddings, axis=1, keepdims=True)
-        query_embedding = embeddings_norm[query_index]
+        query_embedding = embeddings_norm.iloc[query_index]  # before embeddings_norm[query_index]
 
         # Compute cosine similarities between the query and the rest
         similarities = np.dot(embeddings_norm, query_embedding)
