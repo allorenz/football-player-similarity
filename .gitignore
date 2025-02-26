@@ -5,4 +5,5 @@
 cheatsheet.txt
 src/__pycache__/
 src/.DS_Store
+data/bundesliga.csv
 playground
