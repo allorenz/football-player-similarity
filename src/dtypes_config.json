@@ -1,64 +1,101 @@
 {
-    "ball_receipt_outcome": "category",  # Small set of categorical values
-    "ball_recovery_recovery_failure": "boolean",  # True/False values + NaN
-    "block_deflection": "boolean",  # True/False values + NaN
-    "carry_end_location": "object",  # Lists or complex objects
-    "clearance_aerial_won": "boolean",  # True/False values + NaN
-    "clearance_body_part": "category",  # Categorical values
-    "clearance_head": "boolean",  # True/False values + NaN
-    "clearance_left_foot": "boolean",  # True/False values + NaN
-    "clearance_right_foot": "boolean",  # True/False values + NaN
-    "counterpress": "boolean",  # True/False values + NaN
-    "dribble_nutmeg": "boolean",  # True/False values + NaN
-    "dribble_outcome": "category",  # Categorical values
-    "dribble_overrun": "boolean",  # True/False values + NaN
-    "duel_outcome": "category",  # Categorical values
-    "duel_type": "category",  # Categorical values
-    "duration": "float32",  # Continuous numerical values
-    "foul_committed_advantage": "boolean",  # True/False values + NaN
-    "foul_committed_card": "category",  # Categorical values
-    "foul_won_advantage": "boolean",  # True/False values + NaN
-    "foul_won_defensive": "boolean",  # True/False values + NaN
-    "goalkeeper_body_part": "category",  # Categorical values
-    "goalkeeper_end_location": "object",  # Lists or complex objects
-    "goalkeeper_outcome": "category",  # Categorical values
-    "goalkeeper_position": "category",  # Categorical values
-    "goalkeeper_technique": "category",  # Categorical values
-    "goalkeeper_type": "category",  # Categorical values
-    "id": "string",  # UUIDs, best handled as strings
-    "index": "int32",  # Integers
-    "interception_outcome": "category",  # Categorical values
-    "location": "object",  # Lists or complex objects
-    "match_id": "int32",  # Integers
-    "minute": "int8",  # Small integer range
-    "off_camera": "boolean",  # True/False values + NaN
-    "out": "boolean",  # True/False values + NaN
-    "pass_aerial_won": "boolean",  # True/False values + NaN
-    "pass_angle": "float32",  # Continuous numerical values
-    "pass_assisted_shot_id": "string",  # UUIDs, best handled as strings
-    "pass_body_part": "category",  # Categorical values
-    "pass_cross": "boolean",  # True/False values + NaN
-    "pass_cut_back": "boolean",  # True/False values + NaN
-    "pass_deflected": "boolean",  # True/False values + NaN
-    "pass_end_location": "object",  # Lists or complex objects
-    "pass_goal_assist": "boolean",  # True/False values + NaN
-    "pass_height": "category",  # Categorical values
-    "pass_inswinging": "boolean",  # True/False values + NaN
-    "pass_length": "float32",  # Continuous numerical values
-    "pass_outcome": "category",  # Categorical values
-    "pass_outswinging": "boolean",  # True/False values + NaN
-    "pass_shot_assist": "boolean",  # True/False values + NaN
-    "pass_switch": "boolean",  # True/False values + NaN
-    "pass_technique": "category",  # Categorical values
-    "pass_through_ball": "boolean",  # True/False values + NaN
-    "pass_type": "category",  # Categorical values
-    "period": "int4",  # Only 1 or 2
-    "play_pattern": "category",  # Categorical values
-    "position": "category",  # Categorical values
-    "possession": "int16",  # Medium-sized integer range
-    "second": "int8",  # Small integer range
-    "shot_aerial_won": "boolean",  # True/False values + NaN
-    "shot_body_part": "category",  # Categorical values
+    "ball_receipt_outcome": "category",  
+    "ball_recovery_recovery_failure": "boolean",  
+    "ball_recovery_offensive": "boolean",
+    "block_deflection": "boolean",  
+    "block_offensive": "boolean",  
+    "block_save_block": "boolean",  
+    "carry_end_location": "object",  
+    "clearance_aerial_won": "boolean",  
+    "clearance_body_part": "category",  
+    "counterpress": "boolean",  
+    "dribble_nutmeg": "boolean",  
+    "dribble_outcome": "category",  
+    "dribble_overrun": "boolean",  
+    "duel_outcome": "category",  
+    "duel_type": "category",  
+    "duration": "float32",  
+    "foul_committed_advantage": "boolean", 
+    "foul_committed_card": "category",  
+    "foul_committed_penalty": "boolean",  
+    "foul_won_advantage": "boolean",  
+    "foul_won_defensive": "boolean",  
+    "foul_won_penalty": "boolean",  
+    "goalkeeper_body_part": "category",  
+    "goalkeeper_end_location": "object",  
+    "goalkeeper_outcome": "category",  
+    "goalkeeper_position": "category",  
+    "goalkeeper_technique": "category",  
+    "goalkeeper_type": "category",  
+    "id": "string",  
+    "index": "int32",  
+    "interception_outcome": "category",  
+    "location": "object",  
+    "match_id": "int32",  
+    "minute": "int8",  
+    "off_camera": "boolean",  
+    "out": "boolean", 
+    "pass_aerial_won": "boolean",  
+    "pass_angle": "float32",  
+    "pass_assisted_shot_id": "string",  
+    "pass_body_part": "category",  
+    "pass_cross": "boolean",
+    "pass_cut_back": "boolean",
+    "pass_deflected": "boolean",
+    "pass_end_location": "object",
+    "pass_goal_assist": "boolean",
+    "pass_height": "category",
+    "pass_inswinging": "boolean",
+    "pass_length": "float32",
+    "pass_outcome": "category",
+    "pass_outswinging": "boolean",
+    "pass_shot_assist": "boolean",
+    "pass_switch": "boolean",
+    "pass_technique": "category",
+    "pass_through_ball": "boolean",
+    "pass_type": "category",
+    "period": "int8",
+    "play_pattern": "category",
+    "position": "category",
+    "possession": "int8",
+    "second": "int8",
+    "shot_aerial_won": "boolean",
+    "shot_body_part": "category",
     "player" : "string",
-    "timesstamp" : "date"
+    "timesstamp" : "datetime64[ns]",
+    "type": "category",
+    "possession_team": "string",
+    "team" : "string",
+    "under_pressure":"boolean",
+    "related_events":"object",
+    "tactics": "object",
+    "50_50":"object",
+    "bad_behaviour":"object",
+    "half_start" :"boolean",
+    "half_end" :"boolean",
+    "injury_stoppage" :"boolean",
+    "shot_one_on_one":"boolean",
+    "bad_behaviour_card":"category",
+    "injury_stoppage_in_chain": "boolean",
+    "miscontrol_aerial_won" : "boolean",
+    "pass_no_touch": "boolean",
+    "pass_straight": "boolean",
+    "foul_committed_type": "category",
+    "foul_committed_offensive": "boolean",
+    "shot_deflected": "boolean",
+    "clearance_other": "boolean",
+    "goalkeeper_success_out": "boolean",
+    "pass_miscommunication": "boolean",
+    "dribble_no_touch": "boolean",
+    "shot_open_goal": "boolean",
+    "goalkeeper_punched_out": "boolean",
+    "shot_redirect": "boolean",
+    "goalkeeper_shot_saved_off_target": "boolean",
+    "shot_saved_off_target": "boolean",
+    "goalkeeper_shot_saved_to_post": "boolean",
+    "shot_saved_to_post": "boolean",
+    "goalkeeper_lost_out": "boolean",
+    "goalkeeper_success_in_play": "boolean",
+    "shot_follows_dribble": "boolean",
+    "half_start_late_video_start": "boolean"
 }
