@@ -26,14 +26,18 @@
     },
     "defending": {
         "columns": [
-            "player","type","duration","location", "under_pressure","carry_end_location" , 
-           "dribble_nutmeg", "dribble_no_touch",  "dribble_outcome", "dribble_overrun",
-           "duel_type","duel_outcome", "counterpress", "ball_receipt_outcome", "foul_won_penalty", "miscontrol_aerial_won","pass_angle", "pass_end_location"
+            "player","type","location","ball_recovery_recovery_failure", "ball_recovery_offensive", "bad_behaviour_card","foul_committed_card","counterpress",
+            "block_offensive","block_deflection", "block_save_block","foul_committed_offensive", "foul_committed_penalty", "foul_won_penalty", "interception_outcome",
+            "clearance_body_part", "duel_type", "duel_outcome", "under_pressure"
         ],
         "row_filter": ["Ball Recovery","Bad Behaviour","Pressure","Block","Clearance","Duel","Foul Committed","Shield"]
     },
-    "goal_keeper": {
+    "goal_keeping": {
         "columns": ["player","location","type","under_pressure" ,"goalkeeper_position", "goalkeeper_technique","goalkeeper_body_part","goalkeeper_type","goalkeeper_outcome"],
         "row_filter": ["Goal Keeper"]
+    },
+    "standard_stats": {
+        "columns": ["player", "match_id","minute" ,"substitution_replacement","substitution_outcome"],
+        "row_filter": []
     }
 } 

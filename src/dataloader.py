@@ -114,20 +114,26 @@ class Dataloader:
 
     def _load_column_configs(self):
         """Load column configuration from an external JSON file."""
-        with open(f"{PROJECT_ROOT_DIR}/src/columns_config.json", 'r') as f:
+        with open(f"{PROJECT_ROOT_DIR}/config/columns_config.json", 'r') as f:
             return json.load(f)
         
     def _load_dtype_configs(self):
         """Load column configuration from an external JSON file."""
-        with open(f"{PROJECT_ROOT_DIR}/src/dtypes_config.json", 'r') as f:
+        with open(f"{PROJECT_ROOT_DIR}/config/dtypes_config.json", 'r') as f:
             return json.load(f)
     
-    def get_dimension(self,dimension, row_filter=None):
-        if row_filter is None:
+    def get_dimension(self,dimension, row_filter=True):
+        """
+        dimensions: [defending, possession, passing, shooting, goal_keeping, standard_stats]
+        """
+        if row_filter:
             return self.df.loc[self.df["type"].isin(self.columns[dimension]["row_filter"]), self.columns[dimension]["columns"]].copy()
         return self.df[self.columns[dimension]["columns"]].copy()
     
     def get_data(self):
+        """
+        Returns the whole raw event data
+        """
         return self.df.copy()
     
     
@@ -135,5 +141,5 @@ class Dataloader:
 
 if __name__=="__main__":
     dataloader = Dataloader()
-     
-    print(dataloader.get_data().shape)
+    df = dataloader.get_dimension(dimension="goal_keeping")
+    print(df.columns)
