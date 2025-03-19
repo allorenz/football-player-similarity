@@ -1,5 +1,5 @@
 player_name,country,team,positions_played,match_played,minutes_played
-Aaron Hunt,Germany,Hamburger SV,"['Right Center Forward', 'Left Wing']",23.0,1742.0
+Aaron Hunt,Germany,Hamburger SV,"['Left Wing', 'Right Center Forward']",23.0,1742.0
 Adam Hloušek,Czech Republic,VfB Stuttgart,[],7.0,425.0
 Adelino André Vieira Freitas,Portugal,Wolfsburg,"['Right Midfield', 'Right Back']",26.0,1908.0
 Admir Mehmedi,Switzerland,Bayer Leverkusen,['Right Center Forward'],28.0,1373.0
@@ -7,11 +7,11 @@ Adnan Januzaj,Belgium,Borussia Dortmund,[],6.0,176.0
 Ahmet Metin Arslan,Germany,Hamburger SV,[],1.0,4.0
 Albian Afrim Ajeti,Switzerland,Augsburg,[],1.0,41.0
 Albin Ekdal,Sweden,Hamburger SV,['Right Defensive Midfield'],14.0,1137.0
-Alejandro Gálvez Jimena,Spain,Werder Bremen,"['Center Defensive Midfield', 'Left Center Midfield']",21.0,1291.0
-Aleksandar Ignjovski,Serbia,Eintracht Frankfurt,"['Right Wing Back', 'Right Center Midfield', 'Right Back']",18.0,1228.0
+Alejandro Gálvez Jimena,Spain,Werder Bremen,"['Left Center Midfield', 'Center Defensive Midfield']",21.0,1291.0
+Aleksandar Ignjovski,Serbia,Eintracht Frankfurt,"['Right Center Midfield', 'Right Wing Back', 'Right Back']",18.0,1228.0
 Alessandro Schöpf,Austria,Schalke 04,['Right Midfield'],13.0,484.0
 Alexander Baumjohann,Germany,Hertha Berlin,[],24.0,509.0
-Alexander Esswein,Germany,Augsburg,"['Right Center Forward', 'Right Wing']",29.0,1820.0
+Alexander Esswein,Germany,Augsburg,"['Right Wing', 'Right Center Forward']",29.0,1820.0
 Alexander Hack,Germany,FSV Mainz 05,[],7.0,630.0
 Alexander Manninger,Austria,Augsburg,[],2.0,97.0
 Alexander Meier,Germany,Eintracht Frankfurt,['Left Center Midfield'],19.0,1707.0
@@ -22,12 +22,12 @@ Alexandru Iulian Maxim,Romania,VfB Stuttgart,['Right Wing'],25.0,1092.0
 Alfredo Morales,United States of America,Ingolstadt,[],24.0,1681.0
 Alfreð Finnbogason,Iceland,Augsburg,"['Right Center Forward', 'Center Forward']",14.0,1132.0
 Allan Saint-Maximin,France,Hannover 96,"['Center Attacking Midfield', 'Center Forward']",16.0,482.0
-Almog Cohen,Israel,Ingolstadt,"['Center Defensive Midfield', 'Left Center Midfield']",20.0,858.0
+Almog Cohen,Israel,Ingolstadt,"['Left Center Midfield', 'Center Defensive Midfield']",20.0,858.0
 Aloy Ihenacho,Nigeria,Ingolstadt,[],,
 Andre Hoffmann,Germany,Hannover 96,[],8.0,518.0
-Andreas Christensen,Denmark,Borussia Mönchengladbach,"['Left Center Back', 'Center Back']",31.0,2790.0
+Andreas Christensen,Denmark,Borussia Mönchengladbach,"['Center Back', 'Left Center Back']",31.0,2790.0
 Andreas Hirzel,Switzerland,Hamburger SV,[],1.0,55.0
-Andrej Kramarić,Croatia,Hoffenheim,"['Center Forward', 'Left Center Forward']",15.0,1104.0
+Andrej Kramarić,Croatia,Hoffenheim,"['Left Center Forward', 'Center Forward']",15.0,1104.0
 André Hahn,Germany,Borussia Mönchengladbach,"['Right Center Forward', 'Left Center Forward']",16.0,857.0
 André Ramalho Silva,Brazil,Bayer Leverkusen,['Right Center Back'],19.0,1167.0
 André Schürrle,Germany,Wolfsburg,"['Left Midfield', 'Left Center Midfield']",29.0,1915.0
@@ -60,9 +60,9 @@ Caiuby Francisco da Silva,Brazil,Augsburg,['Left Wing'],26.0,2219.0
 Carlos Antonio Ascues Ávila,Peru,Wolfsburg,[],1.0,11.0
 Carlos Armando Gruezo Arboleda,Ecuador,VfB Stuttgart,"['Left Midfield', 'Left Defensive Midfield']",2.0,63.0
 Carlos Augusto Zambrano Ochandarte,Peru,Eintracht Frankfurt,['Right Center Back'],24.0,1817.0
-Ceyhun Gülselam,Turkey,Hannover 96,"['Right Defensive Midfield', 'Right Wing']",13.0,835.0
+Ceyhun Gülselam,Turkey,Hannover 96,"['Right Wing', 'Right Defensive Midfield']",13.0,835.0
 Charles Mariano Aránguiz Sandoval,Chile,Bayer Leverkusen,['Right Defensive Midfield'],7.0,480.0
-Charlison Benschop,Curaçao,Hannover 96,"['Center Attacking Midfield', 'Right Wing']",9.0,359.0
+Charlison Benschop,Curaçao,Hannover 96,"['Right Wing', 'Center Attacking Midfield']",9.0,359.0
 Christian Clemens,Germany,FSV Mainz 05,['Right Midfield'],28.0,1736.0
 Christian Gentner,Germany,VfB Stuttgart,['Left Defensive Midfield'],29.0,2489.0
 Christian Mathenia,Germany,Darmstadt 98,['Goalkeeper'],33.0,2970.0
@@ -80,7 +80,7 @@ Daniel Baier,Germany,Augsburg,['Left Defensive Midfield'],28.0,2326.0
 Daniel Brosinski,Germany,FSV Mainz 05,['Right Back'],30.0,2261.0
 Daniel Caligiuri,Germany,Wolfsburg,"['Left Midfield', 'Left Center Midfield']",29.0,1848.0
 Daniel Didavi,Germany,VfB Stuttgart,['Center Attacking Midfield'],31.0,2444.0
-Daniel Ginczek,Germany,VfB Stuttgart,"['Center Forward', 'Left Center Forward']",7.0,630.0
+Daniel Ginczek,Germany,VfB Stuttgart,"['Left Center Forward', 'Center Forward']",7.0,630.0
 Daniel Mesenhöler,Germany,FC Köln,[],,
 Daniel Schwaab,Germany,VfB Stuttgart,['Right Back'],29.0,2397.0
 Daniel Tawiah Opare,Ghana,Augsburg,['Right Back'],4.0,360.0
@@ -105,7 +105,7 @@ Dominik Maroh,Slovenia,FC Köln,['Right Center Back'],25.0,2128.0
 Dominik Stroh-Engel,Germany,Darmstadt 98,[],15.0,536.0
 Dominique Heintz,Germany,FC Köln,['Left Center Back'],33.0,2872.0
 Dong-Won Ji,Korea (South),Augsburg,['Left Center Forward'],21.0,822.0
-Douglas Costa de Souza,Brazil,Bayern Munich,"['Center Forward', 'Right Wing']",27.0,1978.0
+Douglas Costa de Souza,Brazil,Bayern Munich,"['Right Wing', 'Center Forward']",27.0,1978.0
 Dušan Švento,Slovakia,FC Köln,[],7.0,233.0
 Edgar Prib,Germany,Hannover 96,['Left Back'],20.0,1340.0
 Eduardo Jesús Vargas Rojas,Chile,Hoffenheim,[],24.0,1523.0
@@ -116,12 +116,12 @@ Emir Spahić,Bosnia and Herzegovina,Hamburger SV,['Left Center Back'],26.0,2278.
 Eric Oelschlägel,Germany,Werder Bremen,[],,
 Erik Durm,Germany,Borussia Dortmund,"['Right Defensive Midfield', 'Right Back']",14.0,871.0
 Erik Thommy,Germany,Augsburg,[],,
-Ermin Bičakčić,Bosnia and Herzegovina,Hoffenheim,"['Left Center Back', 'Center Back']",21.0,1630.0
+Ermin Bičakčić,Bosnia and Herzegovina,Hoffenheim,"['Center Back', 'Left Center Back']",21.0,1630.0
 Eugen Polanski,Poland,Hoffenheim,['Left Defensive Midfield'],27.0,1779.0
 Fabian Frei,Switzerland,FSV Mainz 05,['Left Defensive Midfield'],18.0,983.0
 Fabian Giefer,Germany,Schalke 04,[],,
 Fabian Holland,Germany,Darmstadt 98,"['Left Back', 'Left Wing Back']",18.0,1443.0
-Fabian Johnson,United States of America,Borussia Mönchengladbach,"['Right Wing Back', 'Right Center Midfield']",26.0,2158.0
+Fabian Johnson,United States of America,Borussia Mönchengladbach,"['Right Center Midfield', 'Right Wing Back']",26.0,2158.0
 Fabian Lukas Schär,Switzerland,Hoffenheim,['Right Center Back'],24.0,1747.0
 Fabian Lustenberger,Switzerland,Hertha Berlin,[],30.0,2527.0
 Fabian Reese,Germany,Schalke 04,"['Left Midfield', 'Left Center Forward']",1.0,5.0
@@ -131,24 +131,24 @@ Felipe Trevizan Martins,Brazil,Hannover 96,[],8.0,151.0
 Felix Klaus,Germany,Hannover 96,[],18.0,815.0
 Felix Kroos,Germany,Werder Bremen,[],8.0,276.0
 Felix Passlack,Germany,Borussia Dortmund,[],3.0,183.0
-Felix Platte,Germany,Darmstadt 98,"['Left Wing', 'Right Attacking Midfield']",12.0,172.0
+Felix Platte,Germany,Darmstadt 98,"['Right Attacking Midfield', 'Left Wing']",12.0,172.0
 Felix Wiedwald,Germany,Werder Bremen,['Goalkeeper'],34.0,3060.0
 Filip Kostić,Serbia,VfB Stuttgart,['Left Wing'],30.0,2598.0
 Filip Mladenović,Serbia,FC Köln,['Left Wing Back'],14.0,862.0
-Fin Bartels,Germany,Werder Bremen,"['Center Attacking Midfield', 'Left Midfield']",30.0,2086.0
+Fin Bartels,Germany,Werder Bremen,"['Left Midfield', 'Center Attacking Midfield']",30.0,2086.0
 Finn-Dominik Porath,Germany,Hamburger SV,[],,
-Florian Grillitsch,Austria,Werder Bremen,"['Left Defensive Midfield', 'Center Defensive Midfield']",25.0,1986.0
+Florian Grillitsch,Austria,Werder Bremen,"['Center Defensive Midfield', 'Left Defensive Midfield']",25.0,1986.0
 Florian Jungwirth,Germany,Darmstadt 98,"['Right Center Back', 'Right Back']",19.0,1507.0
 Florian Klein,Austria,VfB Stuttgart,"['Center Attacking Midfield', 'Right Back']",22.0,1621.0
 Florian Kohls,Germany,Hertha Berlin,[],1.0,8.0
-Florian Niederlechner,Germany,FSV Mainz 05,"['Center Attacking Midfield', 'Left Defensive Midfield']",12.0,214.0
-Francisco José Rodriguez Araya,Switzerland,Wolfsburg,"['Center Attacking Midfield', 'Right Defensive Midfield']",1.0,13.0
+Florian Niederlechner,Germany,FSV Mainz 05,"['Left Defensive Midfield', 'Center Attacking Midfield']",12.0,214.0
+Francisco José Rodriguez Araya,Switzerland,Wolfsburg,"['Right Defensive Midfield', 'Center Attacking Midfield']",1.0,13.0
 Franck Bilal Ribéry,France,Bayern Munich,['Left Wing'],13.0,697.0
 Franco Matías Di Santo,Argentina,Schalke 04,['Center Forward'],25.0,1326.0
 Frederik Hillesborg Sørensen,Denmark,FC Köln,['Right Back'],22.0,1682.0
 Fynn Arkenberg,Germany,Hannover 96,['Right Back'],2.0,180.0
 Gaëtan Bussmann,France,FSV Mainz 05,['Left Back'],13.0,1170.0
-Genki Haraguchi,Japan,Hertha Berlin,"['Left Wing', 'Left Midfield']",32.0,2533.0
+Genki Haraguchi,Japan,Hertha Berlin,"['Left Midfield', 'Left Wing']",32.0,2533.0
 Georg Niedermeier,Germany,VfB Stuttgart,['Left Center Back'],18.0,1434.0
 Gerhard Tremmel,Germany,Werder Bremen,[],,
 Gian-Luca Waldschmidt,Germany,Eintracht Frankfurt,[],13.0,359.0
@@ -158,10 +158,10 @@ Gideon Jung,Germany,Hamburger SV,[],19.0,1191.0
 Giulio Donati,Italy,FSV Mainz 05,['Right Back'],23.0,1900.0
 Gojko Kačar,Serbia,Hamburger SV,['Left Center Midfield'],19.0,1141.0
 Gonzalo Alejandro Jara Reyes,Chile,FSV Mainz 05,[],6.0,445.0
-Gonzalo Castro Randon,Germany,Borussia Dortmund,"['Left Wing', 'Right Wing', 'Left Center Midfield']",25.0,1503.0
+Gonzalo Castro Randon,Germany,Borussia Dortmund,"['Right Wing', 'Left Center Midfield', 'Left Wing']",25.0,1503.0
 Gotoku Sakai,Japan,Hamburger SV,['Left Back'],22.0,1890.0
-Granit Xhaka,Switzerland,Borussia Mönchengladbach,"['Left Defensive Midfield', 'Right Defensive Midfield']",28.0,2422.0
-Gustavo Adrián Ramos Vásquez,Colombia,Borussia Dortmund,"['Left Wing', 'Right Wing']",27.0,974.0
+Granit Xhaka,Switzerland,Borussia Mönchengladbach,"['Right Defensive Midfield', 'Left Defensive Midfield']",28.0,2422.0
+Gustavo Adrián Ramos Vásquez,Colombia,Borussia Dortmund,"['Right Wing', 'Left Wing']",27.0,974.0
 György Garics,Austria,Darmstadt 98,[],21.0,1796.0
 Hakan Çalhanoğlu,Turkey,Bayer Leverkusen,['Left Center Forward'],31.0,2267.0
 Halil Altıntop,Turkey,Augsburg,['Right Center Forward'],19.0,1210.0
@@ -170,18 +170,18 @@ Heinz Lindner,Austria,Eintracht Frankfurt,[],,
 Hendrik Bonmann,Germany,Borussia Dortmund,[],,
 Henrikh Mkhitaryan,Armenia,Borussia Dortmund,['Right Wing'],31.0,2579.0
 Henrique Sereno Fonseca,Portugal,FSV Mainz 05,[],,
-Heung-Min Son,Korea (South),Bayer Leverkusen,"['Left Wing', 'Left Midfield']",1.0,63.0
+Heung-Min Son,Korea (South),Bayer Leverkusen,"['Left Midfield', 'Left Wing']",1.0,63.0
 Hiroki Sakai,Japan,Hannover 96,['Right Back'],26.0,2299.0
 Hiroshi Kiyotake,Japan,Hannover 96,['Center Attacking Midfield'],21.0,1762.0
 Holger Badstuber,Germany,Bayern Munich,['Left Center Back'],7.0,471.0
 Hotaru Yamaguchi,Japan,Hannover 96,['Left Defensive Midfield'],6.0,407.0
 Hugo Miguel Pereira de Almeida,Portugal,Hannover 96,['Left Center Forward'],7.0,534.0
-Håvard Nordtveit,Norway,Borussia Mönchengladbach,"['Left Defensive Midfield', 'Left Center Back']",31.0,2462.0
-Ibrahima Traoré,Guinea,Borussia Mönchengladbach,"['Right Wing Back', 'Left Wing Back']",24.0,1479.0
+Håvard Nordtveit,Norway,Borussia Mönchengladbach,"['Left Center Back', 'Left Defensive Midfield']",31.0,2462.0
+Ibrahima Traoré,Guinea,Borussia Mönchengladbach,"['Left Wing Back', 'Right Wing Back']",24.0,1479.0
 Ioannis Gelios,Greece,Augsburg,[],,
 Ismail Azzaoui,Belgium,Wolfsburg,[],2.0,24.0
-Ivan Perišić,Croatia,Wolfsburg,"['Right Center Forward', 'Left Wing', 'Right Center Midfield', 'Left Midfield']",2.0,163.0
-Iver Tobias Rørvik Fossum,Norway,Hannover 96,"['Right Midfield', 'Center Attacking Midfield', 'Right Wing']",9.0,722.0
+Ivan Perišić,Croatia,Wolfsburg,"['Left Midfield', 'Right Center Midfield', 'Left Wing', 'Right Center Forward']",2.0,163.0
+Iver Tobias Rørvik Fossum,Norway,Hannover 96,"['Right Wing', 'Right Midfield', 'Center Attacking Midfield']",9.0,722.0
 Ivica Olić,Croatia,Hamburger SV,['Right Center Forward'],9.0,197.0
 Ivo Iličević,Croatia,Hamburger SV,['Left Wing'],31.0,2166.0
 Ja-Cheol Koo,Korea (South),FSV Mainz 05,[],30.0,2194.0
@@ -189,7 +189,7 @@ Jairo Samperio Bustara,Spain,FSV Mainz 05,"['Left Midfield', 'Left Wing']",31.0,
 Jan Kirchhoff,Germany,Bayern Munich,[],,
 Jan Kliment,Czech Republic,VfB Stuttgart,[],8.0,183.0
 Jan Morávek,Czech Republic,Augsburg,['Right Wing'],11.0,417.0
-Jan Rosenthal,Germany,Darmstadt 98,"['Center Attacking Midfield', 'Right Wing']",23.0,1430.0
+Jan Rosenthal,Germany,Darmstadt 98,"['Right Wing', 'Center Attacking Midfield']",23.0,1430.0
 Jan-Ingwer Callsen-Bracker,Germany,Augsburg,['Right Center Back'],10.0,749.0
 Janek Sternberg,Germany,Werder Bremen,[],9.0,459.0
 Jannes-Kilian Horn,Germany,Wolfsburg,[],,
@@ -204,7 +204,7 @@ Jens Grahl,Germany,Hoffenheim,['Goalkeeper'],1.0,90.0
 Jens Hegeler,Germany,Hertha Berlin,[],16.0,515.0
 Jeong-Ho Hong,Korea (South),Augsburg,['Right Center Back'],23.0,1728.0
 Jeremy Toljan,Germany,Hoffenheim,[],18.0,1495.0
-Jhon Andrés Córdoba Copete,Colombia,FSV Mainz 05,"['Center Forward', 'Left Center Forward']",22.0,1424.0
+Jhon Andrés Córdoba Copete,Colombia,FSV Mainz 05,"['Left Center Forward', 'Center Forward']",22.0,1424.0
 Jiloan Hamad,Iraq,Hoffenheim,[],7.0,325.0
 Jin-Su Kim,Korea (South),Hoffenheim,[],15.0,1316.0
 Joel Gerezgiher,Germany,Eintracht Frankfurt,[],3.0,90.0
@@ -215,41 +215,41 @@ Johannes Geis,Germany,Schalke 04,['Center Defensive Midfield'],28.0,2340.0
 Johannes van den Bergh,Germany,Hertha Berlin,[],13.0,264.0
 John Anthony Brooks,United States of America,Hertha Berlin,['Left Center Back'],23.0,1818.0
 Jon Gorenc Stankovič,Slovenia,Borussia Dortmund,[],,
-Jonas Hector,Germany,FC Köln,"['Left Defensive Midfield', 'Right Defensive Midfield']",32.0,2858.0
+Jonas Hector,Germany,FC Köln,"['Right Defensive Midfield', 'Left Defensive Midfield']",32.0,2858.0
 Jonas Hofmann,Germany,Borussia Dortmund,[],15.0,530.0
-Jonathan Schmid,France,Hoffenheim,"['Right Midfield', 'Left Midfield']",23.0,1471.0
+Jonathan Schmid,France,Hoffenheim,"['Left Midfield', 'Right Midfield']",23.0,1471.0
 Jonathan Tah,Germany,Bayer Leverkusen,['Right Center Back'],29.0,2565.0
 Joo-Ho Park,Korea (South),Borussia Dortmund,[],6.0,403.0
 Joshua Kimmich,Germany,Bayern Munich,[],23.0,1434.0
-Josip Drmic,Switzerland,Hamburger SV,"['Left Wing', 'Left Center Midfield']",19.0,898.0
-Josuha Guilavogui,France,Wolfsburg,"['Left Defensive Midfield', 'Center Defensive Midfield']",30.0,2334.0
+Josip Drmic,Switzerland,Hamburger SV,"['Left Center Midfield', 'Left Wing']",19.0,898.0
+Josuha Guilavogui,France,Wolfsburg,"['Center Defensive Midfield', 'Left Defensive Midfield']",30.0,2334.0
 Joël Abu Hanna,Israel,Bayer Leverkusen,[],,
 Joël Andre Job Matip,Cameroon,Schalke 04,"['Right Center Back', 'Left Center Back']",34.0,3060.0
 Juan Bernat Velasco,Spain,Bayern Munich,['Left Back'],16.0,1152.0
 Julian Baumgartlinger,Austria,FSV Mainz 05,['Right Defensive Midfield'],31.0,2719.0
-Julian Brandt,Germany,Bayer Leverkusen,"['Right Midfield', 'Left Midfield']",29.0,1642.0
-Julian Draxler,Germany,Wolfsburg,"['Right Midfield', 'Right Center Midfield']",24.0,1850.0
-Julian Korb,Germany,Borussia Mönchengladbach,"['Right Wing Back', 'Left Wing Back']",17.0,1267.0
+Julian Brandt,Germany,Bayer Leverkusen,"['Left Midfield', 'Right Midfield']",29.0,1642.0
+Julian Draxler,Germany,Wolfsburg,"['Right Center Midfield', 'Right Midfield']",24.0,1850.0
+Julian Korb,Germany,Borussia Mönchengladbach,"['Left Wing Back', 'Right Wing Back']",17.0,1267.0
 Julian Schieber,Germany,Hertha Berlin,"['Left Defensive Midfield', 'Left Center Forward']",6.0,155.0
 Julian Weigl,Germany,Borussia Dortmund,['Center Defensive Midfield'],30.0,2253.0
 Julian von Haacke,Germany,Werder Bremen,[],,
 Julian-Maurice Derstroff,Germany,FSV Mainz 05,[],,
-Jérôme Boateng,Germany,Bayern Munich,"['Right Center Back', 'Left Center Back', 'Center Back']",19.0,1365.0
+Jérôme Boateng,Germany,Bayern Munich,"['Right Center Back', 'Center Back', 'Left Center Back']",19.0,1365.0
 Jérôme Gondorf,Germany,Darmstadt 98,['Left Defensive Midfield'],33.0,2915.0
 Júnior Enrique Díaz Campbell,Costa Rica,Darmstadt 98,[],12.0,878.0
 Kaan Ayhan,Turkey,Eintracht Frankfurt,[],3.0,85.0
-Karim Bellarabi,Germany,Bayer Leverkusen,"['Right Midfield', 'Left Midfield']",33.0,2602.0
+Karim Bellarabi,Germany,Bayer Leverkusen,"['Left Midfield', 'Right Midfield']",33.0,2602.0
 Karim Onisiwo,Austria,FSV Mainz 05,['Left Wing'],9.0,347.0
 Kazuki Nagasawa,Japan,FC Köln,[],1.0,45.0
-Kenan Karaman,Turkey,Hannover 96,"['Left Wing', 'Right Wing']",23.0,1750.0
+Kenan Karaman,Turkey,Hannover 96,"['Right Wing', 'Left Wing']",23.0,1750.0
 Kerim Carolus,Germany,Hamburger SV,[],,
-Kevin De Bruyne,Belgium,Wolfsburg,"['Right Midfield', 'Center Attacking Midfield', 'Left Center Midfield', 'Right Center Midfield']",2.0,164.0
+Kevin De Bruyne,Belgium,Wolfsburg,"['Right Center Midfield', 'Left Center Midfield', 'Right Midfield', 'Center Attacking Midfield']",2.0,164.0
 Kevin Großkreutz,Germany,VfB Stuttgart,['Right Back'],10.0,900.0
 Kevin Kampl,Slovenia,Bayer Leverkusen,['Left Defensive Midfield'],23.0,1767.0
-Kevin Kuranyi,Germany,Hoffenheim,"['Right Center Forward', 'Center Defensive Midfield']",14.0,555.0
-Kevin Vogt,Germany,FC Köln,"['Left Defensive Midfield', 'Right Defensive Midfield']",23.0,1491.0
-Kevin Volland,Germany,Hoffenheim,"['Left Wing', 'Left Attacking Midfield', 'Left Midfield']",33.0,2729.0
-Kingsley Coman,France,Bayern Munich,"['Right Wing Back', 'Left Wing Back', 'Left Wing', 'Right Center Midfield']",23.0,1690.0
+Kevin Kuranyi,Germany,Hoffenheim,"['Center Defensive Midfield', 'Right Center Forward']",14.0,555.0
+Kevin Vogt,Germany,FC Köln,"['Right Defensive Midfield', 'Left Defensive Midfield']",23.0,1491.0
+Kevin Volland,Germany,Hoffenheim,"['Left Midfield', 'Left Wing', 'Left Attacking Midfield']",33.0,2729.0
+Kingsley Coman,France,Bayern Munich,"['Right Center Midfield', 'Left Wing', 'Left Wing Back', 'Right Wing Back']",23.0,1690.0
 Klaas-Jan Huntelaar,Netherlands,Schalke 04,['Center Forward'],31.0,2479.0
 Koen Casteels,Belgium,Wolfsburg,[],13.0,1170.0
 Konstantin Engel,Kazakhstan,Ingolstadt,[],4.0,198.0
@@ -257,17 +257,17 @@ Konstantin Rausch,Russia,Darmstadt 98,['Left Wing'],31.0,2117.0
 Konstantinos Stafylidis,Greece,Augsburg,[],11.0,693.0
 Kyriakos Papadopoulos,Greece,Bayer Leverkusen,['Right Defensive Midfield'],16.0,1005.0
 Lars Bender,Germany,Bayer Leverkusen,"['Right Center Back', 'Left Defensive Midfield', 'Right Back']",11.0,883.0
-Lars Edi Stindl,Germany,Borussia Mönchengladbach,"['Center Attacking Midfield', 'Right Defensive Midfield', 'Left Center Forward']",30.0,2597.0
+Lars Edi Stindl,Germany,Borussia Mönchengladbach,"['Right Defensive Midfield', 'Center Attacking Midfield', 'Left Center Forward']",30.0,2597.0
 Leandro Putaro,Germany,Wolfsburg,[],4.0,58.0
 Leon Aderemi Balogun,Nigeria,FSV Mainz 05,['Right Back'],21.0,1524.0
-Leon Andreasen,Denmark,Hannover 96,"['Center Attacking Midfield', 'Right Defensive Midfield']",15.0,1085.0
+Leon Andreasen,Denmark,Hannover 96,"['Right Defensive Midfield', 'Center Attacking Midfield']",15.0,1085.0
 Leon Goretzka,Germany,Schalke 04,['Left Defensive Midfield'],25.0,1993.0
 Leon Guwara,Gambia,Werder Bremen,[],1.0,90.0
 Leonardo Bittencourt,Germany,FC Köln,['Left Wing'],29.0,2207.0
 Leroy Sané,Germany,Schalke 04,['Right Midfield'],34.0,2437.0
 Levent Ayçiçek,Germany,Werder Bremen,[],,
 Levin Mete Öztunali,Germany,Werder Bremen,"['Right Midfield', 'Left Center Forward']",25.0,1427.0
-Lewis Harry Holtby,Germany,Hamburger SV,"['Left Defensive Midfield', 'Right Defensive Midfield']",34.0,2896.0
+Lewis Harry Holtby,Germany,Hamburger SV,"['Right Defensive Midfield', 'Left Defensive Midfield']",34.0,2896.0
 Loris Karius,Germany,FSV Mainz 05,['Goalkeeper'],34.0,3060.0
 Luc Castaignos,Netherlands,Eintracht Frankfurt,['Center Forward'],19.0,956.0
 Luca Caldirola,Italy,Darmstadt 98,['Left Center Back'],34.0,3060.0
@@ -288,7 +288,7 @@ Marc Stendera,Germany,Eintracht Frankfurt,['Left Defensive Midfield'],26.0,2051.
 Marcel  Hilßner,Germany,Werder Bremen,['Left Center Midfield'],1.0,36.0
 Marcel Hartel,Germany,FC Köln,[],6.0,103.0
 Marcel Heller,Germany,Darmstadt 98,['Right Wing'],33.0,2938.0
-Marcel Risse,Germany,FC Köln,"['Right Wing Back', 'Right Wing']",33.0,2961.0
+Marcel Risse,Germany,FC Köln,"['Right Wing', 'Right Wing Back']",33.0,2961.0
 Marcel Schmelzer,Germany,Borussia Dortmund,['Left Back'],26.0,2068.0
 Marcel Schäfer,Germany,Wolfsburg,['Left Back'],21.0,1324.0
 Marcelo Alfonso Díaz Rojas,Chile,Hamburger SV,[],11.0,487.0
@@ -297,24 +297,24 @@ Marco Höger,Germany,Schalke 04,['Right Center Midfield'],5.0,190.0
 Marco Jhonfai Fabián De La Mora,Mexico,Eintracht Frankfurt,[],11.0,805.0
 Marco Reus,Germany,Borussia Dortmund,['Left Wing'],26.0,1922.0
 Marco Russ,Germany,Eintracht Frankfurt,['Left Center Back'],28.0,2360.0
-Marco Sailer,Germany,Darmstadt 98,"['Center Attacking Midfield', 'Left Midfield']",14.0,466.0
+Marco Sailer,Germany,Darmstadt 98,"['Left Midfield', 'Center Attacking Midfield']",14.0,466.0
 Mario Götze,Germany,Bayern Munich,['Right Center Midfield'],14.0,955.0
 Mario Vrančić,Bosnia and Herzegovina,Darmstadt 98,['Center Attacking Midfield'],22.0,1053.0
 Marius Gersbeck,Germany,Hertha Berlin,[],,
 Marius Wolf,Germany,Hannover 96,[],2.0,140.0
-Mark Uth,Germany,Hoffenheim,"['Right Midfield', 'Right Attacking Midfield', 'Right Wing']",25.0,1433.0
+Mark Uth,Germany,Hoffenheim,"['Right Wing', 'Right Midfield', 'Right Attacking Midfield']",25.0,1433.0
 Markus Feulner,Germany,Augsburg,['Left Back'],20.0,1196.0
 Markus Suttner,Austria,Ingolstadt,['Left Back'],18.0,1347.0
 Marlon Frey,Germany,Bayer Leverkusen,['Right Back'],9.0,266.0
 Marlon Ritter,Germany,Borussia Mönchengladbach,[],,
 Mart Ristl,Germany,VfB Stuttgart,[],3.0,52.0
-Martin Harnik,Austria,VfB Stuttgart,"['Right Center Forward', 'Right Midfield']",19.0,1021.0
+Martin Harnik,Austria,VfB Stuttgart,"['Right Midfield', 'Right Center Forward']",19.0,1021.0
 Martin Hinteregger,Austria,Borussia Mönchengladbach,[],10.0,669.0
-Martin Stranzl,Austria,Borussia Mönchengladbach,"['Right Center Forward', 'Right Center Back']",4.0,167.0
+Martin Stranzl,Austria,Borussia Mönchengladbach,"['Right Center Back', 'Right Center Forward']",4.0,167.0
 Marvin Friedrich,Germany,Schalke 04,[],2.0,8.0
 Marvin Matip,Cameroon,Ingolstadt,['Right Center Back'],33.0,2927.0
 Marvin Plattenhardt,Germany,Hertha Berlin,['Left Back'],33.0,2970.0
-Marvin Schulz,Germany,Borussia Mönchengladbach,"['Left Defensive Midfield', 'Right Defensive Midfield', 'Left Wing Back']",8.0,407.0
+Marvin Schulz,Germany,Borussia Mönchengladbach,"['Right Defensive Midfield', 'Left Wing Back', 'Left Defensive Midfield']",8.0,407.0
 Marvin Wanitzek,Germany,VfB Stuttgart,['Right Defensive Midfield'],1.0,7.0
 Marwin Hitz,Switzerland,Augsburg,['Goalkeeper'],33.0,2966.0
 Mathew Leckie,Australia,Ingolstadt,['Left Wing'],32.0,2481.0
@@ -326,26 +326,26 @@ Matthias Ostrzolek,Germany,Hamburger SV,[],32.0,2835.0
 Matthias Zimmermann,Germany,VfB Stuttgart,['Right Back'],2.0,165.0
 Maurice Hirsch,Germany,Hannover 96,[],,
 Maurice Multhaup,Germany,Ingolstadt,['Right Wing'],4.0,94.0
-Max Christiansen,Germany,Ingolstadt,"['Center Defensive Midfield', 'Left Center Midfield']",19.0,1053.0
+Max Christiansen,Germany,Ingolstadt,"['Left Center Midfield', 'Center Defensive Midfield']",19.0,1053.0
 Max Grün,Germany,Wolfsburg,[],,
-Max Kruse,Germany,Wolfsburg,"['Right Center Forward', 'Center Forward', 'Left Center Forward']",32.0,2426.0
+Max Kruse,Germany,Wolfsburg,"['Right Center Forward', 'Left Center Forward', 'Center Forward']",32.0,2426.0
 Max Meyer,Germany,Schalke 04,['Right Center Midfield'],32.0,2319.0
-Maximilian Arnold,Germany,Wolfsburg,"['Center Attacking Midfield', 'Right Defensive Midfield', 'Left Center Midfield']",31.0,2060.0
+Maximilian Arnold,Germany,Wolfsburg,"['Left Center Midfield', 'Right Defensive Midfield', 'Center Attacking Midfield']",31.0,2060.0
 Maximilian Beister,Germany,FSV Mainz 05,[],1.0,9.0
 Maximilian Eggestein,Germany,Werder Bremen,['Center Attacking Midfield'],7.0,188.0
 Maximilian Mittelstädt,Germany,Hertha Berlin,[],3.0,185.0
 Medhi Amine El Mouttaqi Benatia,Morocco,Bayern Munich,['Right Center Back'],14.0,979.0
 Melvyn Lorenzen,Germany,Werder Bremen,[],9.0,168.0
 Mevlüt Erdinç,Turkey,Hannover 96,"['Right Defensive Midfield', 'Center Forward']",11.0,401.0
-Michael Gregoritsch,Austria,Hamburger SV,"['Center Attacking Midfield', 'Left Center Midfield']",25.0,1463.0
+Michael Gregoritsch,Austria,Hamburger SV,"['Left Center Midfield', 'Center Attacking Midfield']",25.0,1463.0
 Michael Gspurning,Austria,Schalke 04,[],,
 Michael Stegmayer,Germany,Darmstadt 98,[],,
 Michael Zetterer,Germany,Werder Bremen,[],1.0,90.0
 Miiko Martín Albornoz Inola,Chile,Hannover 96,['Left Back'],23.0,2070.0
 Mijat Gaćinović,Serbia,Eintracht Frankfurt,[],8.0,425.0
-Mike-Steven Bähre,Germany,Hannover 96,"['Center Attacking Midfield', 'Right Wing']",1.0,18.0
+Mike-Steven Bähre,Germany,Hannover 96,"['Right Wing', 'Center Attacking Midfield']",1.0,18.0
 Milan Ivana,Slovakia,Darmstadt 98,['Left Midfield'],1.0,3.0
-Milos Veljkovic,Serbia,Werder Bremen,"['Left Defensive Midfield', 'Right Defensive Midfield']",3.0,96.0
+Milos Veljkovic,Serbia,Werder Bremen,"['Right Defensive Midfield', 'Left Defensive Midfield']",3.0,96.0
 Miloš Jojić,Serbia,FC Köln,['Left Defensive Midfield'],15.0,521.0
 Miloš Pantović,Serbia,Bayern Munich,[],1.0,1.0
 Mitchell James Langerak,Australia,VfB Stuttgart,['Goalkeeper'],2.0,180.0
@@ -362,7 +362,7 @@ Nicklas Bendtner,Denmark,Wolfsburg,[],13.0,436.0
 Nico Beyer,Germany,Hertha Berlin,[],,
 Nico Elvedi,Switzerland,Borussia Mönchengladbach,['Right Center Back'],21.0,1554.0
 Nico Rinderknecht,Germany,Eintracht Frankfurt,"['Right Center Midfield', 'Center Back']",1.0,6.0
-Nico Schulz,Germany,Borussia Mönchengladbach,"['Right Midfield', 'Left Midfield', 'Left Center Midfield']",2.0,61.0
+Nico Schulz,Germany,Borussia Mönchengladbach,"['Left Midfield', 'Left Center Midfield', 'Right Midfield']",2.0,61.0
 Nicolai Müller,Germany,Hamburger SV,['Right Wing'],29.0,2163.0
 Niki Dige Zimling,Denmark,FSV Mainz 05,[],,
 Niklas Feierabend,Germany,Hannover 96,[],,
@@ -370,18 +370,18 @@ Niklas Stark,Germany,Hertha Berlin,['Left Center Back'],21.0,1427.0
 Niklas Süle,Germany,Hoffenheim,['Left Center Back'],33.0,2970.0
 Niko Bungert,Germany,FSV Mainz 05,['Right Center Back'],21.0,1745.0
 Nils-Jonathan Körber,Germany,Hertha Berlin,[],,
-Noah-Joel Sarenren-Bazee,Nigeria,Hannover 96,"['Left Wing', 'Right Wing']",5.0,379.0
+Noah-Joel Sarenren-Bazee,Nigeria,Hannover 96,"['Right Wing', 'Left Wing']",5.0,379.0
 Nuri Şahin,Turkey,Borussia Dortmund,[],9.0,505.0
 Odisseas Vlachodimos,Greece,VfB Stuttgart,[],3.0,204.0
 Oliver Baumann,Germany,Hoffenheim,[],33.0,2970.0
 Oliver Hüsing,Germany,Werder Bremen,"['Left Center Back', 'Center Forward']",1.0,9.0
 Oliver Sorg,Germany,Hannover 96,['Left Back'],20.0,1593.0
 Oscar Wendt,Sweden,Borussia Mönchengladbach,"['Left Back', 'Left Wing Back']",30.0,2637.0
-Pablo Ezequiel De Blasis,Argentina,FSV Mainz 05,"['Right Midfield', 'Right Wing']",26.0,1671.0
+Pablo Ezequiel De Blasis,Argentina,FSV Mainz 05,"['Right Wing', 'Right Midfield']",26.0,1671.0
 Papiss Mison Djilobodji,Senegal,Werder Bremen,['Left Center Back'],14.0,1260.0
 Pascal Groß,Germany,Ingolstadt,['Right Center Midfield'],32.0,2845.0
 Pascal Stenzel,Germany,Borussia Dortmund,[],,
-Patrick Herrmann,Germany,Borussia Mönchengladbach,"['Right Wing Back', 'Left Center Forward', 'Left Wing Back']",18.0,660.0
+Patrick Herrmann,Germany,Borussia Mönchengladbach,"['Left Wing Back', 'Right Wing Back', 'Left Center Forward']",18.0,660.0
 Patrick Platins,Germany,Darmstadt 98,[],,
 Patrick Weihrauch,Germany,Bayern Munich,[],,
 Patrik Džalto,Croatia,Bayer Leverkusen,[],,
@@ -389,11 +389,11 @@ Paul Seguin,Germany,Wolfsburg,['Right Center Midfield'],4.0,181.0
 Paul Verhaegh,Netherlands,Augsburg,['Right Back'],25.0,2199.0
 Pavel Kadeřábek,Czech Republic,Hoffenheim,"['Right Wing Back', 'Right Back']",28.0,2242.0
 Paweł Olkowski,Poland,FC Köln,['Right Wing Back'],19.0,1064.0
-Per Ciljan Skjelbred,Norway,Hertha Berlin,"['Left Defensive Midfield', 'Right Defensive Midfield']",31.0,2692.0
+Per Ciljan Skjelbred,Norway,Hertha Berlin,"['Right Defensive Midfield', 'Left Defensive Midfield']",31.0,2692.0
 Peter Niemeyer,Germany,Darmstadt 98,['Right Defensive Midfield'],31.0,2560.0
 Peter Pekarík,Slovakia,Hertha Berlin,['Right Back'],12.0,1065.0
 Philip Heise,Germany,VfB Stuttgart,[],5.0,157.0
-Philipp Bargfrede,Germany,Werder Bremen,"['Center Defensive Midfield', 'Left Center Midfield']",14.0,1183.0
+Philipp Bargfrede,Germany,Werder Bremen,"['Left Center Midfield', 'Center Defensive Midfield']",14.0,1183.0
 Philipp Hosiner,Austria,FC Köln,[],15.0,602.0
 Philipp Lahm,Germany,Bayern Munich,['Right Back'],26.0,2200.0
 Philipp Max,Germany,Augsburg,['Left Back'],26.0,2097.0
@@ -412,7 +412,7 @@ Raffael Caetano de Araújo,Brazil,Borussia Mönchengladbach,[],31.0,2678.0
 Ragnar Klavan,Estonia,Augsburg,['Left Center Back'],31.0,2786.0
 Ralf Fährmann,Germany,Schalke 04,['Goalkeeper'],34.0,3059.0
 Ramazan Özcan,Austria,Ingolstadt,[],28.0,2520.0
-Raúl Marcelo Bobadilla,Paraguay,Augsburg,"['Center Forward', 'Left Center Forward']",27.0,1883.0
+Raúl Marcelo Bobadilla,Paraguay,Augsburg,"['Left Center Forward', 'Center Forward']",27.0,1883.0
 René Adler,Germany,Hamburger SV,['Goalkeeper'],24.0,2109.0
 Ricardo Iván Rodríguez Araya,Switzerland,Wolfsburg,['Left Back'],24.0,2069.0
 Robbie Kruse,Australia,VfB Stuttgart,['Right Wing'],12.0,476.0
@@ -421,7 +421,7 @@ Robert Lewandowski,Poland,Bayern Munich,['Center Forward'],32.0,2657.0
 Roberto Hilbert,Germany,Bayer Leverkusen,['Right Back'],12.0,783.0
 Robin Knoche,Germany,Wolfsburg,[],11.0,821.0
 Robin Zentner,Germany,FSV Mainz 05,[],,
-Roel Brouwers,Netherlands,Borussia Mönchengladbach,"['Right Center Forward', 'Center Back']",8.0,298.0
+Roel Brouwers,Netherlands,Borussia Mönchengladbach,"['Center Back', 'Right Center Forward']",8.0,298.0
 Roger de Oliveira Bernardo,Brazil,Ingolstadt,['Center Defensive Midfield'],29.0,2503.0
 Romain Brégerie,France,Ingolstadt,[],22.0,1151.0
 Roman Bürki,Switzerland,Borussia Dortmund,['Goalkeeper'],33.0,2970.0
@@ -434,9 +434,9 @@ Roy Beerens,Netherlands,Hertha Berlin,[],2.0,134.0
 Rune Almenning Jarstein,Norway,Hertha Berlin,['Goalkeeper'],29.0,2566.0
 Russell Canouse,United States of America,Hoffenheim,['Center Defensive Midfield'],1.0,28.0
 Salif Sané,Senegal,Hannover 96,['Left Center Back'],31.0,2755.0
-Salomon Armand Magloire Kalou,Côte d'Ivoire,Hertha Berlin,"['Right Midfield', 'Center Attacking Midfield', 'Right Wing']",32.0,2526.0
+Salomon Armand Magloire Kalou,Côte d'Ivoire,Hertha Berlin,"['Right Wing', 'Right Midfield', 'Center Attacking Midfield']",32.0,2526.0
 Sambou Yatabaré,Mali,Werder Bremen,['Right Wing'],8.0,492.0
-Sandro Sirigu,Germany,Darmstadt 98,"['Right Wing Back', 'Center Attacking Midfield']",6.0,135.0
+Sandro Sirigu,Germany,Darmstadt 98,"['Center Attacking Midfield', 'Right Wing Back']",6.0,135.0
 Sandro Wagner,Germany,Darmstadt 98,['Center Forward'],32.0,2501.0
 Santiago García,Argentina,Werder Bremen,['Left Back'],29.0,2460.0
 Sascha Burchert,Germany,Hertha Berlin,[],,
@@ -447,16 +447,16 @@ Sebastian Boenisch,Poland,Bayer Leverkusen,[],8.0,621.0
 Sebastian Jung,Germany,Wolfsburg,"['Right Midfield', 'Right Back']",11.0,542.0
 Sebastian Langkamp,Germany,Hertha Berlin,['Right Center Back'],22.0,1878.0
 Sebastian Rode,Germany,Bayern Munich,[],15.0,428.0
-Sebastian Rudy,Germany,Hoffenheim,"['Left Defensive Midfield', 'Right Defensive Midfield', 'Right Center Midfield']",24.0,1833.0
+Sebastian Rudy,Germany,Hoffenheim,"['Right Center Midfield', 'Right Defensive Midfield', 'Left Defensive Midfield']",24.0,1833.0
 Sebastian Stolze,Germany,Wolfsburg,[],,
 Serdar Taşçı,Germany,Bayern Munich,[],3.0,218.0
 Sereso Geoffroy Gonzaroua Dié,Côte d'Ivoire,VfB Stuttgart,['Right Defensive Midfield'],23.0,1818.0
 Seung-Woo Ryu,Korea (South),Bayer Leverkusen,[],,
 Shawn Parker,Germany,Augsburg,[],,
-Shinji Kagawa,Japan,Borussia Dortmund,"['Left Wing', 'Left Center Midfield']",29.0,2169.0
-Sidney Sam,Germany,Schalke 04,"['Center Attacking Midfield', 'Left Center Midfield']",2.0,21.0
+Shinji Kagawa,Japan,Borussia Dortmund,"['Left Center Midfield', 'Left Wing']",29.0,2169.0
+Sidney Sam,Germany,Schalke 04,"['Left Center Midfield', 'Center Attacking Midfield']",2.0,21.0
 Simon Zoller,Germany,FC Köln,['Left Wing'],24.0,1244.0
-Slobodan Medojević,Serbia,Eintracht Frankfurt,"['Center Attacking Midfield', 'Center Defensive Midfield', 'Right Center Midfield']",14.0,619.0
+Slobodan Medojević,Serbia,Eintracht Frankfurt,"['Right Center Midfield', 'Center Defensive Midfield', 'Center Attacking Midfield']",14.0,619.0
 Slobodan Rajković,Serbia,Darmstadt 98,[],15.0,1016.0
 Sokratis Papastathopoulos,Greece,Borussia Dortmund,"['Right Center Back', 'Left Center Back']",25.0,2124.0
 Sonny Kittel,Germany,Eintracht Frankfurt,['Left Wing'],8.0,293.0
@@ -465,7 +465,7 @@ Stefan Bell,Germany,FSV Mainz 05,['Left Center Back'],30.0,2637.0
 Stefan Kießling,Germany,Bayer Leverkusen,['Right Center Forward'],30.0,1927.0
 Stefan Lex,Germany,Ingolstadt,['Center Defensive Midfield'],21.0,910.0
 Stefan Reinartz,Germany,Eintracht Frankfurt,[],15.0,1202.0
-Stefan Wannenwetsch,Germany,Ingolstadt,"['Center Forward', 'Left Center Midfield']",1.0,38.0
+Stefan Wannenwetsch,Germany,Ingolstadt,"['Left Center Midfield', 'Center Forward']",1.0,38.0
 Steven Zuber,Switzerland,Hoffenheim,[],12.0,592.0
 Suat Serdar,Germany,FSV Mainz 05,['Center Attacking Midfield'],12.0,231.0
 Sven Bender,Germany,Borussia Dortmund,"['Right Center Back', 'Left Center Back']",19.0,1265.0
@@ -480,7 +480,7 @@ Thilo Kehrer,Germany,Schalke 04,[],1.0,2.0
 Thomas Blomeyer,Germany,Ingolstadt,[],,
 Thomas Kessler,Germany,FC Köln,['Goalkeeper'],1.0,90.0
 Thomas Kraft,Germany,Hertha Berlin,['Goalkeeper'],6.0,495.0
-Thomas Müller,Germany,Bayern Munich,"['Center Forward', 'Right Wing']",31.0,2352.0
+Thomas Müller,Germany,Bayern Munich,"['Right Wing', 'Center Forward']",31.0,2352.0
 Thomas Pledl,Germany,Ingolstadt,[],,
 Thorgan Hazard,Belgium,Borussia Mönchengladbach,"['Right Center Forward', 'Left Center Forward']",29.0,1667.0
 Tim Dierßen,Germany,Hannover 96,['Center Attacking Midfield'],1.0,20.0
@@ -493,11 +493,11 @@ Timo Werner,Germany,VfB Stuttgart,['Center Forward'],33.0,2201.0
 Timothy Chandler,United States of America,Eintracht Frankfurt,['Right Wing Back'],12.0,681.0
 Tin Jedvaj,Croatia,Bayer Leverkusen,"['Left Defensive Midfield', 'Right Back']",15.0,959.0
 Tino Dehmelt,Germany,Hamburger SV,[],,
-Tobias Kempe,Germany,Darmstadt 98,"['Left Attacking Midfield', 'Right Wing']",31.0,1353.0
+Tobias Kempe,Germany,Darmstadt 98,"['Right Wing', 'Left Attacking Midfield']",31.0,1353.0
 Tobias Levels,Germany,Ingolstadt,[],16.0,1440.0
 Tobias Sippel,Germany,Borussia Mönchengladbach,['Goalkeeper'],2.0,180.0
-Tobias Strobl,Germany,Hoffenheim,"['Left Defensive Midfield', 'Left Center Back', 'Left Back', 'Left Center Midfield']",26.0,2089.0
-Tobias Werner,Germany,Augsburg,"['Left Wing', 'Left Midfield']",13.0,719.0
+Tobias Strobl,Germany,Hoffenheim,"['Left Back', 'Left Center Midfield', 'Left Center Back', 'Left Defensive Midfield']",26.0,2089.0
+Tobias Werner,Germany,Augsburg,"['Left Midfield', 'Left Wing']",13.0,719.0
 Todor Nedelev,Bulgaria,FSV Mainz 05,[],,
 Tohouri Zahoui Constant Djakpa,Côte d'Ivoire,Eintracht Frankfurt,['Left Wing Back'],12.0,762.0
 Tolga Ciğerci,Turkey,Hertha Berlin,['Left Defensive Midfield'],18.0,1041.0
@@ -506,16 +506,16 @@ Tom Starke,Germany,Bayern Munich,[],,
 Tomáš Pekhart,Czech Republic,Ingolstadt,['Center Forward'],4.0,94.0
 Toni Šunjić,Bosnia and Herzegovina,VfB Stuttgart,['Right Center Back'],19.0,1382.0
 Tony Jantschke,Germany,Borussia Mönchengladbach,['Right Defensive Midfield'],12.0,753.0
-Uffe Manich Bech,Denmark,Hannover 96,"['Left Wing', 'Right Wing']",11.0,687.0
+Uffe Manich Bech,Denmark,Hannover 96,"['Right Wing', 'Left Wing']",11.0,687.0
 Uilson de Souza Paula Júnior,Brazil,Schalke 04,[],23.0,1853.0
 Ulisses Alexandre Garcia Lopes,Switzerland,Werder Bremen,['Left Back'],11.0,598.0
 Valentin Stocker,Switzerland,Hertha Berlin,[],22.0,857.0
-Valmir Sulejmani,Kosovo,Hannover 96,"['Right Center Forward', 'Right Wing']",4.0,127.0
+Valmir Sulejmani,Kosovo,Hannover 96,"['Right Wing', 'Right Center Forward']",4.0,127.0
 Vedad Ibišević,Bosnia and Herzegovina,Hertha Berlin,"['Right Center Forward', 'Center Forward']",26.0,2165.0
-Vladimír Darida,Czech Republic,Hertha Berlin,"['Center Attacking Midfield', 'Right Defensive Midfield', 'Right Wing']",31.0,2588.0
+Vladimír Darida,Czech Republic,Hertha Berlin,"['Right Wing', 'Right Defensive Midfield', 'Center Attacking Midfield']",31.0,2588.0
 Vladlen Yurchenko,Ukraine,Bayer Leverkusen,[],7.0,300.0
 Václav Kadlec,Czech Republic,Eintracht Frankfurt,[],5.0,119.0
-Waldemar Anton,Germany,Hannover 96,"['Right Defensive Midfield', 'Right Wing']",8.0,585.0
+Waldemar Anton,Germany,Hannover 96,"['Right Wing', 'Right Defensive Midfield']",8.0,585.0
 Wendell Nascimento Borges,Brazil,Bayer Leverkusen,['Left Back'],28.0,2411.0
 Xabier Alonso Olano,Spain,Bayern Munich,['Center Defensive Midfield'],26.0,1952.0
 Yann Sommer,Switzerland,Borussia Mönchengladbach,[],32.0,2880.0
@@ -526,7 +526,7 @@ Yannik Oettl,Germany,Augsburg,[],,
 Yoshinori Muto,Japan,FSV Mainz 05,['Left Center Forward'],20.0,1492.0
 Younès Belhanda,Morocco,Schalke 04,['Left Center Midfield'],15.0,828.0
 Yunus Mallı,Turkey,FSV Mainz 05,"['Right Center Forward', 'Left Defensive Midfield']",34.0,2787.0
-Yūya Ōsako,Japan,FC Köln,"['Right Wing Back', 'Right Wing']",25.0,1374.0
+Yūya Ōsako,Japan,FC Köln,"['Right Wing', 'Right Wing Back']",25.0,1374.0
 Zlatko Junuzović,Austria,Werder Bremen,['Left Center Midfield'],30.0,2370.0
 Zoltán Stieber,Hungary,Hamburger SV,[],2.0,10.0
 Ádám Szalai,Hungary,Hannover 96,[],16.0,819.0
