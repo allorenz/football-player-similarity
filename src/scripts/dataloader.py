@@ -1,15 +1,15 @@
 import os
+import json
 import pandas as pd
 from statsbombpy import sb
 from tqdm import tqdm
 from pathlib import Path
 from datetime import datetime
-import json
 
 
 COMPETITION_ID = 9
 SEASON_ID = 27
-PROJECT_ROOT_DIR = Path(__file__).parent.parent
+PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent
 
 
 def log_step(message):
