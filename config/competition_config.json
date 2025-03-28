@@ -1,0 +1,26 @@
+{
+    "bundesliga" : {
+        "competition_id" : 9,
+        "season_id" : 27
+    },
+    "la_liga" : {
+        "competition_id" : 11,
+        "season_id" : 27
+    },
+    "ligue_1" : {
+        "competition_id" : 7,
+        "season_id" : 27
+    },
+    "premier_league" : {
+        "competition_id" : 2,
+        "season_id" : 27
+    },
+    "serie_a" : {
+        "competition_id" : 12,
+        "season_id" : 27
+    },
+    "ucl" :{
+        "competition_id" : 16,
+        "season_id" : 27
+    }
+}

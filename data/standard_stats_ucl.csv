@@ -1,0 +1,37 @@
+player,country,team,position,match_played,minutes_played,subbed_in,subbed_out,unique_positions_played,positions_played,full_match_equivalents
+Antoine Griezmann,France,Atlético Madrid,Forward,1.0,90.0,0.0,0.0,['Left Center Forward'],['Left Center Forward'],1.0
+Augusto Matías Fernández,Argentina,Atlético Madrid,Midfielder,1.0,45.0,0.0,1.0,['Left Defensive Midfield'],['Left Defensive Midfield'],0.5
+Carlos Henrique Casimiro,Brazil,Real Madrid,Midfielder,1.0,90.0,0.0,0.0,['Center Defensive Midfield'],['Center Defensive Midfield'],1.0
+Cristiano Ronaldo dos Santos Aveiro,Portugal,Real Madrid,Forward,1.0,90.0,0.0,0.0,"['Center Forward', 'Left Wing']","['Left Wing', 'Center Forward']",1.0
+Daniel Carvajal Ramos,Spain,Real Madrid,Defender,1.0,51.0,0.0,1.0,['Right Back'],['Right Back'],0.5666666666666667
+Danilo Luiz da Silva,Brazil,Real Madrid,Defender,1.0,74.0,1.0,0.0,['Right Back'],['Right Back'],0.8222222222222222
+Diego Roberto Godín Leal,Uruguay,Atlético Madrid,Defender,1.0,90.0,0.0,0.0,['Left Center Back'],['Left Center Back'],1.0
+Fernando José Torres Sanz,Spain,Atlético Madrid,Forward,1.0,90.0,0.0,0.0,['Right Center Forward'],['Right Center Forward'],1.0
+Filipe Luís Kasmirski,Brazil,Atlético Madrid,Defender,1.0,108.0,0.0,1.0,['Left Back'],"['Left Back', 'Left Back']",1.2
+Francisco Casilla Cortés,Spain,Real Madrid,0,0.0,0.0,0.0,0.0,[],[],0.0
+Francisco Román Alarcón Suárez,Spain,Real Madrid,Midfielder,1.0,54.0,1.0,0.0,['Left Center Midfield'],['Left Center Midfield'],0.6
+Gabriel Fernández Arenas,Spain,Atlético Madrid,Midfielder,1.0,90.0,0.0,0.0,['Right Defensive Midfield'],['Right Defensive Midfield'],1.0
+Gareth Frank Bale,Wales,Real Madrid,Forward,1.0,90.0,0.0,0.0,"['Left Wing', 'Right Wing']","['Right Wing', 'Left Wing']",1.0
+James David Rodríguez Rubio,Colombia,Real Madrid,0,0.0,0.0,0.0,0.0,[],[],0.0
+Jan Oblak,Slovenia,Atlético Madrid,Goalkeeper,1.0,90.0,0.0,0.0,['Goalkeeper'],['Goalkeeper'],1.0
+Jesé Rodríguez Ruiz,Spain,Real Madrid,0,0.0,0.0,0.0,0.0,[],[],0.0
+Jorge Resurrección Merodio,Spain,Atlético Madrid,Midfielder,1.0,115.0,0.0,1.0,"['Left Midfield', 'Left Defensive Midfield']","['Left Midfield', 'Left Defensive Midfield']",1.2777777777777777
+José Ignacio Fernández Iglesias,Spain,Real Madrid,0,0.0,0.0,0.0,0.0,[],[],0.0
+José María Giménez de Vargas,Uruguay,Atlético Madrid,0,0.0,0.0,0.0,0.0,[],[],0.0
+Juan Francisco Torres Belén,Spain,Atlético Madrid,Defender,1.0,90.0,0.0,0.0,['Right Back'],['Right Back'],1.0
+Karim Benzema,France,Real Madrid,Forward,1.0,76.0,0.0,1.0,['Center Forward'],['Center Forward'],0.8444444444444444
+Keylor Navas Gamboa,Costa Rica,Real Madrid,Goalkeeper,1.0,90.0,0.0,0.0,['Goalkeeper'],['Goalkeeper'],1.0
+Kléper Laveran Lima Ferreira,Portugal,Real Madrid,Defender,1.0,90.0,0.0,0.0,['Right Center Back'],['Right Center Back'],1.0
+Lucas Hernández Pi,France,Atlético Madrid,Defender,1.0,17.0,1.0,0.0,['Left Back'],['Left Back'],0.18888888888888888
+Lucas Vázquez Iglesias,Spain,Real Madrid,Forward,1.0,49.0,1.0,0.0,"['Center Forward', 'Right Wing']","['Center Forward', 'Right Wing']",0.5444444444444444
+Luka Modrić,Croatia,Real Madrid,Midfielder,1.0,90.0,0.0,0.0,['Right Center Midfield'],['Right Center Midfield'],1.0
+Marcelo Vieira da Silva Júnior,Brazil,Real Madrid,Defender,1.0,90.0,0.0,0.0,['Left Back'],['Left Back'],1.0
+Miguel Ángel Moyà Rumbo,Spain,Atlético Madrid,0,0.0,0.0,0.0,0.0,[],[],0.0
+Saúl Ñíguez Esclapez,Spain,Atlético Madrid,Midfielder,1.0,90.0,0.0,0.0,['Right Midfield'],['Right Midfield'],1.0
+Sergio Ramos García,Spain,Real Madrid,Defender,1.0,90.0,0.0,0.0,['Left Center Back'],['Left Center Back'],1.0
+Stefan Savić,Montenegro,Atlético Madrid,Defender,1.0,90.0,0.0,0.0,['Right Center Back'],['Right Center Back'],1.0
+Thomas Teye Partey,Ghana,Atlético Madrid,Midfielder,1.0,10.0,1.0,0.0,['Left Defensive Midfield'],['Left Defensive Midfield'],0.1111111111111111
+Tiago Cardoso Mendes,Portugal,Atlético Madrid,0,0.0,0.0,0.0,0.0,[],[],0.0
+Toni Kroos,Germany,Real Madrid,Midfielder,1.0,71.0,0.0,1.0,['Left Center Midfield'],['Left Center Midfield'],0.7888888888888889
+Yannick Ferreira Carrasco,Belgium,Atlético Madrid,Midfielder,1.0,80.0,1.0,0.0,"['Left Midfield', 'Left Defensive Midfield']","['Left Defensive Midfield', 'Left Midfield']",0.8888888888888888
+Ángel Martín Correa,Argentina,Atlético Madrid,0,0.0,0.0,0.0,0.0,[],[],0.0
