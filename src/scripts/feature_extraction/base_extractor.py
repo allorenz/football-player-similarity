@@ -4,10 +4,15 @@ import pandas as pd
 
 class BaseDimensionFeatureExtractor(ABC):
     """Abstract base class for dimension feature extractors"""
-    def __init__(self, df: pd.DataFrame, standard_stats: pd.DataFrame, league:str, dim:str):
+    def __init__(self, df: pd.DataFrame, standard_stats: pd.DataFrame, league:str):
         self.df = df
+    
     @abstractmethod
-    def convert_columns(self, raw_data):
+    def filter_by_dimension(self):
+        pass
+
+    @abstractmethod
+    def convert_columns(self):
         """Main method to extract features for a specific dimension"""
         pass
 

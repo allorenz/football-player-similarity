@@ -42,13 +42,13 @@ class Dataloader:
             log_step("Loading data form local file system")
             file_path = f"{PROJECT_ROOT_DIR}/data/event_data/{file_name}" # PROJECT_ROOT_DIR / "data"
             self.df = pd.read_csv(file_path,dtype=self.dtypes)
-            # return df
+            return self.df
         else:
             log_step("File does not exist, downloading data...")
             self.fetch_data()
             file_path = f"{PROJECT_ROOT_DIR}/data/event_data/{file_name}"
             self.df = pd.read_csv(file_path,dtype=self.dtypes)
-            #return df
+            return self.df
             
 
     def fetch_data(self):

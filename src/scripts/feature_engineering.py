@@ -1,21 +1,29 @@
 """
-TODO:
-Load and execute all feature engineering that were designed inside the notebooks.
+Execute this file to load and apply all feature engineering steps that were 
+originally designed inside the notebooks.
 """
 import os
 import json
+import time
 import pandas as pd
 from pathlib import Path
 from feature_extraction.base_extractor import BaseDimensionFeatureExtractor
 from feature_extraction.goalkeeping_extractor import GoalKeepingFeatureExtractor
+from feature_extraction.defending_extractor import DefendingFeatureExtractor
+from feature_extraction.passing_extractor import PassingFeatureExtractor
+from feature_extraction.possession_extractor import PossessionFeatureExtractor
+from feature_extraction.shooting_extractor import ShootingFeatureExtractor
 from dataloader import Dataloader
+from datetime import datetime
 
 
 PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent
 
 
-with open(f"{PROJECT_ROOT_DIR}/config/competition_config.json", "r") as f:
-    league_mapping = json.load(f)
+def log_step(message):
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    print(f"[{timestamp}] {message}")
+
 
 class FeatureEngineeringPipeline:
     def __init__(self, dimensions=None):
@@ -30,7 +38,7 @@ class FeatureEngineeringPipeline:
         """Add a new dimension extractor to the pipeline"""
         self.dimensions.append(dimension_extractor)
     
-    def process(self, df, standard_stats, league, dim):
+    def process(self, df, standard_stats, league):
         """
         Process raw data through all dimension extractors
         
@@ -38,28 +46,45 @@ class FeatureEngineeringPipeline:
         :return: Processed feature dataframe
         """
         
-        for extractor in self.dimensions:
-            extractor(df, standard_stats, league, dim).run()
+        for extractor_class in self.dimensions:
+            extractor = extractor_class(df, standard_stats, league)
+            log_step(f"{extractor.__class__.__name__}: {league}")
+            extractor.run()
 
-        
-    
 
 if __name__ == "__main__":
-    #league = "bundesliga"
-    dim = "goal_keeping"
+    # get league names
+    with open(f"{PROJECT_ROOT_DIR}/config/competition_config.json", "r") as f:
+        league_mapping = json.load(f)
+    league_names = [c for c in league_mapping.keys() if c != "ucl"] # dont use ucl, it misses multiple columns
 
-    for league in league_mapping.keys():
-        # load standard stats
-        standard_stats = pd.read_csv(f"../../data/standard_stats_{league}.csv").loc[:,["player","full_match_equivalents"]]
+    for league in league_names: # league_names:
+        log_step(f"Feature Extraction for {league}")
+        start = time.time()
+        # load standard stats for players at league
+        standard_stats = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/standard_stats_{league}.csv").loc[:,["player","full_match_equivalents"]]
 
         # load event data
         dataloader = Dataloader(league)
-        dataloader.load_data()
-        df = dataloader.get_dimension("goal_keeping")
+        df = dataloader.load_data()
 
-        # execute pipeline
+        # create pipeline
         pipeline = FeatureEngineeringPipeline()
         pipeline.add_dimension(GoalKeepingFeatureExtractor)
-        pipeline.process(df, standard_stats, league, dim)
+        pipeline.add_dimension(DefendingFeatureExtractor)
+        pipeline.add_dimension(PassingFeatureExtractor)
+        pipeline.add_dimension(PossessionFeatureExtractor)
+        pipeline.add_dimension(ShootingFeatureExtractor)
 
-    # print(GoalKeepingFeatureExtractor(df, standard_stats).convert_columns())
+        # execute pipeline
+        pipeline_start_time = time.time()
+        pipeline.process(df, standard_stats, league)
+        pipeline_end_time = time.time()
+        end = time.time()
+
+        # execution time
+        pipeline_execution_time = pipeline_end_time - pipeline_start_time
+        league_execution_time = end - start
+
+        log_step(f"Pipeline Execution time: {pipeline_execution_time:.2f} seconds")
+        log_step(f"League Execution time: {league_execution_time:.2f} seconds")

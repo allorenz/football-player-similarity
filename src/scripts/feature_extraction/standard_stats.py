@@ -1,3 +1,8 @@
+"""
+TODO: Make this cleaner and place it somewhere!!!
+
+"""
+
 import pandas as pd
 import numpy as np
 import json 
@@ -173,9 +178,9 @@ def analyze_standard_stats(df):
     return standard_stats
 
 """
-TODO: Automate this
-
+Automation
 """
+
 with open(f"{PROJECT_ROOT_DIR}/config/competition_config.json", "r") as f:
     league_mapping = json.load(f)
 

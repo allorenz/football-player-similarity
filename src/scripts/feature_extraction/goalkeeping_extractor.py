@@ -1,9 +1,10 @@
-from feature_extraction.base_extractor import BaseDimensionFeatureExtractor
-from ast import literal_eval
 import pandas as pd
 import numpy as np
 import os
+import json
+from ast import literal_eval
 from pathlib import Path
+from feature_extraction.base_extractor import BaseDimensionFeatureExtractor
 
 PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent.parent
 
@@ -53,11 +54,17 @@ def convert_to_list(input_data):
 
 class GoalKeepingFeatureExtractor(BaseDimensionFeatureExtractor):
 
-    def __init__(self, df: pd.DataFrame, standard_stats: pd.DataFrame, league:str, dim:str):
+    def __init__(self, df: pd.DataFrame, standard_stats: pd.DataFrame, league:str):
         self.df = df
         self.standard_stats = standard_stats
         self.league = league
-        self.dim = dim
+        self.dim = "goal_keeping"
+
+        with open(f"{PROJECT_ROOT_DIR}/config/columns_config.json", 'r') as f:
+            self.columns = json.load(f)
+
+    def filter_by_dimension(self):
+        self.df = self.df.loc[self.df["type"].isin(self.columns[self.dim]["row_filter"]), self.columns[self.dim]["columns"]]
 
     def convert_columns(self):
         # Implement passing-specific feature extraction
@@ -222,8 +229,9 @@ class GoalKeepingFeatureExtractor(BaseDimensionFeatureExtractor):
         file_path = f"{folder_dir}/{self.dim}.csv"
         df.to_csv(file_path,index=False)
 
-
+    
     def run(self):
+        self.filter_by_dimension()
         self.convert_columns()
         result_df = self.extract()
         self.store_data(result_df)
