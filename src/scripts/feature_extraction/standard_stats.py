@@ -13,10 +13,11 @@ from datetime import datetime
 from statsbombpy import sb
 from pathlib import Path
 from collections import Counter
+
 # Run the notebook from inside the notebooks folder
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '..')))
 
-from scripts.dataloader import Dataloader
+from dataloader import Dataloader
 
 PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent.parent
 with open(f"{PROJECT_ROOT_DIR}/config/position_mapping.json","r") as f:
@@ -193,6 +194,19 @@ for league in league_mapping.keys():
     result_df= analyze_standard_stats(df)
     result_df["full_match_equivalents"] = result_df["minutes_played"] / 90
 
+    # clean column position
+    result_df["position"] = result_df["position"].replace(0, "nan")
+    result_df['position'] = result_df['position'].str.replace("Forward, Defender", "Forward", case=False, regex=False)
+    result_df['position'] = result_df['position'].str.replace("Forward, Midfielder, Defender", "Forward", case=False, regex=False)
+    result_df['position'] = result_df['position'].str.replace("Midfielder, Defender", "Midfielder", case=False, regex=False)
+    result_df['position'] = result_df['position'].str.replace("Midfielder, Forward", "Midfielder", case=False, regex=False)
+    result_df['position'] = result_df['position'].str.replace("Forward, Midfielder", "Forward", case=False, regex=False)
+    result_df['position'] = result_df['position'].str.replace("Defender, Forward", "Defender", case=False, regex=False)
+    result_df['position'] = result_df['position'].str.replace("Defender, Midfielder", "Defender", case=False, regex=False)
+
+    # add league column
+    result_df["league"] = league
+    
     folder_dir = f"{PROJECT_ROOT_DIR}/data/"
     os.makedirs(folder_dir, exist_ok=True)
     file_path = f"{folder_dir}/standard_stats_{league}.csv"
