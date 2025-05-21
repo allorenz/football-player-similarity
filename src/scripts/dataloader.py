@@ -102,10 +102,12 @@ class Dataloader:
     
     
 if __name__=="__main__":
-    for league in league_mapping.keys():
-        dataloader = Dataloader(league)
-        dataloader.fetch_data()
+    # download data for all leagues
+    # for league in league_mapping.keys():
+    #     dataloader = Dataloader(league)
+    #     dataloader.fetch_data()
 
-    # dataloader = Dataloader("bundesliga")
-    # dataloader.load_data()
-    # dimension = dataloader.get_dimension("passing")
+    # access raw event data given a league
+    dataloader = Dataloader("bundesliga")
+    dataloader.load_data()
+    dimension = dataloader.get_dimension("standard_stats")
