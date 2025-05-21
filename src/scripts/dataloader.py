@@ -99,7 +99,7 @@ class Dataloader:
     
     def __repr__(self):
         return f"dataloader_{self.league}"
-    
+
     
 if __name__=="__main__":
     # download data for all leagues
