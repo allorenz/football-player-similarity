@@ -1,6 +1,5 @@
 import os 
 import json
-import select
 import pandas as pd
 from pathlib import Path
 from sklearn.preprocessing import StandardScaler
@@ -15,7 +14,7 @@ PROJECT_ROOT_DIR = Path.cwd().parent.parent
 
 
 # === Helper Functions
-def load_standard_stats():
+def load_standard_stats(unique_index=False):
     leagues = ["bundesliga", "la_liga", "ligue_1", "premier_league", "serie_a"]
     file_paths = [f"../../data/standard_stats_{l}.csv" for l in leagues]
     df = pd.DataFrame()
@@ -25,9 +24,13 @@ def load_standard_stats():
         df = pd.concat([df, temp_df], ignore_index=True)
     df = df.set_index("player")
 
+    if unique_index:
+        df = df.loc[~df.index.duplicated(keep='first')]
+
+
     return df
 
-def load_dimension(dim):
+def load_dimension(dim, unique_index=False):
     leagues = ["bundesliga", "la_liga", "ligue_1", "premier_league", "serie_a"]
     file_paths = [f"../../data/processed/{l}/{dim}.csv" for l in leagues]
     df = pd.DataFrame()
@@ -37,9 +40,12 @@ def load_dimension(dim):
         df = pd.concat([df, temp_df], ignore_index=True)
     df = df.set_index("player")
 
+    if unique_index:
+        df = df.loc[~df.index.duplicated(keep='first')]
+
     return df
 
-def filter_df(df_input, match_played=2, minutes_played=90):
+def filter_df(df_input, match_played=2, minutes_played=90) -> pd.DataFrame:
     df_output = df_input.copy()
     df_output =  df_output.loc[(df_output["match_played"]>match_played) &  (df_output["minutes_played"]>minutes_played) ,:]
     return df_output
@@ -125,7 +131,7 @@ if __name__ == "__main__":
 
         for c in config:
             total_selected_features = 0
-            print(f"Processing feature representation: {config[c]["columns_value_type"]}")
+            print(f"Processing feature representation: {config[c]['columns_value_type']}")
             X = df_filtered[config[c]["columns"]]
             y = df_filtered["position"]
 
@@ -141,8 +147,7 @@ if __name__ == "__main__":
                 "selected_columns": list(selected_columns),
                 "n_features" : int(len(selected_columns))
             }
-            print(f"selected features {dim}-{config[c]["columns_value_type"]}: {total_selected_features}")
-
+            print(f"selected features {dim}-{config[c]['columns_value_type']}: {total_selected_features}")
 
         # Create output directory if it doesn't exist
         dir_ex_results = "../../experiment_results/feature_selection"
