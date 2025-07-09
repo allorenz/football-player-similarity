@@ -25,7 +25,7 @@ def log_step(message):
     print(f"[{timestamp}] {message}")
 
 
-class FeatureEngineeringPipeline:
+class OldFeatureEngineeringPipeline:
     def __init__(self, dimensions=None):
         """
         Initialize pipeline with dimension extractors
@@ -52,7 +52,7 @@ class FeatureEngineeringPipeline:
             extractor.run()
 
 
-if __name__ == "__main__":
+def old_pipeline():
     # get league names
     with open(f"{PROJECT_ROOT_DIR}/config/competition_config.json", "r") as f:
         league_mapping = json.load(f)
@@ -69,7 +69,7 @@ if __name__ == "__main__":
         df = dataloader.load_data()
 
         # create pipeline
-        pipeline = FeatureEngineeringPipeline()
+        pipeline = OldFeatureEngineeringPipeline()
         pipeline.add_dimension(GoalKeepingFeatureExtractor)
         pipeline.add_dimension(DefendingFeatureExtractor)
         pipeline.add_dimension(PassingFeatureExtractor)
@@ -88,3 +88,64 @@ if __name__ == "__main__":
 
         log_step(f"Pipeline Execution time: {pipeline_execution_time:.2f} seconds")
         log_step(f"League Execution time: {league_execution_time:.2f} seconds")
+
+class FeatureEngineeringPipeline:
+    def __init__(self, dimensions=None):
+        """
+        Initialize pipeline with dimension extractors
+        
+        :param dimensions: List of dimension extractors
+        """
+        self.dimensions = dimensions or []
+    
+    def add_dimension(self, dimension_extractor):
+        """Add a new dimension extractor to the pipeline"""
+        self.dimensions.append(dimension_extractor)
+    
+    def process(self, df, standard_stats, league):
+        """
+        Process raw data through all dimension extractors
+        
+        :param raw_data: Raw event data
+        :return: Processed feature dataframe
+        """
+        for extractor_class in self.dimensions:
+            extractor = extractor_class(df, standard_stats, league)
+            log_step(f"{extractor.__class__.__name__}: {league}")
+            extractor.run()
+
+
+def main():
+    log_step("Start Feature Extraction Pipeline")
+    start = time.time()
+    # load standard stats for players at league
+    standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv").loc[:,["player","player_id","full_match_equivalents"]]
+
+    # load event data
+    dataloader = Dataloader("../../data/new_approach/all_leagues.parquet")
+    dataloader.load_data()
+    df = dataloader.get_dimension("defending")
+
+    # create pipeline
+    pipeline = FeatureEngineeringPipeline()
+    # pipeline.add_dimension(GoalKeepingFeatureExtractor)
+    pipeline.add_dimension(DefendingFeatureExtractor)
+    # pipeline.add_dimension(PassingFeatureExtractor)
+    # pipeline.add_dimension(PossessionFeatureExtractor)
+    # pipeline.add_dimension(ShootingFeatureExtractor)
+
+    # execute pipeline
+    pipeline_start_time = time.time()
+    pipeline.process(df, standard_stats, None)
+    pipeline_end_time = time.time()
+    end = time.time()
+
+    # execution time
+    pipeline_execution_time = pipeline_end_time - pipeline_start_time
+    league_execution_time = end - start
+
+    log_step(f"Pipeline Execution time: {pipeline_execution_time:.2f} seconds")
+    log_step(f"League Execution time: {league_execution_time:.2f} seconds")
+
+if __name__ == "__main__":
+    main()

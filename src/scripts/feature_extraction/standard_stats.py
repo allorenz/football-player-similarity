@@ -76,7 +76,7 @@ def extract_global_position(positions):
             print(positions_list)
 
 def get_positions_played(df):
-    positions_played_df = df.groupby("player_name").agg(
+    positions_played_df = df.groupby("player_id").agg(
         position=("positions", lambda x: get_most_frequent_pos(x)),
         positions_played=("positions", lambda x: extract_positions(x)),
         unique_positions_played=("positions", lambda x: extract_positions(x,unique=True))
@@ -102,9 +102,9 @@ def get_minutes_played(df):
     df_with_flags["minutes_played_subbed_in"] = match_duration - df_with_flags["minute"]
 
     # filter
-    df_player_subbed_out = df_with_flags.loc[df_with_flags["is_substituted"]==True,["player", "minute"]]
-    df_player_subbed_in = df_with_flags.loc[df_with_flags["is_substituted"]==True, ["substitution_replacement", "minutes_played_subbed_in"]]
-    
+    df_player_subbed_out = df_with_flags.loc[df_with_flags["is_substituted"]==True,["player", "player_id", "minute"]]
+    df_player_subbed_in = df_with_flags.loc[df_with_flags["is_substituted"]==True, ["substitution_replacement", "player_id", "minutes_played_subbed_in"]]
+
     # rename
     df_player_subbed_in = df_player_subbed_in.rename({"substitution_replacement":"player",
                                                       "minutes_played_subbed_in" :"minutes_played"}, axis=1)
@@ -118,17 +118,22 @@ def get_minutes_played(df):
 
     # add remaining players that were not subbed off
     players_not_subbed_off = [player for player in all_players if player not in df_subbed_player["player"].values]
-    df_player_not_subbed_off = pd.DataFrame({"player": players_not_subbed_off, "minutes_played" : 90})
+    # get player_id for players not subbed off
+    player_id_map = df_with_flags.set_index("player")["player_id"].to_dict()
+    df_player_not_subbed_off = pd.DataFrame({
+        "player": players_not_subbed_off,
+        "player_id": [player_id_map.get(player, np.nan) for player in players_not_subbed_off],
+        "minutes_played" : 90
+    })
 
     df_result = pd.concat([df_subbed_player, df_player_not_subbed_off],axis=0).reset_index(drop=True)
     df_result["match_played"] = 1
 
-    return df_result 
-
+    return df_result
 
 def analyze_standard_stats(df):
     match_ids = df["match_id"].unique()
-    columns = ["player", "match_id", "minute", "substitution_replacement", "substitution_outcome"]
+    columns = ["player", "player_id", "match_id", "minute", "substitution_replacement", "substitution_outcome"]
     standard_stats = pd.DataFrame()
     
     log_step("Calculating match_played and minutes_played")
@@ -137,13 +142,14 @@ def analyze_standard_stats(df):
     for match_id in tqdm(match_ids, desc="Concatenating matches", unit="match"):
         current = get_minutes_played(df.loc[df["match_id"]==match_id,columns])
         concated_matches_df = pd.concat([concated_matches_df, current])
-
-    df_match_minutes_played = concated_matches_df.groupby("player").agg(
+    
+    df_match_minutes_played = concated_matches_df.groupby("player_id").agg(
             match_played=("match_played","sum"),
             minutes_played=("minutes_played","sum"),
             subbed_in=("subbed_in","sum"),
             subbed_out=("subbed_out","sum")
         )
+
     
     log_step("Retrieve Lineups from API to map team, country, and positions_played")
     
@@ -153,12 +159,12 @@ def analyze_standard_stats(df):
         lineups = sb.lineups(match_id=match_id) # ["Hertha Berlin"]
         
         for team in lineups.keys():
-            player_information = lineups[team].loc[:, ["player_name","country","positions"]]
+            player_information = lineups[team].loc[:, ["player_name","player_id","country","positions", "jersey_number"]].copy()
             player_information["team"] = team
             df_team_country_concated = pd.concat([df_team_country_concated, player_information], axis=0)
     
             
-    df_team_country = df_team_country_concated.drop_duplicates(subset=['player_name'])
+    df_team_country = df_team_country_concated.drop_duplicates(subset=['player_id'])
     df_team_country = df_team_country.rename({"player_name" : "player"},axis=1)
 
     log_step("Process positions")
@@ -167,30 +173,26 @@ def analyze_standard_stats(df):
 
     log_step("Merge to final dataframe")
     # merge player position to standard stats
-    standard_stats = pd.merge(left=df_match_minutes_played, right=positions_played_df, on="player", how="right")
+    standard_stats = pd.merge(left=df_match_minutes_played, right=positions_played_df, on="player_id", how="right")
     standard_stats = standard_stats.fillna(0) # player with nan did not play
     
     # merge country and team to standard stats
-    standard_stats = pd.merge(left=standard_stats, right=df_team_country,on="player", how="left")
+    standard_stats = pd.merge(left=standard_stats, right=df_team_country,on="player_id", how="left")
     
     # reorder columns and keep only relevant
-    standard_stats = standard_stats[["player","country","team","position","match_played","minutes_played","subbed_in","subbed_out","unique_positions_played","positions_played"]]
+    standard_stats = standard_stats[["player", "player_id","country","team","position","match_played","minutes_played","subbed_in","subbed_out","unique_positions_played","positions_played"]]
     
-    return standard_stats
-
+    return standard_stats#, df_team_country_concated
+  
 """
 Automation
 """
 
-with open(f"{PROJECT_ROOT_DIR}/config/competition_config.json", "r") as f:
-    league_mapping = json.load(f)
-
-for league in league_mapping.keys():
-    dataloader = Dataloader(league)
+if __name__ == "__main__":
+    dataloader = Dataloader(file_path="../../../data/new_approach/new_all_leagues.parquet") # /data/new_approach/all_leagues.parquet
     dataloader.load_data()
-    df = dataloader.get_dimension(dimension="standard_stats",row_filter=False)
-    df.columns
-
+    df = dataloader.get_dimension("standard_stats", row_filter=False)
+    print(df.shape)
     result_df= analyze_standard_stats(df)
     result_df["full_match_equivalents"] = result_df["minutes_played"] / 90
 
@@ -203,12 +205,10 @@ for league in league_mapping.keys():
     result_df['position'] = result_df['position'].str.replace("Forward, Midfielder", "Forward", case=False, regex=False)
     result_df['position'] = result_df['position'].str.replace("Defender, Forward", "Defender", case=False, regex=False)
     result_df['position'] = result_df['position'].str.replace("Defender, Midfielder", "Defender", case=False, regex=False)
-
-    # add league column
-    result_df["league"] = league
     
-    folder_dir = f"{PROJECT_ROOT_DIR}/data/"
+    # store standard stats
+    folder_dir = f"{PROJECT_ROOT_DIR}/data/new_approach"
     os.makedirs(folder_dir, exist_ok=True)
-    file_path = f"{folder_dir}/standard_stats_{league}.csv"
+    file_path = f"{folder_dir}/standard_stats_all.csv"
     result_df.to_csv(file_path,index=False)
     print(result_df)

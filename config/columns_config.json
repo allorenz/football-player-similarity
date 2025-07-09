@@ -26,7 +26,7 @@
     },
     "defending": {
         "columns": [
-            "player","type","location","ball_recovery_recovery_failure", "ball_recovery_offensive", "bad_behaviour_card","foul_committed_card","counterpress",
+            "player", "player_id","type","location","ball_recovery_recovery_failure", "ball_recovery_offensive", "bad_behaviour_card","foul_committed_card","counterpress",
             "block_offensive","block_deflection", "block_save_block","foul_committed_offensive", "foul_committed_penalty", "foul_won_penalty", "interception_outcome",
             "clearance_body_part", "duel_type", "duel_outcome", "under_pressure"
         ],
@@ -37,7 +37,7 @@
         "row_filter": ["Goal Keeper"]
     },
     "standard_stats": {
-        "columns": ["player", "match_id","minute" ,"substitution_replacement","substitution_outcome"],
+        "columns": ["player", "player_id", "match_id","minute" ,"substitution_replacement","substitution_outcome","tactics"],
         "row_filter": []
     }
 } 
