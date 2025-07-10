@@ -147,5 +147,6 @@ def main():
     log_step(f"Pipeline Execution time: {pipeline_execution_time:.2f} seconds")
     log_step(f"League Execution time: {league_execution_time:.2f} seconds")
 
+
 if __name__ == "__main__":
     main()
