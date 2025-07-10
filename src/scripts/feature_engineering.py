@@ -2,19 +2,20 @@
 Execute this file to load and apply all feature engineering steps that were 
 originally designed inside the notebooks.
 """
-import os
 import json
 import time
 import pandas as pd
+
 from pathlib import Path
-from feature_extraction.base_extractor import BaseDimensionFeatureExtractor
+from tqdm import tqdm
+from dataloader import Dataloader
+from datetime import datetime
+
 from feature_extraction.goalkeeping_extractor import GoalKeepingFeatureExtractor
 from feature_extraction.defending_extractor import DefendingFeatureExtractor
 from feature_extraction.passing_extractor import PassingFeatureExtractor
 from feature_extraction.possession_extractor import PossessionFeatureExtractor
 from feature_extraction.shooting_extractor import ShootingFeatureExtractor
-from dataloader import Dataloader
-from datetime import datetime
 
 
 PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent
@@ -23,7 +24,6 @@ PROJECT_ROOT_DIR = Path(__file__).parent.parent.parent
 def log_step(message):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(f"[{timestamp}] {message}")
-
 
 class OldFeatureEngineeringPipeline:
     def __init__(self, dimensions=None):
@@ -109,9 +109,9 @@ class FeatureEngineeringPipeline:
         :param raw_data: Raw event data
         :return: Processed feature dataframe
         """
-        for extractor_class in self.dimensions:
+        for extractor_class in tqdm(self.dimensions, desc="Processing dimensions"):
+            log_step(f"{extractor_class.__name__}: {league}")
             extractor = extractor_class(df, standard_stats, league)
-            log_step(f"{extractor.__class__.__name__}: {league}")
             extractor.run()
 
 
@@ -122,17 +122,17 @@ def main():
     standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv").loc[:,["player","player_id","full_match_equivalents"]]
 
     # load event data
-    dataloader = Dataloader("../../data/new_approach/all_leagues.parquet")
+    dataloader = Dataloader("../../data/new_approach/new_all_leagues.parquet")
     dataloader.load_data()
-    df = dataloader.get_dimension("defending")
+    df = dataloader.get_data()
 
     # create pipeline
     pipeline = FeatureEngineeringPipeline()
-    # pipeline.add_dimension(GoalKeepingFeatureExtractor)
+    pipeline.add_dimension(GoalKeepingFeatureExtractor)
     pipeline.add_dimension(DefendingFeatureExtractor)
-    # pipeline.add_dimension(PassingFeatureExtractor)
-    # pipeline.add_dimension(PossessionFeatureExtractor)
-    # pipeline.add_dimension(ShootingFeatureExtractor)
+    pipeline.add_dimension(PassingFeatureExtractor)
+    pipeline.add_dimension(PossessionFeatureExtractor)
+    pipeline.add_dimension(ShootingFeatureExtractor)
 
     # execute pipeline
     pipeline_start_time = time.time()

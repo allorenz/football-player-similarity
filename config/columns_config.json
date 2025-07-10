@@ -1,7 +1,7 @@
 {
     "shooting": {
         "columns": [
-            "player", "position", "type", "location", "minute", "shot_aerial_won", "play_pattern", "shot_body_part", "shot_end_location",
+            "player", "player_id", "position", "type", "location", "minute", "shot_aerial_won", "play_pattern", "shot_body_part", "shot_end_location",
             "shot_first_time", "shot_outcome", "shot_statsbomb_xg", "shot_technique", "shot_type", "shot_follows_dribble",
             "under_pressure", "match_id", "possession_team"
         ],
@@ -9,7 +9,7 @@
     },
     "passing": {
         "columns": [
-            "player","location","under_pressure","pass_aerial_won","pass_angle","pass_assisted_shot_id","pass_body_part",
+            "player", "player_id","location","under_pressure","pass_aerial_won","pass_angle","pass_assisted_shot_id","pass_body_part",
             "pass_cross","pass_cut_back","pass_deflected","pass_end_location","pass_goal_assist","pass_shot_assist","pass_height",
             "pass_inswinging","pass_length","pass_outcome","pass_outswinging","pass_recipient","pass_recipient_id",
             "pass_switch","pass_technique","pass_through_ball","pass_type","shot_key_pass_id"
@@ -18,7 +18,7 @@
     },
     "possession": {
         "columns": [
-            "player","type","duration","location", "under_pressure","carry_end_location" , 
+            "player", "player_id","type","duration","location", "under_pressure","carry_end_location" , 
            "dribble_nutmeg", "dribble_no_touch",  "dribble_outcome", "dribble_overrun",
            "duel_type","duel_outcome", "counterpress", "ball_receipt_outcome", "foul_won_penalty", "miscontrol_aerial_won","pass_angle", "pass_end_location"
         ],
@@ -33,7 +33,7 @@
         "row_filter": ["Ball Recovery","Bad Behaviour","Pressure","Block","Clearance","Duel","Foul Committed","Shield"]
     },
     "goal_keeping": {
-        "columns": ["player","location","type","under_pressure" ,"goalkeeper_position", "goalkeeper_technique","goalkeeper_body_part","goalkeeper_type","goalkeeper_outcome"],
+        "columns": ["player","player_id","location","type","under_pressure" ,"goalkeeper_position", "goalkeeper_technique","goalkeeper_body_part","goalkeeper_type","goalkeeper_outcome"],
         "row_filter": ["Goal Keeper"]
     },
     "standard_stats": {

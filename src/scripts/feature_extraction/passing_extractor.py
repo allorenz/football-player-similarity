@@ -278,8 +278,8 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
         df_with_flags['low_horizontal_into_box'] = ((self.df['pass_height'] == "Ground Pass") & df_with_flags['horizontal_into_box'])
         
         
-        player_under_pressure_grouping = df_with_flags.groupby(['player', 'under_pressure']).agg(
-            passes_total=('player', 'count'),
+        player_under_pressure_grouping = df_with_flags.groupby(['player_id', 'under_pressure']).agg(
+            passes_total=('player_id', 'count'),
             passes_completed=('is_completed', 'sum'),
             passes_from_attacking_third=('is_attacking_third', 'sum'),
             passes_from_middle_third=('is_middle_third', 'sum'),
@@ -334,13 +334,13 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
         
         player_under_pressure_grouping["key_passes"] = player_under_pressure_grouping['passes_shot_assist'] + player_under_pressure_grouping['passes_goal_assist']
         
-        total_stats = player_under_pressure_grouping.groupby('player').sum()
+        total_stats = player_under_pressure_grouping.groupby('player_id').sum()
         player_under_pressure_grouping = player_under_pressure_grouping.add_prefix('up_')
         player_under_pressure_grouping = player_under_pressure_grouping.reset_index()
         player_under_pressure_grouping = player_under_pressure_grouping[player_under_pressure_grouping["under_pressure"] == True]
         player_under_pressure_grouping = player_under_pressure_grouping.drop("under_pressure", axis=1)
 
-        player_stats = pd.merge(left=total_stats, right=player_under_pressure_grouping, on="player")
+        player_stats = pd.merge(left=total_stats, right=player_under_pressure_grouping, on="player_id")
 
         ### calculate relative values ###
 
@@ -376,28 +376,28 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
 
         # merge standard stats with absolute values (result_df)
         absolute_column_values = [col for col in player_stats.columns if not col.endswith("_%") ]
-        df_stats_per_game = pd.merge(left=self.standard_stats, right=player_stats[absolute_column_values],on="player",how="left")
+        df_stats_per_game = pd.merge(left=self.standard_stats, right=player_stats[absolute_column_values],on="player_id",how="left")
         df_stats_per_game = df_stats_per_game.fillna(0)
 
         # calcuate stats per match and add to result_df
-        for col in df_stats_per_game.drop(["player", "full_match_equivalents"], axis=1).columns:
+        for col in df_stats_per_game.drop(["player", "player_id", "full_match_equivalents"], axis=1).columns:
             col_name = f"{col}_per_match"
             df_stats_per_game[col_name] = (df_stats_per_game[col] / 90).round(3)
 
         # keep only per match stats
-        column_per_match = [col for col in df_stats_per_game.columns if col.endswith("_per_match") or col=="player" ]
+        column_per_match = [col for col in df_stats_per_game.columns if col.endswith("_per_match") or col=="player" or col=="player_id" ]
         df_stats_per_game = df_stats_per_game[column_per_match]
 
         # merge: abosulte, relative, per game values
-        player_stats = pd.merge(left=player_stats, right=df_stats_per_game, on="player", how="right")
+        player_stats = pd.merge(left=player_stats, right=df_stats_per_game, on="player_id", how="right")
         player_stats = player_stats.fillna(0)
 
         return player_stats
     
     def store_data(self, df):
-        folder_dir = f"{PROJECT_ROOT_DIR}/data/processed/{self.league}"
+        folder_dir = f"{PROJECT_ROOT_DIR}/data/new_approach"
         os.makedirs(folder_dir, exist_ok=True)
-        file_path = f"{folder_dir}/{self.dim}.csv"
+        file_path = f"{folder_dir}/{self.dim}_ex.csv"
         df.to_csv(file_path,index=False)
 
     def run(self):

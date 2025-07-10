@@ -132,9 +132,9 @@ class GoalKeepingFeatureExtractor(BaseDimensionFeatureExtractor):
 
 
 
-        total_stats = df_with_flags.groupby(['player']).agg(
+        total_stats = df_with_flags.groupby(['player_id']).agg(
                 # general actions
-                actions_total=('player', 'count'),
+                actions_total=('player_id', 'count'),
                 shots_faced=("is_shot_faced","sum"),
                 goals_conceded=("goal_conceded","sum"), # doesnt account own goals
                 defensive_actions_outside_penalty_area=("action_outside_penalty_area","sum"),
@@ -204,19 +204,19 @@ class GoalKeepingFeatureExtractor(BaseDimensionFeatureExtractor):
 
         # merge standard stats with absolute values (result_df)
         absolute_column_values = [col for col in total_stats.columns if not col.endswith("_%") ]
-        df_stats_per_game = pd.merge(left=self.standard_stats, right=total_stats[absolute_column_values],on="player",how="left")
+        df_stats_per_game = pd.merge(left=self.standard_stats, right=total_stats[absolute_column_values],on="player_id",how="left")
 
         # calcuate stats per match and add to result_df
-        for col in df_stats_per_game.drop(["player", "full_match_equivalents"], axis=1).columns:
+        for col in df_stats_per_game.drop(["player", "player_id", "full_match_equivalents"], axis=1).columns:
             col_name = f"{col}_per_match"
             df_stats_per_game[col_name] = (df_stats_per_game[col] / 90).round(3)
 
         # keep only per match stats
-        column_per_match = [col for col in df_stats_per_game.columns if col.endswith("_per_match") or col=="player" ]
+        column_per_match = [col for col in df_stats_per_game.columns if col.endswith("_per_match") or col=="player" or col=="player_id" ]
         df_stats_per_game = df_stats_per_game[column_per_match]
 
         # merge: abosulte, relative, per game values
-        total_stats = pd.merge(left=total_stats, right=df_stats_per_game, on="player", how="right")
+        total_stats = pd.merge(left=total_stats, right=df_stats_per_game, on="player_id", how="right")
 
         # many field players have no goal keeper attributes
         total_stats = total_stats.fillna(0)
@@ -224,9 +224,9 @@ class GoalKeepingFeatureExtractor(BaseDimensionFeatureExtractor):
         return total_stats
 
     def store_data(self, df):
-        folder_dir = f"{PROJECT_ROOT_DIR}/data/processed/{self.league}"
+        folder_dir = f"{PROJECT_ROOT_DIR}/data/new_approach"
         os.makedirs(folder_dir, exist_ok=True)
-        file_path = f"{folder_dir}/{self.dim}.csv"
+        file_path = f"{folder_dir}/{self.dim}_ex.csv"
         df.to_csv(file_path,index=False)
 
     

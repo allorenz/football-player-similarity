@@ -68,7 +68,7 @@ def count_important_goals(df):
     results = defaultdict(list)
 
     for match_id in df["match_id"].unique():
-        match = df.loc[(df["match_id"] == match_id)  & (df["shot_outcome"] == "Goal"), ["match_id", "player","minute","possession_team"]]
+        match = df.loc[(df["match_id"] == match_id)  & (df["shot_outcome"] == "Goal"), ["match_id", "player","player_id","minute","possession_team"]]
         match = match.sort_values("minute", ascending=True)
         team_names = match['possession_team'].unique()
         team_scores = {team: 0 for team in team_names}
@@ -80,23 +80,23 @@ def count_important_goals(df):
             
             # first goal
             if (sum(scores) == 1):
-                results[match.iloc[i]["player"]].append("first_goal")
+                results[match.iloc[i]["player_id"]].append("first_goal")
             # equalizer
             elif (len(scores) > 1) and (scores[0] == scores[1]):
                 is_equalized=True
-                results[match.iloc[i]["player"]].append("equalizer")
+                results[match.iloc[i]["player_id"]].append("equalizer")
             # taking the lead
             elif (len(scores) > 1) and (scores[0]>scores[1] or scores[1]>scores[0]) and is_equalized:
                 is_equalized=False
-                results[match.iloc[i]["player"]].append("leading_goal")
+                results[match.iloc[i]["player_id"]].append("leading_goal")
 
     df_results = pd.DataFrame([
-        {"player": player, "event": event}
-        for player, events in results.items()
+        {"player_id": player_id, "event": event}
+        for player_id, events in results.items()
         for event in events
     ])
 
-    df_event_counts = df_results.groupby(["player", "event"]).size().unstack(fill_value=0).reset_index()
+    df_event_counts = df_results.groupby(["player_id", "event"]).size().unstack(fill_value=0).reset_index()
     return df_event_counts
 
 class ShootingFeatureExtractor(BaseDimensionFeatureExtractor):
@@ -197,7 +197,7 @@ class ShootingFeatureExtractor(BaseDimensionFeatureExtractor):
         df_with_flags["is_last_minute_goal"] = (self.df["minute"] >= threshold_last_minute_goal) & (df_with_flags["is_goal"])
 
 
-        player_under_pressure_grouping = df_with_flags.groupby(['player',"under_pressure"]).agg(
+        player_under_pressure_grouping = df_with_flags.groupby(['player_id',"under_pressure"]).agg(
             # goals 
             goals=('is_goal', "sum"),
             goals_penalty=("penalty_goal","sum"),
@@ -217,7 +217,7 @@ class ShootingFeatureExtractor(BaseDimensionFeatureExtractor):
             goals_short_distance=("goal_is_short_distance","sum"),
             goals_avg_distance=("goal-shot_distance", lambda x: x[df_with_flags["is_goal"]==True].mean()),
             # shots
-            shots_total=('player', "count"),
+            shots_total=('player_id', "count"),
             shots_on_target=("shot_on_target","sum"),
             shots_from_freekick = ('is_freekick', "sum"),
             shots_from_penalty = ('is_penalty', "sum"),
@@ -250,7 +250,7 @@ class ShootingFeatureExtractor(BaseDimensionFeatureExtractor):
 
         )
 
-        total_stats = player_under_pressure_grouping.groupby('player').sum()
+        total_stats = player_under_pressure_grouping.groupby('player_id').sum()
         
         player_under_pressure_grouping = player_under_pressure_grouping.add_prefix('up_')
         player_under_pressure_grouping = player_under_pressure_grouping.reset_index()
@@ -260,8 +260,8 @@ class ShootingFeatureExtractor(BaseDimensionFeatureExtractor):
         important_goal_counts = count_important_goals(self.df)
         important_goal_counts["goals_important"] = important_goal_counts["first_goal"] + important_goal_counts["equalizer"] + important_goal_counts["leading_goal"]
 
-        player_stats = pd.merge(left=total_stats, right=player_under_pressure_grouping, on="player",how="left")
-        player_stats = pd.merge(left=player_stats, right=important_goal_counts, on="player",how="left")
+        player_stats = pd.merge(left=total_stats, right=player_under_pressure_grouping, on="player_id",how="left")
+        player_stats = pd.merge(left=player_stats, right=important_goal_counts, on="player_id",how="left")
 
         ### calculate relative values ###
 
@@ -294,28 +294,28 @@ class ShootingFeatureExtractor(BaseDimensionFeatureExtractor):
 
         # merge standard stats with absolute values (result_df)
         absolute_column_values = [col for col in player_stats.columns if not col.endswith("_%") ]
-        df_stats_per_game = pd.merge(left=self.standard_stats, right=player_stats[absolute_column_values],on="player",how="left")
+        df_stats_per_game = pd.merge(left=self.standard_stats, right=player_stats[absolute_column_values],on="player_id",how="left")
         df_stats_per_game = df_stats_per_game.fillna(0)
 
         # calcuate stats per match and add to result_df
-        for col in df_stats_per_game.drop(["player", "full_match_equivalents"], axis=1).columns:
+        for col in df_stats_per_game.drop(["player","player_id", "full_match_equivalents"], axis=1).columns:
             col_name = f"{col}_per_match"
             df_stats_per_game[col_name] = (df_stats_per_game[col] / 90).round(3)
 
         # keep only per match stats
-        column_per_match = [col for col in df_stats_per_game.columns if col.endswith("_per_match") or col=="player" ]
+        column_per_match = [col for col in df_stats_per_game.columns if col.endswith("_per_match") or col=="player" or col=="player_id"]
         df_stats_per_game = df_stats_per_game[column_per_match]
 
         # merge: abosulte, relative, per game values
-        player_stats = pd.merge(left=player_stats, right=df_stats_per_game, on="player", how="right")
+        player_stats = pd.merge(left=player_stats, right=df_stats_per_game, on="player_id", how="right")
         player_stats = player_stats.fillna(0)
         
         return player_stats
     
     def store_data(self, df):
-        folder_dir = f"{PROJECT_ROOT_DIR}/data/processed/{self.league}"
+        folder_dir = f"{PROJECT_ROOT_DIR}/data/new_approach"
         os.makedirs(folder_dir, exist_ok=True)
-        file_path = f"{folder_dir}/{self.dim}.csv"
+        file_path = f"{folder_dir}/{self.dim}_ex.csv"
         df.to_csv(file_path,index=False)
 
     def run(self):
