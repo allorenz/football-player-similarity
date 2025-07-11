@@ -47,7 +47,7 @@ def load_dimension(dim, unique_index=False):
 
 def filter_df(df_input, match_played=2, minutes_played=90) -> pd.DataFrame:
     df_output = df_input.copy()
-    df_output =  df_output.loc[(df_output["match_played"]>match_played) &  (df_output["minutes_played"]>minutes_played) ,:]
+    df_output =  df_output.loc[(df_output["match_played"]>=match_played) &  (df_output["minutes_played"]>=minutes_played) ,:]
     return df_output
 
 def feature_selection(X, y, model, scale_data=True):
@@ -99,16 +99,19 @@ if __name__ == "__main__":
     for dim in dimensions:
         print(f"Current dimension: {dim}")
         # load
-        df_dimension = load_dimension(dim)
-        df_standard_stats = load_standard_stats()
+        df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})#load_dimension(dim)
+        df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv",dtype={"player_id":"int32"})#load_standard_stats()
 
         # merge and filter
-        df_full = pd.merge(left=df_standard_stats[["position","match_played","minutes_played"]],
-            right=df_dimension,
-            left_index=True, 
-            right_index=True)
+        df_full = pd.merge(
+            left=df_standard_stats[["position", "player_id", "match_played","minutes_played"]],
+            right=df_dimension.loc[:, df_dimension.columns != "player"],
+            left_on="player_id", 
+            right_on="player_id",
+            how="left"
+        )
         df_filtered = filter_df(df_full, match_played=2, minutes_played=90)
-
+        
         # prepare columns
         target_column = "position"
         columns_absolute_values = [col for col in df_filtered.columns if not col.endswith("_%") and not col.endswith("_per_match") and col != target_column and col != "match_played" and col != "minutes_played"]
@@ -152,8 +155,8 @@ if __name__ == "__main__":
         # Create output directory if it doesn't exist
         dir_ex_results = "../../experiment_results/feature_selection"
         os.makedirs(dir_ex_results, exist_ok=True)    
-        with open(f"{dir_ex_results}/{dim}.json", "w") as f:
+        with open(f"{dir_ex_results}/new_{dim}.json", "w") as f:
             json.dump(results, f, indent=2)
-        print(f"Results saved to {dir_ex_results}/{dim}.json")
+        print(f"Results saved to {dir_ex_results}/new_{dim}.json")
 
     print("### Feature Selection Done. ###")

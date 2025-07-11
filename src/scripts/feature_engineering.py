@@ -115,14 +115,14 @@ class FeatureEngineeringPipeline:
             extractor.run()
 
 
-def main():
+def run_feature_engineering(standard_stats_path:str , raw_event_data_path: str):
     log_step("Start Feature Extraction Pipeline")
     start = time.time()
     # load standard stats for players at league
-    standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv").loc[:,["player","player_id","full_match_equivalents"]]
+    standard_stats = pd.read_csv(standard_stats_path).loc[:,["player","player_id","full_match_equivalents"]]
 
     # load event data
-    dataloader = Dataloader("../../data/new_approach/new_all_leagues.parquet")
+    dataloader = Dataloader(raw_event_data_path)
     dataloader.load_data()
     df = dataloader.get_data()
 
@@ -149,4 +149,12 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        log_step("Starting feature engineering process...")
+        run_feature_engineering(
+            standard_stats_path="../../data/new_approach/standard_stats_all.csv",
+            raw_event_data_path="../../data/new_approach/new_all_leagues.parquet"
+        )
+        log_step("Feature engineering process completed successfully.")
+    except Exception as e:
+        log_step(f"An error occurred: {e}")

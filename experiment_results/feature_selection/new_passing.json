@@ -1,0 +1,118 @@
+{
+  "conf_1": {
+    "scores": {
+      "Defender": {
+        "precision": 0.9428571428571428,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.9565217391304348,
+        "support": 170.0
+      },
+      "Forward": {
+        "precision": 0.7175572519083969,
+        "recall": 0.8623853211009175,
+        "f1-score": 0.7833333333333333,
+        "support": 109.0
+      },
+      "Goalkeeper": {
+        "precision": 1.0,
+        "recall": 0.9565217391304348,
+        "f1-score": 0.9777777777777777,
+        "support": 46.0
+      },
+      "Midfielder": {
+        "precision": 0.8677685950413223,
+        "recall": 0.7191780821917808,
+        "f1-score": 0.7865168539325843,
+        "support": 146.0
+      },
+      "accuracy": 0.8662420382165605,
+      "macro avg": {
+        "precision": 0.8820457474517155,
+        "recall": 0.8771683444293127,
+        "f1-score": 0.8760374260435326,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.8730226531205151,
+        "recall": 0.8662420382165605,
+        "f1-score": 0.8658201007164381,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "passes_from_middle_third",
+      "passes_from_defending_third",
+      "passes_into_goal_area",
+      "passes_within_attacking_third_completed",
+      "passes_medium_total",
+      "passes_long_completed",
+      "passes_cross",
+      "passes_vertical_into_the_box",
+      "passes_horizontal_into_the_box",
+      "passes_progressive_completed",
+      "passes_backward",
+      "passes_backward_completed",
+      "passes_long_vertical",
+      "passes_long_vertical_from_defending_third",
+      "passes_long_vertical_from_mid_third",
+      "up_passes_from_middle_third",
+      "up_passes_from_defending_third",
+      "up_passes_into_attacking_third",
+      "up_passes_short_total",
+      "up_passes_progressive_completed"
+    ],
+    "n_features": 20
+  },
+  "conf_2": {
+    "scores": {
+      "Defender": {
+        "precision": 0.7892156862745098,
+        "recall": 0.9470588235294117,
+        "f1-score": 0.8609625668449198,
+        "support": 170.0
+      },
+      "Forward": {
+        "precision": 0.7256637168141593,
+        "recall": 0.7522935779816514,
+        "f1-score": 0.7387387387387387,
+        "support": 109.0
+      },
+      "Goalkeeper": {
+        "precision": 0.9787234042553191,
+        "recall": 1.0,
+        "f1-score": 0.989247311827957,
+        "support": 46.0
+      },
+      "Midfielder": {
+        "precision": 0.7289719626168224,
+        "recall": 0.5342465753424658,
+        "f1-score": 0.616600790513834,
+        "support": 146.0
+      },
+      "accuracy": 0.7791932059447984,
+      "macro avg": {
+        "precision": 0.8056436924902026,
+        "recall": 0.8083997442133822,
+        "f1-score": 0.8013873519813624,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.7743422397817639,
+        "recall": 0.7791932059447984,
+        "f1-score": 0.769459130881666,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "pass_accuracy_%",
+      "up_pass_accuracy_%",
+      "pass_accuracy_progressive_%",
+      "pass_accuracy_backward_%",
+      "pass_horizontal_backward_%",
+      "up_pass_accuracy_backward_%",
+      "pass_progressive_lead_to_shot_%",
+      "pass_mean_distance_%"
+    ],
+    "n_features": 8
+  }
+}

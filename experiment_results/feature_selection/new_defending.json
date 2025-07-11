@@ -1,0 +1,106 @@
+{
+  "conf_1": {
+    "scores": {
+      "Defender": {
+        "precision": 0.935672514619883,
+        "recall": 0.9411764705882353,
+        "f1-score": 0.9384164222873901,
+        "support": 170.0
+      },
+      "Forward": {
+        "precision": 0.7850467289719626,
+        "recall": 0.7706422018348624,
+        "f1-score": 0.7777777777777778,
+        "support": 109.0
+      },
+      "Goalkeeper": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 46.0
+      },
+      "Midfielder": {
+        "precision": 0.7891156462585034,
+        "recall": 0.7945205479452054,
+        "f1-score": 0.7918088737201365,
+        "support": 146.0
+      },
+      "accuracy": 0.861995753715499,
+      "macro avg": {
+        "precision": 0.8774587224625873,
+        "recall": 0.8765848050920758,
+        "f1-score": 0.8770007684463261,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.8616673148557654,
+        "recall": 0.861995753715499,
+        "f1-score": 0.8618103293625776,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "ball_recovery_successful",
+      "pressure_on_opponent",
+      "pressure_on_opponent_defending_third",
+      "pressure_on_opponent_middle_third",
+      "pressure_on_opponent_attacking_third",
+      "counterpressing_total",
+      "counterpressing_opponent_middle_third",
+      "block_total",
+      "block_during_counterpress",
+      "clearance_total",
+      "tackling_won",
+      "tackling_in_defending_third"
+    ],
+    "n_features": 12
+  },
+  "conf_2": {
+    "scores": {
+      "Defender": {
+        "precision": 0.8770949720670391,
+        "recall": 0.9235294117647059,
+        "f1-score": 0.8997134670487106,
+        "support": 170.0
+      },
+      "Forward": {
+        "precision": 0.7706422018348624,
+        "recall": 0.7706422018348624,
+        "f1-score": 0.7706422018348624,
+        "support": 109.0
+      },
+      "Goalkeeper": {
+        "precision": 1.0,
+        "recall": 0.9347826086956522,
+        "f1-score": 0.9662921348314607,
+        "support": 46.0
+      },
+      "Midfielder": {
+        "precision": 0.7928571428571428,
+        "recall": 0.7602739726027398,
+        "f1-score": 0.7762237762237763,
+        "support": 146.0
+      },
+      "accuracy": 0.8386411889596603,
+      "macro avg": {
+        "precision": 0.8601485791897611,
+        "recall": 0.8473070487244901,
+        "f1-score": 0.8532178949847025,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.8383509301667506,
+        "recall": 0.8386411889596603,
+        "f1-score": 0.8380666643932044,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "pressure_on_opponent_middle_third_%",
+      "pressure_on_opponent_attacking_third_%",
+      "tackling_in_defending_third_%",
+      "tackling_in_middle_third_%"
+    ],
+    "n_features": 4
+  }
+}

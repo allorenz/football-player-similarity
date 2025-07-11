@@ -2,41 +2,45 @@
 Fix:
 - goalkeeping has similar columns to shooting. fix this
 """
-
+import os
 import json
 import pandas as pd
 from feature_selection import load_dimension, load_standard_stats, filter_df, train_evaluate_model
-
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 
 def get_data(match_played=2, minutes_played=90):
     """Merges all dimensions and applies filters"""
     # vars
     dimensions = ["defending","possession", "passing", "shooting"] # "goal_keeping"]
-    df_standard_stats = load_standard_stats(unique_index=True)
+    df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
 
     # Merge all dimensions
-    df = df_standard_stats[["position", "match_played", "minutes_played"]].copy()
+    df = df_standard_stats[["player_id","position", "match_played", "minutes_played"]].copy()
     for dim in dimensions:
         # load
-        df_dimension = load_dimension(dim,unique_index=True)
-        print(f"Dim shape{df_dimension.shape}")
+        df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
+        print(f"Dim {dim} shape{df_dimension.shape}")
+
         # merge and update base df
         df = pd.merge(
             left=df,
-            right=df_dimension,
-            left_index=True, 
-            right_index=True,
-            how="inner"  # optional, prevents dropping unmatched rows
+            right=df_dimension.loc[:, df_dimension.columns != "player"],
+            left_on="player_id", 
+            right_on="player_id",
+            how="left"
         )
     print(f"Merge shape: {df.shape}")
-    
+
     # filter rows
     print(f"Apply filters: match_played={match_played} , minutes_player={minutes_played}")
     df_filtered = filter_df(df, match_played=match_played, minutes_played=minutes_played)
+
+    
     
     # filter columns
-    config_1_columns = ["position"]
-    config_2_columns = ["position"]
+    config_1_columns = ["player_id","position"]
+    config_2_columns = ["player_id","position"]
 
     for dim in dimensions:
         path = f"../../experiment_results/feature_selection/{dim}.json"
@@ -58,7 +62,29 @@ def get_data(match_played=2, minutes_played=90):
 
 
 if __name__ == "__main__":
+    print("Get data for experiments")
     experiments_tuple = get_data()
     df_1, df_2 = experiments_tuple
 
-    print(df_2["position"])
+    # experiment 1
+    print("Prepare experiment 1")
+    df_1 = df_1.set_index("player_id")
+    X = df_1.drop(columns=["position"])
+    y = df_1["position"]
+    print(f"X shape: {X.shape}, y shape: {y.shape}")
+    
+    models = {
+        "logistic_regression": LogisticRegression(penalty="l1", solver="liblinear", C=1),
+        "random_forest": RandomForestClassifier(n_estimators=100, random_state=42)
+    }
+    dir_ex_results = "../../experiment_results/modeling"
+    os.makedirs(dir_ex_results, exist_ok=True)
+
+    for model_name, model in models.items():
+        print(f"Train and evaluate model for {model_name.replace('_', ' ').title()}")
+        ex1_results = train_evaluate_model(X, y, model, scale=True)
+        print(f"Experiment 1 results for {model_name}:", ex1_results)
+        result_path = f"{dir_ex_results}/ex1_{model_name}.json"
+        with open(result_path, "w") as f:
+            json.dump(ex1_results, f, indent=2)
+        print(f"Results saved to {result_path}")

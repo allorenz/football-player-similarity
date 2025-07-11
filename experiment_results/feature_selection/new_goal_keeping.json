@@ -1,0 +1,94 @@
+{
+  "conf_1": {
+    "scores": {
+      "Defender": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1-score": 0.5714285714285714,
+        "support": 170.0
+      },
+      "Forward": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 109.0
+      },
+      "Goalkeeper": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 46.0
+      },
+      "Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 146.0
+      },
+      "accuracy": 0.4585987261146497,
+      "macro avg": {
+        "precision": 0.35,
+        "recall": 0.5,
+        "f1-score": 0.39285714285714285,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.24203821656050956,
+        "recall": 0.4585987261146497,
+        "f1-score": 0.3039126478616924,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "avg_distance_to_goal",
+      "avg_distance_to_goal_saved_shots",
+      "avg_distance_to_goal_goals_conceded"
+    ],
+    "n_features": 3
+  },
+  "conf_2": {
+    "scores": {
+      "Defender": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1-score": 0.5714285714285714,
+        "support": 170.0
+      },
+      "Forward": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 109.0
+      },
+      "Goalkeeper": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 46.0
+      },
+      "Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 146.0
+      },
+      "accuracy": 0.4585987261146497,
+      "macro avg": {
+        "precision": 0.35,
+        "recall": 0.5,
+        "f1-score": 0.39285714285714285,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.24203821656050956,
+        "recall": 0.4585987261146497,
+        "f1-score": 0.3039126478616924,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "shots_on_target_%"
+    ],
+    "n_features": 1
+  }
+}

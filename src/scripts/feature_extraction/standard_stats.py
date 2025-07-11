@@ -180,7 +180,7 @@ def analyze_standard_stats(df):
     standard_stats = pd.merge(left=standard_stats, right=df_team_country,on="player_id", how="left")
     
     # reorder columns and keep only relevant
-    standard_stats = standard_stats[["player", "player_id","country","team","position","match_played","minutes_played","subbed_in","subbed_out","unique_positions_played","positions_played"]]
+    standard_stats = standard_stats[["player", "player_id","country","team","competition","position","match_played","minutes_played","subbed_in","subbed_out","unique_positions_played","positions_played"]]
     
     return standard_stats#, df_team_country_concated
   
