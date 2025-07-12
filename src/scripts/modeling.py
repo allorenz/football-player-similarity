@@ -66,25 +66,28 @@ if __name__ == "__main__":
     experiments_tuple = get_data()
     df_1, df_2 = experiments_tuple
 
-    # experiment 1
-    print("Prepare experiment 1")
-    df_1 = df_1.set_index("player_id")
-    X = df_1.drop(columns=["position"])
-    y = df_1["position"]
-    print(f"X shape: {X.shape}, y shape: {y.shape}")
-    
-    models = {
-        "logistic_regression": LogisticRegression(penalty="l1", solver="liblinear", C=1),
-        "random_forest": RandomForestClassifier(n_estimators=100, random_state=42)
-    }
-    dir_ex_results = "../../experiment_results/modeling"
-    os.makedirs(dir_ex_results, exist_ok=True)
+    for experiment in zip([df_1, df_2], ["absolute_values", "relative_values"]):
+        df_ex, ex_name = experiment
+        print(f"Experiment: {ex_name}, shape: {df_ex.shape}")
 
-    for model_name, model in models.items():
-        print(f"Train and evaluate model for {model_name.replace('_', ' ').title()}")
-        ex1_results = train_evaluate_model(X, y, model, scale=True)
-        print(f"Experiment 1 results for {model_name}:", ex1_results)
-        result_path = f"{dir_ex_results}/ex1_{model_name}.json"
-        with open(result_path, "w") as f:
-            json.dump(ex1_results, f, indent=2)
-        print(f"Results saved to {result_path}")
+        print("Prepare experiment")
+        df_ex = df_ex.set_index("player_id")
+        X = df_ex.drop(columns=["position"])
+        y = df_ex["position"]
+        print(f"X shape: {X.shape}, y shape: {y.shape}")
+        
+        models = {
+            "logistic_regression": LogisticRegression(penalty="l1", solver="liblinear", C=1),
+            "random_forest": RandomForestClassifier(n_estimators=100, random_state=42)
+        }
+        dir_ex_results = "../../experiment_results/modeling"
+        os.makedirs(dir_ex_results, exist_ok=True)
+
+        for model_name, model in models.items():
+            print(f"Train and evaluate model for {model_name.replace('_', ' ').title()}")
+            ex1_results = train_evaluate_model(X, y, model, scale=True)
+            print(f"Experiment 1 results for {model_name}:", ex1_results)
+            result_path = f"{dir_ex_results}/expt_{ex_name}_{model_name}.json"
+            with open(result_path, "w") as f:
+                json.dump(ex1_results, f, indent=2)
+            print(f"Results saved to {result_path}")
