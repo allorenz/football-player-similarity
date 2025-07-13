@@ -67,7 +67,7 @@ class Recommender:
 
         # Aggregate scores
         self.df_cosine['avg_sim'] = self.df_cosine.mean(axis=1)
-        self.df_cosine['weighted_avg'] = self.df_cosine.apply(weighted_avg, axis=1)
+        self.df_cosine['weighted_avg'] = self.df_cosine.apply(weighted_avg, axis=1, args=(self.dimensions,self.weights))
 
     def build_result_dataframe(self):
         """built output dataframe with player information and cosine similarities"""
@@ -80,10 +80,12 @@ class Recommender:
         ).sort_values(by="avg_sim", ascending=False)
 
     def plot_results(self):
-        plot_boxplots(self.df_result)
-        plot_distribution_plot(self.df_result)
+        plot_boxplots(self.df_result, self.dimensions)
+        plot_distribution_plot(self.df_result, self.dimensions)
 
-    def recommend(self, query_player_name="Thomas Müller") -> pd.DataFrame:
+    def recommend(self, query_player_name="Thomas Müller", dimensions=["defending", "passing","possession","shooting"], weights = None) -> pd.DataFrame:
+        self.dimensions = dimensions
+        self.weights = weights
         # init query player
         self.query_player_name = query_player_name
 
@@ -142,16 +144,18 @@ def get_data(match_played=2, minutes_played=90):
 
     return (df_filtered.loc[:,config_1_columns].copy(), df_filtered.loc[:,config_2_columns].copy())
 
-def weighted_avg(row):
-    weights = [1, 1, 1, 3]
-    values = row[['sim_defending', 'sim_possession', 'sim_passing', 'sim_shooting']]
+def weighted_avg(row, dimensions, weights):
+    if weights is None:
+        weights = [1 for _ in range(len(dimensions))]
+    col = [f"sim_{d}"for d in dimensions]
+    values = row[col]
     return (values * weights).sum() / sum(weights)
 
 
-def plot_boxplots(df, save_path="../../out/plots/boxplot.png"):
+def plot_boxplots(df, dimensions, save_path="../../out/plots/boxplot.png"):
     import matplotlib.pyplot as plt
 
-    columns_to_plot = ['sim_defending', 'sim_possession', 'sim_passing', 'sim_shooting']
+    columns_to_plot = [f"sim_{d}"for d in dimensions]
     data_to_plot = df[columns_to_plot]
 
     # Plotting
@@ -169,7 +173,7 @@ def plot_boxplots(df, save_path="../../out/plots/boxplot.png"):
     plt.close()
 
 
-def plot_distribution_plot(df, save_path="../../out/plots/distribution_plot.png"):
+def plot_distribution_plot(df, dimensions, save_path="../../out/plots/distribution_plot.png"):
     import seaborn as sns
     import matplotlib.pyplot as plt
     # Set up plot style
@@ -177,7 +181,7 @@ def plot_distribution_plot(df, save_path="../../out/plots/distribution_plot.png"
 
     # Create a figure with subplots
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
-    columns = ['sim_defending', 'sim_possession', 'sim_passing', 'sim_shooting']
+    columns = [f"sim_{d}"for d in dimensions]
 
     # Flatten axes for easy indexing
     axes = axes.flatten()
