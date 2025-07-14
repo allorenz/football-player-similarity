@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 rec = Recommender()
 
 # --- Streamlit App ---
-st.title("Player Recommendation System (Top 5 Leagues 2015/16")
+st.title("Player Recommendation System (Top 5 Leagues 2015/16)")
 
 # Sidebar
 st.sidebar.header("Select Player")
@@ -59,5 +59,6 @@ if selected_player and selected_dimensions:
     output_df = rec.recommend(selected_player, selected_dimensions, weights=dimension_weights_list)
     st.subheader(f"Recommendations for {selected_player} based on weighted dimensions:")
     st.dataframe(output_df, use_container_width=True)
+    
 elif selected_player and not selected_dimensions:
     st.warning("Please select at least one dimension to generate recommendations.")
