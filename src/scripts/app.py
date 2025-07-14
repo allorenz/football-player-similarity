@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 rec = Recommender()
 
 # --- Streamlit App ---
-st.title("Player Recommendation System (Top 5 Leagues 2015/16)")
+st.title("Player Recommendation (Top 5 Leagues 2015/16)")
 
 # Sidebar
 st.sidebar.header("Select Player")
