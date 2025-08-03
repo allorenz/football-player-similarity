@@ -274,3 +274,4 @@ if __name__ == "__main__":
     players = rec.df_standard_stats["player"].to_list()
     output_df = rec.recommend(query_player_name="Eden Hazard")
     print(output_df)
+    

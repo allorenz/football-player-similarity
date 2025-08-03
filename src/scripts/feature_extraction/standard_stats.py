@@ -8,11 +8,12 @@ import numpy as np
 import json 
 import sys
 import os
+import ast
 from tqdm import tqdm
 from datetime import datetime
 from statsbombpy import sb
 from pathlib import Path
-from collections import Counter
+from collections import Counter, defaultdict
 
 # Run the notebook from inside the notebooks folder
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '..')))
@@ -75,11 +76,45 @@ def extract_global_position(positions):
         except:
             print(positions_list)
 
+def get_player_position(input_str):
+    position = ""
+    played_positions = extract_positions(input_str, unique=False) # ast.literal_eval(input_str)
+
+    # Convert string to list if necessary
+    if isinstance(input_str, str):
+        input_str = ast.literal_eval(input_str)
+    if not input_str or len(input_str) == 0:
+        return None
+
+    played_roles = [position_mapping.get(pos, None) for pos in played_positions]
+
+    # get global role count
+    counter = Counter(played_roles)
+
+    # if equal count - pick position of last game
+    value_to_keys = defaultdict(list)
+    for key, value in counter.items():
+        value_to_keys[value].append(key)
+
+    duplicates = [keys for _, keys in value_to_keys.items() if len(keys) > 1]
+
+    if duplicates:
+        for i in reversed(played_roles):
+            if i in duplicates[0]:
+                position = i
+                print(f"Last position played: {position}")
+                break
+    else:
+        position = max(counter, key=counter.get)
+
+    return position
+
 def get_positions_played(df):
     positions_played_df = df.groupby("player_id").agg(
         position=("positions", lambda x: get_most_frequent_pos(x)),
         positions_played=("positions", lambda x: extract_positions(x)),
-        unique_positions_played=("positions", lambda x: extract_positions(x,unique=True))
+        unique_positions_played=("positions", lambda x: extract_positions(x,unique=True)),
+        new_position=("positions", lambda x: get_player_position(x)),
         #global_position=("positions", lambda x: extract_global_position(x)) 
     )
     return positions_played_df
@@ -180,7 +215,7 @@ def analyze_standard_stats(df):
     standard_stats = pd.merge(left=standard_stats, right=df_team_country,on="player_id", how="left")
     
     # reorder columns and keep only relevant
-    standard_stats = standard_stats[["player", "player_id","country","team","competition","position","match_played","minutes_played","subbed_in","subbed_out","unique_positions_played","positions_played"]]
+    standard_stats = standard_stats[["player", "player_id","country","team","position","match_played","minutes_played","subbed_in","subbed_out","unique_positions_played","positions_played"]]
     
     return standard_stats#, df_team_country_concated
   
