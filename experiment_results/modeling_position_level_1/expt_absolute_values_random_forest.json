@@ -1,0 +1,63 @@
+{
+  "Central Midfielder": {
+    "precision": 0.336996336996337,
+    "recall": 0.46938775510204084,
+    "f1-score": 0.39232409381663114,
+    "support": 196.0
+  },
+  "Defensive Midfielder": {
+    "precision": 0.2988505747126437,
+    "recall": 0.24528301886792453,
+    "f1-score": 0.2694300518134715,
+    "support": 106.0
+  },
+  "Goalkeeper": {
+    "precision": 0.9625,
+    "recall": 1.0,
+    "f1-score": 0.9808917197452229,
+    "support": 77.0
+  },
+  "Offensive Defender": {
+    "precision": 0.6064516129032258,
+    "recall": 0.6308724832214765,
+    "f1-score": 0.618421052631579,
+    "support": 149.0
+  },
+  "Offensive Midfielder": {
+    "precision": 1.0,
+    "recall": 0.013513513513513514,
+    "f1-score": 0.02666666666666667,
+    "support": 74.0
+  },
+  "Regular Defender": {
+    "precision": 0.6566265060240963,
+    "recall": 0.7622377622377622,
+    "f1-score": 0.7055016181229773,
+    "support": 143.0
+  },
+  "Striker": {
+    "precision": 0.2751677852348993,
+    "recall": 0.38317757009345793,
+    "f1-score": 0.3203125,
+    "support": 107.0
+  },
+  "Winger": {
+    "precision": 0.1935483870967742,
+    "recall": 0.06666666666666667,
+    "f1-score": 0.09917355371900827,
+    "support": 90.0
+  },
+  "accuracy": 0.4734607218683652,
+  "macro avg": {
+    "precision": 0.541267650370997,
+    "recall": 0.44639234621285523,
+    "f1-score": 0.4265901570644446,
+    "support": 942.0
+  },
+  "weighted avg": {
+    "precision": 0.5063302882310963,
+    "recall": 0.4734607218683652,
+    "f1-score": 0.4449974832297292,
+    "support": 942.0
+  }
+}

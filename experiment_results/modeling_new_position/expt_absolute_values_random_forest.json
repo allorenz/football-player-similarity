@@ -1,0 +1,39 @@
+{
+  "Defender": {
+    "precision": 0.8950617283950617,
+    "recall": 0.9294871794871795,
+    "f1-score": 0.9119496855345912,
+    "support": 312.0
+  },
+  "Forward": {
+    "precision": 0.7924528301886793,
+    "recall": 0.75,
+    "f1-score": 0.7706422018348624,
+    "support": 224.0
+  },
+  "Goalkeeper": {
+    "precision": 0.975,
+    "recall": 1.0,
+    "f1-score": 0.9873417721518988,
+    "support": 78.0
+  },
+  "Midfielder": {
+    "precision": 0.8067484662576687,
+    "recall": 0.801829268292683,
+    "f1-score": 0.8042813455657493,
+    "support": 328.0
+  },
+  "accuracy": 0.8481953290870489,
+  "macro avg": {
+    "precision": 0.8673157562103524,
+    "recall": 0.8703291119449656,
+    "f1-score": 0.8685537512717755,
+    "support": 942.0
+  },
+  "weighted avg": {
+    "precision": 0.8465309874246696,
+    "recall": 0.8481953290870489,
+    "f1-score": 0.847100949757129,
+    "support": 942.0
+  }
+}

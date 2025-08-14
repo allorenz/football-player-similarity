@@ -1,0 +1,325 @@
+{
+    "Manuel Neuer": {
+        "AP@10": 1.0,
+        "RR@10": 1.0,
+        "y_true": "Goalkeeper",
+        "y_pred": [
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper"
+        ]
+    },
+    "Gianluigi Buffon": {
+        "AP@10": 1.0,
+        "RR@10": 1.0,
+        "y_true": "Goalkeeper",
+        "y_pred": [
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper"
+        ]
+    },
+    "Jan Oblak": {
+        "AP@10": 1.0,
+        "RR@10": 1.0,
+        "y_true": "Goalkeeper",
+        "y_pred": [
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper"
+        ]
+    },
+    "Alphonse Areola": {
+        "AP@10": 1.0,
+        "RR@10": 1.0,
+        "y_true": "Goalkeeper",
+        "y_pred": [
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper",
+            "Goalkeeper"
+        ]
+    },
+    "Diego Roberto God\u00edn Leal": {
+        "AP@10": 0.7856701940035273,
+        "RR@10": 0.5,
+        "y_true": "Defender",
+        "y_pred": [
+            "Forward",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender"
+        ]
+    },
+    "Daniel Carvajal Ramos": {
+        "AP@10": 0.9765432098765433,
+        "RR@10": 1.0,
+        "y_true": "Defender",
+        "y_pred": [
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Forward",
+            "Defender",
+            "Defender"
+        ]
+    },
+    "Rapha\u00ebl Varane": {
+        "AP@10": 0.9888888888888889,
+        "RR@10": 1.0,
+        "y_true": "Defender",
+        "y_pred": [
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Midfielder",
+            "Defender"
+        ]
+    },
+    "Gerard Piqu\u00e9 Bernab\u00e9u": {
+        "AP@10": 0.9467813051146384,
+        "RR@10": 1.0,
+        "y_true": "Defender",
+        "y_pred": [
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Forward",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender"
+        ]
+    },
+    "Mats Hummels": {
+        "AP@10": 0.0,
+        "RR@10": 0,
+        "y_true": "Midfielder",
+        "y_pred": [
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender",
+            "Defender"
+        ]
+    },
+    "Thomas M\u00fcller": {
+        "AP@10": 0.0,
+        "RR@10": 0,
+        "y_true": "Midfielder",
+        "y_pred": [
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Defender",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward"
+        ]
+    },
+    "Mesut \u00d6zil": {
+        "AP@10": 0.5285714285714286,
+        "RR@10": 1.0,
+        "y_true": "Midfielder",
+        "y_pred": [
+            "Midfielder",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Midfielder",
+            "Forward",
+            "Forward",
+            "Midfielder"
+        ]
+    },
+    "Kevin De Bruyne": {
+        "AP@10": 0.9861111111111112,
+        "RR@10": 1.0,
+        "y_true": "Forward",
+        "y_pred": [
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Midfielder",
+            "Forward",
+            "Midfielder"
+        ]
+    },
+    "Luka Modri\u0107": {
+        "AP@10": 1.0,
+        "RR@10": 1.0,
+        "y_true": "Midfielder",
+        "y_pred": [
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder"
+        ]
+    },
+    "N''Golo Kant\u00e9": {
+        "AP@10": 0.959375,
+        "RR@10": 1.0,
+        "y_true": "Midfielder",
+        "y_pred": [
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Midfielder",
+            "Defender",
+            "Midfielder",
+            "Forward",
+            "Midfielder"
+        ]
+    },
+    "Cristiano Ronaldo dos Santos Aveiro": {
+        "AP@10": 0.9626543209876544,
+        "RR@10": 1.0,
+        "y_true": "Forward",
+        "y_pred": [
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Defender",
+            "Forward",
+            "Forward",
+            "Forward"
+        ]
+    },
+    "Luis Alberto Su\u00e1rez D\u00edaz": {
+        "AP@10": 0.9060405643738978,
+        "RR@10": 1.0,
+        "y_true": "Forward",
+        "y_pred": [
+            "Forward",
+            "Forward",
+            "Forward",
+            "Midfielder",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward"
+        ]
+    },
+    "Riyad Mahrez": {
+        "AP@10": 0.2216931216931217,
+        "RR@10": 0.14285714285714285,
+        "y_true": "Midfielder",
+        "y_pred": [
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Midfielder",
+            "Forward",
+            "Midfielder",
+            "Midfielder"
+        ]
+    },
+    "Kingsley Coman": {
+        "AP@10": 1.0,
+        "RR@10": 1.0,
+        "y_true": "Forward",
+        "y_pred": [
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward"
+        ]
+    },
+    "Timo Werner": {
+        "AP@10": 1.0,
+        "RR@10": 1.0,
+        "y_true": "Forward",
+        "y_pred": [
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward",
+            "Forward"
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "Offensive Defender": [
+        "RWB", "LWB",
+        "Right Wing Back", "Left Wing Back",
+        "Right Back", "Left Back"
+    ],
+    "Regular Defender": [
+        "RCB", "CB", "LCB",
+        "Right Center Back", "Center Back", "Left Center Back"
+    ],
+    
+    "Defensive Midfielder": [
+        "Right Defensive Midfield",
+        "Center Defensive Midfield",
+        "Left Defensive Midfield"
+    ],
+    "Central Midfielder": [
+        "Right Midfield",
+        "Right Center Midfield",
+        "Center Midfield",
+        "Left Center Midfield",
+        "Left Midfield"
+    ],
+    "Offensive Midfielder": [
+        "Right Attacking Midfield",
+        "Center Attacking Midfield",
+        "Left Attacking Midfield"
+    ],
+    "Winger": [
+        "RW", "LW",
+        "Right Wing", "Left Wing"
+    ],
+    "Striker": [
+        "RCF", "ST", "LCF", "SS",
+        "Right Center Forward", "Striker", "Left Center Forward", "Secondary Striker",
+        "Center Forward"
+    ],
+    "Goalkeeper": [
+        "GK", "Goalkeeper"
+    ]
+    
+}
