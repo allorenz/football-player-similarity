@@ -1,5 +1,6 @@
 import os
 import json
+import math
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from feature_selection import filter_df
@@ -24,7 +25,7 @@ class Recommender:
         
         # load standard stats
         self.df_standard_stats = pd.read_csv(
-            "../../data/new_approach/standard_stats_all.csv", dtype={"player_id": "int32"}
+            "../../data/new_approach/standard_stats_all_test.csv", dtype={"player_id": "int32"}
         ).set_index("player_id", drop=True)
 
 
@@ -72,7 +73,7 @@ class Recommender:
     def build_result_dataframe(self):
         """built output dataframe with player information and cosine similarities"""
         self.df_result = pd.merge(
-            self.df_standard_stats[["player", "position", "team", "country", "match_played"]],
+            self.df_standard_stats[["player", "new_position","position", "team", "country", "match_played"]],
             self.df_cosine,
             left_index=True,
             right_index=True,
@@ -83,7 +84,7 @@ class Recommender:
         plot_boxplots(self.df_result, self.dimensions)
         plot_distribution_plot(self.df_result, self.dimensions)
 
-    def recommend(self, query_player_name="Thomas Müller", dimensions=["defending", "passing","possession","shooting"], weights = None) -> pd.DataFrame:
+    def recommend(self, query_player_name="Thomas Müller", dimensions=["defending", "passing","possession","shooting", "goal_keeping"], weights = None) -> pd.DataFrame:
         self.dimensions = dimensions
         self.weights = weights
         # init query player
@@ -103,11 +104,11 @@ class Recommender:
 def get_data(match_played=2, minutes_played=90):
     """Merges all dimensions and applies filters"""
     # vars
-    dimensions = ["defending","possession", "passing", "shooting"] # "goal_keeping"]
-    df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
+    dimensions = ["defending","possession", "passing", "shooting", "goal_keeping"]
+    df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_test.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
 
     # Merge all dimensions
-    df = df_standard_stats[["player_id","position", "match_played", "minutes_played"]].copy()
+    df = df_standard_stats[["player_id","position", "match_played", "minutes_played","new_position"]].copy()
     for dim in dimensions:
         # load
         df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
@@ -182,8 +183,11 @@ def plot_distribution_plot(df, dimensions, save_path="../../out/plots/distributi
     # Create a figure with subplots
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
     columns = [f"sim_{d}"for d in dimensions]
+    n = len(columns)
+    ncols = 2
+    nrows = math.ceil(n / ncols)
 
-    # Flatten axes for easy indexing
+    fig, axes = plt.subplots(nrows, ncols, figsize=(6 * ncols, 4 * nrows))
     axes = axes.flatten()
 
     # Plot each distribution

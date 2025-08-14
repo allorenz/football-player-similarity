@@ -1,0 +1,356 @@
+{
+  "conf_1": {
+    "scores": {
+      "Center Attacking Midfield": {
+        "precision": 0.09375,
+        "recall": 0.11538461538461539,
+        "f1-score": 0.10344827586206896,
+        "support": 26.0
+      },
+      "Center Back": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "Center Defensive Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22.0
+      },
+      "Center Forward": {
+        "precision": 0.06666666666666667,
+        "recall": 0.06666666666666667,
+        "f1-score": 0.06666666666666667,
+        "support": 15.0
+      },
+      "Center Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Goalkeeper": {
+        "precision": 0.5866666666666667,
+        "recall": 1.0,
+        "f1-score": 0.7394957983193278,
+        "support": 44.0
+      },
+      "Left Attacking Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 4.0
+      },
+      "Left Back": {
+        "precision": 0.1864406779661017,
+        "recall": 0.4782608695652174,
+        "f1-score": 0.2682926829268293,
+        "support": 23.0
+      },
+      "Left Center Back": {
+        "precision": 0.14736842105263157,
+        "recall": 0.3888888888888889,
+        "f1-score": 0.21374045801526717,
+        "support": 36.0
+      },
+      "Left Center Forward": {
+        "precision": 0.2,
+        "recall": 0.07692307692307693,
+        "f1-score": 0.1111111111111111,
+        "support": 13.0
+      },
+      "Left Center Midfield": {
+        "precision": 0.1875,
+        "recall": 0.10714285714285714,
+        "f1-score": 0.13636363636363635,
+        "support": 28.0
+      },
+      "Left Defensive Midfield": {
+        "precision": 0.2857142857142857,
+        "recall": 0.09523809523809523,
+        "f1-score": 0.14285714285714285,
+        "support": 21.0
+      },
+      "Left Midfield": {
+        "precision": 0.08333333333333333,
+        "recall": 0.034482758620689655,
+        "f1-score": 0.04878048780487805,
+        "support": 29.0
+      },
+      "Left Wing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Left Wing Back": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 9.0
+      },
+      "Right Attacking Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "Right Back": {
+        "precision": 0.12727272727272726,
+        "recall": 0.3181818181818182,
+        "f1-score": 0.18181818181818182,
+        "support": 22.0
+      },
+      "Right Center Back": {
+        "precision": 0.2777777777777778,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.30303030303030304,
+        "support": 30.0
+      },
+      "Right Center Forward": {
+        "precision": 0.18181818181818182,
+        "recall": 0.1111111111111111,
+        "f1-score": 0.13793103448275862,
+        "support": 18.0
+      },
+      "Right Center Midfield": {
+        "precision": 0.038461538461538464,
+        "recall": 0.038461538461538464,
+        "f1-score": 0.038461538461538464,
+        "support": 26.0
+      },
+      "Right Defensive Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 16.0
+      },
+      "Right Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22.0
+      },
+      "Right Wing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 25.0
+      },
+      "Right Wing Back": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "accuracy": 0.21231422505307856,
+      "macro avg": {
+        "precision": 0.10261542819707963,
+        "recall": 0.13183648456324618,
+        "f1-score": 0.10383322157165459,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.1497175357901819,
+        "recall": 0.21231422505307856,
+        "f1-score": 0.16208871892759527,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "goals_header",
+      "goals_avg_distance",
+      "shots_on_target_left_foot",
+      "shots_on_target_right_foot",
+      "shots_with_first_touch",
+      "shots_in_penalty_area",
+      "shots_long_distance",
+      "shots_short_distance",
+      "shots_avg_distance",
+      "goal_volley",
+      "xG",
+      "big_chances_total",
+      "big_chances_led_to_goal",
+      "up_shots_on_target_left_foot",
+      "up_shots_on_target_right_foot",
+      "up_shots_in_penalty_area",
+      "up_shots_mid_distance",
+      "up_shots_short_distance",
+      "up_xG",
+      "first_goal"
+    ],
+    "n_features": 20
+  },
+  "conf_2": {
+    "scores": {
+      "Center Attacking Midfield": {
+        "precision": 0.05952380952380952,
+        "recall": 0.19230769230769232,
+        "f1-score": 0.09090909090909091,
+        "support": 26.0
+      },
+      "Center Back": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "Center Defensive Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22.0
+      },
+      "Center Forward": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 15.0
+      },
+      "Center Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "Goalkeeper": {
+        "precision": 0.6825396825396826,
+        "recall": 0.9772727272727273,
+        "f1-score": 0.8037383177570093,
+        "support": 44.0
+      },
+      "Left Attacking Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 4.0
+      },
+      "Left Back": {
+        "precision": 0.09523809523809523,
+        "recall": 0.2608695652173913,
+        "f1-score": 0.13953488372093023,
+        "support": 23.0
+      },
+      "Left Center Back": {
+        "precision": 0.11320754716981132,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.16901408450704225,
+        "support": 36.0
+      },
+      "Left Center Forward": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 13.0
+      },
+      "Left Center Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 28.0
+      },
+      "Left Defensive Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "Left Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 29.0
+      },
+      "Left Wing": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Left Wing Back": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 9.0
+      },
+      "Right Attacking Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "Right Back": {
+        "precision": 0.04878048780487805,
+        "recall": 0.09090909090909091,
+        "f1-score": 0.06349206349206349,
+        "support": 22.0
+      },
+      "Right Center Back": {
+        "precision": 0.13513513513513514,
+        "recall": 0.16666666666666666,
+        "f1-score": 0.14925373134328357,
+        "support": 30.0
+      },
+      "Right Center Forward": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "Right Center Midfield": {
+        "precision": 0.03225806451612903,
+        "recall": 0.038461538461538464,
+        "f1-score": 0.03508771929824561,
+        "support": 26.0
+      },
+      "Right Defensive Midfield": {
+        "precision": 0.1,
+        "recall": 0.0625,
+        "f1-score": 0.07692307692307693,
+        "support": 16.0
+      },
+      "Right Midfield": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22.0
+      },
+      "Right Wing": {
+        "precision": 0.4,
+        "recall": 0.08,
+        "f1-score": 0.13333333333333333,
+        "support": 25.0
+      },
+      "Right Wing Back": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "accuracy": 0.16348195329087048,
+      "macro avg": {
+        "precision": 0.0694451175803142,
+        "recall": 0.09176335892368502,
+        "f1-score": 0.06922026255350315,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.1176459605756586,
+        "recall": 0.16348195329087048,
+        "f1-score": 0.12393365672135997,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "shots_on_target_%",
+      "shots_outside_the_box_%",
+      "goals_right_foot_%",
+      "goals_left_foot_%",
+      "goals_with_first_touch_%",
+      "goals_header_%"
+    ],
+    "n_features": 6
+  }
+}

@@ -49,13 +49,12 @@
       "counterpressing_attacking_third",
       "shield_total",
       "block_total",
-      "block_during_counterpress",
       "clearance_total",
       "tackling_won",
       "tackling_in_defending_third",
       "fouls_total"
     ],
-    "n_features": 14
+    "n_features": 13
   },
   "conf_2": {
     "scores": {

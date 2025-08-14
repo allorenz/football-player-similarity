@@ -1,0 +1,2635 @@
+index,UMAP 1,UMAP 2,new_position,role,position_level_1
+8387.0,3.5618253,0.6123425,Forward,Left Back,Offensive Defender
+5460.0,1.3348553,2.951976,Forward,Left Center Midfield,Central Midfielder
+6039.0,5.5500484,1.8918368,Midfielder,Left Defensive Midfield,Defensive Midfielder
+5537.0,13.541982,4.954515,Defender,Left Center Back,Regular Defender
+12321.0,6.112824,2.9106593,Midfielder,Right Center Midfield,Central Midfielder
+9396.0,11.747981,2.15366,Defender,Right Center Forward,Striker
+26832.0,3.4056156,1.1489654,Midfielder,Center Forward,Striker
+7016.0,13.612643,4.739892,Defender,Left Midfield,Central Midfielder
+3502.0,12.252914,4.5456877,Defender,Right Center Back,Regular Defender
+16534.0,12.521251,1.2223597,Defender,Left Defensive Midfield,Defensive Midfielder
+3510.0,0.41597453,8.038786,Defender,Left Wing,Winger
+8517.0,4.327246,18.60849,Goalkeeper,Goalkeeper,Goalkeeper
+6717.0,6.828108,3.161902,Midfielder,Left Center Midfield,Central Midfielder
+3053.0,3.561446,-0.5292042,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5242.0,3.7729616,4.512153,Midfielder,Left Midfield,Central Midfielder
+8060.0,0.3200376,1.486095,Forward,Center Attacking Midfield,Offensive Midfielder
+3499.0,1.5177416,5.230892,Forward,Right Center Forward,Striker
+8215.0,2.2431936,2.0956948,Forward,Right Center Midfield,Central Midfielder
+8556.0,6.9164577,3.8506489,Midfielder,Left Center Midfield,Central Midfielder
+9397.0,5.693101,-3.531225,Defender,Right Back,Offensive Defender
+8508.0,3.389389,3.2595196,Midfielder,Right Defensive Midfield,Defensive Midfielder
+37972.0,3.8355827,19.011751,Goalkeeper,Goalkeeper,Goalkeeper
+19836.0,0.73255724,1.6553596,Forward,Center Defensive Midfield,Defensive Midfielder
+8404.0,6.314334,4.0215592,Midfielder,Left Center Midfield,Central Midfielder
+11281.0,3.8321576,-0.6379383,Midfielder,Left Wing,Winger
+8403.0,3.5097275,2.6453762,Midfielder,Right Center Forward,Striker
+8824.0,4.300532,3.486694,Midfielder,Right Center Forward,Striker
+5668.0,0.0032444613,1.7593524,Defender,Right Wing Back,Offensive Defender
+5208.0,3.5589724,4.898672,Midfielder,Center Attacking Midfield,Offensive Midfielder
+8220.0,4.021721,5.103359,Defender,Left Center Back,Regular Defender
+19295.0,4.5249066,-0.1103745,Defender,Right Wing Back,Offensive Defender
+9399.0,6.975141,2.8354611,Defender,Left Back,Offensive Defender
+20133.0,5.773662,4.025273,Midfielder,Center Back,Regular Defender
+15651.0,-0.12344939,7.9684386,Defender,Left Midfield,Central Midfielder
+8667.0,4.192922,19.725107,Goalkeeper,Goalkeeper,Goalkeeper
+400621.0,0.4516615,8.113716,Defender,Left Center Midfield,Central Midfielder
+8223.0,0.72835946,5.663436,Midfielder,Left Wing,Winger
+5562.0,2.1457307,0.6697977,Midfielder,Right Midfield,Central Midfielder
+8670.0,5.474322,-3.4140656,Defender,Right Midfield,Central Midfielder
+5570.0,4.160789,19.518858,Goalkeeper,Goalkeeper,Goalkeeper
+36359.0,13.143619,5.328965,Defender,Right Center Back,Regular Defender
+5681.0,4.894755,0.40012717,Midfielder,Left Back,Offensive Defender
+21156.0,3.8870807,-1.1518062,Forward,Center Attacking Midfield,Offensive Midfielder
+8227.0,2.3518527,1.827348,Midfielder,Right Center Midfield,Central Midfielder
+18888.0,3.2536247,5.1320086,Midfielder,Left Defensive Midfield,Defensive Midfielder
+35240.0,1.390557,5.5242763,Forward,Left Center Back,Regular Defender
+8504.0,0.3896841,8.217635,Defender,Left Center Midfield,Central Midfielder
+5543.0,1.9720649,1.8280092,Forward,Left Center Forward,Striker
+8678.0,11.732149,1.9131916,Defender,Left Defensive Midfield,Defensive Midfielder
+10896.0,5.0716724,2.5572376,Midfielder,Left Midfield,Central Midfielder
+7846.0,0.987228,2.562589,Forward,Right Wing,Winger
+10822.0,3.3217418,1.4652435,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5837.0,1.049459,4.8197074,Midfielder,Right Defensive Midfield,Defensive Midfielder
+8206.0,5.1973023,3.7809486,Midfielder,Right Back,Offensive Defender
+8571.0,0.65921664,1.8361746,Forward,Right Midfield,Central Midfielder
+8575.0,1.9148449,3.0497227,Forward,Center Forward,Striker
+30439.0,4.463964,4.781031,Midfielder,Right Defensive Midfield,Defensive Midfielder
+8580.0,13.425607,5.22285,Defender,Right Center Back,Regular Defender
+8577.0,5.2778554,19.461235,Goalkeeper,Goalkeeper,Goalkeeper
+24914.0,1.6978171,6.0935073,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5664.0,6.974147,3.820365,Midfielder,Right Center Midfield,Central Midfielder
+9722.0,6.4035788,-3.834994,Defender,Right Back,Offensive Defender
+5569.0,0.5626782,8.789388,Defender,Left Back,Offensive Defender
+8570.0,13.528624,5.0073123,Defender,Left Center Forward,Striker
+24244.0,3.7638643,-0.04617351,Forward,Left Wing,Winger
+8576.0,5.4290037,-3.399951,Defender,Right Center Midfield,Central Midfielder
+8538.0,6.5565886,2.4449399,Defender,Right Center Forward,Striker
+8543.0,5.214115,2.6714957,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3530.0,6.0914555,-3.258048,Defender,Right Back,Offensive Defender
+8947.0,4.1766005,19.752197,Goalkeeper,Goalkeeper,Goalkeeper
+21311.0,3.2768362,-0.060565062,Forward,Right Wing,Winger
+8578.0,6.8755713,3.583841,Midfielder,Center Defensive Midfield,Defensive Midfielder
+11845.0,1.548724,1.5605628,Forward,Left Center Forward,Striker
+38524.0,3.4213328,2.858098,Midfielder,Right Defensive Midfield,Defensive Midfielder
+23341.0,12.35547,4.6212816,Defender,Right Center Back,Regular Defender
+5697.0,3.1800168,1.2632486,Forward,Right Center Forward,Striker
+8541.0,2.5282564,2.461865,Midfielder,Right Wing,Winger
+8579.0,5.012432,2.65994,Midfielder,Left Center Midfield,Central Midfielder
+11131.0,1.7418975,2.8482387,Forward,Left Defensive Midfield,Defensive Midfielder
+30287.0,6.001864,2.8190987,Defender,Left Center Back,Regular Defender
+12316.0,2.4302504,6.6540537,Defender,Left Center Midfield,Central Midfielder
+13675.0,1.1313932,2.4181943,Midfielder,Left Center Midfield,Central Midfielder
+9723.0,1.3069886,3.0711002,Forward,Center Forward,Striker
+12383.0,6.23991,-2.696477,Defender,Left Defensive Midfield,Defensive Midfielder
+9401.0,3.4924738,-0.26515052,Midfielder,Left Midfield,Central Midfielder
+8560.0,4.7950206,19.697952,Goalkeeper,Goalkeeper,Goalkeeper
+8891.0,4.7208185,4.529193,Midfielder,Right Defensive Midfield,Defensive Midfielder
+8321.0,1.2784965,1.7772146,Forward,Right Center Forward,Striker
+8388.0,3.578982,3.7979746,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6339.0,5.827014,-2.2149339,Defender,Right Back,Offensive Defender
+26791.0,11.854059,1.3287722,Defender,Left Center Back,Regular Defender
+8309.0,2.637292,1.8491616,Midfielder,Left Defensive Midfield,Defensive Midfielder
+24740.0,1.5856737,5.70898,Forward,Right Center Midfield,Central Midfielder
+9404.0,12.625509,0.61702406,Defender,Left Center Back,Regular Defender
+9217.0,12.1277485,4.484028,Defender,Right Attacking Midfield,Offensive Midfielder
+9222.0,1.0495454,7.6701016,Defender,Left Midfield,Central Midfielder
+8306.0,4.0487213,19.48613,Goalkeeper,Goalkeeper,Goalkeeper
+40468.0,11.422702,3.5254428,Defender,Left Defensive Midfield,Defensive Midfielder
+8316.0,6.2696266,-3.5326722,Forward,Center Forward,Striker
+8302.0,4.2293005,0.5022161,Forward,Right Midfield,Central Midfielder
+5624.0,6.5982556,2.8451195,Midfielder,Right Defensive Midfield,Defensive Midfielder
+11134.0,1.1600951,5.4113865,Midfielder,Left Back,Offensive Defender
+40467.0,6.2922177,3.2644444,Midfielder,Center Defensive Midfield,Defensive Midfielder
+8895.0,0.8268379,1.5701559,Forward,Left Defensive Midfield,Defensive Midfielder
+24205.0,2.5192177,2.7684107,Forward,Right Center Midfield,Central Midfielder
+9407.0,6.5296106,3.942747,Midfielder,Right Center Midfield,Central Midfielder
+22017.0,1.1479819,3.0875819,Forward,Right Center Forward,Striker
+9219.0,1.5259912,4.376579,Midfielder,Left Defensive Midfield,Defensive Midfielder
+9224.0,6.2657137,-2.9724503,Midfielder,Right Back,Offensive Defender
+6337.0,0.5988506,2.3273158,Forward,Left Midfield,Central Midfielder
+8679.0,1.9290638,1.8959033,Midfielder,Right Wing,Winger
+8548.0,6.8204985,-3.3700504,Defender,Right Center Back,Regular Defender
+13319.0,12.373246,4.716395,Midfielder,Right Defensive Midfield,Defensive Midfielder
+8559.0,11.387277,3.0233548,Defender,Left Center Back,Regular Defender
+8965.0,11.282938,2.9858782,Midfielder,Center Back,Regular Defender
+20871.0,0.7109678,8.583867,Midfielder,Left Center Back,Regular Defender
+8539.0,5.528661,4.5242443,Midfielder,Right Center Back,Regular Defender
+12327.0,12.223013,1.455699,Forward,Center Forward,Striker
+6925.0,1.4674411,5.5137177,Forward,Right Center Forward,Striker
+3630.0,4.93897,19.67199,Goalkeeper,Goalkeeper,Goalkeeper
+20037.0,6.6597214,2.813761,Midfielder,Left Defensive Midfield,Defensive Midfielder
+9098.0,4.0633707,-0.67743427,Forward,Right Wing Back,Offensive Defender
+8555.0,3.3138196,1.0830437,Forward,Right Center Forward,Striker
+8943.0,0.8159471,2.1992612,Forward,Left Defensive Midfield,Defensive Midfielder
+8817.0,1.7138304,1.5522202,Forward,Right Midfield,Central Midfielder
+40474.0,4.4562993,3.8566594,Midfielder,Center Forward,Striker
+33459.0,2.7735612,2.9034183,Forward,Left Midfield,Central Midfielder
+9721.0,1.5986853,3.7431147,Forward,Left Midfield,Central Midfielder
+400613.0,4.71418,0.4511356,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3016.0,2.9968648,1.3690647,Midfielder,Center Forward,Striker
+3164.0,13.496871,5.0523896,Defender,Right Center Back,Regular Defender
+400614.0,12.6221695,1.3157587,Midfielder,Center Defensive Midfield,Defensive Midfielder
+40538.0,0.78291523,8.518876,Defender,Left Center Back,Regular Defender
+13126.0,0.6839475,7.8185797,Defender,Left Back,Offensive Defender
+8393.0,4.1806936,19.7207,Goalkeeper,Goalkeeper,Goalkeeper
+6322.0,11.36801,3.3309665,Defender,Left Center Back,Regular Defender
+8311.0,1.8002415,3.8080664,Midfielder,Center Attacking Midfield,Offensive Midfielder
+20027.0,0.9183204,1.5766692,Forward,Left Midfield,Central Midfielder
+27317.0,1.4330342,1.5265659,Forward,Right Midfield,Central Midfielder
+8558.0,1.7453234,1.6339536,Forward,Left Wing,Winger
+15146.0,7.003031,-3.444565,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5559.0,1.3950683,3.9537666,Forward,Left Midfield,Central Midfielder
+3712.0,1.0135647,1.4068531,Forward,Center Forward,Striker
+10287.0,5.231574,1.4004462,Midfielder,Left Center Midfield,Central Midfielder
+8216.0,7.02914,3.6986089,Defender,Center Attacking Midfield,Offensive Midfielder
+5658.0,6.1149225,-3.836146,Forward,Center Forward,Striker
+5572.0,12.078016,0.91032034,Midfielder,Right Defensive Midfield,Defensive Midfielder
+8233.0,3.0924187,3.2945235,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3275.0,2.4394498,1.3100959,Forward,Left Midfield,Central Midfielder
+8893.0,13.21766,5.0802236,Defender,Right Midfield,Central Midfielder
+8225.0,4.216664,19.758385,Goalkeeper,Goalkeeper,Goalkeeper
+8816.0,5.8603096,3.5806706,Midfielder,Center Defensive Midfield,Defensive Midfielder
+11458.0,-0.060054008,7.1393504,Defender,Left Wing Back,Offensive Defender
+23268.0,0.67946124,1.8081336,Forward,Left Center Forward,Striker
+9216.0,6.2394166,3.1733844,Midfielder,Right Center Midfield,Central Midfielder
+9134.0,5.7341547,-2.231937,Defender,Left Midfield,Central Midfielder
+5684.0,2.296473,4.723754,Midfielder,Right Wing,Winger
+8244.0,12.31975,5.242257,Defender,Right Back,Offensive Defender
+24324.0,0.38580897,2.1981137,Forward,Right Center Midfield,Central Midfielder
+401018.0,0.37514555,8.797496,Midfielder,Right Center Midfield,Central Midfielder
+8386.0,2.025115,2.7532725,Forward,Right Center Forward,Striker
+10281.0,1.689146,4.4563313,Forward,Right Center Midfield,Central Midfielder
+3186.0,2.2180667,3.3873737,Midfielder,Right Center Forward,Striker
+3197.0,11.759054,1.1913887,Defender,Center Back,Regular Defender
+8516.0,12.360287,5.3087044,Defender,Right Center Back,Regular Defender
+8547.0,0.8306869,8.511804,Defender,Left Back,Offensive Defender
+40469.0,0.06043105,7.7428694,Defender,Left Center Back,Regular Defender
+8323.0,6.54392,2.6051433,Midfielder,Center Defensive Midfield,Defensive Midfielder
+8235.0,4.7477293,3.956354,Midfielder,Right Midfield,Central Midfielder
+10790.0,5.4821362,-3.0900984,Forward,Right Back,Offensive Defender
+23266.0,6.1897902,-3.7815557,Defender,Left Defensive Midfield,Defensive Midfielder
+4600.0,5.28093,19.405558,Goalkeeper,Goalkeeper,Goalkeeper
+8230.0,6.45471,2.908105,Forward,Right Wing,Winger
+10594.0,0.48816833,1.4074751,Forward,Left Midfield,Central Midfielder
+8521.0,3.2669647,0.48185655,Midfielder,Left Center Midfield,Central Midfielder
+8308.0,3.2842727,2.3601925,Midfielder,Right Defensive Midfield,Defensive Midfielder
+24919.0,5.229305,-3.253862,Defender,Left Midfield,Central Midfielder
+5591.0,0.79850197,5.6802025,Midfielder,Left Center Forward,Striker
+40470.0,11.782675,1.7616494,Defender,Left Midfield,Central Midfielder
+8550.0,2.8243172,2.557307,Midfielder,Left Defensive Midfield,Defensive Midfielder
+8956.0,11.818851,2.0372088,Defender,Center Back,Regular Defender
+8243.0,3.4900022,3.083442,Midfielder,Left Defensive Midfield,Defensive Midfielder
+8270.0,13.648374,4.7703443,Defender,Center Attacking Midfield,Offensive Midfielder
+8959.0,4.7077537,3.385519,Midfielder,Left Defensive Midfield,Defensive Midfielder
+11395.0,4.6483555,1.2683444,Midfielder,Center Defensive Midfield,Defensive Midfielder
+12626.0,0.72520244,7.9211044,Defender,Left Center Back,Regular Defender
+5557.0,1.4975673,1.543123,Forward,Right Wing Back,Offensive Defender
+9082.0,4.7248483,18.915209,Goalkeeper,Goalkeeper,Goalkeeper
+5494.0,3.053779,0.13152444,Forward,Left Center Forward,Striker
+9266.0,1.1119659,1.2119557,Forward,Right Midfield,Central Midfielder
+28601.0,5.1747856,4.2542396,Midfielder,Right Defensive Midfield,Defensive Midfielder
+8958.0,0.40065378,7.6588044,Defender,Center Attacking Midfield,Offensive Midfielder
+25003.0,6.150479,-3.3479807,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6324.0,5.8957896,3.2707634,Midfielder,Right Wing,Winger
+3570.0,5.744934,3.3555963,Midfielder,Left Midfield,Central Midfielder
+8512.0,1.6319526,1.4553304,Forward,Left Center Forward,Striker
+5467.0,13.065882,4.8032904,Defender,Right Center Forward,Striker
+8561.0,6.6600733,4.052073,Midfielder,Right Center Forward,Striker
+8551.0,1.3445523,5.3098254,Forward,Left Center Midfield,Central Midfielder
+5627.0,4.731479,1.8188393,Midfielder,Center Forward,Striker
+8807.0,1.6220411,1.3379306,Forward,Center Attacking Midfield,Offensive Midfielder
+8207.0,6.343546,2.6304364,Midfielder,Right Center Midfield,Central Midfielder
+22826.0,12.559009,5.583157,Defender,Right Defensive Midfield,Defensive Midfielder
+8237.0,6.544345,-3.644587,Defender,Right Back,Offensive Defender
+8574.0,3.721009,-0.25152466,Forward,Right Center Midfield,Central Midfielder
+5578.0,6.9641542,3.5566795,Defender,Center Back,Regular Defender
+8209.0,5.3145275,-1.4682816,Midfielder,Left Center Back,Regular Defender
+8317.0,5.076366,4.7182593,Midfielder,Right Defensive Midfield,Defensive Midfielder
+400620.0,0.9614012,5.114696,Forward,Left Defensive Midfield,Defensive Midfielder
+40480.0,5.3288546,-1.3957499,Defender,Left Back,Offensive Defender
+4174.0,12.455445,1.5297631,Defender,Left Center Back,Regular Defender
+8314.0,4.833861,19.132835,Goalkeeper,Goalkeeper,Goalkeeper
+8217.0,3.0015535,0.88596547,Forward,Center Attacking Midfield,Offensive Midfielder
+12302.0,1.8847057,3.1273034,Midfielder,Right Wing,Winger
+40462.0,4.031708,4.342974,Midfielder,Left Center Back,Regular Defender
+7852.0,0.8970461,1.4606756,Forward,Right Defensive Midfield,Defensive Midfielder
+6359.0,12.740213,5.6763515,Defender,Right Center Back,Regular Defender
+9728.0,5.9672823,-2.948293,Defender,Center Defensive Midfield,Defensive Midfielder
+4683.0,12.603031,1.3166727,Defender,Right Center Midfield,Central Midfielder
+9409.0,0.9926486,1.0759878,Forward,Right Center Forward,Striker
+8557.0,3.359602,-0.35826233,Forward,Right Wing Back,Offensive Defender
+19289.0,1.1567667,3.1851277,Forward,Left Wing,Winger
+12583.0,5.6285267,2.0767636,Midfielder,Right Center Midfield,Central Midfielder
+17313.0,5.6772957,18.780508,Goalkeeper,Goalkeeper,Goalkeeper
+20010.0,5.7580814,2.1428268,Midfielder,Right Midfield,Central Midfielder
+8396.0,5.666189,-3.5210164,Defender,Right Back,Offensive Defender
+51388.0,13.529449,4.946194,Defender,Right Center Back,Regular Defender
+8815.0,11.363392,3.367603,Defender,Right Defensive Midfield,Defensive Midfielder
+23269.0,4.2218494,19.74904,Goalkeeper,Goalkeeper,Goalkeeper
+22043.0,1.3115773,6.608352,Midfielder,Left Back,Offensive Defender
+12624.0,0.1670749,1.4325068,Forward,Right Center Forward,Striker
+8401.0,1.9955767,3.5382142,Midfielder,Left Defensive Midfield,Defensive Midfielder
+8390.0,6.500175,3.6382883,Midfielder,Center Defensive Midfield,Defensive Midfielder
+8762.0,3.3134167,3.2194612,Midfielder,Right Center Midfield,Central Midfielder
+8402.0,1.0684252,1.8985682,Forward,Right Center Forward,Striker
+8389.0,1.8520241,2.8062155,Midfielder,Right Center Forward,Striker
+8554.0,3.6462617,-0.31291643,Midfielder,Left Center Forward,Striker
+6924.0,12.991833,4.797738,Defender,Left Center Midfield,Central Midfielder
+40543.0,13.259746,5.3339863,Defender,Left Center Back,Regular Defender
+8319.0,0.14445381,8.276512,Defender,Right Wing,Winger
+8303.0,1.5190023,5.450998,Forward,Left Center Forward,Striker
+24117.0,11.464092,2.524757,Midfielder,Right Wing,Winger
+9408.0,3.007335,3.122781,Midfielder,Left Wing,Winger
+9400.0,6.749119,-3.3626544,Defender,Right Back,Offensive Defender
+5514.0,0.2687715,1.4149529,Forward,Right Wing,Winger
+23702.0,4.097191,19.620813,Goalkeeper,Goalkeeper,Goalkeeper
+400873.0,2.0992763,4.2076488,Forward,Center Forward,Striker
+42462.0,5.1634326,19.382217,Goalkeeper,Goalkeeper,Goalkeeper
+11394.0,0.9059324,1.9924368,Forward,Right Back,Offensive Defender
+7039.0,1.8230323,4.2668595,Midfielder,Right Wing,Winger
+8222.0,3.807094,3.806145,Midfielder,Right Wing,Winger
+9363.0,11.765251,2.1063936,Defender,Left Defensive Midfield,Defensive Midfielder
+8573.0,11.677135,1.6295112,Defender,Center Back,Regular Defender
+10483.0,4.6047597,19.71536,Goalkeeper,Goalkeeper,Goalkeeper
+8211.0,2.2626204,6.7397494,Defender,Center Attacking Midfield,Offensive Midfielder
+8676.0,5.062285,-3.4691708,Defender,Left Wing,Winger
+3097.0,3.7960997,-0.036435895,Midfielder,Right Midfield,Central Midfielder
+8213.0,3.2470434,0.14062011,Forward,Right Wing,Winger
+40464.0,2.0815668,1.1175284,Forward,Right Midfield,Central Midfielder
+8394.0,0.9729151,7.5049562,Midfielder,Left Center Midfield,Central Midfielder
+5481.0,2.7088377,1.277675,Forward,Right Midfield,Central Midfielder
+9113.0,1.6391833,2.5086758,Forward,Right Wing,Winger
+400627.0,5.631088,19.073227,Goalkeeper,Goalkeeper,Goalkeeper
+8918.0,5.278861,-3.2478747,Defender,Right Back,Offensive Defender
+5555.0,2.156493,2.488124,Midfielder,Right Wing,Winger
+8210.0,6.01862,4.148479,Midfielder,Left Center Forward,Striker
+3221.0,0.6333921,7.456455,Defender,Left Back,Offensive Defender
+8405.0,12.506616,1.2200589,Defender,Left Center Back,Regular Defender
+9106.0,13.005396,4.9533076,Defender,Right Center Back,Regular Defender
+20485.0,4.30593,3.5247064,Midfielder,Right Center Midfield,Central Midfielder
+21168.0,5.6219077,1.966841,Midfielder,Center Forward,Striker
+401501.0,4.994306,19.627773,Goalkeeper,Goalkeeper,Goalkeeper
+12551.0,3.153703,2.4194317,Midfielder,Right Midfield,Central Midfielder
+9103.0,2.1633387,1.1417569,Forward,Left Midfield,Central Midfielder
+8219.0,1.4556758,4.278718,Midfielder,Left Center Forward,Striker
+40463.0,1.3632913,1.5102127,Forward,Left Midfield,Central Midfielder
+7993.0,0.6784857,6.793721,Defender,Left Wing Back,Offensive Defender
+8900.0,11.799508,1.5787203,Defender,Center Back,Regular Defender
+23486.0,0.49218798,1.3480337,Forward,Right Center Forward,Striker
+8827.0,6.7789965,3.2688835,Midfielder,Right Center Midfield,Central Midfielder
+8823.0,5.953398,-3.2098715,Defender,Left Center Forward,Striker
+25002.0,3.1361861,18.09832,Goalkeeper,Goalkeeper,Goalkeeper
+8825.0,2.8798769,2.749473,Midfielder,Left Center Forward,Striker
+11286.0,12.707736,5.7516184,Defender,Right Center Back,Regular Defender
+8826.0,1.9186864,4.384312,Midfielder,Left Center Forward,Striker
+8828.0,12.662926,0.77318037,Defender,Left Center Back,Regular Defender
+9459.0,6.7818327,-3.5778906,Defender,Right Center Forward,Striker
+8808.0,4.6682115,-1.0065519,Defender,Left Center Midfield,Central Midfielder
+9475.0,4.1516547,1.8898747,Midfielder,Center Attacking Midfield,Offensive Midfielder
+8231.0,4.125899,4.1688366,Midfielder,Right Defensive Midfield,Defensive Midfielder
+13206.0,2.3121245,6.659205,Defender,Left Wing,Winger
+8822.0,1.8762959,1.0288559,Forward,Right Center Midfield,Central Midfielder
+5679.0,2.8335001,2.0940554,Midfielder,Right Center Midfield,Central Midfielder
+20522.0,6.501204,-2.8820567,Defender,Right Back,Offensive Defender
+11398.0,4.5749154,18.494116,Goalkeeper,Goalkeeper,Goalkeeper
+8814.0,6.9719415,-2.7295437,Defender,Left Back,Offensive Defender
+29245.0,12.132608,4.9166875,Midfielder,Left Center Back,Regular Defender
+3959.0,12.303586,4.6653004,Defender,Right Back,Offensive Defender
+3500.0,6.6439815,4.2848396,Midfielder,Center Attacking Midfield,Offensive Midfielder
+8813.0,3.0423448,0.9263742,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5632.0,2.7212262,1.3495189,Midfielder,Left Center Forward,Striker
+8395.0,11.250935,2.8885198,Defender,Right Back,Offensive Defender
+8804.0,2.2446053,2.5661008,Forward,Center Forward,Striker
+11285.0,4.067983,-0.93342644,Midfielder,Left Midfield,Central Midfielder
+8322.0,2.186058,1.3945858,Forward,Right Midfield,Central Midfielder
+10435.0,5.5725513,19.168926,Goalkeeper,Goalkeeper,Goalkeeper
+8545.0,6.066439,-3.691036,Defender,Right Defensive Midfield,Defensive Midfielder
+400654.0,11.977151,4.187998,Defender,Right Center Midfield,Central Midfielder
+400612.0,0.38484734,1.4831265,Midfielder,Right Center Forward,Striker
+12320.0,10.960557,3.0426676,Defender,Left Center Back,Regular Defender
+13125.0,3.5220711,2.7441056,Midfielder,Left Center Forward,Striker
+5244.0,7.0671,3.7091174,Defender,Right Center Back,Regular Defender
+131141.0,5.6561794,-3.351987,Defender,Right Back,Offensive Defender
+49010.0,2.083327,2.160767,Forward,Left Center Midfield,Central Midfielder
+8208.0,4.714478,18.220486,Goalkeeper,Goalkeeper,Goalkeeper
+22824.0,4.4168344,1.7487625,Midfielder,Right Center Back,Regular Defender
+23242.0,3.7728853,-1.2034034,Midfielder,Center Attacking Midfield,Offensive Midfielder
+18399.0,0.8024279,8.136087,Defender,Left Center Back,Regular Defender
+8549.0,5.5588717,-1.9561454,Defender,Right Wing Back,Offensive Defender
+11278.0,1.1882634,4.7449355,Midfielder,Center Attacking Midfield,Offensive Midfielder
+11397.0,5.7228346,4.119146,Midfielder,Left Midfield,Central Midfielder
+11132.0,1.5685749,1.6574234,Forward,Right Center Forward,Striker
+11396.0,4.607015,3.8540263,Midfielder,Left Midfield,Central Midfielder
+26359.0,0.5243777,8.122172,Defender,Left Wing Back,Offensive Defender
+3774.0,11.867919,1.1187985,Defender,Left Center Back,Regular Defender
+8812.0,11.272291,3.3029754,Defender,Left Center Back,Regular Defender
+20950.0,6.3885717,-3.8521972,Defender,Center Attacking Midfield,Offensive Midfielder
+401376.0,3.3782246,-0.74149877,Forward,Right Wing,Winger
+37112.0,3.7709439,18.422766,Goalkeeper,Goalkeeper,Goalkeeper
+27639.0,1.2097032,1.3568494,Forward,Center Defensive Midfield,Defensive Midfielder
+8240.0,3.9836557,19.268335,Goalkeeper,Goalkeeper,Goalkeeper
+23267.0,4.873081,0.81257224,Forward,Center Attacking Midfield,Offensive Midfielder
+11370.0,6.96495,-3.4545033,Defender,Right Back,Offensive Defender
+12407.0,2.1301143,6.8821354,Midfielder,Left Midfield,Central Midfielder
+40483.0,12.064276,4.63839,Midfielder,Center Attacking Midfield,Offensive Midfielder
+8829.0,13.625399,4.814474,Defender,Center Back,Regular Defender
+6040.0,1.3540525,6.7963934,Defender,Left Center Back,Regular Defender
+8821.0,3.4959996,18.545261,Goalkeeper,Goalkeeper,Goalkeeper
+8397.0,6.363595,4.453535,Midfielder,Center Defensive Midfield,Defensive Midfielder
+9184.0,1.7249359,4.611664,Midfielder,Left Wing,Winger
+40479.0,0.7923345,8.024772,Defender,Left Midfield,Central Midfielder
+8232.0,5.311156,4.350295,Midfielder,Left Center Midfield,Central Midfielder
+8246.0,0.9706312,4.869702,Forward,Center Forward,Striker
+8320.0,1.097715,3.3837879,Forward,Right Center Forward,Striker
+38172.0,13.116399,5.2602153,Defender,Center Back,Regular Defender
+20665.0,5.3184686,-3.4922416,Defender,Right Back,Offensive Defender
+9262.0,0.39557046,8.080988,Defender,Left Midfield,Central Midfielder
+23499.0,4.602964,18.908417,Goalkeeper,Goalkeeper,Goalkeeper
+3545.0,6.101739,4.263774,Midfielder,Center Defensive Midfield,Defensive Midfielder
+8810.0,2.0871751,3.236915,Forward,Left Midfield,Central Midfielder
+8806.0,2.7767746,2.0476058,Forward,Right Defensive Midfield,Defensive Midfielder
+8238.0,5.355924,3.8259816,Defender,Center Defensive Midfield,Defensive Midfielder
+8969.0,4.7631407,2.0497487,Midfielder,Right Center Midfield,Central Midfielder
+8805.0,4.7439027,3.677982,Midfielder,Right Midfield,Central Midfielder
+8809.0,-0.09530998,8.181648,Defender,Left Center Midfield,Central Midfielder
+5550.0,4.224542,19.678867,Goalkeeper,Goalkeeper,Goalkeeper
+3058.0,0.51264143,1.3315654,Forward,Center Forward,Striker
+15581.0,4.9316688,19.696657,Goalkeeper,Goalkeeper,Goalkeeper
+6309.0,6.411463,-2.8212895,Defender,Right Back,Offensive Defender
+8318.0,13.45304,5.0691257,Defender,Right Center Back,Regular Defender
+30312.0,5.305698,-3.5590897,Defender,Right Wing,Winger
+4279.0,0.81328225,8.232468,Defender,Left Defensive Midfield,Defensive Midfielder
+5579.0,5.840628,1.778749,Midfielder,Right Back,Offensive Defender
+40459.0,6.9648194,3.4928572,Midfielder,Left Defensive Midfield,Defensive Midfielder
+12319.0,4.090188,19.614635,Goalkeeper,Goalkeeper,Goalkeeper
+12304.0,1.7709657,4.245927,Midfielder,Right Wing,Winger
+8392.0,0.9771025,7.866688,Defender,Left Center Back,Regular Defender
+9720.0,1.5963918,6.357084,Midfielder,Left Wing Back,Offensive Defender
+8407.0,0.5047309,1.2233919,Forward,Left Center Forward,Striker
+23660.0,3.7797415,-0.9461464,Forward,Right Center Midfield,Central Midfielder
+17520.0,11.752753,1.0901862,Defender,Left Center Back,Regular Defender
+7594.0,5.4203453,3.967664,Midfielder,Left Center Midfield,Central Midfielder
+40473.0,1.4034212,1.8315041,Forward,Right Defensive Midfield,Defensive Midfielder
+8239.0,12.274684,4.462805,Defender,Right Center Back,Regular Defender
+400984.0,11.817579,1.0998104,Defender,Left Center Back,Regular Defender
+6317.0,2.8437803,3.4292836,Midfielder,Right Wing,Winger
+35033.0,12.010604,1.9062995,Defender,Right Midfield,Central Midfielder
+8669.0,1.5052649,4.3262453,Midfielder,Left Midfield,Central Midfielder
+11283.0,1.6255118,4.9266167,Midfielder,Left Wing,Winger
+5544.0,0.44986895,8.833469,Defender,Left Back,Offensive Defender
+55966.0,1.2428391,1.2500947,Midfielder,Center Forward,Striker
+8221.0,13.229545,4.9372354,Defender,Right Center Back,Regular Defender
+8212.0,0.7809823,7.8032746,Defender,Right Back,Offensive Defender
+352950.0,5.0698133,4.093721,Midfielder,Left Center Midfield,Central Midfielder
+13332.0,6.568799,3.4342833,Midfielder,Left Center Back,Regular Defender
+108336.0,1.0126939,7.8130164,Defender,Left Back,Offensive Defender
+9257.0,3.980778,1.7185539,Midfielder,Left Center Midfield,Central Midfielder
+8241.0,3.210093,0.8271078,Midfielder,Right Center Midfield,Central Midfielder
+8883.0,-0.07491168,7.2822924,Forward,Left Defensive Midfield,Defensive Midfielder
+5548.0,1.6725303,4.2699966,Midfielder,Right Center Forward,Striker
+25152.0,4.094096,-0.8109131,Forward,Left Wing,Winger
+28571.0,12.189865,1.4910094,Forward,Center Forward,Striker
+35496.0,1.8885211,1.0537791,Forward,Center Attacking Midfield,Offensive Midfielder
+24428.0,5.938971,2.8095136,Midfielder,Right Center Forward,Striker
+20499.0,12.745297,5.6836987,Midfielder,Left Defensive Midfield,Defensive Midfielder
+12294.0,6.5693083,4.065106,Midfielder,Left Center Back,Regular Defender
+10902.0,0.6271297,1.3865014,Forward,Right Back,Offensive Defender
+8307.0,12.70969,0.6975144,Defender,Right Defensive Midfield,Defensive Midfielder
+16502.0,2.9711244,3.0942938,Midfielder,Left Midfield,Central Midfielder
+8369.0,1.448477,4.226084,Midfielder,Left Midfield,Central Midfielder
+12293.0,12.591108,1.3760532,Defender,Left Center Back,Regular Defender
+8831.0,4.06258,-1.0537595,Midfielder,Right Midfield,Central Midfielder
+20959.0,1.194662,5.3566604,Forward,Left Midfield,Central Midfielder
+34558.0,6.8104873,3.2954824,Midfielder,Center Attacking Midfield,Offensive Midfielder
+20359.0,1.2009138,3.4836273,Midfielder,Left Center Midfield,Central Midfielder
+15847.0,12.6151085,1.4281512,Defender,Left Center Back,Regular Defender
+8890.0,4.391976,4.2585564,Midfielder,Center Attacking Midfield,Offensive Midfielder
+12599.0,12.703922,5.7703886,Defender,Right Center Back,Regular Defender
+40477.0,1.7468808,1.9625579,Midfielder,Right Defensive Midfield,Defensive Midfielder
+400619.0,6.676515,4.2939897,Midfielder,Right Center Midfield,Central Midfielder
+5694.0,6.6378813,2.7027948,Midfielder,Center Attacking Midfield,Offensive Midfielder
+9174.0,3.3961973,-0.4483055,Forward,Center Forward,Striker
+8313.0,11.754986,1.635306,Defender,Center Defensive Midfield,Defensive Midfielder
+5835.0,1.8291523,3.1488845,Midfielder,Right Center Midfield,Central Midfielder
+6321.0,11.310509,3.2219925,Midfielder,Center Defensive Midfield,Defensive Midfielder
+29001.0,0.90291685,3.3391237,Midfielder,Right Wing,Winger
+13369.0,11.504692,3.8508856,Midfielder,Center Defensive Midfield,Defensive Midfielder
+36641.0,1.2099807,7.2969503,Defender,Right Center Midfield,Central Midfielder
+9097.0,2.0991786,4.3174653,Midfielder,Center Attacking Midfield,Offensive Midfielder
+8218.0,3.5621085,-0.93213695,Defender,Right Wing Back,Offensive Defender
+2968.0,2.4510307,1.7884877,Forward,Right Center Forward,Striker
+20415.0,2.3675063,6.6836877,Defender,Left Center Back,Regular Defender
+30847.0,3.9259505,3.2903256,Midfielder,Left Defensive Midfield,Defensive Midfielder
+8671.0,1.9868644,0.91810447,Forward,Left Midfield,Central Midfielder
+4430.0,12.249767,5.1103983,Defender,Right Center Back,Regular Defender
+12424.0,3.9351113,19.200869,Goalkeeper,Goalkeeper,Goalkeeper
+9410.0,1.3865858,4.9766374,Midfielder,Left Midfield,Central Midfielder
+40481.0,1.213072,1.5185946,Forward,Center Attacking Midfield,Offensive Midfielder
+8478.0,4.195487,-1.1392404,Forward,Right Wing,Winger
+26790.0,3.5771506,4.8057346,Midfielder,Right Defensive Midfield,Defensive Midfielder
+20200.0,1.3970789,1.3415213,Forward,Right Center Midfield,Central Midfielder
+8511.0,7.015198,-3.419561,Midfielder,Right Defensive Midfield,Defensive Midfielder
+9406.0,12.518493,0.7191803,Defender,Right Attacking Midfield,Offensive Midfielder
+15370.0,0.01133493,7.5376315,Defender,Left Back,Offensive Defender
+10918.0,1.3437606,5.464176,Forward,Left Center Midfield,Central Midfielder
+5609.0,-0.1458192,8.030666,Defender,Left Center Midfield,Central Midfielder
+9088.0,1.3282642,6.785864,Defender,Left Back,Offensive Defender
+9461.0,11.859898,1.5256988,Defender,Left Center Forward,Striker
+28976.0,4.5256047,3.7798214,Midfielder,Right Defensive Midfield,Defensive Midfielder
+155655.0,1.302864,2.8122852,Midfielder,Left Center Forward,Striker
+13291.0,-0.008603106,1.7579825,Midfielder,Left Midfield,Central Midfielder
+9178.0,5.7993383,3.2577448,Midfielder,Left Center Midfield,Central Midfielder
+40460.0,5.9698634,-3.22584,Defender,Right Back,Offensive Defender
+400805.0,4.2224183,-1.0991107,Forward,Center Forward,Striker
+20355.0,0.40702784,2.0711193,Forward,Left Center Forward,Striker
+30551.0,4.131903,5.1290135,Midfielder,Left Defensive Midfield,Defensive Midfielder
+27341.0,6.504058,3.6828547,Midfielder,Left Center Midfield,Central Midfielder
+42301.0,0.5974836,6.9076614,Forward,Left Wing,Winger
+8542.0,12.083875,1.895814,Defender,Left Center Back,Regular Defender
+48718.0,0.8012692,5.4835935,Forward,Left Wing,Winger
+10332.0,5.0564795,19.477942,Goalkeeper,Goalkeeper,Goalkeeper
+400622.0,1.1354649,6.035434,Midfielder,Left Midfield,Central Midfielder
+8582.0,4.1396084,4.902916,Forward,Left Center Forward,Striker
+9140.0,6.9079905,-3.3969808,Midfielder,Right Center Midfield,Central Midfielder
+6330.0,2.1752982,0.92693686,Forward,Center Forward,Striker
+26677.0,12.500773,1.5079697,Defender,Left Center Back,Regular Defender
+37264.0,1.1311492,3.4616196,Midfielder,Left Midfield,Central Midfielder
+400623.0,2.5341747,1.5734808,Forward,Center Forward,Striker
+43055.0,2.9522672,3.1617553,Midfielder,Left Midfield,Central Midfielder
+9148.0,4.898048,2.6904964,Midfielder,Left Center Forward,Striker
+13370.0,3.3164716,-0.21257028,Forward,Right Wing,Winger
+9091.0,0.5558702,7.5297346,Midfielder,Left Center Midfield,Central Midfielder
+9223.0,4.209746,2.3098211,Midfielder,Left Defensive Midfield,Defensive Midfielder
+47881.0,3.0031457,4.919269,Midfielder,Left Center Midfield,Central Midfielder
+49081.0,0.5431336,1.6075633,Midfielder,Center Forward,Striker
+9398.0,1.3539047,5.499684,Midfielder,Left Center Midfield,Central Midfielder
+400983.0,1.2969053,7.295029,Forward,Left Wing,Winger
+15543.0,3.8597445,-1.2253914,Midfielder,Right Midfield,Central Midfielder
+31437.0,4.960297,19.648046,Goalkeeper,Goalkeeper,Goalkeeper
+3089.0,2.7858536,1.106806,Forward,Right Center Forward,Striker
+5474.0,1.2655978,4.9004393,Forward,Left Attacking Midfield,Offensive Midfielder
+5687.0,0.7960429,5.55822,Midfielder,Right Wing,Winger
+8514.0,12.601022,0.9199659,Defender,Left Center Back,Regular Defender
+3083.0,1.6338474,2.3100443,Forward,Left Attacking Midfield,Offensive Midfielder
+6557.0,3.627973,4.953057,Midfielder,Left Center Forward,Striker
+6566.0,1.3304791,2.02162,Forward,Center Forward,Striker
+6775.0,5.824836,4.4402204,Midfielder,Left Defensive Midfield,Defensive Midfielder
+27239.0,11.425196,3.2809315,Defender,Left Center Back,Regular Defender
+6837.0,13.004227,5.0026317,Defender,Right Center Back,Regular Defender
+6668.0,1.7277533,3.8182776,Midfielder,Left Wing,Winger
+23970.0,6.228212,3.5788295,Midfielder,Left Center Back,Regular Defender
+6647.0,12.053436,1.867648,Defender,Left Center Back,Regular Defender
+6784.0,0.2610457,7.5546837,Defender,Left Center Back,Regular Defender
+6699.0,6.081661,-3.6313112,Defender,Right Back,Offensive Defender
+6712.0,5.6396666,1.8813871,Midfielder,Center Attacking Midfield,Offensive Midfielder
+26023.0,1.0218968,8.63003,Defender,Left Back,Offensive Defender
+24149.0,6.036834,2.8679054,Forward,Left Center Midfield,Central Midfielder
+10763.0,4.4211097,19.619953,Goalkeeper,Goalkeeper,Goalkeeper
+23791.0,2.3415496,2.5235267,Forward,Left Center Midfield,Central Midfielder
+6776.0,0.012896688,8.162317,Defender,Left Back,Offensive Defender
+6730.0,4.2796493,18.625385,Goalkeeper,Goalkeeper,Goalkeeper
+6742.0,3.789005,-1.1934111,Midfielder,Right Midfield,Central Midfielder
+5678.0,4.8468513,1.336498,Midfielder,Right Center Forward,Striker
+25824.0,13.41609,4.9555864,Defender,Right Center Back,Regular Defender
+27250.0,1.0926982,2.7379477,Forward,Right Wing,Winger
+23943.0,1.5026901,4.1631565,Midfielder,Right Center Midfield,Central Midfielder
+6659.0,4.4017386,3.8955896,Midfielder,Right Center Midfield,Central Midfielder
+24070.0,1.3486614,4.9217615,Forward,Center Forward,Striker
+25134.0,1.1589234,2.479603,Forward,Center Defensive Midfield,Defensive Midfielder
+6700.0,1.437985,1.3658364,Forward,Right Midfield,Central Midfielder
+26736.0,4.853019,0.42273375,Defender,Left Center Back,Regular Defender
+6356.0,3.333288,3.583841,Forward,Right Center Midfield,Central Midfielder
+3637.0,7.2791195,3.961117,Midfielder,Right Center Back,Regular Defender
+6672.0,5.911183,-2.8092754,Defender,Left Back,Offensive Defender
+3486.0,-0.09493165,1.5861772,Forward,Right Center Midfield,Central Midfielder
+26753.0,4.0074663,19.227703,Midfielder,Center Attacking Midfield,Offensive Midfielder
+10755.0,2.2631207,4.858827,Midfielder,Right Center Forward,Striker
+6823.0,5.7147813,18.704964,Goalkeeper,Goalkeeper,Goalkeeper
+6932.0,0.26416594,8.784785,Defender,Left Back,Offensive Defender
+7907.0,12.453254,1.4673021,Defender,Left Back,Offensive Defender
+27522.0,13.73166,4.777784,Defender,Right Center Back,Regular Defender
+27483.0,0.61201084,7.834184,Defender,Left Back,Offensive Defender
+15805.0,6.865676,3.1518865,Midfielder,Right Center Midfield,Central Midfielder
+3610.0,6.4578443,3.0145116,Midfielder,Right Midfield,Central Midfielder
+7906.0,5.6565413,-3.648556,Forward,Right Wing,Winger
+7788.0,0.5194153,2.3058975,Forward,Left Center Forward,Striker
+7154.0,7.1713395,3.9177797,Midfielder,Left Defensive Midfield,Defensive Midfielder
+10476.0,12.535317,1.3866285,Defender,Center Back,Regular Defender
+8440.0,12.174128,4.365819,Defender,Center Back,Regular Defender
+8167.0,0.6401501,2.3206408,Forward,Right Center Forward,Striker
+6626.0,3.4305382,4.8893857,Midfielder,Right Center Midfield,Central Midfielder
+3497.0,4.3142586,3.434545,Midfielder,Left Center Forward,Striker
+7948.0,13.161946,5.283841,Defender,Right Center Back,Regular Defender
+6401.0,0.97947896,1.4334615,Forward,Right Defensive Midfield,Defensive Midfielder
+23816.0,3.4428077,0.37460458,Forward,Right Center Forward,Striker
+6841.0,3.2946978,0.28813672,Forward,Right Back,Offensive Defender
+6608.0,3.905669,-0.6794271,Midfielder,Center Defensive Midfield,Defensive Midfielder
+27521.0,4.293754,4.7892876,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6929.0,5.8733516,4.616577,Defender,Left Center Midfield,Central Midfielder
+24035.0,2.0868425,1.1203504,Forward,Left Defensive Midfield,Defensive Midfielder
+11675.0,1.8082609,4.6800175,Midfielder,Right Midfield,Central Midfielder
+6745.0,5.560383,4.7020073,Midfielder,Left Defensive Midfield,Defensive Midfielder
+6627.0,6.4870563,-3.763822,Defender,Right Wing,Winger
+6720.0,3.375058,0.41073382,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6856.0,2.406467,6.681391,Defender,Left Back,Offensive Defender
+27403.0,13.344073,5.172406,Defender,Left Back,Offensive Defender
+6777.0,11.882504,1.2112834,Defender,Left Center Back,Regular Defender
+6869.0,13.4747505,4.947259,Defender,Right Center Back,Regular Defender
+23800.0,6.1722083,-3.2176597,Defender,Right Center Forward,Striker
+27457.0,4.239333,19.46634,Goalkeeper,Goalkeeper,Goalkeeper
+6732.0,1.4676234,1.3966436,Forward,Right Wing,Winger
+5724.0,2.6357303,3.2012887,Midfielder,Center Attacking Midfield,Offensive Midfielder
+7782.0,1.2492483,3.990704,Midfielder,Left Midfield,Central Midfielder
+6728.0,3.6749134,-0.9572342,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6733.0,5.883625,4.3986397,Midfielder,Left Defensive Midfield,Defensive Midfielder
+6625.0,4.972451,19.648733,Goalkeeper,Goalkeeper,Goalkeeper
+6736.0,5.5385103,3.3968914,Midfielder,Left Defensive Midfield,Defensive Midfielder
+220761.0,7.089573,-3.4913168,Defender,Right Back,Offensive Defender
+6913.0,0.67337286,8.351678,Defender,Left Back,Offensive Defender
+5582.0,4.764303,3.8419898,Midfielder,Right Midfield,Central Midfielder
+6907.0,3.8253055,-0.5874751,Forward,Right Wing Back,Offensive Defender
+23416.0,1.9336478,1.4064107,Forward,Right Defensive Midfield,Defensive Midfielder
+6738.0,5.3700833,-3.1450937,Defender,Right Midfield,Central Midfielder
+25921.0,2.944929,2.4885943,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6861.0,11.706857,2.022269,Defender,Left Center Back,Regular Defender
+25881.0,6.602626,2.6643264,Midfielder,Right Center Midfield,Central Midfielder
+27243.0,1.2942383,1.2746754,Forward,Left Midfield,Central Midfielder
+7141.0,0.51628804,1.8900104,Forward,Left Wing,Winger
+27656.0,13.334547,5.115008,Defender,Right Center Back,Regular Defender
+6727.0,12.90188,5.102551,Defender,Right Center Back,Regular Defender
+23843.0,4.586825,18.92099,Goalkeeper,Goalkeeper,Goalkeeper
+6844.0,0.7929539,8.052639,Defender,Left Back,Offensive Defender
+6787.0,6.4017806,-3.4844482,Defender,Right Back,Offensive Defender
+5577.0,4.6138124,18.20702,Goalkeeper,Goalkeeper,Goalkeeper
+6569.0,6.0185184,-3.341288,Defender,Right Back,Offensive Defender
+6707.0,0.4776176,1.2811725,Forward,Left Center Forward,Striker
+6764.0,4.563126,3.3176315,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6740.0,0.77262086,5.920474,Midfielder,Right Center Forward,Striker
+6878.0,2.0398643,7.011676,Defender,Left Back,Offensive Defender
+6563.0,4.342425,0.57209736,Midfielder,Right Wing,Winger
+8234.0,5.962604,3.0806277,Midfielder,Left Center Midfield,Central Midfielder
+27463.0,3.7563639,-0.6511477,Midfielder,Right Center Forward,Striker
+16723.0,11.327179,3.6988251,Defender,Left Midfield,Central Midfielder
+8419.0,1.3070183,3.9272022,Forward,Right Center Forward,Striker
+3084.0,3.434707,0.31229514,Midfielder,Left Center Back,Regular Defender
+25859.0,3.259288,0.7388988,Midfielder,Center Attacking Midfield,Offensive Midfielder
+26211.0,3.3107362,2.5464919,Midfielder,Right Attacking Midfield,Offensive Midfielder
+5719.0,3.0797963,2.517708,Midfielder,Right Center Forward,Striker
+6766.0,1.5658472,1.6071784,Forward,Left Wing,Winger
+6762.0,13.455106,4.96932,Defender,Left Center Back,Regular Defender
+16456.0,11.831927,1.9091866,Defender,Left Back,Offensive Defender
+6792.0,3.9054527,19.213541,Goalkeeper,Goalkeeper,Goalkeeper
+6838.0,4.161886,-0.84637576,Forward,Right Wing Back,Offensive Defender
+6791.0,6.7139583,-3.444268,Defender,Left Defensive Midfield,Defensive Midfielder
+6867.0,6.85162,3.1305523,Midfielder,Left Center Midfield,Central Midfielder
+27462.0,4.0803037,19.492891,Goalkeeper,Goalkeeper,Goalkeeper
+5598.0,7.411534,3.9884615,Defender,Center Back,Regular Defender
+26764.0,11.44232,3.309609,Defender,Center Forward,Striker
+6675.0,0.4881709,7.809274,Midfielder,Right Center Forward,Striker
+6758.0,5.0713305,2.1414149,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6612.0,0.40870655,8.022866,Defender,Left Back,Offensive Defender
+23974.0,6.241124,-3.8475082,Defender,Right Back,Offensive Defender
+24072.0,4.376197,4.1237254,Midfielder,Left Midfield,Central Midfielder
+23924.0,1.1780897,1.7241665,Forward,Center Forward,Striker
+26669.0,12.433394,1.5121773,Defender,Left Center Back,Regular Defender
+6934.0,3.0183294,1.7838954,Midfielder,Left Midfield,Central Midfielder
+6927.0,7.0757904,-3.3207653,Defender,Right Back,Offensive Defender
+7692.0,12.719828,5.5704627,Defender,Left Center Midfield,Central Midfielder
+6580.0,4.2317853,4.4932756,Midfielder,Left Center Midfield,Central Midfielder
+7905.0,4.4509087,18.216158,Goalkeeper,Goalkeeper,Goalkeeper
+6928.0,4.4441442,1.922283,Midfielder,Left Wing,Winger
+6721.0,0.65067554,2.3014681,Forward,Left Wing Back,Offensive Defender
+23848.0,4.26792,-0.7174451,Forward,Right Center Midfield,Central Midfielder
+13107.0,6.620465,2.8597524,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6772.0,6.7516522,-3.6290658,Defender,Right Back,Offensive Defender
+24263.0,0.5724881,8.277764,Defender,Right Wing,Winger
+6581.0,0.7553966,5.6421747,Forward,Center Forward,Striker
+8818.0,11.833718,1.1732597,Defender,Left Center Back,Regular Defender
+6561.0,12.888404,5.0455275,Defender,Right Center Back,Regular Defender
+6610.0,3.9254684,19.323868,Goalkeeper,Goalkeeper,Goalkeeper
+6602.0,1.5922118,1.3913966,Forward,Center Forward,Striker
+3324.0,12.903246,5.094661,Defender,Left Center Back,Regular Defender
+6860.0,5.6251616,19.046413,Goalkeeper,Goalkeeper,Goalkeeper
+6829.0,1.6531959,4.702965,Midfielder,Right Wing,Winger
+27526.0,5.354483,3.5740519,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6880.0,1.5157052,2.2902594,Forward,Right Wing,Winger
+6357.0,4.625991,0.5239009,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6761.0,2.1263654,1.1642648,Forward,Right Center Forward,Striker
+6783.0,3.6341543,-0.6060614,Midfielder,Right Defensive Midfield,Defensive Midfielder
+26633.0,6.853039,-3.4819598,Midfielder,Left Back,Offensive Defender
+5588.0,2.484009,6.632468,Defender,Left Back,Offensive Defender
+6827.0,12.224322,4.6899266,Defender,Right Center Back,Regular Defender
+6771.0,6.4794974,2.6556468,Midfielder,Right Midfield,Central Midfielder
+18867.0,3.7369788,0.0068653966,Midfielder,Right Midfield,Central Midfielder
+6752.0,11.868871,1.229323,Defender,Left Center Back,Regular Defender
+24173.0,1.3928226,1.7047911,Forward,Center Attacking Midfield,Offensive Midfielder
+6609.0,1.507107,4.814863,Midfielder,Right Center Midfield,Central Midfielder
+6926.0,4.2241607,-0.5873571,Midfielder,Right Wing,Winger
+6862.0,1.2776672,1.8998662,Forward,Right Center Midfield,Central Midfielder
+25057.0,3.0132074,2.3232887,Forward,Left Wing,Winger
+6852.0,4.5332155,3.592593,Midfielder,Left Center Midfield,Central Midfielder
+11542.0,1.0663735,2.0211692,Forward,Right Defensive Midfield,Defensive Midfielder
+6713.0,11.3510275,3.68469,Defender,Left Wing,Winger
+24138.0,6.4066105,-2.9077528,Defender,Left Center Back,Regular Defender
+27144.0,12.237063,4.4297447,Defender,Left Wing,Winger
+6914.0,2.4868531,6.639657,Defender,Center Back,Regular Defender
+26848.0,5.1228743,3.63567,Midfielder,Right Defensive Midfield,Defensive Midfielder
+11539.0,3.0917356,0.88521475,Forward,Right Wing Back,Offensive Defender
+4711.0,3.26585,2.0306978,Midfielder,Left Defensive Midfield,Defensive Midfielder
+8801.0,6.087033,-3.1437857,Defender,Right Back,Offensive Defender
+11298.0,2.2440107,6.784044,Defender,Left Back,Offensive Defender
+26012.0,11.961934,4.2437778,Defender,Right Center Back,Regular Defender
+27123.0,3.1394737,0.7801705,Midfielder,Left Center Midfield,Central Midfielder
+27122.0,7.1153927,3.7110684,Midfielder,Left Center Midfield,Central Midfielder
+10612.0,4.3754086,18.719055,Goalkeeper,Goalkeeper,Goalkeeper
+26685.0,1.3106935,1.789172,Forward,Left Wing,Winger
+7900.0,1.2073061,5.324523,Forward,Left Center Back,Regular Defender
+10727.0,0.11589273,7.5514755,Defender,Left Back,Offensive Defender
+27349.0,12.026312,1.8449662,Forward,Right Center Forward,Striker
+27347.0,0.7752636,7.9363894,Defender,Left Wing,Winger
+8803.0,4.043691,19.252222,Goalkeeper,Goalkeeper,Goalkeeper
+6593.0,5.505073,-1.6308018,Defender,Right Back,Offensive Defender
+6630.0,1.5159926,1.4598569,Forward,Left Center Forward,Striker
+6832.0,1.4168143,2.8676102,Forward,Right Midfield,Central Midfielder
+6651.0,3.7105906,-0.16643067,Midfielder,Right Defensive Midfield,Defensive Midfielder
+27402.0,0.7227822,8.79934,Defender,Left Back,Offensive Defender
+5671.0,6.488389,3.5757613,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7161.0,13.1667,5.288044,Defender,Right Center Back,Regular Defender
+27346.0,6.3920617,3.2458258,Midfielder,Left Center Forward,Striker
+6697.0,3.655691,3.7330084,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3601.0,2.933926,1.7537555,Midfielder,Right Wing,Winger
+11813.0,4.686146,0.49418873,Midfielder,Left Wing,Winger
+27092.0,0.9796748,7.7031245,Defender,Center Forward,Striker
+6655.0,3.8647103,1.7758356,Forward,Right Center Forward,Striker
+24132.0,0.05687194,7.582942,Defender,Left Wing,Winger
+26209.0,2.2833073,6.7407584,Defender,Left Center Back,Regular Defender
+5463.0,5.7336736,1.9780616,Midfielder,Left Defensive Midfield,Defensive Midfielder
+6399.0,2.2290635,0.8718822,Forward,Left Center Midfield,Central Midfielder
+5552.0,-0.0807071,7.8635235,Defender,Right Back,Offensive Defender
+5207.0,1.0169986,3.33162,Forward,Left Wing,Winger
+5574.0,6.000417,4.2664785,Midfielder,Center Defensive Midfield,Defensive Midfielder
+5721.0,5.5421615,-3.4531732,Defender,Right Back,Offensive Defender
+5539.0,6.3538637,4.0000997,Defender,Left Defensive Midfield,Defensive Midfielder
+5201.0,12.063894,1.0379473,Defender,Center Defensive Midfield,Defensive Midfielder
+20016.0,13.401853,4.8675566,Defender,Right Center Back,Regular Defender
+20086.0,5.25525,18.537891,Goalkeeper,Goalkeeper,Goalkeeper
+23806.0,5.7019143,2.0858564,Defender,Center Defensive Midfield,Defensive Midfielder
+19677.0,0.42627132,2.4593043,Forward,Center Forward,Striker
+5597.0,4.7378507,18.273136,Goalkeeper,Goalkeeper,Goalkeeper
+5695.0,3.0574422,2.342688,Midfielder,Center Forward,Striker
+4926.0,2.9150794,3.428403,Midfielder,Right Center Midfield,Central Midfielder
+3990.0,1.3248128,4.433716,Forward,Center Forward,Striker
+6807.0,0.9228989,8.671947,Defender,Left Back,Offensive Defender
+6394.0,0.61814106,1.1373317,Forward,Left Center Forward,Striker
+6391.0,2.7793603,1.275783,Midfielder,Right Center Forward,Striker
+26087.0,11.981178,4.25496,Midfielder,Right Center Midfield,Central Midfielder
+6392.0,1.6427215,4.983659,Forward,Right Attacking Midfield,Offensive Midfielder
+6393.0,3.3664937,-0.47597998,Forward,Center Attacking Midfield,Offensive Midfielder
+6386.0,6.9197273,-2.833554,Defender,Left Back,Offensive Defender
+6576.0,4.2518606,19.78215,Goalkeeper,Goalkeeper,Goalkeeper
+6389.0,6.9755206,3.3568845,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6789.0,-0.00028005562,7.765179,Defender,Left Back,Offensive Defender
+6396.0,5.3646426,4.1256595,Midfielder,Center Attacking Midfield,Offensive Midfielder
+8523.0,0.902336,5.645536,Forward,Right Center Midfield,Central Midfielder
+24711.0,7.003318,-3.4127316,Defender,Right Back,Offensive Defender
+30454.0,3.21316,2.4680252,Forward,Left Wing,Winger
+23802.0,0.13524033,1.4739648,Forward,Right Wing,Winger
+6749.0,11.408718,3.2607386,Midfielder,Left Defensive Midfield,Defensive Midfielder
+5737.0,6.784777,3.9331226,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3253.0,13.173767,4.9954934,Defender,Center Defensive Midfield,Defensive Midfielder
+6390.0,3.1544209,0.6723666,Forward,Right Back,Offensive Defender
+6825.0,11.357781,3.450482,Defender,Right Center Back,Regular Defender
+12191.0,6.4624906,2.9450798,Midfielder,Left Center Back,Regular Defender
+6718.0,0.3516779,6.914707,Defender,Right Defensive Midfield,Defensive Midfielder
+6842.0,2.1594112,4.942806,Forward,Right Midfield,Central Midfielder
+6656.0,5.4910674,2.9392424,Midfielder,Left Center Midfield,Central Midfielder
+5487.0,2.3182805,1.6942672,Forward,Center Forward,Striker
+6382.0,0.94155395,1.9259684,Forward,Center Forward,Striker
+19668.0,6.4688525,3.943752,Midfielder,Left Center Midfield,Central Midfielder
+6381.0,3.7108612,3.8350987,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6804.0,11.737679,2.100001,Defender,Right Center Midfield,Central Midfielder
+6375.0,5.0452385,-3.5193415,Midfielder,Right Wing Back,Offensive Defender
+6384.0,5.7309055,1.8374386,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7577.0,0.57421565,8.819511,Midfielder,Left Wing Back,Offensive Defender
+6724.0,0.75208145,5.5911098,Forward,Left Midfield,Central Midfielder
+6801.0,5.3872437,4.085207,Midfielder,Left Center Midfield,Central Midfielder
+6038.0,0.13806845,1.5418749,Forward,Right Center Midfield,Central Midfielder
+6376.0,12.610615,5.1068997,Forward,Center Forward,Striker
+6884.0,4.5781474,18.495428,Goalkeeper,Goalkeeper,Goalkeeper
+6805.0,6.827093,-2.879643,Defender,Right Wing Back,Offensive Defender
+7105.0,2.2068305,1.5072507,Forward,Left Center Midfield,Central Midfielder
+6802.0,2.2887845,6.742866,Defender,Right Wing Back,Offensive Defender
+6797.0,5.534321,2.4917893,Midfielder,Left Center Midfield,Central Midfielder
+5249.0,12.36212,1.2866117,Defender,Left Center Midfield,Central Midfielder
+6320.0,-0.026803546,7.2178445,Defender,Right Center Midfield,Central Midfielder
+5199.0,2.773937,3.421087,Midfielder,Left Wing,Winger
+6378.0,5.085829,18.477158,Goalkeeper,Goalkeeper,Goalkeeper
+5217.0,0.5249563,1.1623636,Forward,Right Center Midfield,Central Midfielder
+23785.0,1.24918,4.8255706,Forward,Left Midfield,Central Midfielder
+5633.0,0.963801,5.2527275,Midfielder,Right Midfield,Central Midfielder
+20669.0,5.824353,4.329268,Midfielder,Left Midfield,Central Midfielder
+6796.0,6.3798003,4.0267925,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6906.0,0.23234081,1.5940092,Forward,Center Forward,Striker
+6685.0,1.7124443,3.6987004,Forward,Center Forward,Striker
+6671.0,4.730981,3.8883424,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6674.0,-0.010019317,7.1784797,Defender,Right Back,Offensive Defender
+16539.0,12.434574,4.5702667,Defender,Left Defensive Midfield,Defensive Midfielder
+6679.0,6.797026,-3.0025206,Defender,Right Back,Offensive Defender
+6763.0,1.1631507,5.580856,Forward,Center Forward,Striker
+6899.0,4.341516,3.6723104,Midfielder,Right Center Midfield,Central Midfielder
+6690.0,3.8583736,-0.5381858,Midfielder,Left Wing,Winger
+16622.0,12.352674,4.493103,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6592.0,11.161366,2.978939,Midfielder,Left Midfield,Central Midfielder
+6898.0,5.0956917,18.768066,Goalkeeper,Goalkeeper,Goalkeeper
+6663.0,6.2578664,-3.456929,Defender,Right Wing,Winger
+6594.0,2.9972317,1.5367683,Forward,Left Center Forward,Striker
+10802.0,4.1207814,4.109099,Midfielder,Left Midfield,Central Midfielder
+6402.0,0.21648978,1.516847,Forward,Left Center Midfield,Central Midfielder
+6694.0,5.0829067,19.607494,Midfielder,Center Attacking Midfield,Offensive Midfielder
+27482.0,11.4331,3.1831129,Defender,Left Center Back,Regular Defender
+6669.0,1.5759206,5.5966043,Forward,Center Forward,Striker
+10037.0,5.6858616,2.9310126,Midfielder,Center Defensive Midfield,Defensive Midfielder
+26780.0,-0.038795117,8.204323,Defender,Left Back,Offensive Defender
+6595.0,5.607492,3.109368,Midfielder,Right Defensive Midfield,Defensive Midfielder
+31469.0,5.623893,-2.0298665,Forward,Left Wing,Winger
+8522.0,1.0428134,4.8129406,Forward,Left Midfield,Central Midfielder
+7005.0,5.6012273,-2.0336359,Defender,Left Center Midfield,Central Midfielder
+8584.0,0.36266512,2.2056901,Forward,Left Center Forward,Striker
+20542.0,0.26287568,1.4813098,Forward,Right Back,Offensive Defender
+6676.0,4.411134,4.542282,Midfielder,Left Defensive Midfield,Defensive Midfielder
+5259.0,12.787659,5.367429,Defender,Left Center Back,Regular Defender
+6377.0,0.61388516,1.7579095,Forward,Left Wing,Winger
+6383.0,4.3833756,0.70065606,Midfielder,Center Defensive Midfield,Defensive Midfielder
+9403.0,1.2144169,4.7088356,Forward,Center Attacking Midfield,Offensive Midfielder
+6778.0,11.8164,1.2375857,Defender,Right Back,Offensive Defender
+9462.0,3.3238413,0.5709987,Midfielder,Left Midfield,Central Midfielder
+24453.0,5.616675,2.9855433,Midfielder,Center Attacking Midfield,Offensive Midfielder
+25997.0,1.0905098,5.12537,Forward,Left Defensive Midfield,Defensive Midfielder
+16426.0,1.8313797,3.763386,Forward,Right Wing,Winger
+17054.0,12.726382,4.7139297,Defender,Right Center Back,Regular Defender
+15893.0,2.695787,3.35869,Midfielder,Left Center Forward,Striker
+27348.0,1.6163472,1.7086753,Forward,Left Center Forward,Striker
+6872.0,11.442189,3.4216385,Defender,Left Center Back,Regular Defender
+186264.0,4.224379,-0.8600777,Midfielder,Right Defensive Midfield,Defensive Midfielder
+23994.0,0.42355984,6.7783947,Forward,Left Defensive Midfield,Defensive Midfielder
+16332.0,6.7878017,-3.2878604,Defender,Right Defensive Midfield,Defensive Midfielder
+6654.0,3.538702,18.533142,Goalkeeper,Goalkeeper,Goalkeeper
+3160.0,6.9018345,3.9524467,Midfielder,Right Defensive Midfield,Defensive Midfielder
+16338.0,7.126126,3.7391617,Midfielder,Left Center Midfield,Central Midfielder
+7158.0,0.78617907,8.552466,Defender,Left Center Back,Regular Defender
+6599.0,6.45113,3.4808517,Midfielder,Right Center Midfield,Central Midfielder
+8697.0,5.1699166,18.49243,Goalkeeper,Goalkeeper,Goalkeeper
+4546.0,5.639653,-1.9880403,Defender,Right Wing Back,Offensive Defender
+6918.0,3.0554168,0.9336189,Forward,Right Center Forward,Striker
+6847.0,2.0744708,2.4731643,Forward,Left Center Forward,Striker
+26387.0,1.5824288,4.882547,Forward,Right Midfield,Central Midfielder
+26781.0,11.400813,3.13659,Defender,Right Center Midfield,Central Midfielder
+6702.0,11.452306,3.3641796,Defender,Center Back,Regular Defender
+27109.0,0.9715341,1.9139503,Forward,Right Wing,Winger
+25707.0,5.1986356,2.639818,Midfielder,Center Attacking Midfield,Offensive Midfielder
+7170.0,2.0884726,3.4712713,Midfielder,Left Center Midfield,Central Midfielder
+20064.0,6.020232,-3.3848853,Defender,Right Wing,Winger
+26009.0,1.2526875,1.3093588,Forward,Left Center Forward,Striker
+22819.0,5.421912,4.595778,Midfielder,Left Center Midfield,Central Midfielder
+3023.0,-0.03993835,7.1726685,Defender,Left Back,Offensive Defender
+6665.0,12.605843,0.76386994,Defender,Left Center Back,Regular Defender
+6633.0,6.1338506,3.1205761,Midfielder,Right Wing,Winger
+6622.0,6.3062177,2.6576254,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6755.0,5.6376534,18.89041,Goalkeeper,Goalkeeper,Goalkeeper
+6605.0,5.1179447,-3.534999,Defender,Right Back,Offensive Defender
+5560.0,3.6512496,-0.83684313,Forward,Left Center Forward,Striker
+6935.0,0.696885,8.571316,Defender,Left Back,Offensive Defender
+6735.0,1.9292352,2.0536747,Forward,Left Center Forward,Striker
+10754.0,-0.04877828,7.1618667,Defender,Left Midfield,Central Midfielder
+21210.0,5.01211,-3.4761498,Defender,Left Back,Offensive Defender
+5504.0,4.163085,3.3880765,Midfielder,Left Center Midfield,Central Midfielder
+26723.0,3.6016755,0.789919,Forward,Right Midfield,Central Midfielder
+23833.0,1.0487609,1.0347769,Forward,Center Attacking Midfield,Offensive Midfielder
+6788.0,12.164831,4.627446,Defender,Right Center Back,Regular Defender
+6388.0,5.7016006,2.3077176,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5484.0,12.67874,0.7323326,Defender,Left Center Back,Regular Defender
+10868.0,1.6414468,4.3573895,Midfielder,Left Wing,Winger
+26783.0,1.5046728,1.3350657,Forward,Center Forward,Striker
+27148.0,4.0353303,4.5003815,Midfielder,Center Attacking Midfield,Offensive Midfielder
+31904.0,3.9706426,18.878815,Goalkeeper,Goalkeeper,Goalkeeper
+27241.0,0.25775313,8.075565,Forward,Right Center Back,Regular Defender
+6624.0,0.7909164,5.742496,Forward,Right Wing,Winger
+6701.0,5.4319787,3.516917,Midfielder,Center Attacking Midfield,Offensive Midfielder
+15602.0,5.8479824,2.3704054,Midfielder,Left Center Midfield,Central Midfielder
+19454.0,11.683116,1.6298448,Defender,Left Center Back,Regular Defender
+26776.0,1.3482221,5.8212986,Forward,Left Wing,Winger
+4498.0,13.114935,5.2229323,Defender,Right Center Back,Regular Defender
+3292.0,4.6682243,3.549172,Midfielder,Left Midfield,Central Midfielder
+6680.0,4.2839313,1.886085,Midfielder,Center Defensive Midfield,Defensive Midfielder
+27480.0,0.67300606,8.436174,Defender,Center Attacking Midfield,Offensive Midfielder
+27054.0,0.14581928,8.119154,Defender,Left Back,Offensive Defender
+6692.0,3.7766993,18.876314,Goalkeeper,Goalkeeper,Goalkeeper
+6770.0,5.7657714,3.1728818,Defender,Center Defensive Midfield,Defensive Midfielder
+26607.0,6.655649,3.9273639,Midfielder,Left Defensive Midfield,Defensive Midfielder
+24255.0,4.0784426,18.539133,Goalkeeper,Goalkeeper,Goalkeeper
+26222.0,11.317892,3.5123122,Defender,Left Wing,Winger
+26690.0,0.9712772,1.9913976,Forward,Left Center Back,Regular Defender
+18925.0,4.880736,4.263238,Midfielder,Left Defensive Midfield,Defensive Midfielder
+40822.0,2.7028487,2.0761795,Midfielder,Center Forward,Striker
+6649.0,5.386943,-3.310481,Defender,Right Midfield,Central Midfielder
+3638.0,12.903948,5.4255342,Defender,Right Center Back,Regular Defender
+4406.0,12.4759655,1.6005976,Defender,Left Center Back,Regular Defender
+25144.0,3.5510325,18.431948,Goalkeeper,Goalkeeper,Goalkeeper
+5718.0,2.492403,0.7149831,Forward,Right Midfield,Central Midfielder
+6751.0,6.778001,4.094675,Midfielder,Left Center Back,Regular Defender
+6596.0,0.04684654,8.283124,Defender,Left Midfield,Central Midfielder
+24508.0,2.316049,6.749325,Forward,Left Center Back,Regular Defender
+5741.0,6.3006105,3.9514453,Midfielder,Left Center Back,Regular Defender
+24144.0,6.574169,3.9669204,Midfielder,Center Defensive Midfield,Defensive Midfielder
+26448.0,1.0057466,8.6151705,Defender,Left Back,Offensive Defender
+6865.0,6.2299395,-3.2996428,Midfielder,Left Back,Offensive Defender
+27251.0,4.185117,-0.761249,Defender,Right Back,Offensive Defender
+6737.0,0.6233992,6.5637,Midfielder,Left Midfield,Central Midfielder
+18404.0,12.547351,1.4450345,Defender,Left Center Back,Regular Defender
+3379.0,4.5025163,18.159683,Goalkeeper,Goalkeeper,Goalkeeper
+6765.0,5.5492105,4.216072,Midfielder,Right Defensive Midfield,Defensive Midfielder
+26248.0,1.3199172,1.8932059,Forward,Center Attacking Midfield,Offensive Midfielder
+12021.0,3.0447917,2.5434182,Midfielder,Right Wing,Winger
+26107.0,13.477117,4.979079,Defender,Right Center Back,Regular Defender
+6734.0,-0.024924673,7.1675634,Midfielder,Left Center Midfield,Central Midfielder
+6794.0,11.938206,4.4011283,Defender,Left Center Midfield,Central Midfielder
+6795.0,4.2227273,18.868956,Goalkeeper,Goalkeeper,Goalkeeper
+6600.0,1.5739923,0.8442939,Forward,Right Center Forward,Striker
+24162.0,6.6900153,4.0307107,Midfielder,Right Center Forward,Striker
+6873.0,3.8610816,3.9142041,Midfielder,Left Wing,Winger
+5485.0,11.912328,4.1657453,Defender,Right Center Back,Regular Defender
+5202.0,12.571816,0.63576794,Defender,Left Center Back,Regular Defender
+5200.0,3.8181262,-0.89803797,Forward,Center Forward,Striker
+7781.0,0.72288585,1.2901517,Midfielder,Left Center Midfield,Central Midfielder
+26288.0,1.2283798,1.8378932,Forward,Left Wing,Winger
+26647.0,1.8299618,1.1041685,Forward,Center Forward,Striker
+23838.0,4.128917,-0.56035393,Forward,Right Center Forward,Striker
+6349.0,11.727321,2.2177851,Defender,Center Attacking Midfield,Offensive Midfielder
+18724.0,3.840258,-1.1843971,Forward,Left Back,Offensive Defender
+18721.0,3.250924,0.12428415,Forward,Left Center Forward,Striker
+8724.0,5.6822176,-3.6174426,Defender,Right Back,Offensive Defender
+4353.0,12.612683,0.92127854,Defender,Left Wing,Winger
+6606.0,2.0484023,1.8807616,Midfielder,Left Midfield,Central Midfielder
+3063.0,5.4529004,-1.8947277,Defender,Right Back,Offensive Defender
+10881.0,5.4213476,-3.2814064,Defender,Left Midfield,Central Midfielder
+3240.0,4.199827,19.50992,Goalkeeper,Goalkeeper,Goalkeeper
+4558.0,5.0095854,4.7206097,Forward,Right Center Forward,Striker
+27240.0,3.63459,18.626137,Goalkeeper,Goalkeeper,Goalkeeper
+6743.0,6.496993,3.9336035,Midfielder,Right Center Midfield,Central Midfielder
+26797.0,3.4782124,1.339911,Forward,Right Center Midfield,Central Midfielder
+16073.0,2.9780319,1.9616454,Defender,Left Wing,Winger
+18904.0,5.824458,4.657659,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6744.0,0.85130084,1.7417197,Forward,Left Wing,Winger
+4788.0,5.272226,-1.5488106,Defender,Left Back,Offensive Defender
+18398.0,6.8407474,3.1907554,Defender,Right Back,Offensive Defender
+37212.0,1.3590823,1.6084163,Forward,Center Forward,Striker
+6559.0,0.581152,6.620006,Forward,Left Midfield,Central Midfielder
+197562.0,6.8216186,2.6625495,Midfielder,Left Defensive Midfield,Defensive Midfielder
+27305.0,5.2423854,19.37194,Goalkeeper,Goalkeeper,Goalkeeper
+27342.0,3.2422452,1.3495129,Forward,Left Wing,Winger
+23930.0,0.6230879,1.6060169,Forward,Left Center Forward,Striker
+24782.0,3.2889445,1.759275,Midfielder,Left Wing,Winger
+5186.0,1.4924252,5.759785,Forward,Center Forward,Striker
+24686.0,0.4985334,8.761312,Defender,Left Back,Offensive Defender
+6666.0,1.1653581,4.665404,Forward,Right Midfield,Central Midfielder
+26103.0,3.5352428,18.420948,Goalkeeper,Goalkeeper,Goalkeeper
+25984.0,6.9308815,3.0060856,Midfielder,Left Defensive Midfield,Defensive Midfielder
+4741.0,0.2915243,8.693488,Defender,Left Back,Offensive Defender
+11537.0,4.4209023,18.764105,Goalkeeper,Goalkeeper,Goalkeeper
+6573.0,11.854039,1.8318408,Defender,Right Center Back,Regular Defender
+197595.0,2.7270107,0.7765775,Forward,Right Wing,Winger
+6617.0,0.70383817,5.6878223,Forward,Left Midfield,Central Midfielder
+21147.0,0.68121636,1.5891143,Forward,Right Center Midfield,Central Midfielder
+5456.0,3.83928,4.636211,Midfielder,Center Attacking Midfield,Offensive Midfielder
+31467.0,1.9996505,4.2644444,Forward,Left Wing,Winger
+7034.0,12.678564,5.720128,Defender,Right Center Back,Regular Defender
+6677.0,1.2748917,1.6587509,Forward,Left Back,Offensive Defender
+11543.0,12.720228,0.82375133,Defender,Right Back,Offensive Defender
+6828.0,0.74034876,8.496394,Defender,Left Back,Offensive Defender
+19431.0,6.2764826,2.8372722,Midfielder,Right Center Midfield,Central Midfielder
+23761.0,3.7270749,-0.95340365,Forward,Left Center Forward,Striker
+6725.0,0.6922825,5.7173343,Forward,Left Wing Back,Offensive Defender
+27335.0,-0.064130016,8.087558,Defender,Left Back,Offensive Defender
+20063.0,0.7296597,5.7163315,Forward,Left Center Forward,Striker
+197493.0,4.5149436,4.7359424,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6706.0,4.980277,18.765188,Goalkeeper,Goalkeeper,Goalkeeper
+26689.0,3.6173701,-0.77399784,Midfielder,Left Defensive Midfield,Defensive Midfielder
+6840.0,5.997124,2.8539608,Midfielder,Left Center Midfield,Central Midfielder
+17622.0,0.2055807,1.7280047,Forward,Right Center Forward,Striker
+24783.0,4.617354,4.1812844,Midfielder,Left Wing,Winger
+4418.0,12.29452,1.3683436,Defender,Left Center Back,Regular Defender
+25126.0,2.582056,0.46982685,Forward,Right Center Midfield,Central Midfielder
+6614.0,11.663845,1.7201966,Defender,Left Center Back,Regular Defender
+26941.0,0.44314194,8.676468,Defender,Left Back,Offensive Defender
+26020.0,1.357076,5.413515,Forward,Left Wing,Winger
+6684.0,0.6424853,1.4093088,Forward,Center Defensive Midfield,Defensive Midfielder
+26518.0,1.1753613,1.2213526,Forward,Left Center Forward,Striker
+6845.0,1.2168965,5.3249035,Forward,Left Wing,Winger
+27111.0,5.725828,18.740463,Goalkeeper,Goalkeeper,Goalkeeper
+11634.0,5.3765116,-3.3445976,Defender,Right Back,Offensive Defender
+27345.0,6.250259,4.3732824,Midfielder,Right Defensive Midfield,Defensive Midfielder
+27401.0,5.592801,3.4028368,Midfielder,Right Center Forward,Striker
+15297.0,11.467637,2.5290327,Defender,Right Center Back,Regular Defender
+27340.0,3.1836462,0.14110982,Forward,Left Midfield,Central Midfielder
+10852.0,1.1532941,4.4637203,Midfielder,Right Center Midfield,Central Midfielder
+27154.0,0.90197635,7.7545094,Defender,Left Back,Offensive Defender
+3302.0,2.6743197,1.2284406,Midfielder,Left Wing,Winger
+24318.0,12.456825,4.411953,Defender,Right Center Back,Regular Defender
+43354.0,0.86409324,8.393909,Defender,Left Center Back,Regular Defender
+20215.0,2.257257,6.7635527,Defender,Left Center Back,Regular Defender
+6673.0,2.3982055,2.698338,Midfielder,Right Midfield,Central Midfielder
+7797.0,2.181814,5.3689275,Midfielder,Left Back,Offensive Defender
+24234.0,5.440404,3.413865,Midfielder,Right Midfield,Central Midfielder
+24086.0,11.516389,2.6804886,Defender,Left Center Back,Regular Defender
+13552.0,5.83894,2.4617019,Midfielder,Left Defensive Midfield,Defensive Midfielder
+26801.0,12.372929,1.6238105,Defender,Left Center Back,Regular Defender
+24143.0,0.9133327,5.361464,Midfielder,Left Wing,Winger
+19724.0,3.9340792,3.9240007,Midfielder,Left Center Forward,Striker
+27184.0,11.360117,3.5723507,Defender,Right Center Back,Regular Defender
+9246.0,3.2056754,1.8668218,Forward,Left Wing,Winger
+18407.0,5.754591,4.6708746,Midfielder,Right Defensive Midfield,Defensive Midfielder
+24249.0,4.0387287,4.406301,Forward,Right Midfield,Central Midfielder
+30429.0,5.1432357,-3.4665174,Forward,Right Wing,Winger
+6890.0,11.929972,1.0275372,Defender,Left Center Back,Regular Defender
+8264.0,1.2732544,4.694434,Forward,Right Wing,Winger
+4320.0,0.9099899,5.336934,Forward,Left Wing,Winger
+5246.0,0.056173727,1.8548006,Forward,Left Center Forward,Striker
+5203.0,5.8036356,3.861418,Midfielder,Right Center Midfield,Central Midfielder
+5216.0,3.270013,4.887272,Midfielder,Left Center Midfield,Central Midfielder
+10609.0,12.470343,0.6688972,Defender,Left Center Back,Regular Defender
+5213.0,12.385133,5.268599,Defender,Right Center Back,Regular Defender
+5211.0,0.021270977,7.8366995,Defender,Left Back,Offensive Defender
+4324.0,5.3672185,-3.4074674,Defender,Left Center Midfield,Central Midfielder
+6379.0,4.3624434,0.5624383,Midfielder,Right Wing,Winger
+6616.0,3.2924142,0.08976046,Forward,Right Center Midfield,Central Midfielder
+4691.0,3.9665124,19.21826,Goalkeeper,Goalkeeper,Goalkeeper
+7068.0,11.423195,3.6530402,Defender,Right Center Back,Regular Defender
+3508.0,1.8161055,0.93086535,Forward,Center Forward,Striker
+49433.0,0.9442543,5.353576,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6709.0,6.4840097,-3.8161163,Defender,Right Back,Offensive Defender
+24277.0,2.60564,1.6537671,Forward,Left Center Forward,Striker
+24578.0,4.213243,-1.0161853,Midfielder,Right Wing,Winger
+23799.0,5.818182,4.4685135,Midfielder,Right Defensive Midfield,Defensive Midfielder
+26070.0,4.4272475,19.595968,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5506.0,7.3902698,4.013144,Defender,Left Center Back,Regular Defender
+5470.0,4.859716,0.9911268,Midfielder,Right Defensive Midfield,Defensive Midfielder
+27155.0,0.589198,8.476358,Defender,Left Back,Offensive Defender
+26775.0,1.5466843,1.30752,Forward,Left Center Back,Regular Defender
+24577.0,0.18029086,8.746266,Defender,Left Back,Offensive Defender
+3236.0,4.6629467,3.047921,Midfielder,Left Midfield,Central Midfielder
+21877.0,13.235323,5.351158,Defender,Right Center Back,Regular Defender
+166764.0,-0.111680426,7.1114683,Defender,Left Back,Offensive Defender
+7909.0,13.625925,4.867905,Defender,Right Center Back,Regular Defender
+8866.0,2.2844048,0.32982782,Forward,Left Center Forward,Striker
+23936.0,5.8886347,4.6142645,Midfielder,Right Defensive Midfield,Defensive Midfielder
+23972.0,0.1168622,7.5686407,Defender,Left Back,Offensive Defender
+34728.0,12.638288,5.725246,Defender,Right Center Back,Regular Defender
+11212.0,4.4185433,0.13803415,Forward,Right Wing,Winger
+12349.0,6.399029,4.2852445,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3130.0,1.9597245,3.79353,Midfielder,Left Midfield,Central Midfielder
+6662.0,5.398175,19.36578,Goalkeeper,Goalkeeper,Goalkeeper
+75537.0,13.09372,4.963662,Defender,Right Center Back,Regular Defender
+23849.0,5.1653986,-3.5438516,Midfielder,Center Defensive Midfield,Defensive Midfielder
+27052.0,4.2822022,-1.1974521,Forward,Right Wing,Winger
+27318.0,6.7058897,-3.1383903,Defender,Right Back,Offensive Defender
+6834.0,6.858969,3.1498725,Midfielder,Left Defensive Midfield,Defensive Midfielder
+11146.0,1.5965667,2.6203153,Midfielder,Right Center Forward,Striker
+79615.0,3.1580057,18.113794,Goalkeeper,Goalkeeper,Goalkeeper
+27970.0,1.4817432,5.1805267,Forward,Right Wing,Winger
+7904.0,6.544993,4.0279727,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6400.0,5.1486335,-3.555663,Defender,Right Back,Offensive Defender
+5503.0,1.6318847,0.8018513,Forward,Center Attacking Midfield,Offensive Midfielder
+11094.0,2.9951808,2.9559863,Midfielder,Left Center Midfield,Central Midfielder
+21229.0,7.557783,3.9953647,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6332.0,12.437945,1.5202881,Defender,Left Center Back,Regular Defender
+20055.0,3.4651737,18.510988,Goalkeeper,Goalkeeper,Goalkeeper
+22102.0,-0.074403204,7.2341,Defender,Left Center Midfield,Central Midfielder
+6998.0,3.5849342,2.5400217,Midfielder,Right Wing,Winger
+26256.0,11.880081,4.139848,Defender,Right Center Back,Regular Defender
+27481.0,12.651154,5.747983,Forward,Left Wing,Winger
+4383.0,2.3400805,2.3706167,Forward,Right Center Forward,Striker
+7498.0,13.574978,4.9367595,Defender,Right Center Back,Regular Defender
+40699.0,12.102775,1.734535,Defender,Left Center Back,Regular Defender
+7369.0,4.9045553,3.970959,Midfielder,Left Wing,Winger
+3424.0,0.5526708,8.832198,Defender,Left Wing,Winger
+7641.0,4.81313,19.007215,Goalkeeper,Goalkeeper,Goalkeeper
+6648.0,12.124628,4.559465,Defender,Right Center Back,Regular Defender
+7635.0,2.5677133,1.7136012,Midfielder,Right Center Forward,Striker
+7363.0,1.5019761,5.7120066,Midfielder,Right Midfield,Central Midfielder
+7435.0,12.587401,1.3474364,Defender,Left Center Back,Regular Defender
+4475.0,6.941558,-3.56996,Defender,Right Defensive Midfield,Defensive Midfielder
+8672.0,6.9230456,3.373671,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3022.0,12.956199,4.8731203,Defender,Left Center Back,Regular Defender
+2990.0,4.698158,4.1504393,Midfielder,Right Defensive Midfield,Defensive Midfielder
+5477.0,3.1759367,0.96953326,Forward,Center Defensive Midfield,Defensive Midfielder
+3018.0,1.3557941,1.2645397,Forward,Center Attacking Midfield,Offensive Midfielder
+3354.0,5.572427,19.07749,Goalkeeper,Goalkeeper,Goalkeeper
+4602.0,3.6860158,4.851114,Midfielder,Right Center Midfield,Central Midfielder
+3248.0,6.3308163,-3.6876688,Midfielder,Right Center Back,Regular Defender
+7815.0,5.5822077,2.3753834,Midfielder,Right Attacking Midfield,Offensive Midfielder
+5667.0,3.0949497,0.88511217,Forward,Center Attacking Midfield,Offensive Midfielder
+18783.0,5.633741,1.6686628,Midfielder,Right Center Midfield,Central Midfielder
+2985.0,-0.058603343,7.3030906,Defender,Left Center Back,Regular Defender
+7367.0,1.5801419,1.4823726,Forward,Left Midfield,Central Midfielder
+4909.0,1.7774224,3.932145,Forward,Right Wing,Winger
+18921.0,4.4339395,4.5739803,Midfielder,Right Center Back,Regular Defender
+3552.0,1.4712218,2.1700113,Forward,Left Defensive Midfield,Defensive Midfielder
+7615.0,1.1197479,2.8814316,Forward,Left Center Forward,Striker
+7766.0,5.052256,4.410543,Midfielder,Left Midfield,Central Midfielder
+5209.0,0.5890459,8.282915,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7211.0,11.865461,1.9915549,Defender,Left Center Back,Regular Defender
+7346.0,12.598678,5.6822124,Defender,Right Center Back,Regular Defender
+6335.0,7.019729,-3.4515011,Defender,Right Center Back,Regular Defender
+7336.0,3.1054416,0.9451544,Midfielder,Right Center Midfield,Central Midfielder
+3261.0,0.31525585,8.471893,Defender,Center Attacking Midfield,Offensive Midfielder
+10036.0,6.6497846,3.8189044,Midfielder,Center Attacking Midfield,Offensive Midfielder
+7567.0,0.21216659,7.0268517,Midfielder,Left Center Forward,Striker
+3543.0,5.607246,18.865177,Goalkeeper,Goalkeeper,Goalkeeper
+8572.0,12.388504,1.5247421,Defender,Left Center Back,Regular Defender
+3254.0,3.3640883,0.5580576,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3420.0,3.2398233,3.2980466,Midfielder,Left Center Midfield,Central Midfielder
+18874.0,5.9030175,1.9862887,Midfielder,Right Center Back,Regular Defender
+3639.0,0.70291936,5.679955,Forward,Center Attacking Midfield,Offensive Midfielder
+3457.0,0.14724113,1.3812543,Forward,Right Center Forward,Striker
+3075.0,5.472919,-1.5789622,Defender,Right Back,Offensive Defender
+3008.0,4.0187883,18.765942,Goalkeeper,Goalkeeper,Goalkeeper
+7472.0,12.7650585,5.6936364,Defender,Center Back,Regular Defender
+22587.0,6.3439574,2.5847044,Midfielder,Right Back,Offensive Defender
+25199.0,6.7863584,3.8202863,Midfielder,Left Center Back,Regular Defender
+19813.0,11.631003,1.8024522,Defender,Left Center Back,Regular Defender
+4351.0,4.166035,-0.9577073,Forward,Left Defensive Midfield,Defensive Midfielder
+3140.0,6.7651925,4.2325816,Midfielder,Right Midfield,Central Midfielder
+3102.0,4.6926007,0.11266229,Midfielder,Left Center Forward,Striker
+7199.0,0.5847521,8.8806505,Defender,Left Center Back,Regular Defender
+5726.0,1.4164937,1.2888937,Forward,Left Wing,Winger
+7721.0,2.3628519,1.0331408,Forward,Left Wing,Winger
+3207.0,0.97894853,8.575529,Defender,Right Midfield,Central Midfielder
+401508.0,3.9856358,19.44512,Goalkeeper,Goalkeeper,Goalkeeper
+3769.0,11.818065,1.2103837,Defender,Left Center Back,Regular Defender
+33178.0,1.9018182,2.3793354,Forward,Right Wing Back,Offensive Defender
+90746.0,5.361733,-3.3214564,Defender,Left Center Midfield,Central Midfielder
+401509.0,4.676403,1.1900748,Forward,Right Midfield,Central Midfielder
+31911.0,3.5877209,5.0196576,Midfielder,Left Wing,Winger
+7430.0,1.6338607,4.281797,Forward,Right Defensive Midfield,Defensive Midfielder
+4352.0,2.2381685,6.7727685,Defender,Center Attacking Midfield,Offensive Midfielder
+40531.0,7.1103487,-3.449254,Defender,Right Back,Offensive Defender
+7808.0,12.721898,5.2776794,Defender,Right Center Midfield,Central Midfielder
+7389.0,5.3534036,1.8517158,Midfielder,Left Center Midfield,Central Midfielder
+401506.0,1.1116449,1.3249012,Forward,Center Forward,Striker
+2953.0,11.965556,4.1890855,Defender,Left Defensive Midfield,Defensive Midfielder
+4839.0,0.79693586,7.3111415,Midfielder,Left Center Midfield,Central Midfielder
+7338.0,1.8678972,5.135634,Midfielder,Center Forward,Striker
+401505.0,1.2549859,3.5847247,Forward,Left Midfield,Central Midfielder
+3114.0,1.388668,1.7069935,Forward,Left Midfield,Central Midfielder
+3319.0,2.669338,1.9024911,Midfielder,Right Center Forward,Striker
+401477.0,1.4873668,4.089886,Forward,Left Midfield,Central Midfielder
+10746.0,0.84170836,7.8211865,Defender,Left Wing Back,Offensive Defender
+7347.0,0.8711904,8.4080925,Defender,Center Forward,Striker
+4802.0,12.3831625,1.3792213,Defender,Right Back,Offensive Defender
+3414.0,5.012924,4.2273574,Midfielder,Left Wing,Winger
+4601.0,1.1754607,2.5996583,Forward,Left Wing,Winger
+3144.0,5.6025505,-1.7404686,Defender,Right Back,Offensive Defender
+4254.0,2.891022,3.1015806,Midfielder,Right Midfield,Central Midfielder
+25377.0,4.983966,19.632782,Goalkeeper,Goalkeeper,Goalkeeper
+4259.0,5.0123634,19.589252,Goalkeeper,Goalkeeper,Goalkeeper
+7442.0,6.603453,4.375371,Midfielder,Left Center Midfield,Central Midfielder
+12351.0,4.2177873,0.6057518,Midfielder,Right Center Midfield,Central Midfielder
+4263.0,11.336606,3.0652943,Defender,Left Center Back,Regular Defender
+4382.0,5.8816876,-3.464781,Defender,Center Defensive Midfield,Defensive Midfielder
+7350.0,6.7973657,4.0367694,Midfielder,Left Center Back,Regular Defender
+4256.0,2.989904,1.5286945,Forward,Left Wing,Winger
+4260.0,2.585023,0.6978059,Forward,Center Forward,Striker
+3174.0,13.142362,5.274228,Defender,Right Center Back,Regular Defender
+3365.0,6.033848,3.5558262,Midfielder,Right Center Midfield,Central Midfielder
+10936.0,11.76883,1.8145823,Defender,Left Center Back,Regular Defender
+3151.0,3.8008938,-1.092814,Forward,Right Defensive Midfield,Defensive Midfielder
+7200.0,6.061247,2.2466846,Midfielder,Left Center Midfield,Central Midfielder
+2944.0,2.012145,2.4327526,Midfielder,Center Forward,Striker
+8469.0,1.4662987,4.343489,Forward,Right Midfield,Central Midfielder
+3375.0,4.015993,0.9951062,Midfielder,Center Attacking Midfield,Offensive Midfielder
+2943.0,11.234954,2.8934906,Midfielder,Right Wing,Winger
+401470.0,2.7535381,2.9232059,Midfielder,Right Wing,Winger
+3002.0,4.858278,1.8336754,Midfielder,Right Center Back,Regular Defender
+7415.0,6.2710032,4.1913505,Midfielder,Center Attacking Midfield,Offensive Midfielder
+7301.0,5.52134,-1.8632501,Defender,Left Defensive Midfield,Defensive Midfielder
+2969.0,4.596902,0.5058853,Midfielder,Left Midfield,Central Midfielder
+3181.0,6.2470465,4.416496,Midfielder,Right Center Midfield,Central Midfielder
+7857.0,6.4170523,-3.7052042,Defender,Left Back,Offensive Defender
+13730.0,11.687993,1.8423046,Defender,Left Center Back,Regular Defender
+4390.0,0.87154806,8.671206,Defender,Left Back,Offensive Defender
+15296.0,3.8146727,-0.40229192,Forward,Left Center Forward,Striker
+4432.0,4.577291,18.86266,Goalkeeper,Goalkeeper,Goalkeeper
+3161.0,3.2005527,3.1393332,Midfielder,Left Midfield,Central Midfielder
+36553.0,5.513718,18.89631,Goalkeeper,Goalkeeper,Goalkeeper
+9554.0,0.79648006,1.3734756,Forward,Center Defensive Midfield,Defensive Midfielder
+7283.0,7.128347,3.7032435,Midfielder,Left Wing,Winger
+31625.0,11.86534,4.0948577,Defender,Right Center Back,Regular Defender
+4413.0,5.7383432,-1.9691061,Midfielder,Left Center Midfield,Central Midfielder
+23933.0,3.776301,2.9521632,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3141.0,6.739437,3.70917,Midfielder,Left Center Midfield,Central Midfielder
+27014.0,0.8619829,1.2519712,Midfielder,Center Attacking Midfield,Offensive Midfielder
+170152.0,12.870451,5.5242023,Defender,Left Center Back,Regular Defender
+7791.0,5.034131,4.616841,Midfielder,Right Center Forward,Striker
+15689.0,2.4426413,1.7208142,Forward,Center Attacking Midfield,Offensive Midfielder
+10522.0,6.7287836,4.3494473,Midfielder,Center Attacking Midfield,Offensive Midfielder
+2989.0,6.981107,-3.422868,Forward,Left Center Forward,Striker
+3753.0,13.203662,5.128371,Defender,Left Defensive Midfield,Defensive Midfielder
+40528.0,0.9644259,8.630895,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3405.0,3.2733836,1.1589506,Forward,Left Center Midfield,Central Midfielder
+7349.0,2.7144468,2.9351885,Forward,Left Wing Back,Offensive Defender
+4508.0,0.5273855,8.370441,Defender,Left Back,Offensive Defender
+7282.0,5.5650253,18.821337,Goalkeeper,Goalkeeper,Goalkeeper
+3433.0,5.8128476,2.0983267,Midfielder,Center Attacking Midfield,Offensive Midfielder
+23850.0,11.394821,3.1462197,Defender,Left Center Back,Regular Defender
+45685.0,4.2249565,4.5302057,Forward,Center Attacking Midfield,Offensive Midfielder
+40509.0,1.4262083,1.4552385,Forward,Center Forward,Striker
+4350.0,6.616226,2.6387122,Midfielder,Left Defensive Midfield,Defensive Midfielder
+16503.0,3.2375107,1.1257515,Forward,Right Wing Back,Offensive Defender
+401541.0,0.8025485,1.8394023,Forward,Center Forward,Striker
+3356.0,4.224267,4.550537,Midfielder,Right Center Midfield,Central Midfielder
+7130.0,0.33242166,1.4468313,Forward,Center Attacking Midfield,Offensive Midfielder
+7552.0,6.6625247,4.1691203,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3779.0,11.23252,3.0266645,Defender,Right Center Midfield,Central Midfielder
+2946.0,7.097856,-2.6439357,Defender,Right Back,Offensive Defender
+30338.0,5.7886586,-2.4183714,Midfielder,Right Midfield,Central Midfielder
+3004.0,11.556521,3.6821833,Defender,Right Center Back,Regular Defender
+3150.0,5.527702,2.8012533,Midfielder,Right Wing,Winger
+3196.0,1.8522621,3.778655,Midfielder,Right Midfield,Central Midfielder
+4380.0,6.0731797,3.077236,Midfielder,Left Center Midfield,Central Midfielder
+6284.0,1.216967,1.4122638,Forward,Right Wing,Winger
+10448.0,3.8700047,-0.11784412,Forward,Right Center Forward,Striker
+4628.0,0.07585483,8.57213,Defender,Left Defensive Midfield,Defensive Midfielder
+31687.0,1.6211468,5.6081758,Midfielder,Left Center Midfield,Central Midfielder
+40533.0,4.1867485,19.504282,Goalkeeper,Goalkeeper,Goalkeeper
+3408.0,2.3323448,2.449966,Forward,Right Center Forward,Striker
+4509.0,4.034081,19.483559,Goalkeeper,Goalkeeper,Goalkeeper
+3184.0,0.4688292,1.5699536,Forward,Right Back,Offensive Defender
+3451.0,0.15023693,2.0981028,Forward,Left Wing,Winger
+3361.0,4.277764,4.065713,Midfielder,Left Midfield,Central Midfielder
+3118.0,4.9832177,1.0410799,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3372.0,3.7332368,-0.7599326,Forward,Right Center Midfield,Central Midfielder
+5480.0,5.2808986,4.163944,Midfielder,Right Wing Back,Offensive Defender
+2983.0,-0.04323801,7.8630266,Defender,Left Back,Offensive Defender
+5492.0,11.875634,1.140638,Defender,Left Center Back,Regular Defender
+4463.0,12.480259,5.503812,Defender,Right Center Back,Regular Defender
+6982.0,7.0254326,3.5893059,Midfielder,Left Center Back,Regular Defender
+4410.0,5.9730515,-3.7613022,Forward,Right Wing,Winger
+401468.0,12.562754,5.5228295,Defender,Center Attacking Midfield,Offensive Midfielder
+3413.0,6.611203,-3.1891575,Defender,Right Back,Offensive Defender
+3423.0,0.09658472,1.4201269,Forward,Right Wing,Winger
+2947.0,3.8077998,18.738947,Goalkeeper,Goalkeeper,Goalkeeper
+4431.0,1.5636113,4.2394295,Forward,Right Wing,Winger
+18868.0,2.1006966,2.7222476,Midfielder,Right Center Forward,Striker
+7225.0,0.18115662,2.0061061,Forward,Right Center Forward,Striker
+3162.0,1.2740105,4.5770116,Forward,Right Center Back,Regular Defender
+3200.0,3.3377812,2.5948424,Midfielder,Right Defensive Midfield,Defensive Midfielder
+4766.0,0.44907606,1.776858,Forward,Left Center Forward,Striker
+3553.0,0.21264276,1.7148004,Defender,Right Wing,Winger
+5727.0,4.1289625,-0.79625434,Forward,Right Back,Offensive Defender
+10805.0,11.775879,2.0752108,Defender,Left Center Back,Regular Defender
+27558.0,0.6297724,8.055383,Forward,Left Center Back,Regular Defender
+3247.0,4.823292,0.28046787,Defender,Left Defensive Midfield,Defensive Midfielder
+3204.0,5.8369064,-3.6134808,Defender,Right Back,Offensive Defender
+19047.0,-0.11631057,8.234923,Defender,Left Back,Offensive Defender
+401194.0,11.80247,2.0629728,Defender,Right Defensive Midfield,Defensive Midfielder
+16271.0,2.0864193,1.1734933,Forward,Right Center Forward,Striker
+3444.0,4.7048264,18.468777,Goalkeeper,Goalkeeper,Goalkeeper
+29875.0,5.046876,2.6396306,Midfielder,Left Midfield,Central Midfielder
+3955.0,6.6480203,4.3096986,Midfielder,Right Wing,Winger
+8277.0,11.884613,4.1021194,Defender,Left Defensive Midfield,Defensive Midfielder
+4465.0,1.4457841,1.0496287,Forward,Right Wing,Winger
+40517.0,6.934892,-3.573095,Defender,Right Back,Offensive Defender
+3193.0,3.2673328,0.5470878,Forward,Center Forward,Striker
+3245.0,2.7687213,3.2950501,Midfielder,Left Midfield,Central Midfielder
+402967.0,2.2965734,2.9040554,Forward,Right Midfield,Central Midfielder
+9931.0,1.2559091,5.2834277,Forward,Right Center Forward,Striker
+2936.0,13.21935,5.2174745,Defender,Right Center Back,Regular Defender
+3322.0,4.9180055,18.857939,Goalkeeper,Goalkeeper,Goalkeeper
+3124.0,12.2302685,1.4331267,Defender,Left Center Back,Regular Defender
+30182.0,0.6197468,8.504323,Defender,Left Back,Offensive Defender
+401512.0,6.920242,3.346883,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3121.0,6.749258,2.796754,Midfielder,Left Midfield,Central Midfielder
+3364.0,6.6007376,-3.2391212,Defender,Right Back,Offensive Defender
+26481.0,12.96835,5.5248246,Defender,Right Center Midfield,Central Midfielder
+3122.0,3.7029889,-0.120118566,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3213.0,1.5635395,2.5107672,Forward,Center Attacking Midfield,Offensive Midfielder
+3301.0,1.3608987,5.3425355,Midfielder,Center Attacking Midfield,Offensive Midfielder
+4434.0,1.6593627,6.286836,Midfielder,Center Defensive Midfield,Defensive Midfielder
+4799.0,0.10126875,1.8119167,Forward,Right Center Midfield,Central Midfielder
+4375.0,4.321978,4.897182,Midfielder,Right Center Midfield,Central Midfielder
+3672.0,0.2510483,1.7575823,Forward,Right Wing,Winger
+4325.0,6.643454,3.866738,Midfielder,Right Center Midfield,Central Midfielder
+26613.0,0.64380836,8.333636,Defender,Right Back,Offensive Defender
+3956.0,11.736091,1.1181726,Defender,Center Defensive Midfield,Defensive Midfielder
+3026.0,6.789866,3.3220468,Midfielder,Left Center Midfield,Central Midfielder
+20048.0,6.735026,-3.6869216,Defender,Right Back,Offensive Defender
+3481.0,6.594908,-3.0628436,Defender,Right Back,Offensive Defender
+3071.0,3.121116,3.2576447,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3745.0,2.4716082,1.76212,Forward,Left Center Midfield,Central Midfielder
+3432.0,5.2166767,19.348719,Goalkeeper,Goalkeeper,Goalkeeper
+3203.0,0.9878873,8.319427,Defender,Left Back,Offensive Defender
+4441.0,2.8571312,3.0156054,Forward,Right Center Midfield,Central Midfielder
+5219.0,7.3307385,4.0419803,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3431.0,5.8832374,-2.0667665,Defender,Right Back,Offensive Defender
+3111.0,3.4204378,1.0461192,Forward,Center Forward,Striker
+3549.0,12.450806,1.5783565,Defender,Left Center Back,Regular Defender
+2995.0,3.0199177,1.664492,Forward,Right Midfield,Central Midfielder
+3045.0,12.778025,5.6915784,Defender,Right Center Back,Regular Defender
+5676.0,5.6930933,1.9561034,Midfielder,Left Center Forward,Striker
+4440.0,5.1770725,18.750631,Goalkeeper,Goalkeeper,Goalkeeper
+7337.0,2.3573055,1.7048116,Forward,Right Center Midfield,Central Midfielder
+401482.0,6.7440777,-3.2894,Defender,Right Back,Offensive Defender
+7212.0,2.5647924,2.7644825,Forward,Center Forward,Striker
+2999.0,12.399183,1.5265594,Defender,Left Center Back,Regular Defender
+8515.0,7.043141,3.5825562,Midfielder,Right Wing,Winger
+4319.0,1.0934217,3.4579146,Forward,Left Wing,Winger
+401484.0,5.7669244,3.7275999,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3047.0,0.6203057,8.856852,Defender,Left Wing Back,Offensive Defender
+2975.0,6.4553986,-3.6395261,Defender,Right Back,Offensive Defender
+3679.0,2.201811,0.8721544,Forward,Right Midfield,Central Midfielder
+3674.0,12.671621,5.7064967,Defender,Right Center Back,Regular Defender
+3011.0,12.587981,1.0128419,Defender,Left Center Back,Regular Defender
+3676.0,0.21558392,7.629202,Defender,Right Wing,Winger
+6661.0,3.0866978,2.4790316,Midfielder,Right Midfield,Central Midfielder
+3421.0,4.6962075,0.4198064,Midfielder,Right Midfield,Central Midfielder
+2950.0,4.1464243,4.8996844,Midfielder,Right Defensive Midfield,Defensive Midfielder
+2980.0,1.8795577,2.571829,Forward,Right Wing,Winger
+3767.0,6.736234,3.4921613,Midfielder,Right Back,Offensive Defender
+40645.0,4.9064503,19.09976,Goalkeeper,Goalkeeper,Goalkeeper
+3179.0,2.0237393,1.1764383,Forward,Right Center Forward,Striker
+3191.0,0.58650297,8.452429,Defender,Left Wing,Winger
+3546.0,4.264154,2.1193862,Midfielder,Center Forward,Striker
+30255.0,0.95050114,1.100923,Forward,Left Midfield,Central Midfielder
+4265.0,3.1281137,0.95772356,Forward,Left Midfield,Central Midfielder
+38413.0,6.8910785,3.352171,Midfielder,Left Defensive Midfield,Defensive Midfielder
+401478.0,6.7307396,3.0089734,Forward,Center Forward,Striker
+4249.0,0.6914645,8.076304,Midfielder,Left Center Midfield,Central Midfielder
+3404.0,5.482164,-2.0949714,Defender,Right Back,Offensive Defender
+3185.0,4.5225453,4.787022,Midfielder,Right Defensive Midfield,Defensive Midfielder
+4906.0,0.04718613,7.6898026,Midfielder,Left Wing,Winger
+401483.0,6.841606,3.9111447,Midfielder,Right Center Midfield,Central Midfielder
+3024.0,0.6164605,7.9200377,Defender,Left Back,Offensive Defender
+6723.0,1.0692174,1.6737611,Forward,Center Attacking Midfield,Offensive Midfielder
+4447.0,1.0711313,3.4342782,Forward,Right Midfield,Central Midfielder
+3036.0,5.5326056,4.6290956,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3189.0,4.6710663,3.7369254,Midfielder,Center Defensive Midfield,Defensive Midfielder
+31174.0,4.841278,1.7704947,Midfielder,Right Defensive Midfield,Defensive Midfielder
+8677.0,10.998472,3.0251772,Defender,Right Center Back,Regular Defender
+16522.0,4.5394516,3.518532,Midfielder,Left Center Midfield,Central Midfielder
+3030.0,5.6206813,-1.9145521,Defender,Right Center Midfield,Central Midfielder
+2981.0,4.089213,19.49475,Goalkeeper,Goalkeeper,Goalkeeper
+4349.0,12.64688,5.620475,Defender,Right Center Back,Regular Defender
+2961.0,6.708924,4.214252,Defender,Right Midfield,Central Midfielder
+11540.0,3.0997584,3.3020163,Midfielder,Right Midfield,Central Midfielder
+40526.0,3.3370125,4.91029,Midfielder,Center Attacking Midfield,Offensive Midfielder
+4669.0,5.7077136,1.4941906,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3020.0,1.0362918,5.1870193,Forward,Center Forward,Striker
+3025.0,6.265936,4.2149534,Midfielder,Right Center Midfield,Central Midfielder
+4372.0,12.293096,4.5966225,Defender,Center Defensive Midfield,Defensive Midfielder
+4370.0,5.34267,2.86604,Midfielder,Right Wing,Winger
+40530.0,6.50638,4.2507954,Defender,Right Attacking Midfield,Offensive Midfielder
+8510.0,1.5931093,1.4185548,Forward,Right Wing,Winger
+15996.0,1.7482456,1.6058056,Forward,Left Center Forward,Striker
+3425.0,4.1853204,0.4827327,Forward,Right Midfield,Central Midfielder
+11332.0,6.861304,4.2903256,Midfielder,Left Center Midfield,Central Midfielder
+3218.0,3.0507746,0.8729301,Forward,Right Back,Offensive Defender
+131849.0,7.0636754,-2.66499,Defender,Right Center Back,Regular Defender
+23329.0,12.678513,0.7109446,Defender,Left Center Back,Regular Defender
+40523.0,11.727324,2.1732285,Defender,Right Center Forward,Striker
+40484.0,4.569274,18.962797,Goalkeeper,Goalkeeper,Goalkeeper
+3446.0,0.88387024,7.7729363,Defender,Right Wing Back,Offensive Defender
+3677.0,11.568,2.383236,Midfielder,Right Wing Back,Offensive Defender
+40522.0,6.5897245,4.3054185,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6716.0,5.02647,-3.540448,Defender,Center Attacking Midfield,Offensive Midfielder
+46801.0,5.7343903,4.5357037,Midfielder,Right Center Midfield,Central Midfielder
+3673.0,1.6566906,1.6720053,Forward,Left Center Forward,Striker
+5476.0,4.144904,5.2043886,Defender,Left Center Back,Regular Defender
+3625.0,1.567897,4.3314233,Forward,Right Center Forward,Striker
+7375.0,1.7868483,0.982918,Forward,Right Midfield,Central Midfielder
+401488.0,3.7081885,-0.73704094,Forward,Left Defensive Midfield,Defensive Midfielder
+40697.0,4.470732,4.693409,Midfielder,Left Wing,Winger
+7603.0,12.403342,1.4326692,Defender,Left Center Back,Regular Defender
+401507.0,6.7379036,3.8153114,Forward,Center Attacking Midfield,Offensive Midfielder
+10616.0,2.8795283,3.402777,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6739.0,1.8344489,2.8755498,Forward,Left Midfield,Central Midfielder
+8385.0,11.728859,4.086582,Defender,Right Midfield,Central Midfielder
+4542.0,11.471623,3.361456,Defender,Left Center Back,Regular Defender
+40698.0,6.276948,3.6006873,Midfielder,Right Center Midfield,Central Midfielder
+2959.0,4.1308455,4.480189,Midfielder,Right Midfield,Central Midfielder
+2992.0,0.8720101,6.8065734,Midfielder,Right Midfield,Central Midfielder
+3256.0,12.337545,1.2945158,Defender,Left Center Back,Regular Defender
+2963.0,4.9595313,19.058851,Goalkeeper,Goalkeeper,Goalkeeper
+7726.0,1.3797526,0.989354,Midfielder,Right Wing,Winger
+3038.0,1.3085271,2.6896594,Forward,Right Center Forward,Striker
+22111.0,5.6473036,-3.571211,Defender,Right Back,Offensive Defender
+3109.0,3.1033084,0.7602001,Forward,Left Wing,Winger
+2955.0,3.2268195,1.0673451,Forward,Left Center Midfield,Central Midfielder
+7344.0,7.3336387,3.955414,Midfielder,Left Center Back,Regular Defender
+4386.0,11.731043,2.210203,Defender,Left Center Back,Regular Defender
+2979.0,4.7234693,1.3376377,Midfielder,Right Midfield,Central Midfielder
+21792.0,5.392564,2.9337049,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3797.0,6.3961053,3.6505144,Midfielder,Right Center Midfield,Central Midfielder
+4539.0,4.3932085,1.2907852,Midfielder,Right Center Midfield,Central Midfielder
+13592.0,0.6083144,8.3290415,Defender,Right Back,Offensive Defender
+3295.0,12.188429,4.7945747,Defender,Right Center Back,Regular Defender
+4377.0,4.7494493,19.061705,Goalkeeper,Goalkeeper,Goalkeeper
+7269.0,3.4342885,18.082748,Goalkeeper,Goalkeeper,Goalkeeper
+4776.0,6.9840684,-3.4518325,Defender,Right Back,Offensive Defender
+4257.0,4.396566,18.736109,Goalkeeper,Goalkeeper,Goalkeeper
+4443.0,12.658239,4.6212444,Forward,Left Center Forward,Striker
+6352.0,2.3081539,6.740486,Defender,Right Midfield,Central Midfielder
+3359.0,5.5557904,4.6092825,Midfielder,Center Defensive Midfield,Defensive Midfielder
+4506.0,7.0870314,3.7055666,Midfielder,Right Defensive Midfield,Defensive Midfielder
+4264.0,5.8858247,1.8842218,Midfielder,Right Center Forward,Striker
+4270.0,5.565501,-2.0342476,Defender,Right Back,Offensive Defender
+2971.0,13.646004,4.8726354,Defender,Left Center Back,Regular Defender
+3235.0,3.4761136,1.6352161,Midfielder,Right Center Midfield,Central Midfielder
+16462.0,2.986465,1.8147713,Forward,Right Wing Back,Offensive Defender
+3210.0,1.6167283,1.4805709,Forward,Left Wing,Winger
+3348.0,5.8966165,4.610411,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3230.0,1.7422323,2.509925,Forward,Right Wing Back,Offensive Defender
+20199.0,5.525718,-1.742155,Defender,Right Back,Offensive Defender
+3363.0,3.5496516,-0.13199441,Midfielder,Left Defensive Midfield,Defensive Midfielder
+4373.0,11.4211645,3.74477,Defender,Left Center Midfield,Central Midfielder
+401525.0,6.1987786,2.9313264,Midfielder,Right Center Midfield,Central Midfielder
+401528.0,4.9884815,3.8160164,Midfielder,Right Center Midfield,Central Midfielder
+3403.0,1.0639827,2.7888608,Forward,Right Center Midfield,Central Midfielder
+3211.0,5.8135724,1.909955,Midfielder,Right Midfield,Central Midfielder
+29057.0,13.020678,4.787403,Defender,Center Defensive Midfield,Defensive Midfielder
+7303.0,3.4415998,0.28140062,Forward,Left Wing,Winger
+40524.0,3.731915,-1.2910928,Defender,Right Back,Offensive Defender
+3374.0,12.76743,4.583998,Forward,Right Center Forward,Striker
+3168.0,5.2057467,4.3860574,Midfielder,Center Defensive Midfield,Defensive Midfielder
+18953.0,0.45568338,1.7920367,Forward,Center Attacking Midfield,Offensive Midfielder
+3406.0,6.891709,3.819687,Midfielder,Right Defensive Midfield,Defensive Midfielder
+18243.0,0.89599866,5.0798044,Forward,Left Midfield,Central Midfielder
+7590.0,5.8533955,4.5080495,Midfielder,Center Attacking Midfield,Offensive Midfielder
+7485.0,1.2560353,2.7737525,Forward,Right Center Forward,Striker
+3246.0,0.34418377,1.7127534,Forward,Center Attacking Midfield,Offensive Midfielder
+16418.0,3.1558683,1.9239434,Midfielder,Left Attacking Midfield,Offensive Midfielder
+7230.0,11.405225,3.9488673,Midfielder,Right Center Back,Regular Defender
+30447.0,12.544468,5.278571,Defender,Center Attacking Midfield,Offensive Midfielder
+3035.0,11.123907,2.9371197,Defender,Center Forward,Striker
+40641.0,6.1967225,-3.1757603,Defender,Right Back,Offensive Defender
+3156.0,5.936463,-3.8273945,Defender,Left Back,Offensive Defender
+401455.0,11.717838,1.4568971,Defender,Left Center Back,Regular Defender
+7355.0,5.9410458,1.9547772,Defender,Right Wing Back,Offensive Defender
+4895.0,-0.14895377,8.080661,Defender,Left Back,Offensive Defender
+30291.0,0.3619707,8.2492,Midfielder,Left Midfield,Central Midfielder
+3980.0,4.9062376,19.691072,Goalkeeper,Goalkeeper,Goalkeeper
+2948.0,2.1982207,0.9067954,Forward,Left Center Forward,Striker
+4450.0,12.40815,5.367828,Defender,Right Center Back,Regular Defender
+4545.0,6.1308494,3.5458457,Midfielder,Center Defensive Midfield,Defensive Midfielder
+7817.0,3.340831,1.0184402,Midfielder,Left Center Midfield,Central Midfielder
+4428.0,5.7736382,-3.535128,Defender,Right Back,Offensive Defender
+4326.0,0.0521629,8.216793,Defender,Left Back,Offensive Defender
+3217.0,7.024994,-2.7126944,Defender,Right Center Back,Regular Defender
+4454.0,3.2509787,2.467985,Midfielder,Right Wing,Winger
+401454.0,5.1910195,19.442999,Goalkeeper,Goalkeeper,Goalkeeper
+3229.0,12.519024,1.5654483,Defender,Left Center Back,Regular Defender
+3220.0,0.09562047,8.278452,Defender,Left Midfield,Central Midfielder
+7509.0,4.085884,18.892796,Goalkeeper,Goalkeeper,Goalkeeper
+29714.0,6.612663,4.3007493,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3250.0,11.844731,4.0949445,Defender,Center Back,Regular Defender
+3195.0,5.62903,-1.8855736,Defender,Right Wing,Winger
+10330.0,1.3660853,1.820958,Forward,Left Midfield,Central Midfielder
+40527.0,11.387871,3.4662538,Defender,Left Back,Offensive Defender
+7428.0,6.5386815,-3.224776,Defender,Right Wing Back,Offensive Defender
+4411.0,13.615832,4.8683133,Defender,Right Center Back,Regular Defender
+5656.0,11.722618,2.1830528,Defender,Center Attacking Midfield,Offensive Midfielder
+106683.0,1.4033809,5.365081,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3138.0,5.887905,2.8001769,Midfielder,Right Center Back,Regular Defender
+7392.0,5.861081,-1.9597986,Defender,Right Center Back,Regular Defender
+45688.0,12.632938,5.7291517,Defender,Right Center Back,Regular Defender
+19395.0,4.3756886,1.5626776,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3010.0,2.2819083,1.5207772,Forward,Left Center Forward,Striker
+401471.0,1.0782913,1.1961181,Forward,Right Center Forward,Striker
+7376.0,2.5161319,2.686498,Midfielder,Right Center Forward,Striker
+7444.0,12.94153,4.948945,Defender,Right Center Back,Regular Defender
+17617.0,2.6519916,1.8993317,Forward,Right Center Midfield,Central Midfielder
+2991.0,1.2789973,4.615385,Midfielder,Right Center Midfield,Central Midfielder
+23203.0,12.725753,4.637093,Defender,Center Attacking Midfield,Offensive Midfielder
+7308.0,0.7966694,8.641687,Defender,Left Back,Offensive Defender
+7638.0,12.170695,1.5424988,Defender,Left Center Back,Regular Defender
+3136.0,4.7055054,4.770368,Midfielder,Center Forward,Striker
+7323.0,12.6096,0.7689513,Defender,Left Wing Back,Offensive Defender
+146696.0,2.8792005,3.1024806,Forward,Left Defensive Midfield,Defensive Midfielder
+403155.0,4.10365,3.6139305,Midfielder,Left Center Midfield,Central Midfielder
+310534.0,3.963853,-0.6026708,Midfielder,Left Wing,Winger
+40521.0,0.2434509,8.716813,Defender,Left Back,Offensive Defender
+401775.0,4.726931,1.9050345,Midfielder,Left Defensive Midfield,Defensive Midfielder
+28968.0,0.8711429,5.4929557,Forward,Left Wing,Winger
+7197.0,6.451801,-3.4162915,Defender,Left Back,Offensive Defender
+3166.0,6.5873194,2.650515,Midfielder,Right Center Midfield,Central Midfielder
+23784.0,4.2171893,-0.8365008,Midfielder,Left Center Midfield,Central Midfielder
+30315.0,3.121259,0.8798967,Midfielder,Left Midfield,Central Midfielder
+106664.0,4.0229526,3.7715898,Midfielder,Center Attacking Midfield,Offensive Midfielder
+401472.0,13.096727,5.1587396,Defender,Right Center Back,Regular Defender
+18162.0,1.0627921,7.9929333,Defender,Center Attacking Midfield,Offensive Midfielder
+2993.0,3.9222567,0.09552373,Midfielder,Right Center Forward,Striker
+2976.0,2.115628,5.9613166,Midfielder,Left Midfield,Central Midfielder
+40700.0,1.7761574,5.200377,Defender,Right Defensive Midfield,Defensive Midfielder
+7595.0,0.52890986,2.1497147,Forward,Left Center Forward,Striker
+4345.0,2.3977814,1.6646193,Forward,Left Wing,Winger
+175093.0,3.5254421,-0.67881846,Forward,Right Midfield,Central Midfielder
+24646.0,6.5156937,3.8915133,Midfielder,Center Attacking Midfield,Offensive Midfielder
+401489.0,5.2177396,3.7890327,Midfielder,Left Center Midfield,Central Midfielder
+5615.0,0.60130507,1.2371876,Forward,Left Wing,Winger
+26752.0,0.9476889,8.240079,Defender,Left Back,Offensive Defender
+7469.0,4.9891987,18.420963,Goalkeeper,Goalkeeper,Goalkeeper
+40701.0,4.8753376,1.4365013,Midfielder,Right Midfield,Central Midfielder
+34539.0,4.3821163,3.9925926,Midfielder,Right Midfield,Central Midfielder
+4255.0,6.141568,3.488284,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7264.0,7.0752034,-2.6826477,Midfielder,Right Center Midfield,Central Midfielder
+16056.0,0.24790248,7.893021,Defender,Left Center Midfield,Central Midfielder
+134561.0,4.0673847,4.484821,Midfielder,Center Forward,Striker
+3009.0,3.6684053,-1.0063019,Forward,Left Midfield,Central Midfielder
+7483.0,0.5845456,1.7113504,Forward,Center Forward,Striker
+4902.0,13.335958,5.0625205,Defender,Right Center Back,Regular Defender
+401453.0,1.5969448,1.7456417,Forward,Right Center Forward,Striker
+401453.0,1.5969448,1.7456417,Forward,Right Center Forward,Striker
+4474.0,0.5186809,7.6731505,Defender,Left Back,Offensive Defender
+31039.0,12.576467,1.0473244,Defender,Left Back,Offensive Defender
+2970.0,3.4871306,-0.47827432,Forward,Left Center Midfield,Central Midfielder
+148132.0,0.7917643,8.57901,Defender,Left Back,Offensive Defender
+44955.0,7.0206428,-3.5018673,Defender,Right Back,Offensive Defender
+401481.0,1.390956,2.881275,Forward,Left Wing,Winger
+7198.0,2.9393058,0.8334448,Forward,Left Midfield,Central Midfielder
+403377.0,6.6134777,2.6893516,Midfielder,Right Center Midfield,Central Midfielder
+4442.0,0.19578224,8.171951,Defender,Left Back,Offensive Defender
+4823.0,5.352998,-3.5024123,Defender,Right Back,Offensive Defender
+40518.0,6.089507,4.5715256,Midfielder,Right Defensive Midfield,Defensive Midfielder
+40431.0,1.0870143,3.3247695,Forward,Center Defensive Midfield,Defensive Midfielder
+40486.0,1.5888474,4.868971,Forward,Left Wing,Winger
+7525.0,1.0838511,3.2314177,Forward,Center Forward,Striker
+401479.0,13.169483,5.1071777,Defender,Left Center Back,Regular Defender
+15796.0,0.8178364,1.7025515,Forward,Left Midfield,Central Midfielder
+4253.0,6.0855064,4.1793404,Midfielder,Right Center Midfield,Central Midfielder
+4258.0,6.265429,-3.8165464,Defender,Right Back,Offensive Defender
+7193.0,3.3990624,18.478514,Goalkeeper,Goalkeeper,Goalkeeper
+6863.0,4.582965,4.055395,Midfielder,Left Defensive Midfield,Defensive Midfielder
+401513.0,0.6884237,7.9182277,Defender,Left Back,Offensive Defender
+7510.0,0.94213194,5.5806365,Defender,Left Wing Back,Offensive Defender
+40407.0,3.3345628,2.0779617,Midfielder,Right Center Midfield,Central Midfielder
+31711.0,3.3939602,3.2571177,Midfielder,Right Center Midfield,Central Midfielder
+401542.0,1.0653489,2.449603,Forward,Left Midfield,Central Midfielder
+16430.0,11.632957,1.829559,Defender,Left Midfield,Central Midfielder
+4900.0,1.2148337,5.648938,Forward,Right Wing,Winger
+3032.0,1.6728374,5.6923904,Midfielder,Center Attacking Midfield,Offensive Midfielder
+9860.0,3.9517868,-0.9623863,Forward,Right Wing,Winger
+42422.0,11.437043,3.5956366,Defender,Right Center Back,Regular Defender
+7365.0,5.1779428,4.503307,Midfielder,Center Attacking Midfield,Offensive Midfielder
+29133.0,0.38810322,1.3800435,Forward,Center Attacking Midfield,Offensive Midfielder
+7607.0,6.80665,-3.3297112,Defender,Right Center Back,Regular Defender
+91209.0,12.442531,4.5890055,Defender,Right Center Back,Regular Defender
+401524.0,5.5036387,-1.5950488,Defender,Right Back,Offensive Defender
+42428.0,5.6915126,18.79739,Goalkeeper,Goalkeeper,Goalkeeper
+34953.0,3.549236,18.387259,Goalkeeper,Goalkeeper,Goalkeeper
+16014.0,0.9670535,4.964008,Forward,Center Forward,Striker
+403378.0,2.5548987,1.6557899,Forward,Right Center Forward,Striker
+3357.0,1.0872818,1.9046499,Forward,Right Center Forward,Striker
+7441.0,4.2826724,3.9961717,Midfielder,Left Wing,Winger
+9102.0,1.3764852,1.9061091,Forward,Left Wing,Winger
+4446.0,4.948318,4.3398566,Midfielder,Right Center Midfield,Central Midfielder
+23835.0,3.0648496,1.881136,Midfielder,Right Wing,Winger
+13634.0,12.508225,5.298531,Midfielder,Left Wing,Winger
+40536.0,2.829686,1.1139829,Forward,Left Wing,Winger
+2994.0,5.6413665,18.931227,Goalkeeper,Goalkeeper,Goalkeeper
+7707.0,6.270707,-3.5837336,Defender,Right Wing Back,Offensive Defender
+401603.0,3.4029539,-0.4852465,Midfielder,Right Defensive Midfield,Defensive Midfielder
+351521.0,1.6692307,4.088665,Forward,Left Center Midfield,Central Midfielder
+20039.0,1.0339329,4.776352,Forward,Center Forward,Striker
+11603.0,5.0655427,3.4266174,Midfielder,Right Midfield,Central Midfielder
+42427.0,3.1880105,18.121826,Goalkeeper,Goalkeeper,Goalkeeper
+401474.0,7.121219,-2.6225572,Defender,Right Center Back,Regular Defender
+5653.0,4.4009147,18.457678,Goalkeeper,Goalkeeper,Goalkeeper
+6979.0,0.8914488,5.4151464,Forward,Left Center Forward,Striker
+4723.0,1.0997467,3.6356711,Forward,Left Wing,Winger
+7560.0,0.2381277,7.877455,Defender,Left Wing,Winger
+5692.0,5.055889,1.3073727,Midfielder,Right Defensive Midfield,Defensive Midfielder
+388167.0,1.006071,5.399629,Forward,Left Wing,Winger
+44065.0,0.6905593,8.008045,Defender,Left Back,Offensive Defender
+401476.0,-0.026418706,7.3140254,Defender,Left Midfield,Central Midfielder
+8981.0,2.7695558,0.8777154,Midfielder,Right Wing,Winger
+34762.0,4.2637043,-1.2457265,Forward,Right Wing,Winger
+13286.0,12.729585,5.1166205,Defender,Left Center Back,Regular Defender
+7432.0,3.6548007,-0.18849204,Midfielder,Right Wing,Winger
+7438.0,1.3405228,4.9833627,Defender,Left Midfield,Central Midfielder
+95699.0,6.7073092,4.2673273,Defender,Left Center Back,Regular Defender
+5110.0,5.8109694,4.5179453,Midfielder,Left Back,Offensive Defender
+42430.0,1.668671,5.732864,Midfielder,Right Midfield,Central Midfielder
+10977.0,0.8157236,7.3090563,Midfielder,Left Midfield,Central Midfielder
+7616.0,4.5461683,4.751167,Midfielder,Left Center Midfield,Central Midfielder
+3078.0,1.5972449,5.1540713,Forward,Left Wing,Winger
+4547.0,3.4921746,18.551653,Goalkeeper,Goalkeeper,Goalkeeper
+3117.0,5.2444882,4.2580957,Midfielder,Center Defensive Midfield,Defensive Midfielder
+45415.0,5.6001263,18.700382,Goalkeeper,Goalkeeper,Goalkeeper
+7237.0,0.75388235,8.505977,Defender,Left Back,Offensive Defender
+7488.0,6.0985985,2.247856,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7515.0,4.3132205,18.908821,Goalkeeper,Goalkeeper,Goalkeeper
+34976.0,2.0380368,5.108762,Forward,Left Defensive Midfield,Defensive Midfielder
+401491.0,7.078863,-3.5311828,Defender,Right Back,Offensive Defender
+403310.0,12.246941,4.371361,Defender,Right Center Back,Regular Defender
+9897.0,2.1503632,3.3971426,Midfielder,Center Attacking Midfield,Offensive Midfielder
+4803.0,4.9931087,19.145542,Goalkeeper,Goalkeeper,Goalkeeper
+7322.0,0.9935311,4.975985,Midfielder,Left Center Midfield,Central Midfielder
+41385.0,4.539592,18.235651,Goalkeeper,Goalkeeper,Goalkeeper
+10461.0,1.9719417,3.206129,Forward,Left Wing,Winger
+3103.0,12.444542,5.2684946,Defender,Right Center Back,Regular Defender
+7207.0,4.144027,0.41088197,Midfielder,Right Center Midfield,Central Midfielder
+4464.0,3.9086652,4.8284507,Forward,Left Wing,Winger
+22130.0,3.4111238,18.200953,Goalkeeper,Goalkeeper,Goalkeeper
+41041.0,0.07315175,8.609192,Defender,Right Center Back,Regular Defender
+4469.0,6.8327284,3.5091555,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3682.0,4.952392,1.0282285,Midfielder,Left Wing,Winger
+34565.0,3.168328,0.76916426,Forward,Left Attacking Midfield,Offensive Midfielder
+401480.0,0.56289214,7.007102,Midfielder,Left Midfield,Central Midfielder
+28357.0,5.377391,19.459978,Goalkeeper,Goalkeeper,Goalkeeper
+24469.0,5.0762386,18.824867,Goalkeeper,Goalkeeper,Goalkeeper
+4473.0,1.8841444,3.2499404,Midfielder,Left Midfield,Central Midfielder
+43896.0,1.1470672,5.350272,Forward,Left Center Forward,Striker
+24021.0,5.3728194,19.36257,Goalkeeper,Goalkeeper,Goalkeeper
+3190.0,1.2375985,7.306464,Midfielder,Left Midfield,Central Midfielder
+403390.0,3.5948994,-0.97369134,Forward,Center Forward,Striker
+13731.0,3.4616442,5.0084577,Forward,Left Center Forward,Striker
+7366.0,12.217783,1.3346891,Defender,Left Back,Offensive Defender
+7443.0,3.7493064,4.8843174,Midfielder,Left Center Midfield,Central Midfielder
+7358.0,0.8016894,5.459209,Forward,Left Wing,Winger
+403392.0,2.110517,3.634975,Midfielder,Left Center Midfield,Central Midfielder
+40485.0,3.6593297,-0.97739625,Forward,Left Center Midfield,Central Midfielder
+4599.0,2.995527,0.78351176,Forward,Right Wing,Winger
+42423.0,0.36377463,1.636912,Forward,Center Forward,Striker
+7406.0,3.2879348,0.0450506,Midfielder,Left Center Forward,Striker
+3761.0,4.1682105,19.666897,Goalkeeper,Goalkeeper,Goalkeeper
+141742.0,3.7320554,-1.2478467,Midfielder,Right Attacking Midfield,Offensive Midfielder
+401467.0,4.8336916,18.233389,Goalkeeper,Goalkeeper,Goalkeeper
+7190.0,3.6850054,-0.34521163,Forward,Center Forward,Striker
+3951.0,6.5101633,3.8889878,Midfielder,Right Wing,Winger
+7685.0,13.3876,5.2121305,Defender,Right Center Back,Regular Defender
+3735.0,2.365076,4.603336,Forward,Left Center Forward,Striker
+3257.0,0.90890574,1.0287244,Forward,Center Forward,Striker
+42376.0,12.04163,1.5209053,Midfielder,Right Center Midfield,Central Midfielder
+2967.0,3.378485,18.1455,Goalkeeper,Goalkeeper,Goalkeeper
+31681.0,0.12513211,8.714006,Defender,Left Back,Offensive Defender
+23315.0,2.3419006,3.419943,Midfielder,Left Midfield,Central Midfielder
+3544.0,12.881072,5.1602345,Defender,Right Center Back,Regular Defender
+401453.0,1.4839704,1.6113212,Forward,Right Center Forward,Striker
+401453.0,1.4839704,1.6113212,Forward,Right Center Forward,Striker
+4417.0,5.5090566,3.4163034,Midfielder,Left Wing,Winger
+3343.0,4.764162,3.0211797,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3346.0,1.627442,1.1729244,Forward,Right Midfield,Central Midfielder
+3344.0,6.265436,3.5310998,Midfielder,Left Defensive Midfield,Defensive Midfielder
+6409.0,5.5801935,-3.3292012,Defender,Left Midfield,Central Midfielder
+3608.0,6.9445567,-2.7724934,Defender,Right Center Back,Regular Defender
+3341.0,11.650312,2.285624,Defender,Left Center Back,Regular Defender
+3345.0,0.40795508,7.7783647,Defender,Left Back,Offensive Defender
+3270.0,6.6775856,-3.255673,Defender,Right Back,Offensive Defender
+40123.0,11.391823,3.099721,Defender,Left Center Back,Regular Defender
+3049.0,4.118233,-0.7087056,Midfielder,Right Midfield,Central Midfielder
+3304.0,4.2583404,4.163746,Midfielder,Right Center Midfield,Central Midfielder
+20074.0,4.66799,18.188023,Goalkeeper,Goalkeeper,Goalkeeper
+3961.0,4.619493,3.4769459,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3662.0,5.2971396,2.6184208,Midfielder,Right Center Midfield,Central Midfielder
+3812.0,0.9282285,8.053347,Forward,Right Wing,Winger
+3463.0,1.4948963,4.382316,Midfielder,Right Center Midfield,Central Midfielder
+10960.0,0.5160909,2.1391466,Forward,Left Center Forward,Striker
+3307.0,1.2310029,5.2542725,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3671.0,2.0512652,1.1495906,Forward,Center Forward,Striker
+3815.0,5.0839252,19.61072,Goalkeeper,Goalkeeper,Goalkeeper
+3813.0,12.019803,4.2689967,Defender,Right Center Back,Regular Defender
+3814.0,3.7068293,-0.6817433,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3631.0,3.0115342,0.8055985,Midfielder,Right Midfield,Central Midfielder
+3085.0,1.1328166,1.8096337,Forward,Right Midfield,Central Midfielder
+3810.0,1.780651,1.5400668,Forward,Right Midfield,Central Midfielder
+28782.0,5.622394,-3.541477,Defender,Right Center Forward,Striker
+40218.0,12.488912,1.377027,Defender,Right Midfield,Central Midfielder
+4041.0,1.22757,1.2334579,Forward,Left Midfield,Central Midfielder
+4630.0,0.6756708,2.2655003,Forward,Left Center Midfield,Central Midfielder
+3523.0,5.6303635,-3.1898432,Defender,Right Midfield,Central Midfielder
+4022.0,5.782359,2.1657708,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3967.0,6.3563266,4.0936213,Midfielder,Left Midfield,Central Midfielder
+3541.0,1.0233516,7.6924386,Defender,Left Midfield,Central Midfielder
+11012.0,12.654171,0.61100024,Defender,Left Center Back,Regular Defender
+3596.0,13.069914,5.081237,Defender,Right Center Back,Regular Defender
+3514.0,1.1310616,5.292698,Midfielder,Right Center Forward,Striker
+43627.0,4.003741,4.853649,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7171.0,2.0439963,1.3793596,Midfielder,Center Forward,Striker
+10503.0,5.6205974,-1.9466108,Defender,Right Back,Offensive Defender
+4429.0,5.9257607,2.9316878,Midfielder,Right Center Midfield,Central Midfielder
+2966.0,3.7562504,-0.6903752,Midfielder,Center Forward,Striker
+10783.0,6.0034366,3.3545473,Midfielder,Right Center Midfield,Central Midfielder
+5617.0,4.888955,1.0915087,Midfielder,Right Midfield,Central Midfielder
+3658.0,5.9756994,-3.1173851,Defender,Right Back,Offensive Defender
+4746.0,12.1421995,1.842317,Defender,Left Center Back,Regular Defender
+5108.0,5.301597,19.050695,Goalkeeper,Goalkeeper,Goalkeeper
+16890.0,11.401041,3.2751944,Defender,Left Center Back,Regular Defender
+6871.0,5.1941314,18.990454,Goalkeeper,Goalkeeper,Goalkeeper
+40124.0,1.423624,1.0114418,Forward,Left Midfield,Central Midfielder
+3337.0,0.08575714,2.0140762,Forward,Left Midfield,Central Midfielder
+42902.0,4.6338177,2.6111286,Midfielder,Center Defensive Midfield,Defensive Midfielder
+4217.0,1.7264171,2.670081,Forward,Left Wing,Winger
+9485.0,2.9817324,2.3889658,Midfielder,Center Forward,Striker
+8061.0,1.9432695,1.8660719,Midfielder,Left Back,Offensive Defender
+30289.0,1.8783268,1.5342578,Forward,Right Wing,Winger
+9649.0,5.6971793,3.804436,Midfielder,Left Wing Back,Offensive Defender
+9533.0,5.3579316,-1.4534615,Defender,Right Wing,Winger
+3436.0,4.9174438,4.2061205,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3650.0,5.2498956,-3.583368,Defender,Right Back,Offensive Defender
+3091.0,3.6383889,0.05453322,Midfielder,Right Center Midfield,Central Midfielder
+5685.0,6.595245,4.0646324,Midfielder,Left Center Midfield,Central Midfielder
+12608.0,3.4391384,18.298864,Goalkeeper,Goalkeeper,Goalkeeper
+3583.0,5.32855,3.668292,Midfielder,Left Defensive Midfield,Defensive Midfielder
+26207.0,11.681201,1.7904195,Midfielder,Right Center Back,Regular Defender
+3567.0,4.134172,3.7690053,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3065.0,0.8969784,8.537761,Defender,Left Back,Offensive Defender
+9642.0,5.39908,-3.5951593,Defender,Right Back,Offensive Defender
+3450.0,1.8508519,3.8537416,Forward,Left Attacking Midfield,Offensive Midfielder
+7153.0,3.3266902,2.4567115,Midfielder,Left Center Midfield,Central Midfielder
+20285.0,11.796671,1.882211,Defender,Left Center Back,Regular Defender
+24380.0,13.039907,5.4360485,Defender,Right Center Back,Regular Defender
+11117.0,1.9445189,2.9052792,Forward,Center Forward,Striker
+3096.0,4.5628047,18.26831,Goalkeeper,Goalkeeper,Goalkeeper
+3044.0,13.034212,4.9237885,Defender,Right Center Back,Regular Defender
+16072.0,5.7112813,1.5525919,Midfielder,Left Defensive Midfield,Defensive Midfielder
+4269.0,0.9725367,1.5212384,Forward,Right Defensive Midfield,Defensive Midfielder
+19362.0,0.4606471,1.3357593,Forward,Left Center Forward,Striker
+3076.0,3.2751296,3.532335,Forward,Center Forward,Striker
+3616.0,1.6571411,1.1284258,Forward,Center Forward,Striker
+13042.0,5.5468154,18.654768,Goalkeeper,Goalkeeper,Goalkeeper
+3476.0,5.7039366,2.7898593,Defender,Left Defensive Midfield,Defensive Midfielder
+4275.0,4.1541586,3.8064451,Midfielder,Left Center Midfield,Central Midfielder
+3953.0,3.563742,-0.38462743,Forward,Left Wing,Winger
+3683.0,2.9798703,3.193076,Midfielder,Left Midfield,Central Midfielder
+20067.0,6.9010553,4.1129084,Forward,Center Defensive Midfield,Defensive Midfielder
+3518.0,0.36592162,8.14237,Defender,Left Back,Offensive Defender
+3607.0,5.8792286,2.2849972,Midfielder,Right Center Back,Regular Defender
+3646.0,0.74437106,5.999411,Midfielder,Left Midfield,Central Midfielder
+9626.0,13.519204,4.9595833,Defender,Right Center Back,Regular Defender
+4700.0,11.35877,2.6273708,Defender,Right Back,Offensive Defender
+3244.0,13.076401,5.0523105,Defender,Right Center Back,Regular Defender
+3442.0,0.83102936,2.248346,Forward,Left Center Forward,Striker
+129558.0,4.3188744,-0.16856122,Defender,Right Back,Offensive Defender
+3289.0,0.54660726,1.1346117,Forward,Right Center Forward,Striker
+3278.0,1.6928376,1.3953396,Forward,Center Forward,Striker
+9593.0,2.2067068,1.2952392,Forward,Center Attacking Midfield,Offensive Midfielder
+22622.0,3.7427218,-0.3889187,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5458.0,0.02832543,1.712239,Forward,Left Midfield,Central Midfielder
+3626.0,5.815035,4.3409414,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3488.0,5.287232,19.082159,Goalkeeper,Goalkeeper,Goalkeeper
+3443.0,6.084579,-2.957254,Defender,Right Back,Offensive Defender
+3507.0,3.4920416,-0.053728588,Forward,Left Center Forward,Striker
+15892.0,2.8614364,2.6273806,Midfielder,Left Defensive Midfield,Defensive Midfielder
+4884.0,0.435457,7.657775,Defender,Left Back,Offensive Defender
+3454.0,0.60889965,2.3008618,Forward,Right Wing,Winger
+3693.0,12.262853,1.8304563,Defender,Left Center Back,Regular Defender
+26699.0,1.1256443,2.321361,Forward,Right Center Forward,Striker
+5489.0,6.091543,3.786282,Midfielder,Right Back,Offensive Defender
+3407.0,13.120656,5.0561914,Defender,Right Center Back,Regular Defender
+20641.0,1.4244158,1.8120936,Forward,Center Attacking Midfield,Offensive Midfielder
+3522.0,4.511982,18.31515,Goalkeeper,Goalkeeper,Goalkeeper
+3277.0,5.9900737,3.1498992,Midfielder,Right Defensive Midfield,Defensive Midfielder
+5540.0,4.6350894,4.5028257,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3991.0,6.0230675,-3.1851158,Defender,Right Back,Offensive Defender
+3721.0,4.7076473,3.1501143,Midfielder,Right Center Midfield,Central Midfielder
+3309.0,12.619127,5.426873,Defender,Right Center Back,Regular Defender
+3306.0,0.9512145,7.8793283,Defender,Left Center Back,Regular Defender
+3263.0,11.45076,3.54531,Defender,Right Center Back,Regular Defender
+3326.0,2.886091,2.663317,Midfielder,Center Attacking Midfield,Offensive Midfielder
+43081.0,3.19328,2.341646,Midfielder,Right Wing,Winger
+23488.0,5.434641,3.947717,Forward,Right Attacking Midfield,Offensive Midfielder
+9641.0,1.7270561,1.3353853,Forward,Right Center Midfield,Central Midfielder
+3604.0,0.28952453,2.1172342,Forward,Left Defensive Midfield,Defensive Midfielder
+3496.0,2.1292796,2.739297,Midfielder,Left Wing,Winger
+3437.0,5.4878182,3.958897,Midfielder,Right Wing,Winger
+3511.0,5.4879684,-3.581326,Defender,Right Back,Offensive Defender
+11386.0,4.7964873,3.8121743,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3498.0,0.15690164,7.3412113,Defender,Left Back,Offensive Defender
+6746.0,12.215051,4.813259,Defender,Center Forward,Striker
+3394.0,11.7732935,1.1363014,Defender,Left Center Back,Regular Defender
+3385.0,1.3251743,3.882422,Forward,Right Back,Offensive Defender
+20951.0,4.820766,-1.4453739,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3388.0,1.8096286,0.5665024,Midfielder,Left Wing,Winger
+3461.0,3.3762388,18.4584,Goalkeeper,Goalkeeper,Goalkeeper
+75899.0,1.0470773,8.294841,Defender,Left Center Back,Regular Defender
+27146.0,0.1502902,7.400391,Defender,Left Back,Offensive Defender
+18672.0,4.870914,19.08751,Goalkeeper,Goalkeeper,Goalkeeper
+42700.0,12.966988,4.987652,Defender,Right Center Back,Regular Defender
+3568.0,5.7636156,2.223839,Midfielder,Left Defensive Midfield,Defensive Midfielder
+9638.0,2.0313327,4.3785005,Midfielder,Left Center Back,Regular Defender
+42703.0,6.1154933,4.158691,Midfielder,Right Back,Offensive Defender
+5581.0,3.6385276,-0.46991587,Forward,Center Attacking Midfield,Offensive Midfielder
+7780.0,6.786195,3.8351376,Midfielder,Right Defensive Midfield,Defensive Midfielder
+18872.0,12.523663,5.4625854,Defender,Right Center Back,Regular Defender
+10007.0,6.8178763,-3.6783178,Defender,Right Back,Offensive Defender
+4243.0,5.7976227,2.053305,Midfielder,Right Wing,Winger
+9985.0,5.65707,18.66503,Goalkeeper,Goalkeeper,Goalkeeper
+22702.0,3.6568696,-0.52430415,Forward,Left Wing,Winger
+20527.0,12.100771,1.8527693,Defender,Left Back,Offensive Defender
+3380.0,0.018791255,1.7742889,Forward,Right Wing,Winger
+10931.0,4.7761436,4.448838,Midfielder,Left Midfield,Central Midfielder
+11992.0,6.810823,3.5465126,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3635.0,3.239825,0.12272057,Forward,Right Defensive Midfield,Defensive Midfielder
+13448.0,0.010448883,7.2162848,Defender,Left Back,Offensive Defender
+13200.0,3.54497,1.1151391,Midfielder,Left Midfield,Central Midfielder
+4053.0,4.897581,18.686075,Goalkeeper,Goalkeeper,Goalkeeper
+9628.0,2.3552902,6.704252,Defender,Left Back,Offensive Defender
+3532.0,5.092593,1.5299981,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3654.0,0.5454419,2.3494344,Forward,Right Center Forward,Striker
+4129.0,0.90660304,2.1587574,Forward,Right Wing,Winger
+4762.0,3.568444,-0.8087145,Forward,Right Wing,Winger
+3479.0,4.4140196,4.724129,Forward,Left Wing,Winger
+3094.0,0.9732571,2.66993,Midfielder,Right Wing,Winger
+10955.0,1.0557765,2.7136104,Forward,Center Forward,Striker
+3611.0,12.652085,1.2558618,Defender,Left Center Back,Regular Defender
+3099.0,3.4258769,18.473934,Goalkeeper,Goalkeeper,Goalkeeper
+3205.0,6.1806307,-3.1091383,Defender,Right Back,Offensive Defender
+10956.0,6.350789,2.8851779,Midfielder,Left Center Back,Regular Defender
+3585.0,2.2089753,1.087882,Forward,Right Attacking Midfield,Offensive Midfielder
+3594.0,-0.04443267,8.16714,Defender,Left Back,Offensive Defender
+3043.0,2.5661864,3.4361916,Forward,Left Attacking Midfield,Offensive Midfielder
+3037.0,4.979718,3.7894168,Midfielder,Right Defensive Midfield,Defensive Midfielder
+20005.0,12.753885,5.1725993,Defender,Right Center Back,Regular Defender
+4416.0,0.9861295,5.5971932,Midfielder,Right Midfield,Central Midfielder
+13248.0,4.7459655,3.1849895,Midfielder,Left Center Midfield,Central Midfielder
+3310.0,3.8905957,2.5781345,Midfielder,Right Center Midfield,Central Midfielder
+40127.0,4.4929585,4.7256656,Midfielder,Left Center Midfield,Central Midfielder
+4831.0,1.5350069,3.6122563,Forward,Right Defensive Midfield,Defensive Midfielder
+3054.0,5.3285856,3.7370675,Midfielder,Left Center Back,Regular Defender
+3090.0,12.108836,4.6062436,Defender,Right Center Back,Regular Defender
+7110.0,5.9687796,-3.8157744,Defender,Left Back,Offensive Defender
+3237.0,0.25960726,2.086845,Forward,Center Forward,Striker
+3064.0,2.1382766,2.8238146,Midfielder,Left Wing,Winger
+3087.0,5.2902203,3.6649747,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3389.0,11.76471,1.1213768,Defender,Left Center Back,Regular Defender
+5596.0,0.12914208,7.142763,Defender,Center Attacking Midfield,Offensive Midfielder
+20230.0,5.256094,3.5783792,Midfielder,Left Center Midfield,Central Midfielder
+3233.0,0.865008,5.118871,Forward,Center Forward,Striker
+3291.0,4.742326,18.621893,Goalkeeper,Goalkeeper,Goalkeeper
+3598.0,0.61431867,1.2701734,Defender,Left Center Back,Regular Defender
+6821.0,3.716137,-1.3134214,Forward,Left Center Midfield,Central Midfielder
+3665.0,4.1739116,3.1361415,Midfielder,Right Midfield,Central Midfielder
+3708.0,1.117239,0.94188243,Forward,Center Attacking Midfield,Offensive Midfielder
+3589.0,1.2997912,4.485321,Forward,Right Center Forward,Striker
+3092.0,0.34154052,2.1652071,Forward,Center Attacking Midfield,Offensive Midfielder
+19688.0,3.1994176,2.3949351,Midfielder,Right Defensive Midfield,Defensive Midfielder
+4629.0,12.283817,1.405961,Defender,Right Attacking Midfield,Offensive Midfielder
+4589.0,5.7589946,-3.3342443,Defender,Right Midfield,Central Midfielder
+3633.0,6.2274027,3.946151,Forward,Right Center Forward,Striker
+26696.0,1.6912246,2.7903244,Forward,Left Back,Offensive Defender
+16309.0,5.7449503,18.756649,Goalkeeper,Goalkeeper,Goalkeeper
+5836.0,2.3501935,6.6764326,Defender,Right Wing,Winger
+3469.0,1.434828,4.48051,Forward,Left Midfield,Central Midfielder
+4317.0,1.4967734,3.686596,Forward,Left Center Midfield,Central Midfielder
+9578.0,3.8174274,3.0224109,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3286.0,3.5370922,0.13067108,Midfielder,Left Center Midfield,Central Midfielder
+9463.0,6.405278,2.7831745,Midfielder,Right Center Midfield,Central Midfielder
+10499.0,5.0404506,-3.5074942,Defender,Right Center Back,Regular Defender
+4807.0,1.136721,1.5379139,Forward,Left Center Forward,Striker
+21212.0,7.068749,-2.6559343,Defender,Right Center Back,Regular Defender
+3709.0,5.2458615,-3.3116202,Forward,Right Center Forward,Striker
+9528.0,1.303698,3.243706,Midfielder,Center Defensive Midfield,Defensive Midfielder
+9930.0,12.772569,5.3680215,Defender,Left Back,Offensive Defender
+23635.0,4.3912687,18.489693,Goalkeeper,Goalkeeper,Goalkeeper
+10967.0,0.7198255,6.538862,Defender,Left Wing Back,Offensive Defender
+3520.0,1.4918344,5.6574883,Midfielder,Right Wing,Winger
+22594.0,1.1962268,4.5348125,Midfielder,Right Wing,Winger
+23663.0,1.1847094,1.541301,Forward,Right Center Back,Regular Defender
+10457.0,1.1786666,1.3794713,Forward,Left Midfield,Central Midfielder
+3448.0,5.617387,-1.7570722,Defender,Right Back,Offensive Defender
+13846.0,5.9729056,3.1041143,Defender,Right Center Back,Regular Defender
+16295.0,2.4786518,1.4084148,Midfielder,Right Wing,Winger
+18751.0,4.8523927,4.315393,Forward,Right Center Midfield,Central Midfielder
+3321.0,0.8476919,7.5851355,Defender,Left Back,Offensive Defender
+9539.0,4.920573,19.057781,Goalkeeper,Goalkeeper,Goalkeeper
+4817.0,4.8721967,4.2490563,Midfielder,Left Center Midfield,Central Midfielder
+3576.0,0.71713513,7.6291265,Defender,Left Back,Offensive Defender
+9452.0,5.973074,2.548549,Midfielder,Right Defensive Midfield,Defensive Midfielder
+31296.0,12.299415,1.5472969,Defender,Left Center Back,Regular Defender
+3656.0,2.7807655,1.8173248,Midfielder,Right Wing,Winger
+23742.0,3.355582,0.35521457,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6800.0,3.1701748,0.96447927,Forward,Left Wing,Winger
+9630.0,4.3170495,-1.1345102,Midfielder,Center Attacking Midfield,Offensive Midfielder
+2956.0,1.0129158,0.8891339,Forward,Center Attacking Midfield,Offensive Midfielder
+3621.0,1.5283946,4.2658753,Forward,Right Wing,Winger
+3478.0,4.6953306,3.3754592,Midfielder,Left Center Back,Regular Defender
+12325.0,0.50880635,7.991289,Defender,Left Center Back,Regular Defender
+4590.0,5.4875526,-3.478547,Defender,Right Back,Offensive Defender
+3958.0,1.7370082,3.8970337,Forward,Left Defensive Midfield,Defensive Midfielder
+3535.0,2.5084767,1.7376235,Forward,Left Center Forward,Striker
+3339.0,4.8921604,18.713186,Goalkeeper,Center Attacking Midfield,Offensive Midfielder
+3957.0,2.2893627,6.746129,Defender,Left Back,Offensive Defender
+3515.0,0.2560996,7.3843484,Defender,Right Wing,Winger
+38412.0,12.202136,4.574519,Defender,Right Wing,Winger
+3471.0,11.416234,3.400025,Defender,Center Attacking Midfield,Offensive Midfielder
+3529.0,0.91722864,0.969695,Forward,Center Forward,Striker
+3473.0,3.6646736,0.6330354,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3539.0,5.4016333,18.949007,Goalkeeper,Goalkeeper,Goalkeeper
+4090.0,2.4953077,1.743701,Midfielder,Right Center Midfield,Central Midfielder
+3381.0,5.2091084,4.540536,Midfielder,Right Center Midfield,Central Midfielder
+3493.0,5.8670807,3.9502127,Midfielder,Left Back,Offensive Defender
+5475.0,6.881337,3.2787056,Midfielder,Right Wing,Winger
+3501.0,2.1981328,4.477849,Forward,Right Back,Offensive Defender
+3472.0,3.5091758,0.31361753,Forward,Left Wing,Winger
+3645.0,12.013704,4.3168445,Defender,Right Center Back,Regular Defender
+3666.0,1.6559731,5.6975427,Forward,Right Center Back,Regular Defender
+3440.0,0.7135518,1.7478187,Forward,Center Forward,Striker
+3504.0,4.321182,2.0557702,Midfielder,Right Midfield,Central Midfielder
+6300.0,12.877625,5.731134,Defender,Right Center Back,Regular Defender
+40366.0,12.093649,1.8035513,Defender,Left Center Back,Regular Defender
+3483.0,12.050926,1.2394971,Defender,Left Center Back,Regular Defender
+22281.0,2.3507183,0.8039726,Midfielder,Left Center Forward,Striker
+16457.0,2.503913,2.6432195,Midfielder,Left Attacking Midfield,Offensive Midfielder
+3606.0,4.2942286,1.7972556,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3314.0,13.656228,4.8217077,Defender,Right Center Back,Regular Defender
+3311.0,12.631791,0.6427205,Defender,Left Center Back,Regular Defender
+3537.0,5.2673817,18.6046,Goalkeeper,Goalkeeper,Goalkeeper
+3325.0,1.0565845,5.5626,Forward,Right Center Forward,Striker
+3467.0,0.83352137,8.505568,Defender,Left Back,Offensive Defender
+4913.0,2.7060199,3.462062,Midfielder,Right Defensive Midfield,Defensive Midfielder
+40121.0,11.779116,1.9449214,Defender,Left Center Back,Regular Defender
+3612.0,4.827659,-1.2070136,Defender,Center Forward,Striker
+3294.0,3.584839,0.42709467,Midfielder,Left Center Midfield,Central Midfielder
+4751.0,5.940609,3.159199,Midfielder,Left Defensive Midfield,Defensive Midfielder
+4891.0,4.4639497,3.9900737,Midfielder,Right Wing,Winger
+9625.0,6.8273215,3.527438,Midfielder,Right Defensive Midfield,Defensive Midfielder
+4035.0,13.080967,5.369271,Defender,Right Center Back,Regular Defender
+4724.0,5.790357,-3.6032264,Defender,Right Back,Offensive Defender
+3333.0,5.664747,18.631203,Goalkeeper,Goalkeeper,Goalkeeper
+3480.0,12.803198,4.421102,Defender,Left Center Back,Regular Defender
+3533.0,3.7204688,-0.780624,Forward,Left Midfield,Central Midfielder
+3296.0,4.2318907,3.5491314,Midfielder,Left Center Midfield,Central Midfielder
+2988.0,0.75935555,5.5448465,Forward,Right Midfield,Central Midfielder
+10958.0,11.992048,4.4720273,Defender,Right Center Back,Regular Defender
+8251.0,4.7911325,3.1874244,Midfielder,Left Center Midfield,Central Midfielder
+3538.0,0.64114565,2.2848377,Forward,Left Center Forward,Striker
+3603.0,1.5761484,1.4991734,Forward,Right Back,Offensive Defender
+3636.0,5.0612025,4.4206824,Midfielder,Left Wing,Winger
+6846.0,2.9564557,0.98693943,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3265.0,1.6565851,1.4575338,Defender,Right Back,Offensive Defender
+40118.0,1.5585715,4.7963066,Defender,Left Defensive Midfield,Defensive Midfielder
+3288.0,12.125393,1.8532047,Defender,Left Center Back,Regular Defender
+13848.0,12.298957,4.4957986,Defender,Right Back,Offensive Defender
+4040.0,0.60872585,1.8636345,Forward,Center Attacking Midfield,Offensive Midfielder
+3670.0,2.135304,0.8697635,Forward,Left Back,Offensive Defender
+36983.0,5.655199,-3.4910028,Defender,Left Midfield,Central Midfielder
+19288.0,7.2158237,3.8374453,Defender,Right Center Midfield,Central Midfielder
+16003.0,5.5616884,3.5361707,Midfielder,Left Wing,Winger
+4597.0,3.4040306,4.9803457,Midfielder,Right Wing,Winger
+20287.0,11.790001,1.2403773,Defender,Center Attacking Midfield,Offensive Midfielder
+28100.0,5.770577,2.1387007,Forward,Right Wing Back,Offensive Defender
+3456.0,12.652092,5.676966,Defender,Center Back,Regular Defender
+5198.0,0.51908934,2.5548325,Forward,Center Forward,Striker
+40122.0,2.8122494,3.5012012,Midfielder,Center Midfield,Central Midfielder
+6623.0,0.12758167,2.107439,Forward,Left Defensive Midfield,Defensive Midfielder
+4738.0,1.456801,3.3397427,Midfielder,Left Center Forward,Striker
+4632.0,4.2362504,3.7363734,Midfielder,Right Center Midfield,Central Midfielder
+42901.0,3.500255,-0.5946387,Forward,Left Wing,Winger
+18414.0,3.9328024,4.7965784,Midfielder,Right Wing,Winger
+9648.0,13.476718,4.7273183,Defender,Center Attacking Midfield,Offensive Midfielder
+4280.0,11.841019,4.0523753,Defender,Right Center Back,Regular Defender
+4587.0,5.4568787,-1.7722515,Defender,Right Back,Offensive Defender
+3293.0,3.125788,0.5467142,Midfielder,Right Center Midfield,Central Midfielder
+3316.0,7.0861473,-2.687573,Defender,Right Center Forward,Striker
+3874.0,5.354234,2.65972,Midfielder,Center Defensive Midfield,Defensive Midfielder
+27053.0,5.2549467,4.154074,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3623.0,4.519341,18.875465,Goalkeeper,Goalkeeper,Goalkeeper
+3843.0,12.284605,1.3201768,Defender,Right Defensive Midfield,Defensive Midfielder
+3062.0,0.4572873,7.8313565,Defender,Left Back,Offensive Defender
+4271.0,0.5661831,1.6405389,Forward,Center Back,Regular Defender
+3684.0,5.9247074,3.2122483,Midfielder,Left Defensive Midfield,Defensive Midfielder
+27853.0,1.555876,3.4461784,Forward,Left Midfield,Central Midfielder
+3600.0,6.3999534,3.6631334,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3963.0,2.9967647,0.8315991,Forward,Left Wing,Winger
+3349.0,4.071676,-0.6954472,Defender,Right Wing,Winger
+5264.0,6.6128764,-3.2710416,Defender,Right Back,Offensive Defender
+3897.0,6.156019,3.658716,Midfielder,Left Midfield,Central Midfielder
+21254.0,6.180345,-3.0197062,Defender,Left Back,Offensive Defender
+3490.0,4.4483895,2.9428554,Midfielder,Left Midfield,Central Midfielder
+4747.0,1.1667176,2.566961,Midfielder,Center Attacking Midfield,Offensive Midfielder
+40453.0,3.7479975,1.7153081,Forward,Right Midfield,Central Midfielder
+3464.0,6.017933,3.7121584,Midfielder,Right Defensive Midfield,Defensive Midfielder
+50245.0,2.3598793,1.2152606,Forward,Left Wing,Winger
+3057.0,6.395736,3.7694345,Midfielder,Right Back,Offensive Defender
+4631.0,6.368863,2.8226187,Midfielder,Center Attacking Midfield,Offensive Midfielder
+4726.0,13.007665,5.4287457,Defender,Right Center Back,Regular Defender
+3644.0,11.899383,1.1462317,Defender,Left Center Back,Regular Defender
+3605.0,4.8655157,4.1017222,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3262.0,5.2389755,19.50115,Goalkeeper,Goalkeeper,Goalkeeper
+9627.0,-0.19550113,7.9489985,Defender,Left Back,Offensive Defender
+3347.0,3.1431537,0.86345094,Forward,Left Center Midfield,Central Midfielder
+3449.0,3.2298958,0.6321543,Forward,Left Midfield,Central Midfielder
+24888.0,5.2109942,19.12047,Goalkeeper,Goalkeeper,Goalkeeper
+3340.0,6.09363,-3.8764606,Defender,Right Wing Back,Offensive Defender
+3944.0,0.9117696,2.1386182,Midfielder,Right Attacking Midfield,Offensive Midfielder
+7063.0,0.6887337,5.69565,Forward,Left Wing,Winger
+20521.0,1.3727406,0.8606116,Forward,Left Center Midfield,Central Midfielder
+29382.0,1.6849976,5.3281794,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3290.0,13.4278145,5.0773683,Defender,Left Center Back,Regular Defender
+3329.0,5.178859,-3.5301182,Defender,Right Back,Offensive Defender
+3629.0,2.1472948,1.0357432,Midfielder,Right Attacking Midfield,Offensive Midfielder
+3960.0,12.79108,4.9204826,Defender,Right Center Back,Regular Defender
+3462.0,5.706096,1.7495152,Midfielder,Center Forward,Striker
+3669.0,11.35036,2.9055183,Defender,Left Center Back,Regular Defender
+3831.0,1.1841146,4.52876,Forward,Center Attacking Midfield,Offensive Midfielder
+11062.0,0.24029756,1.683267,Forward,Left Wing,Winger
+3828.0,3.3121572,2.527387,Midfielder,Right Center Midfield,Central Midfielder
+3098.0,6.4257236,3.82369,Midfielder,Right Center Midfield,Central Midfielder
+20045.0,0.39263374,7.336164,Defender,Left Back,Offensive Defender
+3328.0,4.5983787,2.415754,Midfielder,Right Defensive Midfield,Defensive Midfielder
+20201.0,5.283634,18.758984,Goalkeeper,Goalkeeper,Goalkeeper
+3272.0,6.144875,4.093951,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3685.0,1.0878605,3.321522,Forward,Center Attacking Midfield,Offensive Midfielder
+6695.0,0.50129277,1.9228948,Forward,Left Defensive Midfield,Defensive Midfielder
+3726.0,3.7313716,-1.2543589,Forward,Right Midfield,Central Midfielder
+42947.0,2.2974112,4.5985975,Midfielder,Left Wing,Winger
+10966.0,2.5427406,2.7572181,Midfielder,Right Midfield,Central Midfielder
+16334.0,5.7480755,2.3662615,Midfielder,Left Defensive Midfield,Defensive Midfielder
+11124.0,5.340743,-3.317432,Defender,Right Back,Offensive Defender
+4804.0,2.2387354,4.515441,Midfielder,Left Midfield,Central Midfielder
+3475.0,13.486286,5.0209627,Midfielder,Center Attacking Midfield,Offensive Midfielder
+9536.0,3.8148673,-1.2250811,Forward,Center Defensive Midfield,Defensive Midfielder
+3528.0,1.296661,6.6729617,Defender,Left Back,Offensive Defender
+3713.0,11.467875,4.0443807,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3647.0,2.0619087,4.6541924,Forward,Center Attacking Midfield,Offensive Midfielder
+3267.0,5.1813426,-3.5247529,Defender,Left Center Back,Regular Defender
+3101.0,12.3044195,5.2944064,Defender,Right Center Back,Regular Defender
+3602.0,0.06945351,7.6621447,Defender,Left Back,Offensive Defender
+6631.0,6.2250557,3.0173035,Midfielder,Center Forward,Striker
+4808.0,5.3022633,-3.2806458,Defender,Right Back,Offensive Defender
+3517.0,4.5657253,2.7941546,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3525.0,3.6312518,0.30261675,Forward,Right Wing,Winger
+9467.0,4.347173,18.482492,Goalkeeper,Goalkeeper,Goalkeeper
+5594.0,5.5260587,-2.2650218,Defender,Right Back,Offensive Defender
+16027.0,0.3230636,7.9834433,Defender,Left Back,Offensive Defender
+42899.0,1.4663568,4.8873625,Midfielder,Right Midfield,Central Midfielder
+3445.0,0.6009668,1.3105943,Forward,Right Wing,Winger
+3834.0,0.69893616,0.914594,Midfielder,Right Center Midfield,Central Midfielder
+6560.0,12.623583,0.6474668,Defender,Center Attacking Midfield,Offensive Midfielder
+9551.0,1.6261386,3.829933,Midfielder,Left Center Forward,Striker
+5602.0,1.2890837,4.669257,Midfielder,Left Midfield,Central Midfielder
+3077.0,11.935103,1.1464432,Defender,Right Center Back,Regular Defender
+3041.0,12.550047,1.0623331,Defender,Right Back,Offensive Defender
+42699.0,0.60022014,2.1236832,Forward,Center Defensive Midfield,Defensive Midfielder
+42701.0,0.57948464,8.423935,Defender,Left Midfield,Central Midfielder
+3086.0,-0.061714202,8.115694,Defender,Left Back,Offensive Defender
+16067.0,3.3166702,-0.039872304,Forward,Center Forward,Striker
+3300.0,10.894569,3.0612292,Defender,Left Back,Offensive Defender
+3668.0,1.6177704,2.6296487,Forward,Right Wing,Winger
+7745.0,3.66556,-0.68302023,Midfielder,Left Midfield,Central Midfielder
+11333.0,4.091994,-1.1007558,Forward,Right Center Forward,Striker
+3323.0,0.7074285,7.787645,Defender,Left Back,Offensive Defender
+6296.0,4.012009,-1.4824728,Midfielder,Right Midfield,Central Midfielder
+4826.0,6.842096,-2.8804889,Defender,Right Back,Offensive Defender
+3495.0,0.18879938,8.03306,Defender,Left Back,Offensive Defender
+20066.0,4.32846,18.791737,Goalkeeper,Goalkeeper,Goalkeeper
+3595.0,3.8691738,4.0853853,Midfielder,Left Midfield,Central Midfielder
+3491.0,1.8244833,4.20393,Forward,Left Center Forward,Striker
+3962.0,1.537103,1.0509474,Forward,Center Attacking Midfield,Offensive Midfielder
+4273.0,7.170604,3.6460094,Defender,Right Center Back,Regular Defender
+4837.0,3.4681942,-0.78565156,Forward,Center Forward,Striker
+3651.0,-0.002470394,7.3333125,Defender,Left Back,Offensive Defender
+3590.0,5.3593235,-3.3231628,Defender,Right Wing Back,Offensive Defender
+3842.0,1.1370167,1.7608564,Forward,Left Wing,Winger
+6870.0,1.6308353,5.576236,Midfielder,Center Defensive Midfield,Defensive Midfielder
+4840.0,0.39537016,8.217185,Defender,Left Back,Offensive Defender
+3391.0,0.9005439,8.303779,Forward,Left Wing Back,Offensive Defender
+4828.0,4.5429034,1.0645767,Midfielder,Right Defensive Midfield,Defensive Midfielder
+3659.0,4.6080685,18.162554,Goalkeeper,Goalkeeper,Goalkeeper
+9958.0,13.62512,4.710501,Midfielder,Left Defensive Midfield,Defensive Midfielder
+16932.0,6.2716246,3.8866405,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3509.0,3.4338486,18.14836,Goalkeeper,Center Attacking Midfield,Offensive Midfielder
+4347.0,0.06852865,7.3952203,Defender,Left Back,Offensive Defender
+30702.0,0.53135115,8.08555,Defender,Left Back,Offensive Defender
+3973.0,6.633815,-3.7556682,Forward,Right Wing,Winger
+3297.0,3.7483032,-0.885866,Forward,Right Wing,Winger
+3534.0,1.0238858,4.8607445,Midfielder,Center Attacking Midfield,Offensive Midfielder
+20543.0,0.45472693,2.1529396,Forward,Right Wing,Winger
+3482.0,12.04058,4.3063393,Forward,Center Back,Regular Defender
+43695.0,11.8413925,2.0701787,Defender,Left Center Back,Regular Defender
+43757.0,3.733126,4.522366,Midfielder,Left Wing,Winger
+3052.0,6.016336,-3.83833,Defender,Right Back,Offensive Defender
+3081.0,11.641903,2.279723,Defender,Center Forward,Striker
+42900.0,6.8502073,3.4769459,Midfielder,Left Wing,Winger
+3619.0,5.2047033,19.333246,Goalkeeper,Goalkeeper,Goalkeeper
+20046.0,11.437561,3.278244,Defender,Left Center Back,Regular Defender
+42946.0,5.6976385,-1.9960301,Defender,Right Back,Offensive Defender
+9014.0,5.6836214,18.661043,Goalkeeper,Goalkeeper,Goalkeeper
+3382.0,-0.2259783,8.05282,Defender,Left Back,Offensive Defender
+4892.0,4.2895007,18.485325,Goalkeeper,Goalkeeper,Goalkeeper
+8520.0,5.341187,4.6759543,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3609.0,5.577465,19.14258,Goalkeeper,Goalkeeper,Goalkeeper
+10779.0,-0.017079325,7.2371955,Defender,Right Back,Offensive Defender
+3908.0,3.5147963,-0.7650888,Forward,Center Forward,Striker
+28559.0,1.8570442,2.4874945,Forward,Center Attacking Midfield,Offensive Midfielder
+6361.0,1.5072097,0.66925,Forward,Right Wing,Winger
+40130.0,0.40186977,1.1615314,Forward,Right Wing,Winger
+20253.0,1.614527,4.1900373,Forward,Left Center Midfield,Central Midfielder
+16181.0,5.739063,4.3751316,Midfielder,Left Center Midfield,Central Midfielder
+5109.0,4.394236,18.8139,Goalkeeper,Goalkeeper,Goalkeeper
+3807.0,5.446125,18.563221,Goalkeeper,Goalkeeper,Goalkeeper
+7884.0,12.57459,5.4636297,Defender,Right Back,Offensive Defender
+19847.0,3.2269528,1.7999746,Midfielder,Left Center Forward,Striker
+11295.0,2.0051336,4.206999,Midfielder,Left Midfield,Central Midfielder
+13573.0,1.2821798,1.3580081,Forward,Right Center Forward,Striker
+45014.0,1.6050582,3.6412508,Forward,Center Forward,Striker
+3722.0,13.34992,5.3246055,Defender,Right Center Back,Regular Defender
+7010.0,3.6871915,-1.0502489,Forward,Right Wing,Winger
+10770.0,6.2698894,-3.8578925,Defender,Right Back,Offensive Defender
+3308.0,5.058502,-3.5072885,Defender,Right Back,Offensive Defender
+3725.0,0.60108405,8.424116,Defender,Left Back,Offensive Defender
+5556.0,3.247901,0.11043435,Midfielder,Left Midfield,Central Midfielder
+3731.0,7.016608,-2.6308267,Defender,Right Center Back,Regular Defender
+48634.0,0.8616592,5.408589,Forward,Left Wing,Winger
+9519.0,1.2927545,0.88707066,Forward,Left Center Forward,Striker
+24743.0,1.041985,1.0226687,Midfielder,Right Center Midfield,Central Midfielder
+20302.0,-0.13760847,7.8642716,Defender,Left Back,Offensive Defender
+43121.0,3.1761172,18.118454,Goalkeeper,Goalkeeper,Goalkeeper
+3643.0,5.9228444,-3.7305405,Defender,Right Back,Offensive Defender
+21540.0,11.869762,4.38516,Midfielder,Center Defensive Midfield,Defensive Midfielder
+42702.0,1.5156586,1.4681101,Forward,Left Center Forward,Striker
+5689.0,3.828432,-1.2588482,Defender,Center Defensive Midfield,Defensive Midfielder
+41082.0,6.799799,4.0890083,Midfielder,Center Attacking Midfield,Offensive Midfielder
+20781.0,2.5537097,0.68604493,Midfielder,Center Defensive Midfield,Defensive Midfielder
+8400.0,2.0725918,3.069965,Midfielder,Right Midfield,Central Midfielder
+3970.0,5.304103,18.609339,Goalkeeper,Goalkeeper,Goalkeeper
+7121.0,6.684313,3.0535123,Midfielder,Center Attacking Midfield,Offensive Midfielder
+128704.0,1.2791567,1.1014566,Defender,Right Center Back,Regular Defender
+4045.0,5.341652,3.7170322,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6652.0,11.878412,4.069221,Defender,Left Center Midfield,Central Midfielder
+9629.0,-0.056120977,7.1450043,Defender,Left Back,Offensive Defender
+3569.0,0.8848468,3.1284752,Forward,Center Forward,Striker
+4093.0,5.6240983,4.7304397,Midfielder,Right Defensive Midfield,Defensive Midfielder
+4346.0,5.400711,4.020333,Midfielder,Center Attacking Midfield,Offensive Midfielder
+4276.0,5.660976,18.953352,Goalkeeper,Goalkeeper,Goalkeeper
+28247.0,0.84057355,1.2242239,Forward,Right Back,Offensive Defender
+3312.0,0.9075143,5.252733,Midfielder,Left Back,Offensive Defender
+3966.0,0.78132933,1.9242451,Forward,Left Wing,Winger
+41185.0,3.4802396,18.400898,Goalkeeper,Goalkeeper,Goalkeeper
+6950.0,0.85518146,1.4668086,Forward,Right Center Forward,Striker
+43591.0,2.8821466,2.6884959,Forward,Right Wing,Winger
+3487.0,5.514063,19.169237,Goalkeeper,Goalkeeper,Goalkeeper
+4116.0,2.5068738,0.72455806,Midfielder,Left Midfield,Central Midfielder
+17276.0,0.4973296,1.425742,Midfielder,Center Forward,Striker
+3165.0,1.1983145,1.2892854,Forward,Right Center Forward,Striker
+3649.0,5.2406015,19.325075,Goalkeeper,Goalkeeper,Goalkeeper
+9914.0,4.411706,18.765285,Goalkeeper,Goalkeeper,Goalkeeper
+8485.0,7.1136184,2.9006228,Midfielder,Right Center Midfield,Central Midfielder
+27949.0,1.5257092,4.098157,Forward,Left Center Midfield,Central Midfielder
+3468.0,3.4312744,18.441288,Goalkeeper,Goalkeeper,Goalkeeper
+10772.0,6.10787,-3.2074416,Defender,Right Back,Offensive Defender
+9635.0,3.7985146,-1.136781,Forward,Center Forward,Striker
+9636.0,7.0721517,-3.4441419,Forward,Left Center Forward,Striker
+7848.0,12.754592,5.6302433,Defender,Right Center Back,Regular Defender
+25351.0,2.3409462,3.3344398,Forward,Center Forward,Striker
+15542.0,-0.058058757,8.002272,Defender,Left Back,Offensive Defender
+3318.0,1.7149885,1.2839664,Forward,Center Forward,Striker
+18947.0,0.41099027,7.4205775,Defender,Left Back,Offensive Defender
+3465.0,13.102054,4.84913,Defender,Right Back,Offensive Defender
+11936.0,10.790669,3.142048,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3586.0,5.558341,-3.595659,Defender,Right Back,Offensive Defender
+10932.0,2.3199553,5.928731,Forward,Left Wing,Winger
+3652.0,3.04641,3.4626203,Midfielder,Center Defensive Midfield,Defensive Midfielder
+3542.0,6.828228,-3.110145,Defender,Right Back,Offensive Defender
+40125.0,1.52179,5.746975,Midfielder,Left Center Midfield,Central Midfielder
+10484.0,3.7169032,-1.3828763,Defender,Right Back,Offensive Defender
+9563.0,5.134348,18.407507,Goalkeeper,Goalkeeper,Goalkeeper
+22058.0,6.44964,-3.8633718,Defender,Right Back,Offensive Defender
+22237.0,-0.03531028,1.7473367,Midfielder,Left Midfield,Central Midfielder
+20446.0,5.668342,18.602446,Goalkeeper,Goalkeeper,Goalkeeper
+10458.0,7.0063643,-3.4363215,Defender,Right Back,Offensive Defender
+8344.0,5.8792133,2.067569,Midfielder,Right Defensive Midfield,Defensive Midfielder
+128703.0,12.088986,1.8243744,Defender,Left Center Back,Regular Defender
+10326.0,4.2027807,-0.16587688,Midfielder,Left Center Midfield,Central Midfielder
+9566.0,4.0175076,-1.2965168,Midfielder,Right Midfield,Central Midfielder
+9070.0,7.496823,4.0117025,Midfielder,Right Defensive Midfield,Defensive Midfielder
+45389.0,0.63965464,8.291972,Defender,Left Back,Offensive Defender
+129559.0,1.0794066,5.257246,Midfielder,Left Midfield,Central Midfielder
+10771.0,1.1089525,5.2750664,Midfielder,Right Midfield,Central Midfielder
+4097.0,0.5129057,8.283187,Forward,Left Wing,Winger
+6994.0,6.575987,3.8544197,Midfielder,Center Defensive Midfield,Defensive Midfielder
+8420.0,4.934948,2.6760504,Midfielder,Right Defensive Midfield,Defensive Midfielder
+6992.0,7.022233,-2.6999881,Defender,Center Back,Regular Defender
+7796.0,5.201512,-3.5168834,Forward,Right Wing,Winger
+5512.0,3.3091307,5.005546,Midfielder,Left Back,Offensive Defender
+8184.0,3.9997401,-0.9446653,Forward,Center Forward,Striker
+386607.0,5.532199,-1.6672872,Defender,Right Wing,Winger
+8191.0,0.004835586,7.138573,Defender,Left Center Back,Regular Defender
+8272.0,1.9743769,2.8974133,Forward,Left Midfield,Central Midfielder
+386654.0,11.783139,1.5643407,Defender,Left Center Back,Regular Defender
+7017.0,0.98109114,1.5004853,Forward,Left Center Back,Regular Defender
+6577.0,5.9383817,3.8702514,Midfielder,Center Defensive Midfield,Defensive Midfielder
+7799.0,11.816649,4.0171437,Forward,Right Center Forward,Striker
+3577.0,13.684417,4.706528,Defender,Center Back,Regular Defender
+6941.0,1.729121,4.7122593,Midfielder,Center Attacking Midfield,Offensive Midfielder
+31231.0,0.079113945,8.099513,Defender,Left Center Back,Regular Defender
+7157.0,4.6684747,19.020485,Goalkeeper,Goalkeeper,Goalkeeper
+24722.0,4.908661,1.0510805,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7108.0,12.464207,1.5029206,Defender,Left Center Back,Regular Defender
+8871.0,0.57180524,1.7408746,Forward,Right Midfield,Central Midfielder
+3742.0,5.5010495,18.712418,Goalkeeper,Goalkeeper,Goalkeeper
+8852.0,13.707288,4.71381,Forward,Center Back,Regular Defender
+40367.0,6.068182,3.8267958,Midfielder,Right Center Midfield,Central Midfielder
+7002.0,13.037358,4.9262257,Defender,Left Center Back,Regular Defender
+40333.0,6.4555616,-3.1942053,Defender,Left Defensive Midfield,Defensive Midfielder
+40455.0,5.6669416,2.6887722,Midfielder,Left Midfield,Central Midfielder
+19846.0,-0.032729764,1.8838078,Forward,Right Center Back,Regular Defender
+6938.0,12.533682,0.74616426,Defender,Center Attacking Midfield,Offensive Midfielder
+8661.0,1.0020375,7.812493,Defender,Left Back,Offensive Defender
+24235.0,1.589584,3.0542915,Forward,Center Attacking Midfield,Offensive Midfielder
+8793.0,1.5345247,5.5234585,Midfielder,Left Midfield,Central Midfielder
+7462.0,5.8898296,-3.1314027,Defender,Right Wing,Winger
+5204.0,2.880568,3.511321,Midfielder,Left Midfield,Central Midfielder
+6729.0,6.169884,2.694441,Midfielder,Center Defensive Midfield,Defensive Midfielder
+20636.0,5.964859,2.8564234,Midfielder,Left Defensive Midfield,Defensive Midfielder
+387847.0,12.18711,1.8403382,Defender,Center Back,Regular Defender
+8291.0,11.949958,4.2239046,Defender,Right Attacking Midfield,Offensive Midfielder
+386512.0,3.5431244,4.8585906,Midfielder,Right Midfield,Central Midfielder
+23470.0,3.8328626,-0.63652164,Midfielder,Left Wing,Winger
+32037.0,4.366374,18.501719,Goalkeeper,Goalkeeper,Goalkeeper
+46670.0,10.785509,3.126385,Forward,Right Center Forward,Striker
+13613.0,0.051450785,1.4586022,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7696.0,2.786854,1.1603123,Midfielder,Right Midfield,Central Midfielder
+7805.0,1.4722736,1.0992737,Defender,Left Center Forward,Striker
+9903.0,5.7381783,2.7655091,Midfielder,Center Defensive Midfield,Defensive Midfielder
+30927.0,2.8401282,0.99254584,Midfielder,Left Center Forward,Striker
+30911.0,6.1608853,3.453636,Midfielder,Right Back,Offensive Defender
+40427.0,13.5306,5.0444703,Defender,Left Center Back,Regular Defender
+34881.0,3.5459123,18.145708,Goalkeeper,Goalkeeper,Goalkeeper
+4709.0,11.731532,3.8923059,Defender,Center Back,Regular Defender
+28289.0,1.0124182,8.201585,Defender,Left Center Forward,Striker
+3660.0,5.044445,-3.5443065,Defender,Right Wing Back,Offensive Defender
+40430.0,6.893658,3.6673377,Midfielder,Left Defensive Midfield,Defensive Midfielder
+12619.0,-0.07794243,1.4793668,Forward,Right Wing Back,Offensive Defender
+7471.0,0.03663167,1.59069,Forward,Right Wing Back,Offensive Defender
+6965.0,5.643543,-1.943313,Defender,Right Wing Back,Offensive Defender
+25116.0,5.2097325,-1.300001,Defender,Right Center Forward,Striker
+7474.0,4.743112,0.34145355,Midfielder,Right Center Midfield,Central Midfielder
+7149.0,4.471968,1.5258603,Defender,Right Wing Back,Offensive Defender
+7465.0,3.4484642,4.971381,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7479.0,0.58774126,7.9375706,Defender,Left Center Back,Regular Defender
+7466.0,0.058772884,1.5089276,Midfielder,Center Defensive Midfield,Defensive Midfielder
+7037.0,0.88006425,5.390043,Forward,Center Attacking Midfield,Offensive Midfielder
+5497.0,-0.16740397,1.6250827,Forward,Right Center Forward,Striker
+7030.0,12.210264,5.1842184,Defender,Right Center Back,Regular Defender
+5675.0,11.796374,1.1126189,Defender,Left Center Back,Regular Defender
+7031.0,6.1819773,-3.6974082,Defender,Right Back,Offensive Defender
+8876.0,-0.15672527,8.1037035,Defender,Left Back,Offensive Defender
+7024.0,5.3465695,3.942437,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7028.0,4.33702,18.435806,Goalkeeper,Goalkeeper,Goalkeeper
+7029.0,4.0674515,-0.64392823,Forward,Left Center Forward,Striker
+7025.0,3.370491,5.0326104,Midfielder,Left Center Midfield,Central Midfielder
+7035.0,4.8605156,0.98503643,Midfielder,Right Center Midfield,Central Midfielder
+5630.0,1.066873,5.2019124,Forward,Left Center Forward,Striker
+6754.0,4.5663757,2.7565618,Midfielder,Right Center Midfield,Central Midfielder
+16495.0,2.5849178,1.5867873,Forward,Center Attacking Midfield,Offensive Midfielder
+3434.0,1.2239531,3.6560383,Forward,Right Attacking Midfield,Offensive Midfielder
+6987.0,0.048813954,1.5589789,Forward,Center Forward,Striker
+16453.0,6.848746,3.7132545,Midfielder,Right Center Midfield,Central Midfielder
+6984.0,5.67467,-1.9923177,Defender,Left Center Forward,Striker
+5469.0,3.566222,2.6522007,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5690.0,5.272666,-1.3174982,Defender,Right Back,Offensive Defender
+6589.0,4.192007,4.671371,Midfielder,Right Wing,Winger
+6585.0,11.529633,2.4552884,Defender,Right Defensive Midfield,Defensive Midfielder
+5457.0,0.61735773,8.379704,Defender,Left Back,Offensive Defender
+7001.0,3.4662714,18.344744,Goalkeeper,Goalkeeper,Goalkeeper
+5551.0,12.592003,5.2398233,Defender,Left Center Midfield,Central Midfielder
+3949.0,-0.03831423,1.4234462,Forward,Left Wing,Winger
+11497.0,3.911671,-1.0801579,Defender,Right Wing Back,Offensive Defender
+25430.0,6.049513,3.8193252,Defender,Right Midfield,Central Midfielder
+7165.0,2.441638,1.109717,Forward,Center Forward,Striker
+386516.0,1.8702774,0.8281086,Forward,Right Wing,Winger
+7054.0,1.0161904,2.6172972,Forward,Right Center Midfield,Central Midfielder
+8664.0,11.7103405,1.2321798,Defender,Left Center Back,Regular Defender
+16061.0,12.14939,5.1169634,Defender,Right Center Back,Regular Defender
+7785.0,1.2834649,6.8068285,Defender,Left Back,Offensive Defender
+8847.0,12.356489,1.398372,Defender,Left Center Back,Regular Defender
+19286.0,0.16789491,1.3758136,Forward,Right Center Midfield,Central Midfielder
+7151.0,0.665439,8.521807,Defender,Left Back,Offensive Defender
+3588.0,11.3982525,2.85009,Forward,Right Wing,Winger
+5510.0,6.330881,3.580738,Defender,Right Defensive Midfield,Defensive Midfielder
+7776.0,3.893841,-0.83800256,Forward,Left Midfield,Central Midfielder
+8187.0,3.7658472,4.860347,Midfielder,Left Center Midfield,Central Midfielder
+8190.0,6.856124,-3.3896708,Defender,Right Center Midfield,Central Midfielder
+12491.0,3.9109511,19.267649,Goalkeeper,Goalkeeper,Goalkeeper
+8173.0,4.081433,4.332904,Midfielder,Left Back,Offensive Defender
+16308.0,6.2336183,3.495082,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7155.0,6.908135,-3.4115214,Defender,Right Back,Offensive Defender
+40332.0,3.3619294,18.183384,Goalkeeper,Goalkeeper,Goalkeeper
+40251.0,3.3595886,5.046398,Midfielder,Right Center Midfield,Central Midfielder
+33311.0,5.8763766,2.183564,Midfielder,Left Defensive Midfield,Defensive Midfielder
+3145.0,0.9977559,4.9197426,Forward,Right Center Forward,Striker
+7150.0,0.79228354,2.1264663,Midfielder,Right Center Forward,Striker
+31172.0,6.1965575,-3.8584268,Defender,Left Center Back,Regular Defender
+18028.0,1.0217968,1.0359583,Forward,Right Back,Offensive Defender
+8172.0,3.2576618,0.97495973,Forward,Left Wing,Winger
+3412.0,5.8146496,4.5019674,Midfielder,Center Attacking Midfield,Offensive Midfielder
+11427.0,0.7741416,1.2588257,Forward,Left Wing,Winger
+8443.0,6.9151855,-3.5187352,Defender,Right Back,Offensive Defender
+7006.0,1.3274026,5.576312,Forward,Left Center Midfield,Central Midfielder
+36770.0,0.7393143,2.0530808,Forward,Right Center Midfield,Central Midfielder
+8657.0,6.737433,-3.0410702,Defender,Right Midfield,Central Midfielder
+6830.0,6.974897,-2.5081372,Defender,Left Wing Back,Offensive Defender
+3112.0,4.9463367,18.514284,Goalkeeper,Goalkeeper,Goalkeeper
+11722.0,0.81589556,8.44754,Defender,Left Back,Offensive Defender
+11516.0,0.008558735,7.3792152,Defender,Right Attacking Midfield,Offensive Midfielder
+8275.0,12.551779,0.73127717,Defender,Left Center Back,Regular Defender
+26192.0,3.0950983,2.30882,Midfielder,Right Defensive Midfield,Defensive Midfielder
+25931.0,11.922645,4.3847632,Defender,Center Back,Regular Defender
+7125.0,-0.060730904,1.8380063,Forward,Right Wing Back,Offensive Defender
+6305.0,5.825021,3.5030506,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5255.0,5.304283,4.0862846,Midfielder,Left Attacking Midfield,Offensive Midfielder
+6658.0,3.8289177,-1.2703726,Forward,Left Wing Back,Offensive Defender
+7777.0,4.174031,0.3416361,Forward,Right Wing,Winger
+7033.0,-0.19838709,1.5981439,Forward,Left Attacking Midfield,Offensive Midfielder
+6997.0,4.3210816,3.940623,Midfielder,Right Attacking Midfield,Offensive Midfielder
+3556.0,1.6545559,1.1392226,Forward,Center Forward,Striker
+7056.0,7.0353255,-3.31731,Defender,Center Attacking Midfield,Offensive Midfielder
+15818.0,2.5875049,1.2440913,Forward,Left Wing,Winger
+7051.0,6.8925242,4.0709443,Midfielder,Left Center Back,Regular Defender
+6947.0,4.6157904,1.8490064,Midfielder,Right Center Midfield,Central Midfielder
+6849.0,0.31805244,7.4514904,Defender,Left Back,Offensive Defender
+7468.0,1.6628693,4.725804,Midfielder,Right Wing,Winger
+7961.0,12.247835,1.3649397,Defender,Left Center Back,Regular Defender
+5669.0,4.4585648,18.612165,Goalkeeper,Goalkeeper,Goalkeeper
+8104.0,5.6771827,-1.831533,Defender,Left Center Midfield,Central Midfielder
+7048.0,12.368875,5.3516364,Defender,Right Center Back,Regular Defender
+11512.0,3.6928618,2.0803676,Midfielder,Left Center Midfield,Central Midfielder
+3531.0,3.4868057,-0.7466881,Forward,Center Attacking Midfield,Offensive Midfielder
+6964.0,5.850414,-2.6144898,Defender,Center Attacking Midfield,Offensive Midfielder
+40250.0,5.883131,-2.2076347,Defender,Right Wing Back,Offensive Defender
+11508.0,3.6918063,18.271698,Goalkeeper,Goalkeeper,Goalkeeper
+40252.0,1.0192175,3.26399,Forward,Center Attacking Midfield,Offensive Midfielder
+7160.0,12.189029,5.206811,Defender,Center Back,Regular Defender
+6962.0,4.38005,3.3639326,Midfielder,Right Defensive Midfield,Defensive Midfielder
+22041.0,2.0554447,1.2562188,Forward,Left Center Midfield,Central Midfielder
+20637.0,5.4092703,3.6549187,Midfielder,Left Center Midfield,Central Midfielder
+11602.0,5.9908876,4.3233232,Midfielder,Left Center Midfield,Central Midfielder
+23241.0,6.0828333,4.3267694,Midfielder,Right Wing,Winger
+386641.0,1.7531496,1.8835988,Forward,Center Forward,Striker
+7107.0,5.5301485,2.8752217,Midfielder,Center Defensive Midfield,Defensive Midfielder
+8459.0,0.32920313,8.728215,Defender,Left Back,Offensive Defender
+9939.0,12.627291,4.924485,Defender,Left Center Back,Regular Defender
+38237.0,11.638124,1.7874712,Defender,Left Center Back,Regular Defender
+22828.0,1.3313372,4.3831625,Forward,Left Wing,Winger
+8093.0,0.024884013,1.61404,Forward,Left Wing,Winger
+30941.0,4.440872,0.82732296,Midfielder,Left Center Midfield,Central Midfielder
+7698.0,3.385639,4.9400845,Forward,Left Wing,Winger
+6963.0,4.578212,0.9932335,Midfielder,Left Defensive Midfield,Defensive Midfielder
+8848.0,12.526161,5.533645,Defender,Left Center Back,Regular Defender
+40428.0,0.41980493,7.693013,Defender,Left Back,Offensive Defender
+6859.0,0.9106984,5.3619475,Forward,Left Center Forward,Striker
+7132.0,4.040289,18.519516,Goalkeeper,Goalkeeper,Goalkeeper
+7119.0,12.057804,1.6924661,Defender,Right Center Back,Regular Defender
+7118.0,0.79158396,8.247134,Defender,Left Back,Offensive Defender
+8284.0,6.1873026,4.046499,Midfielder,Center Midfield,Central Midfielder
+8851.0,3.967016,3.0416718,Forward,Right Midfield,Central Midfielder
+30745.0,11.924479,4.1834574,Defender,Right Center Back,Regular Defender
+7142.0,12.759017,4.3504725,Defender,Right Back,Offensive Defender
+8280.0,4.813863,1.0780442,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7131.0,3.7189438,-0.6234214,Forward,Center Attacking Midfield,Offensive Midfielder
+10031.0,5.6312313,-1.950186,Defender,Right Back,Offensive Defender
+7775.0,1.4197396,5.468283,Forward,Right Center Forward,Striker
+8873.0,13.020188,5.006248,Defender,Left Center Back,Regular Defender
+7174.0,4.53188,18.827038,Goalkeeper,Goalkeeper,Goalkeeper
+8103.0,0.4873489,2.0983999,Forward,Center Forward,Striker
+10030.0,4.6937532,0.14067848,Midfielder,Left Midfield,Central Midfielder
+6948.0,0.7193031,2.5769515,Forward,Right Wing,Winger
+18027.0,4.5085545,3.9811897,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7704.0,6.023649,-2.6790798,Defender,Right Center Back,Regular Defender
+7457.0,0.4104772,1.4602084,Forward,Left Center Forward,Striker
+6978.0,-0.070758246,1.7303771,Forward,Right Wing,Winger
+7166.0,6.127523,3.3643935,Midfielder,Center Defensive Midfield,Defensive Midfielder
+7458.0,11.947071,1.3136042,Defender,Center Attacking Midfield,Offensive Midfielder
+7009.0,4.1447797,4.605739,Midfielder,Left Wing,Winger
+7463.0,6.661477,-3.6964502,Defender,Right Back,Offensive Defender
+40945.0,12.55452,5.559912,Defender,Right Center Back,Regular Defender
+7036.0,4.6030354,18.977312,Goalkeeper,Goalkeeper,Goalkeeper
+7473.0,5.7742653,-3.6298366,Defender,Right Wing Back,Offensive Defender
+36364.0,4.6340275,0.9778633,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7019.0,11.984415,4.197803,Defender,Left Defensive Midfield,Defensive Midfielder
+7026.0,1.4514836,5.590634,Midfielder,Center Attacking Midfield,Offensive Midfielder
+8874.0,0.46873426,8.29631,Defender,Left Back,Offensive Defender
+10919.0,4.8040013,1.2555053,Midfielder,Center Defensive Midfield,Defensive Midfielder
+7702.0,3.8044603,-1.2341793,Forward,Left Wing,Winger
+7018.0,3.3820887,18.23554,Goalkeeper,Goalkeeper,Goalkeeper
+7012.0,0.67091405,8.646455,Defender,Left Back,Offensive Defender
+6759.0,3.7497237,3.099321,Midfielder,Center Forward,Striker
+16586.0,6.461922,3.3995712,Midfielder,Center Defensive Midfield,Defensive Midfielder
+5661.0,2.0037887,2.545521,Forward,Right Wing,Winger
+40394.0,0.85733837,8.650648,Defender,Left Center Back,Regular Defender
+5688.0,0.11981883,2.0417628,Forward,Left Center Forward,Striker
+6334.0,1.0291777,1.0654329,Forward,Right Center Forward,Striker
+7000.0,1.5182685,2.7730615,Forward,Right Midfield,Central Midfielder
+7168.0,4.576475,1.2665596,Midfielder,Left Center Midfield,Central Midfielder
+8423.0,5.8666687,-2.376342,Defender,Right Back,Offensive Defender
+7773.0,1.4362447,1.0532817,Forward,Center Forward,Striker
+40429.0,6.8641024,3.23687,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5683.0,3.812668,-0.6306181,Midfielder,Left Midfield,Central Midfielder
+21272.0,0.69245,1.027559,Forward,Left Center Midfield,Central Midfielder
+7147.0,4.006947,4.373694,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6944.0,2.345171,6.6802063,Defender,Left Back,Offensive Defender
+23349.0,5.6388903,2.7953517,Midfielder,Right Center Midfield,Central Midfielder
+9898.0,3.5113335,0.27353388,Midfielder,Center Attacking Midfield,Offensive Midfielder
+11608.0,1.6164778,5.318265,Midfielder,Left Defensive Midfield,Defensive Midfielder
+31721.0,6.7362924,-3.281769,Defender,Right Back,Offensive Defender
+174418.0,13.014266,4.873861,Defender,Center Back,Regular Defender
+11672.0,0.47523937,1.5217314,Forward,Left Wing,Winger
+6822.0,2.2240202,4.593993,Midfielder,Right Center Midfield,Central Midfielder
+19850.0,1.834136,2.7770936,Forward,Left Center Midfield,Central Midfielder
+9884.0,11.469507,2.7144535,Defender,Center Back,Regular Defender
+387417.0,5.78461,-1.8968991,Defender,Right Back,Offensive Defender
+7137.0,12.610283,0.64961743,Defender,Center Back,Regular Defender
+27595.0,4.315191,-0.3932268,Midfielder,Left Center Midfield,Central Midfielder
+8875.0,4.056182,0.36994365,Midfielder,Left Defensive Midfield,Defensive Midfielder
+25505.0,0.020594683,7.2364445,Midfielder,Left Midfield,Central Midfielder
+26683.0,5.461783,-1.6895812,Defender,Right Back,Offensive Defender
+8877.0,11.897546,1.223535,Forward,Right Center Back,Regular Defender
+386657.0,6.0431237,2.8317864,Midfielder,Left Defensive Midfield,Defensive Midfielder
+7042.0,6.4809084,3.378479,Midfielder,Left Center Midfield,Central Midfielder
+7049.0,4.5037065,0.77450323,Midfielder,Left Midfield,Central Midfielder
+7050.0,5.7205906,-1.905118,Defender,Center Attacking Midfield,Offensive Midfielder
+7771.0,12.410677,5.309614,Defender,Center Back,Regular Defender
+7803.0,5.129536,18.947058,Goalkeeper,Goalkeeper,Goalkeeper
+8645.0,0.7243598,8.51984,Defender,Left Wing Back,Offensive Defender
+7043.0,0.37259603,1.7306122,Forward,Left Center Forward,Striker
+7045.0,3.165588,2.2788095,Midfielder,Left Center Forward,Striker
+5589.0,2.7608898,1.567924,Midfielder,Right Center Midfield,Central Midfielder
+7778.0,0.43590343,8.806691,Defender,Right Center Forward,Striker
+6991.0,5.013626,19.616402,Goalkeeper,Goalkeeper,Goalkeeper
+8296.0,0.070927635,1.636583,Forward,Left Center Forward,Striker
+40447.0,7.054165,-2.7170517,Midfielder,Right Center Midfield,Central Midfielder
+23324.0,6.8080287,-3.583553,Defender,Left Center Back,Regular Defender
+18946.0,2.7333963,3.6667724,Forward,Right Midfield,Central Midfielder
+37999.0,0.53062856,2.4175224,Forward,Left Midfield,Central Midfielder
+7139.0,4.6342883,1.0075289,Forward,Right Center Midfield,Central Midfielder
+8294.0,6.1280675,3.8885107,Midfielder,Right Center Midfield,Central Midfielder
+7173.0,11.878888,4.3457437,Defender,Center Back,Regular Defender
+5743.0,2.17602,1.2460383,Forward,Center Attacking Midfield,Offensive Midfielder
+20008.0,-0.028988095,7.9912224,Defender,Center Defensive Midfield,Defensive Midfielder
+5472.0,1.2357354,1.6078466,Forward,Left Center Forward,Striker
+6943.0,6.981324,-2.528488,Defender,Right Back,Offensive Defender
+6954.0,12.555124,0.68912125,Midfielder,Right Back,Offensive Defender
+20004.0,3.5206327,4.935698,Midfielder,Right Center Midfield,Central Midfielder
+5566.0,4.7711115,0.43496317,Midfielder,Right Center Midfield,Central Midfielder
+3964.0,0.07682279,7.198989,Defender,Left Midfield,Central Midfielder
+6949.0,4.8437486,19.13943,Goalkeeper,Goalkeeper,Goalkeeper
+7013.0,4.6509748,0.74366933,Midfielder,Left Wing Back,Offensive Defender
+6945.0,-0.0032203838,7.169789,Defender,Right Back,Offensive Defender
+3477.0,1.1109903,3.4597018,Forward,Left Midfield,Central Midfielder
+12759.0,3.4794688,0.37623593,Forward,Center Forward,Striker
+49439.0,0.93510455,1.9946197,Forward,Right Center Forward,Striker
+6952.0,4.633034,0.25931546,Midfielder,Right Defensive Midfield,Defensive Midfielder
+40529.0,5.479868,19.096146,Goalkeeper,Goalkeeper,Goalkeeper
+6973.0,-0.032497484,1.5861219,Midfielder,Center Attacking Midfield,Offensive Midfielder
+40426.0,12.592408,5.6616793,Defender,Left Center Forward,Striker
+11128.0,1.3760386,1.5080514,Forward,Left Wing,Winger
+19299.0,5.2515407,-3.664776,Defender,Right Wing Back,Offensive Defender
+45590.0,12.595104,1.4448991,Defender,Left Center Midfield,Central Midfielder
+20252.0,0.036928706,1.4176376,Forward,Left Defensive Midfield,Defensive Midfielder
+7949.0,4.7601237,1.7269721,Midfielder,Left Midfield,Central Midfielder
+8421.0,13.009695,4.808094,Defender,Right Center Midfield,Central Midfielder
+5461.0,6.13656,-3.1976373,Defender,Right Back,Offensive Defender
+7113.0,4.8136153,2.0633478,Defender,Right Back,Offensive Defender
+7020.0,5.4578075,-3.023915,Defender,Right Midfield,Central Midfielder
+8274.0,4.3682075,18.916073,Goalkeeper,Goalkeeper,Goalkeeper
+11494.0,1.3587352,4.6302395,Midfielder,Right Center Forward,Striker
+7695.0,-0.025308229,7.597467,Defender,Center Attacking Midfield,Offensive Midfielder
+7770.0,6.728424,3.136173,Midfielder,Center Attacking Midfield,Offensive Midfielder
+31488.0,11.907837,4.114008,Defender,Left Center Midfield,Central Midfielder
+11339.0,3.912003,-0.92192817,Midfielder,Right Wing,Winger
+7109.0,4.0242105,-0.8380446,Forward,Left Center Midfield,Central Midfielder
+32119.0,5.179854,4.237259,Midfielder,Right Center Midfield,Central Midfielder
+27110.0,2.0835304,4.461818,Forward,Left Wing,Winger
+6686.0,0.012127421,1.4136642,Forward,Center Attacking Midfield,Offensive Midfielder
+45591.0,3.2087643,3.2512093,Midfielder,Right Center Forward,Striker
+11729.0,3.2550445,1.8168935,Forward,Right Center Midfield,Central Midfielder
+7169.0,0.5976009,8.409064,Defender,Left Wing Back,Offensive Defender
+7027.0,6.402889,-3.8289907,Defender,Right Midfield,Central Midfielder
+7164.0,6.1277747,-3.6408143,Defender,Right Wing Back,Offensive Defender
+7175.0,4.1954827,4.7154284,Midfielder,Left Midfield,Central Midfielder
+25954.0,6.639246,3.860599,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5584.0,11.730985,3.880841,Defender,Center Back,Regular Defender
+24061.0,7.048309,-3.457103,Defender,Center Defensive Midfield,Defensive Midfielder
+40350.0,12.248535,1.7367663,Defender,Right Back,Offensive Defender
+7055.0,5.1114407,18.522993,Goalkeeper,Goalkeeper,Goalkeeper
+5605.0,4.717632,1.6697743,Midfielder,Left Center Midfield,Central Midfielder
+10032.0,-0.12261398,7.850172,Defender,Center Attacking Midfield,Offensive Midfielder
+32807.0,4.785362,1.0561017,Midfielder,Left Center Midfield,Central Midfielder
+11183.0,0.05119736,8.17388,Defender,Center Forward,Striker
+6719.0,3.023383,2.0914233,Forward,Center Forward,Striker
+38389.0,0.41676855,1.414068,Forward,Right Wing Back,Offensive Defender
+30769.0,5.3432846,-3.2626507,Defender,Right Wing Back,Offensive Defender
+7461.0,4.7790427,1.306886,Forward,Right Wing,Winger
+8552.0,1.4202011,4.211441,Midfielder,Left Center Midfield,Central Midfielder
+5587.0,1.4678828,4.1861186,Forward,Center Forward,Striker
+28974.0,0.5056016,8.369533,Defender,Left Wing Back,Offensive Defender
+7962.0,11.884377,4.2710605,Defender,Left Center Forward,Striker
+7456.0,1.6040118,4.836468,Forward,Center Defensive Midfield,Defensive Midfielder
+7467.0,11.576916,3.4549427,Defender,Left Center Back,Regular Defender
+4369.0,5.3821454,-3.4331176,Defender,Left Center Back,Regular Defender
+7475.0,5.1022525,1.3037862,Midfielder,Right Wing Back,Offensive Defender
+5717.0,0.37700185,6.946741,Defender,Right Midfield,Central Midfielder
+5554.0,4.140987,4.5360436,Defender,Center Attacking Midfield,Offensive Midfielder
+27044.0,3.6609766,4.89921,Midfielder,Left Center Forward,Striker
+7176.0,10.844468,3.1595604,Defender,Center Attacking Midfield,Offensive Midfielder
+9940.0,10.837687,3.1476545,Defender,Center Back,Regular Defender
+24683.0,3.0620837,0.75265026,Forward,Left Center Midfield,Central Midfielder
+38312.0,5.7069697,18.721066,Goalkeeper,Goalkeeper,Goalkeeper
+8180.0,-0.15777014,1.6008894,Forward,Center Attacking Midfield,Offensive Midfielder
+30772.0,4.3659005,4.463956,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7145.0,3.4338655,-0.17075987,Forward,Left Center Forward,Striker
+6969.0,1.1038202,8.472446,Defender,Left Wing Back,Offensive Defender
+6999.0,6.3664494,-3.5456586,Defender,Left Wing Back,Offensive Defender
+12475.0,5.593124,18.871727,Goalkeeper,Goalkeeper,Goalkeeper
+15415.0,0.72542864,1.6010184,Forward,Center Forward,Striker
+30770.0,3.7275937,-1.2930021,Midfielder,Right Defensive Midfield,Defensive Midfielder
+5660.0,4.8953705,1.0345497,Midfielder,Left Center Midfield,Central Midfielder
+7127.0,6.2589965,2.9929347,Midfielder,Center Defensive Midfield,Defensive Midfielder
+7123.0,3.4975383,18.302185,Goalkeeper,Goalkeeper,Goalkeeper
+32903.0,12.688595,5.7546096,Forward,Right Wing,Winger
+7011.0,-0.1323036,1.5150237,Forward,Right Center Forward,Striker
+7476.0,12.745238,0.701584,Defender,Left Center Back,Regular Defender
+3034.0,11.732874,3.8935723,Defender,Right Center Back,Regular Defender
+8193.0,-0.16965623,1.516521,Forward,Right Center Midfield,Central Midfielder
+4407.0,6.6380873,2.7114592,Midfielder,Left Center Midfield,Central Midfielder
+26827.0,4.5525727,4.375882,Midfielder,Left Back,Offensive Defender
+40349.0,3.3285182,5.1035047,Defender,Left Wing Back,Offensive Defender
+30735.0,6.165501,3.4293346,Midfielder,Left Center Midfield,Central Midfielder
+30512.0,1.636903,3.6590273,Forward,Center Attacking Midfield,Offensive Midfielder
+4355.0,0.59963006,6.4674807,Defender,Right Back,Offensive Defender
+20043.0,2.424698,6.6686254,Midfielder,Left Midfield,Central Midfielder
+6360.0,12.33224,4.7210164,Defender,Center Attacking Midfield,Offensive Midfielder
+6636.0,11.475664,3.2455745,Defender,Center Attacking Midfield,Offensive Midfielder
+6768.0,5.464989,18.900885,Goalkeeper,Goalkeeper,Goalkeeper
+386656.0,-0.049055196,7.1731386,Defender,Left Wing Back,Offensive Defender
+15959.0,5.759978,4.4981194,Midfielder,Left Defensive Midfield,Defensive Midfielder
+6990.0,12.696442,0.6022581,Midfielder,Center Attacking Midfield,Offensive Midfielder
+6953.0,10.832728,3.152272,Defender,Right Center Back,Regular Defender
+5541.0,5.2370057,-3.5143945,Defender,Right Wing Back,Offensive Defender
+6940.0,3.4310997,5.0032706,Midfielder,Center Attacking Midfield,Offensive Midfielder
+3416.0,0.00094280683,7.7444105,Defender,Left Center Midfield,Central Midfielder
+6894.0,12.812,4.5054708,Defender,Left Wing,Winger
+8849.0,11.951091,1.0776798,Defender,Right Back,Offensive Defender
+7464.0,5.3464546,-1.4486045,Defender,Right Center Back,Regular Defender
+10530.0,2.8747113,3.4640326,Midfielder,Right Center Forward,Striker
+7022.0,3.5053399,0.23299089,Forward,Left Wing,Winger
+40119.0,3.3967352,0.7800108,Defender,Left Back,Offensive Defender
+34355.0,6.2001805,-3.278891,Defender,Center Back,Regular Defender
+399299.0,-0.040276192,8.319813,Defender,Left Back,Offensive Defender
+8668.0,1.9363728,1.4180539,Midfielder,Left Center Forward,Striker
+45508.0,11.495752,3.6416667,Defender,Right Center Back,Regular Defender
+3371.0,1.9407921,2.649609,Forward,Left Wing,Winger
+8675.0,2.653103,2.7798598,Midfielder,Center Attacking Midfield,Offensive Midfielder
+32608.0,0.5251909,1.7718192,Forward,Center Forward,Striker
+7460.0,6.5971174,2.9515996,Midfielder,Right Center Back,Regular Defender
+31273.0,4.826186,1.5490719,Defender,Right Midfield,Central Midfielder
+30750.0,4.301558,-0.74366665,Defender,Left Wing Back,Offensive Defender
+7114.0,5.4088926,-1.5687572,Defender,Right Wing Back,Offensive Defender
+387476.0,1.6766212,5.6523767,Midfielder,Right Center Forward,Striker
+8662.0,4.443597,18.799698,Goalkeeper,Goalkeeper,Goalkeeper
+7172.0,11.984757,4.2027955,Defender,Right Center Back,Regular Defender
+387300.0,6.997043,-2.7238326,Defender,Right Center Back,Regular Defender
+7793.0,0.4326754,1.7041739,Midfielder,Right Attacking Midfield,Offensive Midfielder
+8653.0,4.1866913,4.5306597,Midfielder,Left Defensive Midfield,Defensive Midfielder
+20300.0,2.0856771,3.6203475,Midfielder,Right Midfield,Central Midfielder
+387472.0,4.224627,-0.7461458,Midfielder,Center Attacking Midfield,Offensive Midfielder
+7038.0,7.0231805,3.0193672,Midfielder,Left Defensive Midfield,Defensive Midfielder
+25345.0,5.6580386,3.882272,Midfielder,Right Center Midfield,Central Midfielder
+6584.0,0.027338,1.7716464,Forward,Left Center Forward,Striker
+40351.0,6.3201666,4.1020465,Midfielder,Center Defensive Midfield,Defensive Midfielder
+16202.0,7.1396804,-2.603906,Defender,Right Center Back,Regular Defender
+7470.0,3.2904904,5.117289,Midfielder,Left Attacking Midfield,Offensive Midfielder
+3167.0,11.617702,2.224779,Defender,Left Center Back,Regular Defender
+20169.0,6.150243,3.3981526,Midfielder,Right Center Midfield,Central Midfielder
+15780.0,1.7900716,1.3730977,Forward,Right Defensive Midfield,Defensive Midfielder
+23846.0,0.53239226,2.525347,Forward,Center Forward,Striker
+30928.0,7.082003,-2.6714838,Defender,Right Center Back,Regular Defender
+7792.0,0.34067932,7.6451497,Forward,Left Wing,Winger
+6983.0,3.1699085,4.9881783,Midfielder,Right Defensive Midfield,Defensive Midfielder
+40457.0,12.68281,0.57955545,Forward,Center Back,Regular Defender
+40247.0,2.9452367,2.557275,Midfielder,Left Center Forward,Striker
+7046.0,3.3912911,5.064354,Midfielder,Right Center Midfield,Central Midfielder
+11643.0,1.5012854,1.3456562,Forward,Right Center Forward,Striker
+8278.0,12.010115,4.330384,Defender,Right Center Back,Regular Defender
+11342.0,5.9911323,-2.4076807,Defender,Right Center Back,Regular Defender
+30829.0,4.65395,2.702549,Midfielder,Right Center Midfield,Central Midfielder
+32525.0,4.0311446,5.344536,Defender,Left Back,Offensive Defender
+11502.0,0.93607813,5.772862,Midfielder,Left Back,Offensive Defender
+31572.0,6.047609,3.9905903,Midfielder,Right Center Midfield,Central Midfielder
+11499.0,12.689326,0.6011571,Forward,Center Forward,Striker
+7966.0,12.042507,1.2487057,Defender,Right Wing,Winger
+7705.0,0.7780548,7.8827434,Defender,Left Defensive Midfield,Defensive Midfielder
+352172.0,4.800408,4.221367,Midfielder,Left Defensive Midfield,Defensive Midfielder
+5465.0,2.0310283,2.9823022,Forward,Right Wing Back,Offensive Defender
+386651.0,1.2834942,3.1620364,Forward,Left Defensive Midfield,Defensive Midfielder
+386640.0,2.58265,3.3820212,Forward,Left Midfield,Central Midfielder
+30704.0,5.4874806,4.0872827,Midfielder,Right Defensive Midfield,Defensive Midfielder
+40419.0,0.99040484,5.7410493,Midfielder,Left Midfield,Central Midfielder
+23987.0,0.09063748,1.8215171,Forward,Right Wing,Winger
+32722.0,3.0130289,0.5532532,Midfielder,Center Defensive Midfield,Defensive Midfielder
+7148.0,4.4271903,18.412186,Goalkeeper,Goalkeeper,Goalkeeper
+7146.0,1.0430924,3.2791975,Midfielder,Left Defensive Midfield,Defensive Midfielder
+6980.0,4.4077606,4.0241213,Defender,Right Back,Offensive Defender
+398941.0,12.0215225,1.8946202,Defender,Right Back,Offensive Defender
+26197.0,3.1851819,18.183958,Goalkeeper,Goalkeeper,Goalkeeper
+8644.0,0.18019326,1.5291913,Forward,Left Center Midfield,Central Midfielder
+26728.0,4.9968333,4.526241,Midfielder,Left Defensive Midfield,Defensive Midfielder
+8463.0,0.7986722,6.546885,Midfielder,Right Midfield,Central Midfielder
+13612.0,11.585073,3.4495983,Defender,Left Center Back,Regular Defender
+15318.0,5.197763,-1.2928346,Defender,Right Wing Back,Offensive Defender
+10033.0,12.395565,5.403788,Defender,Right Center Back,Regular Defender
+7120.0,7.004279,-3.4748569,Defender,Right Back,Offensive Defender
+26707.0,5.6362076,18.629871,Goalkeeper,Goalkeeper,Goalkeeper
+7041.0,6.0760016,3.298168,Midfielder,Left Center Forward,Striker
+386650.0,0.6550342,8.501529,Defender,Left Wing Back,Offensive Defender
+6951.0,2.1287231,6.7267523,Midfielder,Left Center Midfield,Central Midfielder
+40348.0,5.071595,2.6298473,Midfielder,Right Center Midfield,Central Midfielder
+3579.0,2.9807694,1.636553,Midfielder,Right Wing Back,Offensive Defender
+31268.0,5.5870743,-2.0315716,Defender,Left Center Midfield,Central Midfielder
+8102.0,12.862893,5.311512,Defender,Right Wing Back,Offensive Defender
+36465.0,3.395005,18.20111,Goalkeeper,Goalkeeper,Goalkeeper
+29312.0,0.63089305,7.5025206,Defender,Left Wing Back,Offensive Defender
+386509.0,13.055312,5.421698,Defender,Right Center Back,Regular Defender
+26442.0,2.3773353,2.426624,Forward,Left Wing,Winger
+25303.0,5.4773555,-3.477971,Defender,Left Back,Offensive Defender
+7694.0,4.0149384,-0.41585007,Midfielder,Left Midfield,Central Midfielder
+11426.0,4.236578,18.861675,Goalkeeper,Goalkeeper,Goalkeeper
+3125.0,-0.054967005,7.1313643,Defender,Left Wing Back,Offensive Defender
+27328.0,3.95704,4.3068557,Midfielder,Left Center Midfield,Central Midfielder
+38326.0,5.0884147,19.452808,Goalkeeper,Goalkeeper,Goalkeeper
+33529.0,4.8924913,1.7898518,Midfielder,Left Center Forward,Striker
+22271.0,3.55357,18.4061,Goalkeeper,Goalkeeper,Goalkeeper
+5663.0,4.1185193,-0.99833375,Defender,Right Wing,Winger
+296873.0,0.8969158,7.8745155,Defender,Left Back,Offensive Defender
+386606.0,3.3042183,5.1075244,Midfielder,Right Center Midfield,Central Midfielder
+28066.0,0.99128735,5.0683837,Midfielder,Left Midfield,Central Midfielder
+20970.0,1.3620247,1.1573455,Midfielder,Left Attacking Midfield,Offensive Midfielder
+387474.0,11.38797,3.0162394,Defender,Right Center Back,Regular Defender
+7052.0,12.13392,4.5474243,Defender,Right Center Back,Regular Defender
+35923.0,5.940025,2.6023958,Midfielder,Center Attacking Midfield,Offensive Midfielder
+386652.0,4.21848,5.2390995,Midfielder,Right Defensive Midfield,Defensive Midfielder
+10736.0,11.614289,1.3566589,Defender,Left Center Back,Regular Defender
+9887.0,3.6489112,18.206408,Midfielder,Center Attacking Midfield,Offensive Midfielder
+5558.0,12.99922,4.9079437,Defender,Right Center Back,Regular Defender
+31725.0,1.7835237,1.9002005,Forward,Left Midfield,Central Midfielder
+7965.0,6.147405,4.185853,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7699.0,3.3422518,-0.4662375,Midfielder,Left Midfield,Central Midfielder
+22822.0,-0.08278861,1.6986531,Forward,Center Forward,Striker
+28442.0,4.2154818,4.5622964,Midfielder,Center Defensive Midfield,Defensive Midfielder
+387477.0,5.030577,19.663103,Goalkeeper,Goalkeeper,Goalkeeper
+387475.0,4.3751755,4.2782173,Forward,Center Forward,Striker
+36927.0,5.1921554,19.53713,Goalkeeper,Goalkeeper,Goalkeeper
+7003.0,4.5133767,1.9580736,Midfielder,Right Defensive Midfield,Defensive Midfielder
+5662.0,13.527791,5.0756335,Defender,Right Center Back,Regular Defender
+8717.0,5.8652267,2.6316822,Midfielder,Right Midfield,Central Midfielder
+30830.0,3.985745,18.148634,Goalkeeper,Goalkeeper,Goalkeeper
+41231.0,3.1931531,18.134132,Goalkeeper,Goalkeeper,Goalkeeper
+6358.0,5.9353833,-2.9518793,Defender,Left Center Back,Regular Defender
+41063.0,0.8064304,5.4319916,Forward,Left Wing,Winger
+34315.0,3.463753,18.091208,Goalkeeper,Goalkeeper,Goalkeeper
+387832.0,6.578945,2.8838294,Midfielder,Right Defensive Midfield,Defensive Midfielder
+7804.0,3.1738262,18.129078,Goalkeeper,Goalkeeper,Goalkeeper
+6590.0,3.847464,18.139668,Goalkeeper,Goalkeeper,Goalkeeper
+44395.0,2.1004193,0.7830764,Forward,Center Forward,Striker
+20289.0,11.545746,4.074241,Defender,Right Center Back,Regular Defender
+7032.0,5.400691,-3.5868328,Defender,Right Back,Offensive Defender
+18237.0,3.4513354,18.100079,Goalkeeper,Goalkeeper,Goalkeeper
+42271.0,11.971537,1.0832438,Defender,Left Center Back,Regular Defender
+386510.0,5.1710434,18.47635,Goalkeeper,Goalkeeper,Goalkeeper
+7952.0,4.7434845,0.35410944,Midfielder,Right Defensive Midfield,Defensive Midfielder
+13614.0,5.3617015,19.430788,Goalkeeper,Goalkeeper,Goalkeeper
+387420.0,0.58449566,8.847611,Defender,Left Back,Offensive Defender
+31383.0,4.4065385,4.7962437,Midfielder,Left Center Midfield,Central Midfielder
+7794.0,11.631153,1.7518258,Defender,Left Center Back,Regular Defender
+11519.0,0.7600265,0.9453864,Midfielder,Right Midfield,Central Midfielder
+3287.0,3.4008472,5.055409,Midfielder,Left Center Midfield,Central Midfielder
+7701.0,2.3633447,0.34813437,Midfielder,Right Center Midfield,Central Midfielder
+30767.0,3.525631,18.141062,Goalkeeper,Goalkeeper,Goalkeeper
+29161.0,3.444661,18.456135,Goalkeeper,Goalkeeper,Goalkeeper
+8194.0,5.221937,3.8179045,Midfielder,Center Defensive Midfield,Defensive Midfielder
+6993.0,5.994156,3.4462109,Midfielder,Left Attacking Midfield,Offensive Midfielder
+5248.0,7.0770545,-3.501493,Defender,Right Back,Offensive Defender
+31737.0,11.765986,1.1787175,Defender,Left Center Back,Regular Defender
+40321.0,12.140192,1.5172695,Defender,Center Back,Regular Defender
+49440.0,12.051151,4.3243513,Defender,Right Center Back,Regular Defender
+390310.0,5.542224,-2.9028134,Forward,Right Wing,Winger
+8424.0,13.4304495,5.2235837,Forward,Center Forward,Striker
+41067.0,3.478049,18.5211,Goalkeeper,Goalkeeper,Goalkeeper
+20057.0,5.1207814,1.7276701,Midfielder,Center Defensive Midfield,Defensive Midfielder
+8792.0,2.8735566,1.1808221,Midfielder,Right Center Midfield,Central Midfielder
+387473.0,5.871181,-2.631743,Defender,Right Back,Offensive Defender
+387428.0,0.118669644,1.7375113,Forward,Left Center Forward,Striker
+26220.0,6.4535255,3.8574593,Midfielder,Right Wing,Winger
+7079.0,1.1512618,1.8587136,Forward,Center Forward,Striker
+7769.0,5.339115,-3.3319356,Defender,Right Back,Offensive Defender
+31265.0,5.4167123,-3.5092149,Defender,Right Wing Back,Offensive Defender
+57655.0,4.78817,18.302444,Goalkeeper,Goalkeeper,Goalkeeper
+386515.0,5.592313,4.036336,Midfielder,Center Defensive Midfield,Defensive Midfielder
+15161.0,4.422555,-0.47417566,Midfielder,Right Center Midfield,Central Midfielder
+7787.0,13.497638,5.1546416,Defender,Right Center Back,Regular Defender
+20561.0,1.5414184,5.3607693,Midfielder,Right Center Midfield,Central Midfielder
+386514.0,12.300351,5.3899055,Defender,Right Center Back,Regular Defender
+41948.0,2.325271,4.727691,Midfielder,Left Center Midfield,Central Midfielder
+31335.0,0.3178375,8.773761,Forward,Right Center Forward,Striker

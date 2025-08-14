@@ -95,12 +95,13 @@
       }
     },
     "selected_columns": [
+      "dangerous_shots_%",
       "goals_conceded_%",
       "saved_shots_%",
       "standing_saved_%",
       "punch_%",
       "collecting_ball_%"
     ],
-    "n_features": 5
+    "n_features": 6
   }
 }

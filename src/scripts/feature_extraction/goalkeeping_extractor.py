@@ -140,7 +140,7 @@ class GoalKeepingFeatureExtractor(BaseDimensionFeatureExtractor):
                 defensive_actions_outside_penalty_area=("action_outside_penalty_area","sum"),
                 
                 # shots and saves
-                shots_on_target=("is_shot_on_target","sum"),
+                shots_on_target_faced=("is_shot_on_target","sum"),
                 saved_shots=("is_saved_shot","sum"),
                 saved_shot_creates_danger=("save_that_creates_danger", "sum"),
                 saved_shots_head=("saved_head","sum"),
@@ -189,9 +189,22 @@ class GoalKeepingFeatureExtractor(BaseDimensionFeatureExtractor):
         ### calculate relative values ###
 
         calculation_pairs = [
-                ("shots_on_target","shots_faced","shots_on_target_%"),
-                ("goals_conceded","shots_on_target","save_%"),
-                ("penalty_saved","penalty_total","penalty_save_%"),
+                ("shots_on_target_faced","shots_faced","dangerous_shots_%"),
+                ("goals_conceded","shots_on_target_faced","goals_conceded_%"),
+                ("tackling_successful","tackling_total","tackling_successful_%"),
+                ("saved_shots","shots_on_target_faced","saved_shots_%"),
+                ("dives_total","shots_faced","dives_%"),
+                ("dives_saved_shots","dives_total","dives_saved_%"),
+                ("standings_total","shots_faced","standings_%"),
+                ("standing_saved_shots","standings_total","standing_saved_%"),
+                ("penalty_total","shots_faced","penalty_%"),
+                ("penalty_saved","penalty_total","penalty_saved_%"),
+                ("punch_total","shots_faced","punch_%"),
+                ("punch_clears_ball","punch_total","punch_clears_%"),
+                ("punch_creates_danger","punch_total","punch_creates_%"),
+                ("collecting_ball_total","shots_faced","collecting_ball_%"),
+                ("collecting_ball_failed","collecting_ball_total","collecting_ball_failed_%"),
+                ("collecting_ball_in_second_attempt","collecting_ball_total","collecting_ball_in_second_attempt_%"),
             ]
 
         for a, b, c in calculation_pairs:

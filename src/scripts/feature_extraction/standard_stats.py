@@ -75,7 +75,7 @@ def extract_global_position(positions):
             return output
         except:
             print(positions_list)
-
+"""""
 def get_player_position(input_str):
     position = ""
     played_positions = extract_positions(input_str, unique=False) # ast.literal_eval(input_str)
@@ -108,13 +108,13 @@ def get_player_position(input_str):
         position = max(counter, key=counter.get)
 
     return position
-
+"""
 def get_positions_played(df):
     positions_played_df = df.groupby("player_id").agg(
         position=("positions", lambda x: get_most_frequent_pos(x)),
         positions_played=("positions", lambda x: extract_positions(x)),
         unique_positions_played=("positions", lambda x: extract_positions(x,unique=True)),
-        new_position=("positions", lambda x: get_player_position(x)),
+        # new_position=("positions", lambda x: get_player_position(x)),
         #global_position=("positions", lambda x: extract_global_position(x)) 
     )
     return positions_played_df
@@ -219,6 +219,66 @@ def analyze_standard_stats(df):
     
     return standard_stats#, df_team_country_concated
   
+def get_player_position(input_str):
+    position = None
+
+    # Convert string to list if necessary
+    if isinstance(input_str, str):
+        input_str = ast.literal_eval(input_str)
+    if not input_str or len(input_str) == 0:
+        return None
+
+    played_roles = [position_mapping.get(pos, None) for pos in input_str]
+    counter = Counter(played_roles)
+
+    value_to_keys = defaultdict(list)
+    for key, value in counter.items():
+        value_to_keys[value].append(key)
+
+    duplicates = [keys for _, keys in value_to_keys.items() if len(keys) > 1]
+
+    if duplicates:
+        for i in reversed(played_roles):
+            if i in duplicates[0]:
+                position = i
+                break
+    else:
+        position = max(counter, key=counter.get)
+
+    return position
+
+def get_player_role(input_str):
+    position = None
+
+    # Convert string to list if necessary
+    if isinstance(input_str, str):
+        played_roles = ast.literal_eval(input_str)
+        if len(played_roles) == 0:
+            return None
+    if not input_str or len(input_str) == 0:
+        return None
+    if len(input_str) > 0:
+        played_roles = input_str 
+    
+    # played_roles = [position_mapping.get(pos, None) for pos in input_str]
+    counter = Counter(played_roles)
+
+    value_to_keys = defaultdict(list)
+    for key, value in counter.items():
+        value_to_keys[value].append(key)
+
+    duplicates = [keys for _, keys in value_to_keys.items() if len(keys) > 1]
+
+    if duplicates:
+        for i in reversed(played_roles):
+            if i in duplicates[0]:
+                position = i
+                break
+    else:
+        position = max(counter, key=counter.get)
+
+    return position
+
 """
 Automation
 """
@@ -228,22 +288,28 @@ if __name__ == "__main__":
     dataloader.load_data()
     df = dataloader.get_dimension("standard_stats", row_filter=False)
     print(df.shape)
-    result_df= analyze_standard_stats(df)
+    result_df = analyze_standard_stats(df)
     result_df["full_match_equivalents"] = result_df["minutes_played"] / 90
-
+    
     # clean column position
-    result_df["position"] = result_df["position"].replace(0, "nan")
-    result_df['position'] = result_df['position'].str.replace("Forward, Defender", "Forward", case=False, regex=False)
-    result_df['position'] = result_df['position'].str.replace("Forward, Midfielder, Defender", "Forward", case=False, regex=False)
-    result_df['position'] = result_df['position'].str.replace("Midfielder, Defender", "Midfielder", case=False, regex=False)
-    result_df['position'] = result_df['position'].str.replace("Midfielder, Forward", "Midfielder", case=False, regex=False)
-    result_df['position'] = result_df['position'].str.replace("Forward, Midfielder", "Forward", case=False, regex=False)
-    result_df['position'] = result_df['position'].str.replace("Defender, Forward", "Defender", case=False, regex=False)
-    result_df['position'] = result_df['position'].str.replace("Defender, Midfielder", "Defender", case=False, regex=False)
+    # result_df["position"] = result_df["position"].replace(0, "nan")
+    # result_df['position'] = result_df['position'].str.replace("Forward, Defender", "Forward", case=False, regex=False)
+    # result_df['position'] = result_df['position'].str.replace("Forward, Midfielder, Defender", "Forward", case=False, regex=False)
+    # result_df['position'] = result_df['position'].str.replace("Midfielder, Defender", "Midfielder", case=False, regex=False)
+    # result_df['position'] = result_df['position'].str.replace("Midfielder, Forward", "Midfielder", case=False, regex=False)
+    # result_df['position'] = result_df['position'].str.replace("Forward, Midfielder", "Forward", case=False, regex=False)
+    # result_df['position'] = result_df['position'].str.replace("Defender, Forward", "Defender", case=False, regex=False)
+    # result_df['position'] = result_df['position'].str.replace("Defender, Midfielder", "Defender", case=False, regex=False)
+    
+    # assign "new position" and "role"
+    result_df["new_position"] = result_df["positions_played"].apply(get_player_position)
+    result_df["role"] = result_df["positions_played"].apply(get_player_role)
+    print(result_df[["player","new_position", "role"]])
+    
     
     # store standard stats
     folder_dir = f"{PROJECT_ROOT_DIR}/data/new_approach"
     os.makedirs(folder_dir, exist_ok=True)
-    file_path = f"{folder_dir}/standard_stats_all.csv"
+    file_path = f"{folder_dir}/standard_stats_all_test.csv"
     result_df.to_csv(file_path,index=False)
     print(result_df)

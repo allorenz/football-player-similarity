@@ -89,8 +89,7 @@ def train_evaluate_model(X, y, model, scale=True, test_size=0.2, random_state=42
 
 
 
-
-if __name__ == "__main__":
+def run_feature_selection(target: str = "new_position"):
     # vars
     dimensions = ["defending","possession", "passing", "shooting", "goal_keeping"]
     model = LogisticRegression(penalty="l1", solver="liblinear", C=1, class_weight='balanced')
@@ -100,11 +99,11 @@ if __name__ == "__main__":
         print(f"Current dimension: {dim}")
         # load
         df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})#load_dimension(dim)
-        df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv",dtype={"player_id":"int32"})#load_standard_stats()
+        df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_test.csv",dtype={"player_id":"int32"})#load_standard_stats()
 
         # merge and filter
         df_full = pd.merge(
-            left=df_standard_stats[["position", "player_id", "match_played","minutes_played"]],
+            left=df_standard_stats[[target, "player_id", "match_played","minutes_played"]],
             right=df_dimension.loc[:, df_dimension.columns != "player"],
             left_on="player_id", 
             right_on="player_id",
@@ -113,7 +112,7 @@ if __name__ == "__main__":
         df_filtered = filter_df(df_full, match_played=2, minutes_played=90)
         
         # prepare columns
-        target_column = "position"
+        target_column = target
         columns_absolute_values = [col for col in df_filtered.columns if not col.endswith("_%") and not col.endswith("_per_match") and col != target_column and col != "match_played" and col != "minutes_played"]
         columns_relative_values = [col for col in df_filtered.columns if col.endswith("_%") and col != target_column]
         config = {
@@ -136,7 +135,7 @@ if __name__ == "__main__":
             total_selected_features = 0
             print(f"Processing feature representation: {config[c]['columns_value_type']}")
             X = df_filtered[config[c]["columns"]]
-            y = df_filtered["position"]
+            y = df_filtered[target]
 
 
             selected_columns = feature_selection(X, y, model, scale_data=True)
@@ -153,10 +152,15 @@ if __name__ == "__main__":
             print(f"selected features {dim}-{config[c]['columns_value_type']}: {total_selected_features}")
 
         # Create output directory if it doesn't exist
-        dir_ex_results = "../../experiment_results/feature_selection"
+        dir_ex_results = f"../../experiment_results/feature_selection_{target}"
         os.makedirs(dir_ex_results, exist_ok=True)    
         with open(f"{dir_ex_results}/new_{dim}.json", "w") as f:
             json.dump(results, f, indent=2)
-        print(f"Results saved to {dir_ex_results}/new_{dim}.json")
+        print(f"{target} - Results saved to {dir_ex_results}/new_{dim}.json")
 
     print("### Feature Selection Done. ###")
+
+
+if __name__ == "__main__":
+    run_feature_selection(target="new_position")
+    run_feature_selection(target="role")

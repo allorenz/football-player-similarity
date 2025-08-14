@@ -81,12 +81,12 @@ def average_precision_k(y_true:str , y_pred:List[str], k=10):
     return sum(precisions) / len(precisions)
 
 
-def eval_impactful_players():
+def main():
     # setup
     recommender = Recommender(match_played=2, minutes_played=90)
     K = 10
     experiment_setup = {
-        #"goalkeeper" : ["Manuel Neuer", "Gianluigi Buffon", "Jan Oblak", "Alphonse Areola"],
+        "goalkeeper" : ["Manuel Neuer", "Gianluigi Buffon", "Jan Oblak", "Alphonse Areola"],
         "defender" : ["Diego Roberto Godín Leal", "Daniel Carvajal Ramos", "Raphaël Varane", "Gerard Piqué Bernabéu",
                       "Mats Hummels"],
         "midfielder" : ["Thomas Müller", "Mesut Özil", "Kevin De Bruyne", "Luka Modrić", "N''Golo Kanté"],
@@ -108,8 +108,8 @@ def eval_impactful_players():
                 recommended_df = recommended_df[recommended_df["player"]!=query_player]
 
                 # evaluate
-                y_true: str = recommender.df_standard_stats.loc[recommender.df_standard_stats["player"] == query_player, "position"].iloc[0]
-                y_pred = recommended_df["position"].values
+                y_true: str = recommender.df_standard_stats.loc[recommender.df_standard_stats["player"] == query_player, "new_position"].iloc[0]
+                y_pred = recommended_df["new_position"].values
                 ap = average_precision_k(y_true, y_pred)
                 rr = reciprocal_rank(y_true, y_pred)
 
@@ -146,4 +146,6 @@ def eval_impactful_players():
 
 
 if __name__ == "__main__":
-    eval_impactful_players()
+    main()
+    # recommender = Recommender(match_played=2, minutes_played=90)
+    # print(recommender.df_standard_stats.head())
