@@ -4,20 +4,22 @@ Fix:
 """
 import os
 import json
+from xml.etree.ElementInclude import include
 import pandas as pd
 from feature_selection import load_dimension, load_standard_stats, filter_df, train_evaluate_model
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from xgboost import XGBClassifier
+from lightgbm import LGBMClassifier
 
-def get_data(target:str = "new_position", match_played=2, minutes_played=90):
+def get_data(target:str = "position_level_0", match_played=2, minutes_played=90):
     """Merges all dimensions and applies filters"""
     # vars
     dimensions = ["defending","possession", "passing", "shooting", "goal_keeping"]
     df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_test.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
 
     # Merge all dimensions
-    df = df_standard_stats[["player_id", "new_position", "role" ,"position", "match_played", "minutes_played"]].copy()
+    df = df_standard_stats[["player_id", "position_level_0", "position_level_1","position_level_2", "match_played", "minutes_played"]].copy()
     for dim in dimensions:
         # load
         df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
@@ -38,8 +40,8 @@ def get_data(target:str = "new_position", match_played=2, minutes_played=90):
     df_filtered = df.loc[(df["match_played"]>=match_played) & (df["minutes_played"]>=minutes_played), : ].copy()#filter_df(df, match_played=match_played, minutes_played=minutes_played)
 
     # filter columns
-    config_1_columns = ["player_id","position","new_position", "role"]
-    config_2_columns = ["player_id","position","new_position", "role"]
+    config_1_columns = ["player_id", "position_level_0", "position_level_1","position_level_2"]
+    config_2_columns = ["player_id", "position_level_0", "position_level_1","position_level_2"]
 
     for dim in dimensions:
         path = f"../../experiment_results/feature_selection_{target}/new_{dim}.json"
@@ -63,34 +65,32 @@ def get_data(target:str = "new_position", match_played=2, minutes_played=90):
     return (df_filtered.loc[:,config_1_columns].copy(), df_filtered.loc[:,config_2_columns].copy())
 
 
-def run_modeling(target: str = "new_position"):
-    drop_map = {
-        "new_position": ["new_position", "position"],
-        "role": ["new_position", "position", "role"],
-    }
-    columns_to_drop = drop_map.get(target, [])
-    
+def run_modeling(target: str = "position_level_0", include_heatmap=False, match_played=2, minutes_played=90):
     print("Get data for experiments")
-    experiments_tuple = get_data()
+    experiments_tuple = get_data(target=target, match_played=match_played, minutes_played=minutes_played)
     df_1, df_2 = experiments_tuple
-    print(df_1["player_id"])
+    print(f"Absolute values shape: {df_1.shape}")
 
 
     # load heatmap data
-    df_heatmap = pd.read_csv("../../data/new_approach/heatmap_bins_ex.csv")
-    df_heatmap = df_heatmap.set_index("index")
-    df_1 = df_1.merge(
-        df_heatmap[["position_level_1"]],
-        left_on="player_id",
-        right_index=True,
-        how="left"
-    )
-    df_2 = df_2.merge(
-        df_heatmap[["position_level_1"]],
-        left_on="player_id",
-        right_index=True,
-        how="left"
-    )
+    df_heatmap = pd.read_csv("../../data/new_approach/feature_multichannel_heatmap.csv")
+    df_heatmap = df_heatmap.set_index("player_id")
+
+    if include_heatmap:
+        print(f"Heatmap data shape: {df_heatmap.shape}")
+        df_1 = df_1.merge(
+            df_heatmap[[c for c in df_heatmap.columns if "comp" in c]],
+            left_on="player_id",
+            right_index=True,
+            how="left"
+        )
+        df_2 = df_2.merge(
+            df_heatmap[[c for c in df_heatmap.columns if "comp" in c]],
+            left_on="player_id",
+            right_index=True,
+            how="left"
+        )
+        print(f"Fused inputdata: {df_1.shape}, {df_2.shape}")
 
 
     for experiment in zip([df_1, df_2], ["absolute_values", "relative_values"]):
@@ -99,14 +99,16 @@ def run_modeling(target: str = "new_position"):
 
         print("Prepare experiment")
         df_ex = df_ex.set_index("player_id")
-        X = df_ex.drop(columns=["position", "new_position", "role", "position_level_1"])
+        X = df_ex.drop(columns=["position_level_0", "position_level_1","position_level_2"])
         y = df_ex[target]
         print(f"X shape: {X.shape}, y shape: {y.shape}")
         
         models = {
-            "logistic_regression": LogisticRegression(penalty="l1", solver="liblinear", C=1),
-            "random_forest": RandomForestClassifier(n_estimators=100, random_state=42),
-            "gradient_boosting": GradientBoostingClassifier(n_estimators=100, random_state=42),
+            # "logistic_regression": LogisticRegression(penalty="l1", solver="liblinear", C=1),
+            "LGMB" : LGBMClassifier(verbose=-1),
+            # "xgboost" : XGBClassifier(use_label_encoder=True, eval_metric='logloss'), 
+            # "random_forest": RandomForestClassifier(n_estimators=100, random_state=42),
+            # "gradient_boosting": GradientBoostingClassifier(n_estimators=100, random_state=42),
         }
         dir_ex_results = f"../../experiment_results/modeling_{target}"
         os.makedirs(dir_ex_results, exist_ok=True)
@@ -115,14 +117,20 @@ def run_modeling(target: str = "new_position"):
             print(f"Train and evaluate model for {model_name.replace('_', ' ').title()}")
             ex1_results = train_evaluate_model(X, y, model, scale=True, test_size=0.4)
             print(f"Experiment 1 results for {model_name}:", ex1_results)
-            result_path = f"{dir_ex_results}/expt_{ex_name}_{model_name}.json"
+            result_path = f"{dir_ex_results}/expt_{ex_name}_{model_name}_heatmap_{include_heatmap}.json"
             with open(result_path, "w") as f:
                 json.dump(ex1_results, f, indent=2)
             print(f"Results saved to {result_path}")
 
 
 if __name__ == "__main__":
-    # run_modeling(target="new_position")
-    # run_modeling(target="role")
-    run_modeling(target="position_level_1")
+    # === Experiment ===
+    # levels = ["position_level_0", "position_level_1", "position_level_2"]
+    # for level in levels[1:]:
+    #     run_modeling(target=level, include_heatmap=True)
+    #     run_modeling(target=level, include_heatmap=False)
 
+    run_modeling(target="position_level_2", 
+                 include_heatmap=True,
+                 match_played=4,
+                 minutes_played=360)

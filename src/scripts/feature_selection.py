@@ -66,7 +66,7 @@ def feature_selection(X, y, model, scale_data=True):
 
 def train_evaluate_model(X, y, model, scale=True, test_size=0.2, random_state=42):
     # Split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
 
     # Optionale Skalierung
     if scale:
@@ -162,5 +162,6 @@ def run_feature_selection(target: str = "new_position"):
 
 
 if __name__ == "__main__":
-    run_feature_selection(target="new_position")
-    run_feature_selection(target="role")
+    levels = ["position_level_0", "position_level_1", "position_level_2"]
+    for level in levels:
+        run_feature_selection(target=level)
