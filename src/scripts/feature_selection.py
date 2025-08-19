@@ -52,6 +52,7 @@ def filter_df(df_input, match_played=2, minutes_played=90) -> pd.DataFrame:
 
 def feature_selection(X, y, model, scale_data=True):
     feature_names = X.columns
+    
     if scale_data:
         scaler = StandardScaler()
         X = scaler.fit_transform(X)  

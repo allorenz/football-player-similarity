@@ -102,9 +102,12 @@ class DefendingFeatureExtractor(BaseDimensionFeatureExtractor):
 
         # Combinations
         df_with_flags["ball_recovery_successful"] = df_with_flags["is_ball_recovery"] & df_with_flags["is_ball_recovery_successful"]
+        df_with_flags["ball_recovery_successful_in_defending_third"] = df_with_flags["is_ball_recovery"] & df_with_flags["is_ball_recovery_successful"] & df_with_flags['is_defending_third']
+        df_with_flags["ball_recovery_successful_in_middle_third"] = df_with_flags["is_ball_recovery"] & df_with_flags["is_ball_recovery_successful"] & df_with_flags['is_middle_third']
+        df_with_flags["ball_recovery_successful_in_attacking_third"] = df_with_flags["is_ball_recovery"] & df_with_flags["is_ball_recovery_successful"] & df_with_flags['is_attacking_third']
         df_with_flags["ball_recovery_failed"] = (df_with_flags["is_ball_recovery"])  & (df_with_flags["is_ball_recovery_failed"])
         df_with_flags["ball_recovery_offensive_successful"] = df_with_flags["is_offensive_ball_recovery"] & df_with_flags["is_ball_recovery_successful"]
-        df_with_flags["block_during_counterpress"] = df_with_flags["is_block"] & df_with_flags["is_block"]
+        df_with_flags["block_during_counterpress"] = df_with_flags["is_block"] & df_with_flags["is_counterpress"]
         df_with_flags["is_clearance_with_head"] = (df_with_flags["is_clearance"]) & (self.df["clearance_body_part"] == "Head")
         df_with_flags["is_duel_tackling"] = (df_with_flags["is_duel"]) & (self.df["duel_type"] == "Tackle")
         df_with_flags["is_duel_tackling_won"] = (df_with_flags["is_duel"]) & (self.df["duel_type"] == "Tackle") & ((self.df["duel_outcome"] == "Won") | (self.df["duel_outcome"] == "Success In Play"))
@@ -133,6 +136,12 @@ class DefendingFeatureExtractor(BaseDimensionFeatureExtractor):
             ball_recovery_offensive_total=("is_offensive_ball_recovery", "sum"),
             ball_recovery_offensive_successful=("ball_recovery_offensive_successful", "sum"),
             ball_recovery_failed=("ball_recovery_failed", "sum"),
+            ball_recovery_defending_third=("ball_recovery_successful_in_defending_third", "sum"),
+            ball_recovery_middle_third=("ball_recovery_successful_in_middle_third", "sum"),
+            ball_recovery_attacking_third=("ball_recovery_successful_in_attacking_third", "sum"),
+            ball_recovery_successful_defending_third=("ball_recovery_successful_in_defending_third", "sum"),
+            ball_recovery_successful_middle_third=("ball_recovery_successful_in_middle_third", "sum"),
+            ball_recovery_successful_attacking_third=("ball_recovery_successful_in_attacking_third", "sum"),
             # pressure 
             pressure_on_opponent=("is_pressure_on_opponent","sum"),
             pressure_on_opponent_defending_third=("is_pressure_on_opponent_defending_third","sum"),
@@ -149,7 +158,6 @@ class DefendingFeatureExtractor(BaseDimensionFeatureExtractor):
             block_total = ("is_block", "sum"),
             block_offensive = ("is_block_offensive", "sum"),
             block_ball_deflection = ("is_block_ball_deflection", "sum"),
-            block_counterpress = ("is_block_ball_deflection", "sum"),
             block_during_counterpress =("block_during_counterpress", "sum"),
             block_shot_on_target=("is_block_shot_on_target", "sum"),
             # clearance
@@ -188,6 +196,13 @@ class DefendingFeatureExtractor(BaseDimensionFeatureExtractor):
 
         calculation_pairs = [
             ("ball_recovery_successful","ball_recovery_total","ball_recovery_successful_%"),
+            ("ball_recovery_successful_defending_third","ball_recovery_successful","ball_recovery_successful_defending_third_%"),
+            ("ball_recovery_successful_middle_third","ball_recovery_successful","ball_recovery_successful_middle_third_%"),
+            ("ball_recovery_successful_attacking_third","ball_recovery_successful","ball_recovery_successful_attacking_third_%"),
+            ("ball_recovery_defending_third","ball_recovery_total","ball_recovery_defending_third_%"),
+            ("ball_recovery_middle_third","ball_recovery_total","ball_recovery_middle_third_%"),
+            ("ball_recovery_attacking_third","ball_recovery_total","ball_recovery_attacking_third_%"),
+            ("ball_recovery_offensive_successful","ball_recovery_offensive_total","ball_recovery_offensive_successful_%"),
             ("pressure_on_opponent_defending_third","pressure_on_opponent","pressure_on_opponent_defending_third_%"),
             ("pressure_on_opponent_middle_third","pressure_on_opponent","pressure_on_opponent_middle_third_%"),
             ("pressure_on_opponent_attacking_third","pressure_on_opponent","pressure_on_opponent_attacking_third_%"),

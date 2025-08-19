@@ -59,7 +59,7 @@ class Recommender:
             query_vector_scaled = scaler.transform(query_vector)
 
             # Compute similarity
-            similarities = cosine_similarity(normalize(df_dim_scaled.values), normalize(query_vector_scaled)).flatten()
+            similarities = cosine_similarity(df_dim_scaled.values, query_vector_scaled).flatten() # normalization not neccessary: cosine_similarity(normalize(df_dim_scaled.values), normalize(query_vector_scaled)).flatten()
             df_dim_eval = pd.DataFrame({f"sim_{dim}": similarities}, index=df_dim.index)
             df_cosine_list.append(df_dim_eval)
 

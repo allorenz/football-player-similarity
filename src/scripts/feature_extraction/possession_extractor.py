@@ -111,14 +111,21 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
         df_with_flags['ends_in_box'] = self.df[['x_end_carry','y_end_carry']].apply(lambda row: is_in_penalty_area(row['x_end_carry'], row['y_end_carry']), axis=1)
         df_with_flags['ends_in_edge_box'] = self.df[['x_end_carry','y_end_carry']].apply(lambda row: is_in_edge_of_the_box(row['x_end_carry'], row['y_end_carry']), axis=1)
         df_with_flags["carry_distance"] = np.sqrt((self.df["x_end_carry"] - self.df["x"])**2 + (self.df["y_end_carry"] - self.df["y"])**2)
+        df_with_flags["carry_distance_defending_third"] = np.sqrt((self.df.loc[df_with_flags['is_defending_third'], "x_end_carry"] - self.df.loc[df_with_flags['is_defending_third'], "x"])**2 + (self.df.loc[df_with_flags['is_defending_third'], "y_end_carry"] - self.df.loc[df_with_flags['is_defending_third'], "y"])**2)
+        df_with_flags["carry_distance_middle_third"] = np.sqrt((self.df.loc[df_with_flags['is_middle_third'], "x_end_carry"] - self.df.loc[df_with_flags['is_middle_third'], "x"])**2 + (self.df.loc[df_with_flags['is_middle_third'], "y_end_carry"] - self.df.loc[df_with_flags['is_middle_third'], "y"])**2)
+        df_with_flags["carry_distance_attacking_third"] = np.sqrt((self.df.loc[df_with_flags['is_attacking_third'], "x_end_carry"] - self.df.loc[df_with_flags['is_attacking_third'], "x"])**2 + (self.df.loc[df_with_flags['is_attacking_third'], "y_end_carry"] - self.df.loc[df_with_flags['is_attacking_third'], "y"])**2)
         
-
         # Check if progressive carry
         df_with_flags["start_to_goal_distance"] = np.sqrt( (self.df["x"] - 120)**2 + (self.df["y"] - 40)**2)
         df_with_flags["end_to_goal_distance"] = np.sqrt((self.df["x_end_carry"] - 120)**2 + (self.df["y_end_carry"] - 40)**2)
         df_with_flags["is_progressive_carry"] = df_with_flags["end_to_goal_distance"] < df_with_flags["start_to_goal_distance"]
-
-
+        df_with_flags["is_progressive_carry_defending_third"] = df_with_flags["is_progressive_carry"] & df_with_flags['is_defending_third']
+        df_with_flags["is_progressive_carry_middle_third"] = df_with_flags["is_progressive_carry"] & df_with_flags['is_middle_third']
+        df_with_flags["is_progressive_carry_attacking_third"] = df_with_flags["is_progressive_carry"] & df_with_flags['is_attacking_third']
+        df_with_flags["is_progressive_carry_distance_defending_third"] = df_with_flags.loc[(df_with_flags["is_progressive_carry"] & df_with_flags['is_defending_third']), "carry_distance"]
+        df_with_flags["is_progressive_carry_distance_middle_third"] = df_with_flags.loc[(df_with_flags["is_progressive_carry"] & df_with_flags['is_middle_third']), "carry_distance"]
+        df_with_flags["is_progressive_carry_distance_attacking_third"] = df_with_flags.loc[(df_with_flags["is_progressive_carry"] & df_with_flags['is_attacking_third']), "carry_distance"]
+        
         # Action flags
         df_with_flags['is_dribbling'] = self.df['type'] == "Dribble"
         df_with_flags['is_overrun'] = self.df['dribble_overrun'] == True
@@ -135,7 +142,13 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
         df_with_flags['is_offside'] = self.df["type"]=='Offside'
 
         # Combination of flags
+        df_with_flags['is_dribbling_from_attacking_third'] = df_with_flags['is_dribbling'] & df_with_flags['is_attacking_third']
+        df_with_flags['is_dribbling_from_middle_third'] = df_with_flags['is_dribbling'] & df_with_flags['is_middle_third']
+        df_with_flags['is_dribbling_from_defending_third'] = df_with_flags['is_dribbling'] & df_with_flags['is_defending_third']
         df_with_flags['is_dribbling_and_completed'] = df_with_flags['is_dribbling'] & (self.df["dribble_outcome"] == "Complete")
+        df_with_flags['is_dribbling_and_completed_from_defending_third'] = df_with_flags['is_dribbling_and_completed'] & df_with_flags['is_defending_third']
+        df_with_flags['is_dribbling_and_completed_from_middle_third'] = df_with_flags['is_dribbling_and_completed'] & df_with_flags['is_middle_third']
+        df_with_flags['is_dribbling_and_completed_from_attacking_third'] = df_with_flags['is_dribbling_and_completed'] & df_with_flags['is_attacking_third']
         df_with_flags['is_dribbling_and_is_not_completed'] = df_with_flags['is_dribbling'] & (self.df["dribble_outcome"] == "Incomplete")
         df_with_flags['is_dribbling_and_overrun'] = df_with_flags['is_dribbling'] & (df_with_flags['is_overrun'])
         df_with_flags['is_dribbling_and_through_legs'] = df_with_flags['is_dribbling'] & (df_with_flags['is_nutmeg'])
@@ -148,6 +161,15 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
         df_with_flags['is_dispossessed_in_middle_third'] = df_with_flags['is_dispossessed'] & df_with_flags['is_middle_third']
         df_with_flags['is_dispossessed_in_attacking_third'] = df_with_flags['is_dispossessed'] & df_with_flags['is_attacking_third']
         df_with_flags['is_dispossessed_in_penalty_area'] = df_with_flags['is_dispossessed'] & df_with_flags['is_in_box']
+        df_with_flags['balls_received_in_defending_penalty_area'] = df_with_flags['balls_received'] & df_with_flags['is_in_defending_box']
+        df_with_flags['balls_received_in_defending_third'] = df_with_flags['balls_received'] & df_with_flags['is_defending_third']
+        df_with_flags['balls_received_in_middle_third'] = df_with_flags['balls_received'] & df_with_flags['is_middle_third']
+        df_with_flags['balls_received_in_attacking_third'] = df_with_flags['balls_received'] & df_with_flags['is_attacking_third']
+        df_with_flags['balls_received_in_penalty_area'] = df_with_flags['balls_received'] & df_with_flags['is_in_box']
+        df_with_flags['balls_received_in_edge_of_the_box'] = df_with_flags['balls_received'] & df_with_flags['is_in_edge_box']
+        df_with_flags['is_carry_defending_third'] = df_with_flags['is_carry'] & df_with_flags['is_defending_third']
+        df_with_flags['is_carry_middle_third'] = df_with_flags['is_carry'] & df_with_flags['is_middle_third']
+        df_with_flags['is_carry_attacking_third'] = df_with_flags['is_carry'] & df_with_flags['is_attacking_third']
 
 
         player_under_pressure_grouping = df_with_flags.groupby(['player_id', 'under_pressure']).agg(
@@ -165,8 +187,17 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
             dribbling_overrun=("is_dribbling_and_overrun", "sum"),
             dribbling_through_legs=("is_dribbling_and_through_legs", "sum"),
             dribbling_push_and_run=("is_dribbling_and_no_touch", "sum"),
+            dribbling_from_attacking_third=("is_dribbling_from_attacking_third", "sum"),
+            dribbling_from_middle_third=("is_dribbling_from_middle_third", "sum"),
+            dribbling_from_defending_third=("is_dribbling_from_defending_third", "sum"),
+            dribbling_completed_from_defending_third=("is_dribbling_and_completed_from_defending_third", "sum"),
+            dribbling_completed_from_middle_third=("is_dribbling_and_completed_from_middle_third", "sum"),
+            dribbling_completed_from_attacking_third=("is_dribbling_and_completed_from_attacking_third", "sum"),
             # carries
             carries_total=("is_carry","sum"),
+            carries_in_defending_third=("is_carry_defending_third", "sum"),
+            carries_in_middle_third=("is_carry_middle_third", "sum"),
+            carries_in_attacking_third=("is_carry_attacking_third", "sum"),
             carry_into_attacking_third=("is_carry_from_outside_inside_attacking_third","sum"),
             carry_into_penalty_area=("is_carry_from_outside_inside_penalty_area","sum"),
             carry_into_edge_of_the_box=("is_carry_from_outside_inside_edge_of_the_box","sum"),
@@ -174,6 +205,12 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
             # progressive carries
             progressive_carry_total=("is_progressive_carry","sum"),
             progressive_carry_distance=("carry_distance", lambda x: x[df_with_flags["is_progressive_carry"]].sum()),
+            progressive_carry_defending_third=("is_progressive_carry_defending_third", "sum"),
+            progressive_carry_middle_third=("is_progressive_carry_middle_third", "sum"),
+            progressive_carry_attacking_third=("is_progressive_carry_attacking_third", "sum"),
+            progressive_carry_distance_defending_third=("is_progressive_carry_distance_defending_third", "sum"),
+            progressive_carry_distance_middle_third=("is_progressive_carry_distance_middle_third", "sum"),
+            progressive_carry_distance_attacking_third=("is_progressive_carry_distance_attacking_third", "sum"),
             # miscontrols and dispossesions
             miscontrol_total=("is_miscontrol","sum"),
             miscontrol_in_aerial_duel=("is_miscontrol_in_aerial_duel", "sum"),
@@ -183,9 +220,15 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
             dispossessed_in_middle_third=("is_dispossessed_in_middle_third", "sum"),
             dispossessed_in_attacking_third=("is_dispossessed_in_attacking_third", "sum"),
             dispossessed_in_penalty_area=("is_dispossessed_in_penalty_area", "sum"),
-            # ball receive
+            # balls received
             balls_received=("balls_received", "sum"),
             balls_received_successful=("balls_received_successful","sum"),
+            balls_received_in_defending_penalty_area=("balls_received_in_defending_penalty_area", "sum"),
+            balls_received_in_defending_third=("balls_received_in_defending_third", "sum"),
+            balls_received_in_middle_third=("balls_received_in_middle_third", "sum"),
+            balls_received_in_attacking_third=("balls_received_in_attacking_third", "sum"),
+            balls_received_in_penalty_area=("balls_received_in_penalty_area", "sum"),
+            balls_received_in_edge_of_the_box=("balls_received_in_edge_of_the_box", "sum"),
             # error an offside
             error_lead_to_goal=("is_error","sum"),
             offside=("is_offside", "sum")
@@ -202,19 +245,60 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
         ### calculate relative values ###
 
         calculation_pairs = [
+            ("balls_received_successful", "balls_received", "ball_reception_%"),
+            ("dribbling_completed", "dribbling_total", "dribblings_successful_%"),
+            
             ("touches_in_defending_penalty","touches_total","touches_in_defending_penalty_%"),
             ("touches_in_defending_third","touches_total","touches_in_defending_third_%"),
             ("touches_in_middle_third","touches_total","touches_in_middle_third_%"),
             ("touches_in_attacking_third","touches_total","touches_in_attacking_third_%"),
             ("touches_in_attacking_penalty","touches_total","touches_in_attacking_penalty_%"),
-            ("balls_received_successful", "balls_received", "ball_reception_%"),
-            ("dribbling_completed", "dribbling_total", "dribblings_successful_%"),
+            
             ("carry_distance", "carries_total", "distance_per_carry_%"),
             ("carry_into_attacking_third","carries_total", "carries_into_attacking_third_%"),
             ("carry_into_penalty_area","carries_total", "carries_into_penalty_area_%"),
             ("carry_into_edge_of_the_box","carries_total", "carries_into_edge_of_the_box_%"),
+            
+            #("up_carry_total", "carries_total", "carries_under_pressure_%"),
+            ("up_carry_distance", "up_carry_distance", "up_distance_per_carry_%"),
+            ("up_carries_in_attacking_third", "up_carry_total", "up_carries_in_attacking_third_%"),
+            ("up_carries_in_middle_third", "up_carry_total", "up_carries_in_middle_third_%"),
+            ("up_carries_in_defending_third", "up_carry_total", "up_carries_in_defending_third_%"),
+
+
             ("progressive_carry_distance", "progressive_carry_total", "distance_per_progressive_carry"),
-            ("dispossessed_total","carries_total","dispossessed_per_carry_%")
+            ("progressive_carry_defending_third", "progressive_carry_total", "progressive_carry_defending_third_%"),
+            ("progressive_carry_middle_third", "progressive_carry_total", "progressive_carry_middle_third_%"),
+            ("progressive_carry_attacking_third", "progressive_carry_total", "progressive_carry_attacking_third_%"),
+            ("progressive_carry_distance_defending_third", "progressive_carry_defending_third", "progressive_carry_distance_defending_third_%"),
+            ("progressive_carry_distance_middle_third", "progressive_carry_middle_third", "progressive_carry_distance_middle_third_%"),
+            ("progressive_carry_distance_attacking_third", "progressive_carry_attacking_third", "progressive_carry_distance_attacking_third_%"),
+            
+            ("dribbling_from_attacking_third", "dribbling_total", "dribblings_from_attacking_third_%"),
+            ("dribbling_from_middle_third", "dribbling_total", "dribblings_from_middle_third_%"),
+            ("dribbling_from_defending_third", "dribbling_total", "dribblings_from_defending_third_%"),
+            ("dribbling_completed_from_defending_third", "dribbling_completed", "dribblings_completed_from_defending_third_%"),
+            ("dribbling_completed_from_middle_third", "dribbling_completed", "dribblings_completed_from_middle_third_%"),
+            ("dribbling_completed_from_attacking_third", "dribbling_completed", "dribblings_completed_from_attacking_third_%"),
+            
+            ("balls_received_in_defending_penalty_area", "balls_received", "balls_received_in_defending_penalty_area_%"),
+            ("balls_received_in_defending_third", "balls_received", "balls_received_in_defending_third_%"),
+            ("balls_received_in_middle_third", "balls_received", "balls_received_in_middle_third_%"),
+            ("balls_received_in_attacking_third", "balls_received", "balls_received_in_attacking_third_%"),
+            ("balls_received_in_penalty_area", "balls_received", "balls_received_in_penalty_area_%"),
+            ("balls_received_in_edge_of_the_box", "balls_received", "balls_received_in_edge_of_the_box_%"),
+
+            ("up_balls_received_in_defending_penalty_area", "up_balls_received", "up_balls_received_in_defending_penalty_area_%"),
+            ("up_balls_received_in_defending_third", "up_balls_received", "up_balls_received_in_defending_third_%"),
+            ("up_balls_received_in_middle_third", "up_balls_received", "up_balls_received_in_middle_third_%"),
+            ("up_balls_received_in_attacking_third", "up_balls_received", "up_balls_received_in_attacking_third_%"),
+            ("up_balls_received_in_penalty_area", "up_balls_received", "up_balls_received_in_penalty_area_%"),
+            ("up_balls_received_in_edge_of_the_box", "up_balls_received", "up_balls_received_in_edge_of_the_box_%"),
+
+            ("dispossessed_total","carries_total","dispossessed_per_carry_%"),
+            ("dispossessed_in_defending_third","dispossessed_total","dispossessed_in_defending_third_%"),
+            ("dispossessed_in_middle_third","dispossessed_total","dispossessed_in_middle_third_%"),
+            ("dispossessed_in_attacking_third","dispossessed_total","dispossessed_in_attacking_third_%"),
         ]
 
         for a, b, c in calculation_pairs:
@@ -253,7 +337,10 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
         df.to_csv(file_path,index=False)
 
     def run(self):
+        print("Filtering by dimension")
         self.filter_by_dimension()
+        print("Converting columns")
         self.convert_columns()
+        print("Extracting features")
         result_df = self.extract()
         self.store_data(result_df)

@@ -200,6 +200,8 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
         df_with_flags['is_in_edge_box'] = self.df[["x","y"]].apply(lambda row: is_in_edge_of_the_box(row['x'], row['y']), axis=1)
         
         # End location flags
+        df_with_flags['end_defending_third'] = self.df['x_end_pass'] <= 40
+        df_with_flags['end_middle_third'] = (80 > self.df['x_end_pass']) & (self.df['x_end_pass'] > 40)
         df_with_flags['end_attacking_third'] = self.df['x_end_pass'] >= 80 # self.df[["x_end_pass", "y_end_pass"]]
         df_with_flags['end_in_box'] = self.df[["x_end_pass","y_end_pass"]].apply(lambda row: is_in_penalty_area(row['x_end_pass'], row['y_end_pass']), axis=1)
         df_with_flags['end_in_goal_area'] = self.df[["x_end_pass","y_end_pass"]].apply(lambda row: is_in_goal_area(row['x_end_pass'], row['y_end_pass']), axis=1)
@@ -232,6 +234,7 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
         df_with_flags['is_long_vertical_and_from_defending_third'] = (df_with_flags['is_long']) & (df_with_flags['is_vertical']) 
         df_with_flags['is_long_vertical_and_from_mid_third'] = (df_with_flags['is_long']) & (df_with_flags['is_vertical']) & (df_with_flags['is_middle_third'])
         df_with_flags['is_long_vertical_and_from_mid_third_into_the_box'] = (df_with_flags['is_long']) & (df_with_flags['is_vertical']) & (df_with_flags['is_middle_third']) & (df_with_flags['end_in_box'])
+        df_with_flags['is_vertical_and_completed'] = (df_with_flags['is_vertical']) & (df_with_flags['is_completed'])
         
         # Combined conditions
         df_with_flags['into_box_not_from_box'] = df_with_flags['end_in_box'] & ~df_with_flags['is_in_box']
@@ -242,6 +245,17 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
         
         df_with_flags['within_attacking_third'] = df_with_flags['is_attacking_third'] & df_with_flags['end_attacking_third']
         df_with_flags['within_attacking_third_completed'] = df_with_flags['within_attacking_third'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_defending_third"] = df_with_flags['is_defending_third'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_middle_third"] = df_with_flags['is_middle_third'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_attacking_third"] = df_with_flags['is_attacking_third'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_box"] = df_with_flags['is_in_box'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_edge_box"] = df_with_flags['is_in_edge_box'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_end_in_defending_third"] = df_with_flags['end_defending_third'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_end_in_middle_third"] = df_with_flags['end_middle_third'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_end_in_attacking_third"] = df_with_flags['end_attacking_third'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_end_in_box"] = df_with_flags['end_in_box'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_end_in_edge_box"] = df_with_flags['end_in_edge_box'] & df_with_flags['is_completed']
+        df_with_flags["is_complete_end_in_goal_area"] = df_with_flags['end_in_goal_area'] & df_with_flags['is_completed']
         
         # Pass type combinations
         df_with_flags['vertical_into_edge'] = (df_with_flags['is_vertical'] & 
@@ -281,20 +295,39 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
         player_under_pressure_grouping = df_with_flags.groupby(['player_id', 'under_pressure']).agg(
             passes_total=('player_id', 'count'),
             passes_completed=('is_completed', 'sum'),
+            
             passes_from_attacking_third=('is_attacking_third', 'sum'),
             passes_from_middle_third=('is_middle_third', 'sum'),
             passes_from_defending_third=('is_defending_third', 'sum'),
             passes_from_the_box=('is_in_box', 'sum'),
+            passes_from_edge_of_the_box=('is_in_edge_box', 'sum'),
+
+            passes_from_attacking_third_completed=('is_complete_attacking_third', 'sum'),
+            passes_from_middle_third_completed=('is_complete_middle_third', 'sum'),
+            passes_from_defending_third_completed=('is_complete_defending_third', 'sum'),
+            passes_from_box_completed=('is_complete_box', 'sum'),
+            passes_from_edge_of_the_box_completed=('is_complete_edge_box', 'sum'),
+           
+            passes_into_defending_third=('end_defending_third', 'sum'),
+            passes_into_middle_third=('end_middle_third', 'sum'),
             passes_into_attacking_third=('end_attacking_third', 'sum'),
             passes_into_box=('into_box_not_from_box', 'sum'),
-            passes_into_box_completed=('into_box_not_from_box_completed', 'sum'),
-            passes_into_goal_area=("end_in_goal_area", "sum"),
             passes_into_edge_of_the_box=("into_edge_box_not_from_edge_box", "sum"),
+            passes_into_goal_area=("end_in_goal_area", "sum"),
+
+            passes_into_defending_third_completed=('is_complete_end_in_defending_third', 'sum'),
+            passes_into_middle_third_completed=('is_complete_end_in_middle_third', 'sum'),
+            passes_into_attacking_third_completed=('is_complete_end_in_attacking_third', 'sum'),
+            passes_into_box_completed=('into_box_not_from_box_completed', 'sum'),
             passes_into_edge_of_the_box_completed=("into_edge_box_not_from_edge_box_completed", "sum"),
+            passes_into_goal_area_completed=("is_complete_end_in_goal_area", "sum"),
+
             passes_cuts_last_line_of_defence=("is_through_ball", "sum"),
             passes_cuts_last_line_of_defence_completed=("is_through_ball_and_completed", "sum"),
+            
             passes_within_attacking_third=("within_attacking_third", "sum"),
             passes_within_attacking_third_completed=("within_attacking_third_completed", "sum"),
+            
             passes_total_distance=("pass_length", "sum"),
             passes_short_total=("is_short", "sum"),
             passes_short_completed=("is_short_and_completed", "sum"),
@@ -302,30 +335,41 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
             passes_medium_completed=("is_medium_and_completed", "sum"),
             passes_long_total=("is_long", "sum"),
             passes_long_completed=("is_long_and_completed", "sum"),
+            
             passes_shot_assist=("is_pass_shot_assist", "sum"),
             passes_goal_assist=("is_pass_goal_assist", "sum"),
+            
             passes_switch=("is_switch", "sum"),
             passes_cross=("is_cross", "sum"),
             passes_cut_back=("is_cut_back", "sum"),
-            passes_vertical_into_edge_of_the_box=("vertical_into_edge", "sum"),
-            passes_vertical_into_the_box=("vertical_into_box", "sum"),
-            passes_horizontal_into_edge_of_the_box=("horizontal_into_edge", "sum"),
-            passes_horizontal_into_the_box=("horizontal_into_box", "sum"),
-            passes_cut_back_into_edge_of_the_box=("cut_back_into_edge", "sum"),
-            passes_high_vertical_into_edge_of_the_box=("high_vertical_into_edge", "sum"),
-            passes_high_vertical_into_the_box=("high_vertical_into_box", "sum"),
-            passes_low_vertical_into_edge_of_the_box=("low_vertical_into_edge", "sum"),
-            passes_low_vertical_into_the_box=("low_vertical_into_box", "sum"),
-            passes_high_horizontal_into_edge_of_the_box=("high_horizontal_into_edge", "sum"),
-            passes_high_horizontal_into_the_box=("high_horizontal_into_box", "sum"),
-            passes_low_horizontal_into_edge_of_the_box=("low_horizontal_into_edge", "sum"),
-            passes_low_horizontal_into_the_box=("low_horizontal_into_box", "sum"),
+            
+            # pass types
             passes_progressive=("is_progressive", "sum"),
             passes_progressive_completed=("is_progressive_and_completed", "sum"),
             passes_horizontal=("is_horizontal_and_completed", "sum"),
             passes_horizontal_completed=("is_horizontal_and_completed", "sum"),
+            passes_vertical=("is_vertical", "sum"),
+            passes_vertical_completed=("is_vertical_and_completed", "sum"),
             passes_backward=("is_backward", "sum"),
             passes_backward_completed=("is_backward_and_completed", "sum"),
+
+
+            passes_vertical_into_edge_of_the_box=("vertical_into_edge", "sum"),
+            passes_vertical_into_the_box=("vertical_into_box", "sum"),
+            passes_cut_back_into_edge_of_the_box=("cut_back_into_edge", "sum"),
+
+            passes_high_vertical_into_edge_of_the_box=("high_vertical_into_edge", "sum"),
+            passes_high_vertical_into_the_box=("high_vertical_into_box", "sum"),
+            passes_low_vertical_into_edge_of_the_box=("low_vertical_into_edge", "sum"),
+            passes_low_vertical_into_the_box=("low_vertical_into_box", "sum"),
+            
+            passes_horizontal_into_edge_of_the_box=("horizontal_into_edge", "sum"),
+            passes_horizontal_into_the_box=("horizontal_into_box", "sum"),
+            passes_high_horizontal_into_edge_of_the_box=("high_horizontal_into_edge", "sum"),
+            passes_high_horizontal_into_the_box=("high_horizontal_into_box", "sum"),
+            passes_low_horizontal_into_edge_of_the_box=("low_horizontal_into_edge", "sum"),
+            passes_low_horizontal_into_the_box=("low_horizontal_into_box", "sum"),
+           
             passes_long_vertical=("is_long_and_vertical", "sum"),
             passes_long_vertical_from_defending_third=("is_long_vertical_and_from_defending_third", "sum"),
             passes_long_vertical_from_mid_third=("is_long_vertical_and_from_mid_third", "sum"),
@@ -345,24 +389,101 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
         ### calculate relative values ###
 
         calculation_pairs = [
+            # pass accuracy
             ('passes_completed', 'passes_total', "pass_accuracy_%"),
+            ("passes_total_distance", "passes_total", "pass_mean_distance_%"),
             ('up_passes_completed', 'up_passes_total', "up_pass_accuracy_%"),
-            ("passes_progressive_completed", "passes_progressive","pass_accuracy_progressive_%"),
-            ("up_passes_progressive_completed", "up_passes_progressive","up_pass_accuracy_progressive_%"),
-            ("passes_backward_completed", "passes_backward","pass_accuracy_backward_%"),
-            ("passes_horizontal_completed", "passes_horizontal","pass_horizontal_backward_%"),
-            ("up_passes_backward_completed", "up_passes_backward","up_pass_accuracy_backward_%"),
+
+            # pass attempts
+            ("passes_from_attacking_third", "passes_total", "pass_from_attacking_third_%"),
+            ("passes_from_middle_third", "passes_total", "pass_from_middle_third_%"),
+            ("passes_from_defending_third", "passes_total", "pass_from_defending_third_%"),
+            ("passes_from_the_box", "passes_total", "pass_from_box_%"),     
+            ("passes_from_edge_of_the_box", "passes_total", "pass_from_edge_of_the_box_%"),
+
+            # pass accuracy location
+            ("passes_from_attacking_third_completed", "passes_from_attacking_third", "pass_accuracy_from_attacking_third_%"),
+            ("passes_from_middle_third_completed", "passes_from_middle_third", "pass_accuracy_from_middle_third_%"),
+            ("passes_from_defending_third_completed", "passes_from_defending_third", "pass_accuracy_from_defending_third_%"),
+            ("passes_from_box_completed", "passes_from_the_box", "pass_accuracy_from_box_%"),
+            ("passes_from_edge_of_the_box_completed", "passes_from_edge_of_the_box", "pass_accuracy_from_edge_of_the_box_%"),
+            
+            # pass attempts end location
+            ("passes_into_defending_third", "passes_total", "pass_into_defending_third_%"),
+            ("passes_into_middle_third", "passes_total", "pass_into_middle_third_%"),
+            ("passes_into_attacking_third", "passes_total", "pass_into_attacking_third_%"),
+            ("passes_into_box", "passes_total", "pass_into_box_%"),
+            ("passes_into_edge_of_the_box", "passes_total", "pass_into_edge_of_the_box_%"),
+            ("passes_into_goal_area", "passes_total", "pass_into_goal_area_%"),
+
+            # pass accuracy end location
+            ("passes_into_defending_third_completed", "passes_into_defending_third", "pass_accuracy_into_defending_third_%"),
+            ("passes_into_middle_third_completed", "passes_into_middle_third", "pass_accuracy_into_middle_third_%"),
+            ("passes_into_attacking_third_completed", "passes_into_attacking_third", "pass_accuracy_into_attacking_third_%"),
             ("passes_into_box_completed", "passes_into_box", "pass_accuracy_into_box_%"),
             ("passes_into_edge_of_the_box_completed", "passes_into_edge_of_the_box", "pass_accuracy_into_edge_of_the_box_%"),
-            ("up_passes_into_box_completed", "up_passes_into_box", "up_pass_accuracy_into_box_%"),
+            ("passes_into_goal_area_completed", "passes_into_goal_area", "pass_accuracy_into_goal_area_%"),
+
+            # pass type
+            ("passes_horizontal_completed", "passes_horizontal","pass_horizontal_accuracy_%"),
+            ("passes_vertical_completed", "passes_vertical","pass_vertical_accuracy_%"),
+            ("passes_progressive_completed", "passes_progressive","pass_progressive_accuracy_%"),
+            ("passes_backward_completed", "passes_backward","pass_accuracy_backward_%"),
+
+
+            # pass type under pressure
+            ("up_passes_horizontal_completed", "up_passes_horizontal","up_pass_horizontal_accuracy_%"),
+            ("up_passes_vertical_completed", "up_passes_vertical","up_pass_vertical_accuracy_%"),
+            ("up_passes_progressive_completed", "up_passes_progressive","up_pass_progressive_accuracy_%"),
+            ("up_passes_backward_completed", "up_passes_backward","up_pass_accuracy_backward_%"),
+
+            # assists
+            ("passes_shot_assist", "passes_progressive", "pass_progressive_lead_to_shot_%" ),
+            ("passes_goal_assist", "passes_progressive", "pass_progressive_lead_to_goal_%" ),
+            
+            # distance
             ("passes_short_completed" , "passes_short_total", "pass_accuaracy_short_%"),
             ("passes_medium_completed" , "passes_medium_total", "pass_accuaracy_medium_%"),
             ("passes_long_completed" , "passes_long_total", "pass_accuaracy_long_%"),
+
+            # pass types general
+            ("passes_horizontal", "passes_total", "pass_horizontal_%"),
+            ("passes_vertical", "passes_total", "pass_vertical_%"),
+            ("passes_progressive", "passes_total", "pass_progressive_%"),
+            ("passes_switch", "passes_total", "pass_switch_%"),
+            ("passes_cross", "passes_total", "pass_cross_%"),
+            ("passes_cut_back", "passes_total", "pass_cut_back_%"),
+            ("passes_cuts_last_line_of_defence_completed", "passes_total", "pass_cuts_last_line_of_defence_%"),
+            ("passes_cut_back_into_edge_of_the_box", "passes_total", "pass_cut_back_into_edge_of_the_box_%"),
+
+            # pass types vertical
+            ("passes_vertical_into_edge_of_the_box", "passes_vertical", "pass_vertical_into_edge_of_the_box_%"),
+            ("passes_vertical_into_the_box", "passes_vertical", "pass_vertical_into_the_box_%"),
+            ("passes_high_vertical_into_edge_of_the_box", "passes_vertical", "pass_high_vertical_into_edge_of_the_box_%"),
+            ("passes_high_vertical_into_the_box", "passes_vertical", "pass_high_vertical_into_the_box_%"),
+            ("passes_low_vertical_into_edge_of_the_box", "passes_vertical", "pass_low_vertical_into_edge_of_the_box_%"),
+            ("passes_low_vertical_into_the_box", "passes_vertical", "pass_low_vertical_into_the_box_%"),
+            ("passes_long_vertical", "passes_vertical", "pass_long_vertical_%"),
+            ("passes_long_vertical_from_defending_third", "passes_vertical", "pass_long_vertical_from_defending_third_%"),
+            ("passes_long_vertical_from_mid_third", "passes_vertical", "pass_long_vertical_from_mid_third_%"),
+            ("passes_long_vertical_from_mid_third_into_the_box", "passes_vertical", "pass_long_vertical_from_mid_third_into_the_box_%"),
+            
+            # pass types horizontal
+            ("passes_horizontal_into_edge_of_the_box", "passes_horizontal", "pass_horizontal_into_edge_of_the_box_%"),
+            ("passes_horizontal_into_the_box", "passes_horizontal", "pass_horizontal_into_the_box_%"),
+            ("passes_high_horizontal_into_edge_of_the_box", "passes_horizontal", "pass_high_horizontal_into_edge_of_the_box_%"),
+            ("passes_high_horizontal_into_the_box", "passes_horizontal", "pass_high_horizontal_into_the_box_%"),
+            ("passes_low_horizontal_into_edge_of_the_box", "passes_horizontal", "pass_low_horizontal_into_edge_of_the_box_%"),
+            ("passes_low_horizontal_into_the_box", "passes_horizontal", "pass_low_horizontal_into_the_box_%"),  
+            
+            # TODO: under Pressure Values!!!
+            
+            ("up_passes_into_box_completed", "up_passes_into_box", "up_pass_accuracy_into_box_%"),
+
             ("passes_within_attacking_third_completed","passes_within_attacking_third", "pass_accuracy_within_attacking_third_%"),       
             ("up_passes_within_attacking_third_completed","up_passes_within_attacking_third", "up_pass_accuracy_within_attacking_third_%"),   
-            ("passes_shot_assist", "passes_progressive", "pass_progressive_lead_to_shot_%" ),
-            ("passes_goal_assist", "passes_progressive", "pass_progressive_lead_to_goal_%" ),
-            ("passes_total_distance", "passes_total", "pass_mean_distance_%"),
+            
+            
             ("passes_cuts_last_line_of_defence","passes_cuts_last_line_of_defence_completed", "pass_accuracy_cuts_last_line_of_defence_%")
         ] # pass_accuracy_cuts_last_line_of_defence
 
