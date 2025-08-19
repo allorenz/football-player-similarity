@@ -261,9 +261,9 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
             
             #("up_carry_total", "carries_total", "carries_under_pressure_%"),
             ("up_carry_distance", "up_carry_distance", "up_distance_per_carry_%"),
-            ("up_carries_in_attacking_third", "up_carry_total", "up_carries_in_attacking_third_%"),
-            ("up_carries_in_middle_third", "up_carry_total", "up_carries_in_middle_third_%"),
-            ("up_carries_in_defending_third", "up_carry_total", "up_carries_in_defending_third_%"),
+            ("up_carries_in_attacking_third", "up_carries_total", "up_carries_in_attacking_third_%"),
+            ("up_carries_in_middle_third", "up_carries_total", "up_carries_in_middle_third_%"),
+            ("up_carries_in_defending_third", "up_carries_total", "up_carries_in_defending_third_%"),
 
 
             ("progressive_carry_distance", "progressive_carry_total", "distance_per_progressive_carry"),

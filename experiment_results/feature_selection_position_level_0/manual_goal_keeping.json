@@ -1,0 +1,15 @@
+{
+  "selected_columns": [
+      "shots_faced",
+      "saved_shots_chest",
+      "saved_shots_right_foot",
+      "punch_creates_danger",
+      "sweeper_in_middle_third",
+      "collecting_ball_total",
+      "collecting_ball_failed",
+      "collecting_ball_in_second_attempt",
+      "avg_distance_to_goal",
+      "avg_distance_to_goal_saved_shots",
+      "avg_distance_to_goal_goals_conceded"
+    ]
+}
