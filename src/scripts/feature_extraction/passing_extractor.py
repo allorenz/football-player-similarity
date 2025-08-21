@@ -353,7 +353,6 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
             passes_backward=("is_backward", "sum"),
             passes_backward_completed=("is_backward_and_completed", "sum"),
 
-
             passes_vertical_into_edge_of_the_box=("vertical_into_edge", "sum"),
             passes_vertical_into_the_box=("vertical_into_box", "sum"),
             passes_cut_back_into_edge_of_the_box=("cut_back_into_edge", "sum"),
@@ -401,13 +400,34 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
             ("passes_from_the_box", "passes_total", "pass_from_box_%"),     
             ("passes_from_edge_of_the_box", "passes_total", "pass_from_edge_of_the_box_%"),
 
-            # pass accuracy location
+            # pass attempts under pressure
+            ("up_passes_from_attacking_third", "up_passes_total", "up_pass_from_attacking_third_%"),
+            ("up_passes_from_middle_third", "up_passes_total", "up_pass_from_middle_third_%"),
+            ("up_passes_from_defending_third", "up_passes_total", "up_pass_from_defending_third_%"),
+            ("passes_from_the_box", "up_passes_total", "up_pass_from_box_%"),
+            ("up_passes_from_edge_of_the_box", "up_passes_total", "up_pass_from_edge_of_the_box_%"),
+
+            # pass accuracy 
             ("passes_from_attacking_third_completed", "passes_from_attacking_third", "pass_accuracy_from_attacking_third_%"),
             ("passes_from_middle_third_completed", "passes_from_middle_third", "pass_accuracy_from_middle_third_%"),
             ("passes_from_defending_third_completed", "passes_from_defending_third", "pass_accuracy_from_defending_third_%"),
             ("passes_from_box_completed", "passes_from_the_box", "pass_accuracy_from_box_%"),
             ("passes_from_edge_of_the_box_completed", "passes_from_edge_of_the_box", "pass_accuracy_from_edge_of_the_box_%"),
             
+            # pass accuracy under pressure
+            ("up_passes_from_attacking_third_completed", "up_passes_from_attacking_third", "up_pass_accuracy_from_attacking_third_%"),
+            ("up_passes_from_middle_third_completed", "up_passes_from_middle_third", "up_pass_accuracy_from_middle_third_%"),
+            ("up_passes_from_defending_third_completed", "up_passes_from_defending_third", "up_pass_accuracy_from_defending_third_%"),
+            ("up_passes_from_box_completed", "passes_from_the_box", "up_pass_accuracy_from_box_%"),
+            ("up_passes_from_edge_of_the_box_completed", "up_passes_from_edge_of_the_box", "up_pass_accuracy_from_edge_of_the_box_%"),
+
+            # under pressure pass accuracy
+            ("up_passes_from_attacking_third_completed", "up_passes_from_attacking_third", "up_pass_accuracy_from_attacking_third_%"),
+            ("up_passes_from_middle_third_completed", "up_passes_from_middle_third", "up_pass_accuracy_from_middle_third_%"),
+            ("up_passes_from_defending_third_completed", "up_passes_from_defending_third", "up_pass_accuracy_from_defending_third_%"),
+            ("up_passes_from_box_completed", "up_passes_from_the_box", "up_pass_accuracy_from_box_%"),
+            ("up_passes_from_edge_of_the_box_completed", "up_passes_from_edge_of_the_box", "up_pass_accuracy_from_edge_of_the_box_%"),
+
             # pass attempts end location
             ("passes_into_defending_third", "passes_total", "pass_into_defending_third_%"),
             ("passes_into_middle_third", "passes_total", "pass_into_middle_third_%"),
@@ -429,7 +449,6 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
             ("passes_vertical_completed", "passes_vertical","pass_vertical_accuracy_%"),
             ("passes_progressive_completed", "passes_progressive","pass_progressive_accuracy_%"),
             ("passes_backward_completed", "passes_backward","pass_accuracy_backward_%"),
-
 
             # pass type under pressure
             ("up_passes_horizontal_completed", "up_passes_horizontal","up_pass_horizontal_accuracy_%"),
@@ -476,22 +495,15 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
             ("passes_low_horizontal_into_edge_of_the_box", "passes_horizontal", "pass_low_horizontal_into_edge_of_the_box_%"),
             ("passes_low_horizontal_into_the_box", "passes_horizontal", "pass_low_horizontal_into_the_box_%"),  
             
-            # TODO: under Pressure Values!!!
-            
-            ("up_passes_into_box_completed", "up_passes_into_box", "up_pass_accuracy_into_box_%"),
-
-            ("passes_within_attacking_third_completed","passes_within_attacking_third", "pass_accuracy_within_attacking_third_%"),       
-            ("up_passes_within_attacking_third_completed","up_passes_within_attacking_third", "up_pass_accuracy_within_attacking_third_%"),   
-            
-            
-            ("passes_cuts_last_line_of_defence","passes_cuts_last_line_of_defence_completed", "pass_accuracy_cuts_last_line_of_defence_%")
-        ] # pass_accuracy_cuts_last_line_of_defence
+        ] 
 
         for a, b, c in calculation_pairs:
             player_stats[c] = (player_stats[f'{a}'] / player_stats[f'{b}'])
             # replace inf
             player_stats[c] = player_stats[c].replace([np.inf, -np.inf], 0)
 
+        # === external stats calculation ===
+        player_stats["pass_made_under_pressure_%"] = player_stats["up_passes_total"] / player_stats["passes_total"] + player_stats["up_passes_total"]
 
         ###  calcuate stats per match ###
 

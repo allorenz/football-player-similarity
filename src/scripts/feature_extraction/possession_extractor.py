@@ -306,6 +306,9 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
             # replace inf
             player_stats[c] = player_stats[c].replace([np.inf, -np.inf], 0)
 
+        # === External Stats ===
+        player_stats["carries_made_under_pressure_%"] = player_stats["up_carries_total"] / player_stats["up_carries_total"] + player_stats["carries_total"]
+
 
         ###  calcuate stats per match ###
 

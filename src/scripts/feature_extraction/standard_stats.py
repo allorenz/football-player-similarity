@@ -302,9 +302,14 @@ if __name__ == "__main__":
     # result_df['position'] = result_df['position'].str.replace("Defender, Midfielder", "Defender", case=False, regex=False)
     
     # assign "new position" and "role"
-    result_df["new_position"] = result_df["positions_played"].apply(get_player_position)
-    result_df["role"] = result_df["positions_played"].apply(get_player_role)
-    print(result_df[["player","new_position", "role"]])
+    with open('../../../config/position_mapping_level_1.json', 'r') as file:
+        position_mapping_level_1 = json.load(file)
+    reverse_mapping = {pos: level for level, positions in position_mapping_level_1.items() for pos in positions}
+    result_df["position_level_0"] = result_df["positions_played"].apply(get_player_position)
+    result_df["posiition_level_2"] = result_df["positions_played"].apply(get_player_role)
+    result_df["posiition_level_1"] = result_df["posiition_level_2"].map(reverse_mapping)
+    
+    print(result_df[["player","position_level_0", "posiition_level_1", "posiition_level_2"]])
     
     
     # store standard stats
