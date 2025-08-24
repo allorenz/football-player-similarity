@@ -6,6 +6,8 @@ from operator import le
 import os
 import json
 from xml.etree.ElementInclude import include
+from pathlib import Path
+
 import pandas as pd
 from feature_selection import filter_df, train_evaluate_model
 from sklearn.linear_model import LogisticRegression
@@ -23,6 +25,10 @@ from sklearn.svm import SVC
 from lightgbm import LGBMClassifier
 
 
+# === Constants ===
+PROJECT_ROOT_DIR = Path.cwd().parent.parent
+
+# === Helper Functions ===
 def get_data(target:str = "position_level_0", match_played=2, minutes_played=90):
     """Merges all dimensions and applies filters"""
     # vars
@@ -76,7 +82,7 @@ def get_data(target:str = "position_level_0", match_played=2, minutes_played=90)
 
     return (df_filtered.loc[:,config_1_columns].copy(), df_filtered.loc[:,config_2_columns].copy())
 
-
+# === Modeling ===
 def run_modeling(target: str = "position_level_0", include_heatmap=False, match_played=2, minutes_played=90):
     print("Get data for experiments")
     experiments_tuple = get_data(target=target, match_played=match_played, minutes_played=minutes_played)
@@ -135,7 +141,7 @@ def run_modeling(target: str = "position_level_0", include_heatmap=False, match_
             print(f"Results saved to {result_path}")
 
 
-def run_modeling_v2(target: str = "position_level_0", include_heatmap=False, match_played=2, minutes_played=90):
+def run_modeling_v2(target: str = "position_level_0", include_heatmap=False, match_played=2, minutes_played=90, data_flag="automated"):
     # load data
     print("Get experiment data.")
     experiments_tuple = get_data(target=target, match_played=match_played, minutes_played=minutes_played)
@@ -199,8 +205,7 @@ def run_modeling_v2(target: str = "position_level_0", include_heatmap=False, mat
             ("scaler", StandardScaler()),
             ("pca", PCA()),
             ("clf", XGBClassifier(
-                objective="multi:softmax", eval_metric="mlogloss", use_label_encoder=False,
-                random_state=42
+                objective="multi:softmax", eval_metric="mlogloss", random_state=42
                 ))
         ]),
         "SVC": Pipeline([
@@ -256,14 +261,18 @@ def run_modeling_v2(target: str = "position_level_0", include_heatmap=False, mat
             "Accuracy (mean)": np.mean(scores["test_accuracy"]),
             "Accuracy (std)": np.std(scores["test_accuracy"]),
             "F1_macro (mean)": np.mean(scores["test_f1_macro"]),
+            "F1_macro (std)": np.std(scores["test_f1_macro"]),
             "Precision_macro (mean)": np.mean(scores["test_precision_macro"]),
+            "Precision_macro (std)": np.std(scores["test_precision_macro"]),
             "Recall_macro (mean)": np.mean(scores["test_recall_macro"]),
+            "Recall_macro (std)": np.std(scores["test_recall_macro"]),
         })
 
     results_df = pd.DataFrame(results)
     print(results_df.sort_values("Accuracy (mean)", ascending=False))
 
-
+    # Save results to CSV
+    results_df.to_csv(PROJECT_ROOT_DIR / "experiment_results" / f"modeling_{target}" / f"{data_flag}_results_heatmap_{include_heatmap}.csv", index=False)
 
 if __name__ == "__main__":
     # === Experiment ===
@@ -272,9 +281,16 @@ if __name__ == "__main__":
     #     run_modeling(target=level, include_heatmap=True)
     #     run_modeling(target=level, include_heatmap=False)
 
-    run_modeling_v2(
-        target="position_level_0", 
-        include_heatmap=True,
-        match_played=4,
-        minutes_played=360
-    )
+
+    # === Experiment ===
+    levels = ["position_level_0", "position_level_1", "position_level_2"]
+    for level in levels:
+        run_modeling_v2(
+            target=level, 
+            include_heatmap=True,
+            match_played=4,
+            minutes_played=360,
+            data_flag="automated"
+        )
+
+    
