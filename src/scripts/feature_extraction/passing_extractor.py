@@ -413,20 +413,15 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
             ("passes_from_defending_third_completed", "passes_from_defending_third", "pass_accuracy_from_defending_third_%"),
             ("passes_from_box_completed", "passes_from_the_box", "pass_accuracy_from_box_%"),
             ("passes_from_edge_of_the_box_completed", "passes_from_edge_of_the_box", "pass_accuracy_from_edge_of_the_box_%"),
+            ("passes_progressive_completed", "passes_progressive", "pass_progressive_accuracy_%"),
             
-            # pass accuracy under pressure
-            ("up_passes_from_attacking_third_completed", "up_passes_from_attacking_third", "up_pass_accuracy_from_attacking_third_%"),
-            ("up_passes_from_middle_third_completed", "up_passes_from_middle_third", "up_pass_accuracy_from_middle_third_%"),
-            ("up_passes_from_defending_third_completed", "up_passes_from_defending_third", "up_pass_accuracy_from_defending_third_%"),
-            ("up_passes_from_box_completed", "passes_from_the_box", "up_pass_accuracy_from_box_%"),
-            ("up_passes_from_edge_of_the_box_completed", "up_passes_from_edge_of_the_box", "up_pass_accuracy_from_edge_of_the_box_%"),
-
             # under pressure pass accuracy
             ("up_passes_from_attacking_third_completed", "up_passes_from_attacking_third", "up_pass_accuracy_from_attacking_third_%"),
             ("up_passes_from_middle_third_completed", "up_passes_from_middle_third", "up_pass_accuracy_from_middle_third_%"),
             ("up_passes_from_defending_third_completed", "up_passes_from_defending_third", "up_pass_accuracy_from_defending_third_%"),
             ("up_passes_from_box_completed", "up_passes_from_the_box", "up_pass_accuracy_from_box_%"),
             ("up_passes_from_edge_of_the_box_completed", "up_passes_from_edge_of_the_box", "up_pass_accuracy_from_edge_of_the_box_%"),
+            ("up_passes_progressive_completed", "up_passes_progressive", "up_pass_progressive_accuracy_%"),
 
             # pass attempts end location
             ("passes_into_defending_third", "passes_total", "pass_into_defending_third_%"),
@@ -474,6 +469,7 @@ class PassingFeatureExtractor(BaseDimensionFeatureExtractor):
             ("passes_cut_back", "passes_total", "pass_cut_back_%"),
             ("passes_cuts_last_line_of_defence_completed", "passes_total", "pass_cuts_last_line_of_defence_%"),
             ("passes_cut_back_into_edge_of_the_box", "passes_total", "pass_cut_back_into_edge_of_the_box_%"),
+            ("passes_into_box", "passes_total", "pass_into_the_box_%"),
 
             # pass types vertical
             ("passes_vertical_into_edge_of_the_box", "passes_vertical", "pass_vertical_into_edge_of_the_box_%"),

@@ -14,37 +14,6 @@ PROJECT_ROOT_DIR = Path.cwd().parent.parent
 
 
 # === Helper Functions
-def load_standard_stats(unique_index=False):
-    leagues = ["bundesliga", "la_liga", "ligue_1", "premier_league", "serie_a"]
-    file_paths = [f"../../data/standard_stats_{l}.csv" for l in leagues]
-    df = pd.DataFrame()
-    
-    for file in file_paths:
-        temp_df = pd.read_csv(file)  # Load DataFrame from CSV file
-        df = pd.concat([df, temp_df], ignore_index=True)
-    df = df.set_index("player")
-
-    if unique_index:
-        df = df.loc[~df.index.duplicated(keep='first')]
-
-
-    return df
-
-def load_dimension(dim, unique_index=False):
-    leagues = ["bundesliga", "la_liga", "ligue_1", "premier_league", "serie_a"]
-    file_paths = [f"../../data/processed/{l}/{dim}.csv" for l in leagues]
-    df = pd.DataFrame()
-    
-    for file in file_paths:
-        temp_df = pd.read_csv(file)  # Load DataFrame from CSV file
-        df = pd.concat([df, temp_df], ignore_index=True)
-    df = df.set_index("player")
-
-    if unique_index:
-        df = df.loc[~df.index.duplicated(keep='first')]
-
-    return df
-
 def filter_df(df_input, match_played=2, minutes_played=90) -> pd.DataFrame:
     df_output = df_input.copy()
     df_output =  df_output.loc[(df_output["match_played"]>=match_played) &  (df_output["minutes_played"]>=minutes_played) ,:]
@@ -99,8 +68,8 @@ def run_feature_selection(target: str = "new_position"):
     for dim in dimensions:
         print(f"Current dimension: {dim}")
         # load
-        df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})#load_dimension(dim)
-        df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_test.csv",dtype={"player_id":"int32"})#load_standard_stats()
+        df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
+        df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_test.csv",dtype={"player_id":"int32"})
 
         # merge and filter
         df_full = pd.merge(
@@ -111,6 +80,7 @@ def run_feature_selection(target: str = "new_position"):
             how="left"
         )
         df_filtered = filter_df(df_full, match_played=2, minutes_played=90)
+        df_filtered = df_filtered.fillna(0)
         
         # prepare columns
         target_column = target
@@ -128,13 +98,13 @@ def run_feature_selection(target: str = "new_position"):
         }
 
         # do feature selection
-        model = LogisticRegression(penalty="l1", solver="liblinear", C=1)
+        model = LogisticRegression(penalty="l1", solver="liblinear", C=1, class_weight='balanced')
         results = dict()
         
 
         for c in config:
             total_selected_features = 0
-            print(f"Processing feature representation: {config[c]['columns_value_type']}")
+            print(f" === Processing feature representation: {config[c]['columns_value_type']} ===")
             X = df_filtered[config[c]["columns"]]
             y = df_filtered[target]
 
@@ -150,19 +120,21 @@ def run_feature_selection(target: str = "new_position"):
                 "selected_columns": list(selected_columns),
                 "n_features" : int(len(selected_columns))
             }
-            print(f"selected features {dim}-{config[c]['columns_value_type']}: {total_selected_features}")
+            print(f"selected features {dim}-{config[c]['columns_value_type']}: {total_selected_features} out of {X.shape[1]}")
 
         # Create output directory if it doesn't exist
         dir_ex_results = f"../../experiment_results/feature_selection_{target}"
         os.makedirs(dir_ex_results, exist_ok=True)    
-        with open(f"{dir_ex_results}/new_{dim}.json", "w") as f:
+        with open(f"{dir_ex_results}/automated_{dim}.json", "w") as f:
             json.dump(results, f, indent=2)
-        print(f"{target} - Results saved to {dir_ex_results}/new_{dim}.json")
+        print(f"{target} - Results saved to {dir_ex_results}/automated_{dim}.json")
 
-    print("### Feature Selection Done. ###")
+    print(f"=== Feature Selection {dim} Done. ===")
 
 
 if __name__ == "__main__":
     levels = ["position_level_0", "position_level_1", "position_level_2"]
     for level in levels:
         run_feature_selection(target=level)
+
+    

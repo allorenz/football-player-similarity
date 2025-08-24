@@ -266,22 +266,49 @@ class ShootingFeatureExtractor(BaseDimensionFeatureExtractor):
         ### calculate relative values ###
 
         calculation_pairs = [
+            # shots
             ('shots_on_target', 'shots_total', "shots_on_target_%"),
-            ("goals", "shots_total", "shot_conversion_%"),
-            ("goals", "shots_on_target", "shot_conversion_on_target_%"),
-            ("big_chances_led_to_goal","big_chances_total","big_chances_conversion_%"),
-            ("up_goals", "up_shots_total", "up_shot_conversion_%"),
-            ("up_shots_on_target", "up_shots_total", "up_shots_on_target_%"),
-            ("up_big_chances_led_to_goal","up_big_chances_total","up_big_chances_conversion_%"),
             ("shots_inside_penalty_area", "shots_total", "shots_inside_the_box_%"),
             ("shots_outside_penalty_area", "shots_total", "shots_outside_the_box_%"),
+            ("shots_in_attacking_third", "shots_total", "shots_in_attacking_third_%"),
+
+            # shots under pressure
+            ("up_shots_on_target", "up_shots_total", "up_shots_on_target_%"),
+
+            # shot distance
+            ("shots_long_distance", "shots_total", "shots_long_distance_%"),
+            ("shots_mid_distance", "shots_total", "shots_mid_distance_%"),
+            ("shots_short_distance", "shots_total", "shots_short_distance_%"),
+            ("shots_avg_distance", "shots_total", "shots_avg_distance_%"),
+            
+            # goals
+            ("goals", "shots_total", "shot_conversion_%"),
+            ("goals", "shots_on_target", "shot_conversion_on_target_%"),
             ("goals_right_foot", "goals", "goals_right_foot_%"),
             ("goals_left_foot", "goals", "goals_left_foot_%"),
             ("goals_with_first_touch", "goals", "goals_with_first_touch_%"),
-            ("big_chances_led_to_goal", "big_chances_total","big_chance_conversion_%"),
+            ("goals_in_goal_area", "goals", "goals_in_goal_area_%"),          
             ("goals_outside_penalty_area", "goals","goals_outside_penalty_area_%"),
             ("goals_inside_penalty_area", "goals","goals_inside_penalty_area_%"),
-            ("goals_header", "goals", "goals_header_%")
+            ("goals_in_attacking_third", "goals", "goals_in_attacking_third_%"),
+            ("goals_header", "goals", "goals_header_%"),
+
+            # goals distance
+            ("goals_long_distance", "goals", "goals_long_distance_%"),
+            ("goals_mid_distance", "goals", "goals_mid_distance_%"),
+            ("goals_short_distance", "goals", "goals_short_distance_%"),
+            ("goals_avg_distance", "goals", "goals_avg_distance_%"),
+
+            # under pressure goals
+            ("up_goals", "up_shots_total", "up_shot_conversion_%"),
+            ("up_shots_on_target", "up_shots_total", "up_shots_on_target_%"),
+
+            # big chances
+            ("big_chances_led_to_goal","big_chances_total","big_chances_conversion_%"),
+            ("up_big_chances_led_to_goal","up_big_chances_total","up_big_chances_conversion_%"),
+            
+            
+            
         ]
         
         for a, b, c in calculation_pairs:

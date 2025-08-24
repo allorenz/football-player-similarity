@@ -110,7 +110,7 @@ class FeatureEngineeringPipeline:
         :return: Processed feature dataframe
         """
         for extractor_class in tqdm(self.dimensions, desc="Processing dimensions"):
-            log_step(f"{extractor_class.__name__}: {league}")
+            log_step(f"{extractor_class.__name__}")
             extractor = extractor_class(df, standard_stats, league)
             extractor.run()
 
@@ -129,8 +129,8 @@ def run_feature_engineering(standard_stats_path:str , raw_event_data_path: str):
     # create pipeline
     pipeline = FeatureEngineeringPipeline()
     # pipeline.add_dimension(GoalKeepingFeatureExtractor)
-    # pipeline.add_dimension(DefendingFeatureExtractor)
-    pipeline.add_dimension(PassingFeatureExtractor)
+    pipeline.add_dimension(DefendingFeatureExtractor)
+    # pipeline.add_dimension(PassingFeatureExtractor)
     # pipeline.add_dimension(PossessionFeatureExtractor)
     # pipeline.add_dimension(ShootingFeatureExtractor)
 
@@ -149,12 +149,12 @@ def run_feature_engineering(standard_stats_path:str , raw_event_data_path: str):
 
 
 if __name__ == "__main__":
-    try:
-        log_step("Starting feature engineering process...")
-        run_feature_engineering(
-            standard_stats_path="../../data/new_approach/standard_stats_all.csv",
-            raw_event_data_path="../../data/new_approach/new_all_leagues.parquet"
-        )
-        log_step("Feature engineering process completed successfully.")
-    except Exception as e:
-        log_step(f"An error occurred: {e}")
+    # try:
+    log_step("Starting feature engineering process...")
+    run_feature_engineering(
+        standard_stats_path="../../data/new_approach/standard_stats_all.csv",
+        raw_event_data_path="../../data/new_approach/new_all_leagues.parquet"
+    )
+    log_step("Feature engineering process completed successfully.")
+    # except Exception as e:
+    #     log_step(f"An error occurred: {e}")

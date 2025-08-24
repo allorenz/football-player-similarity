@@ -205,6 +205,7 @@ class GoalKeepingFeatureExtractor(BaseDimensionFeatureExtractor):
                 ("collecting_ball_total","shots_faced","collecting_ball_%"),
                 ("collecting_ball_failed","collecting_ball_total","collecting_ball_failed_%"),
                 ("collecting_ball_in_second_attempt","collecting_ball_total","collecting_ball_in_second_attempt_%"),
+                ("tackling_successful","tackling_total","tackling_successful_%")
             ]
 
         for a, b, c in calculation_pairs:
