@@ -1,24 +1,22 @@
-"""
-Fix:
-- goalkeeping has similar columns to shooting. fix this
-"""
-from operator import le
+
+
 import os
 import json
-from xml.etree.ElementInclude import include
-from pathlib import Path
-
+import numpy as np
 import pandas as pd
-from feature_selection import filter_df, train_evaluate_model
+
+
+from pathlib import Path
+from feature_selection import train_evaluate_model
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
-import numpy as np
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.decomposition import PCA
 from sklearn.model_selection import GridSearchCV, StratifiedKFold, cross_validate
+from sklearn.base import clone
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
@@ -170,8 +168,8 @@ def run_modeling_v2(target: str = "position_level_0", include_heatmap=False, mat
     # prepare X and y
     X = df_1.drop(columns=["position_level_0", "position_level_1", "position_level_2"])
     y = df_1[target]
-    le = LabelEncoder()
-    y_encoded = le.fit_transform(y)
+    label_encoder = LabelEncoder()
+    y_encoded = label_encoder.fit_transform(y)
 
     # -----------------
     # Cross-validation strategy
@@ -186,111 +184,184 @@ def run_modeling_v2(target: str = "position_level_0", include_heatmap=False, mat
             ("scaler", StandardScaler()),
             ("pca", PCA()),  # param grid can control n_components or disable
             ("clf", LogisticRegression(
-                multi_class="multinomial", solver="saga", max_iter=5000, random_state=42
+                penalty="l1", solver="saga", max_iter=2000, random_state=42
             ))
         ]),
         "RandomForest": Pipeline([
             ("scaler", StandardScaler()),
             ("pca", PCA()),
-            ("clf", RandomForestClassifier(random_state=42))
+            ("clf", RandomForestClassifier(
+                        n_estimators=200,    # more stable than 100
+                        max_depth=None,      # let it grow, but monitor overfitting
+                        min_samples_leaf=2,  # prevents tiny leaves, helps generalization
+                        random_state=42,
+                        n_jobs=-1
+                    ))
         ]),
         "LightGBM": Pipeline([
             ("scaler", StandardScaler()),
             ("pca", PCA()),
             ("clf", LGBMClassifier(
-                objective="multiclass", class_weight="balanced", random_state=42
-            ))
+                        objective="multiclass",
+                        n_estimators=200,    # baseline boosting rounds
+                        num_leaves=31,       # safe default, balances depth & variance
+                        learning_rate=0.1,   # standard start
+                        class_weight="balanced",  # useful if your classes are uneven
+                        random_state=42,
+                        n_jobs=-1
+                    ))
         ]),
         "XGBoost": Pipeline([
             ("scaler", StandardScaler()),
             ("pca", PCA()),
             ("clf", XGBClassifier(
-                objective="multi:softmax", eval_metric="mlogloss", random_state=42
-                ))
+                objective="multi:softprob",   # probabilities for multiclass
+                eval_metric="mlogloss",       # stable multiclass metric
+                n_estimators=200,             # 200 boosting rounds is plenty here
+                max_depth=6,                  # balanced trees (not too deep for 2.5k samples)
+                learning_rate=0.1,            # standard starting point
+                subsample=0.8,                # random row sampling (prevents overfit)
+                colsample_bytree=0.8,         # random feature sampling (helps with correlated features)
+                reg_lambda=1.0,               # L2 regularization
+                reg_alpha=0.5,                # L1 regularization (sparsity on weights)
+                random_state=42,
+                n_jobs=-1
+            ))
         ]),
         "SVC": Pipeline([
             ("scaler", StandardScaler()),
             ("pca", PCA()),
-            ("clf", SVC(kernel="rbf", probability=True, random_state=42))
+            ("clf", SVC(
+                kernel="rbf",
+                C=1.0,               # default regularization strength
+                gamma="scale",       # adapts to your data variance
+                probability=True,    # enables probability outputs
+                random_state=42
+            ))
         ]),
     }
 
     # -----------------
-    # Define parameter grids (for optional tuning)
-    # -----------------
-    param_grids = {
-        "LogReg": {
-            "pca": [PCA(n_components=20), "passthrough"],  # test with & without PCA
-            "clf__C": [0.1, 1, 10]
-        },
-        "RandomForest": {
-            "pca": [PCA(n_components=50), "passthrough"],
-            "clf__n_estimators": [200],
-            "clf__max_depth": [None, 10, 20]
-        },
-        "LightGBM": {
-            "pca": [PCA(n_components=50), "passthrough"],
-            "clf__n_estimators": [200],
-            "clf__num_leaves": [31, 64]
-        }
-    }
-
-    # -----------------
-    # Run evaluation
+    # Run evaluation with PCA yes/no and Heatmap yes/no
     # -----------------
     results = []
 
-    for name, pipe in pipelines.items():
-        print(f"Evaluating {name}...")
-        
-        # choose y depending on the model
-        if name in ["XGBoost", "LightGBM"]:
-            y_use = y_encoded
+    # keep untouched base data
+    df_base_1, df_base_2 = df_1.copy(), df_2.copy()
+
+    for heatmap_flag, heatmap_label in [(False, "noHeatmap"), (True, "Heatmap")]:
+        if heatmap_flag:
+            df_1 = df_base_1.merge(
+                df_heatmap[[c for c in df_heatmap.columns if "comp" in c]],
+                left_on="player_id",
+                right_index=True,
+                how="left"
+            )
+            df_2 = df_base_2.merge(
+                df_heatmap[[c for c in df_heatmap.columns if "comp" in c]],
+                left_on="player_id",
+                right_index=True,
+                how="left"
+            )
         else:
-            y_use = y
-        
-        scores = cross_validate(
-            pipe, X, y_use,
-            cv=cv,
-            scoring=["accuracy", "f1_macro", "precision_macro", "recall_macro"],
-            return_train_score=False,
-            n_jobs=-1
-        )
-        results.append({
-            "Model": name,
-            "Accuracy (mean)": np.mean(scores["test_accuracy"]),
-            "Accuracy (std)": np.std(scores["test_accuracy"]),
-            "F1_macro (mean)": np.mean(scores["test_f1_macro"]),
-            "F1_macro (std)": np.std(scores["test_f1_macro"]),
-            "Precision_macro (mean)": np.mean(scores["test_precision_macro"]),
-            "Precision_macro (std)": np.std(scores["test_precision_macro"]),
-            "Recall_macro (mean)": np.mean(scores["test_recall_macro"]),
-            "Recall_macro (std)": np.std(scores["test_recall_macro"]),
-        })
+            df_1, df_2 = df_base_1.copy(), df_base_2.copy()
+
+        # prepare X and y
+        X = df_1.drop(columns=["position_level_0", "position_level_1", "position_level_2"])
+        y = df_1[target]
+        y_encoded = label_encoder.fit_transform(y)
+
+        for name, pipe in pipelines.items():
+            print(f"Evaluating {name} ({heatmap_label})...")
+
+            # Choose y depending on the model
+            if name in ["XGBoost", "LightGBM"]:
+                y_use = y_encoded
+            else:
+                y_use = y
+
+            # Test both PCA ON and PCA OFF
+            for pca_setting, pca_label in [(PCA(n_components=.95, random_state=42), "PCA"), ("passthrough", "noPCA")]:
+                pipe_clone = clone(pipe)
+                pipe_clone.set_params(pca=pca_setting)
+
+                scores = cross_validate(
+                    pipe_clone, X, y_use,
+                    cv=cv,
+                    scoring=["accuracy", "precision_macro", "recall_macro", "f1_macro"],
+                    return_train_score=False,
+                    n_jobs=-1
+                )
+
+                results.append({
+                    "Model": f"{name}_{pca_label}",
+                    "Heatmap": heatmap_label,  # <-- NEW COLUMN
+                    "Accuracy (mean)": np.mean(scores["test_accuracy"]),
+                    "Accuracy (std)": np.std(scores["test_accuracy"]),
+                    "Precision_macro (mean)": np.mean(scores["test_precision_macro"]),
+                    "Precision_macro (std)": np.std(scores["test_precision_macro"]),
+                    "Recall_macro (mean)": np.mean(scores["test_recall_macro"]),
+                    "Recall_macro (std)": np.std(scores["test_recall_macro"]),
+                    "F1_macro (mean)": np.mean(scores["test_f1_macro"]),
+                    "F1_macro (std)": np.std(scores["test_f1_macro"]),
+                })
 
     results_df = pd.DataFrame(results)
-    print(results_df.sort_values("Accuracy (mean)", ascending=False))
+    results_df = results_df.sort_values("Accuracy (mean)", ascending=False)
+    print(results_df)
 
     # Save results to CSV
-    results_df.to_csv(PROJECT_ROOT_DIR / "experiment_results" / f"modeling_{target}" / f"{data_flag}_results_heatmap_{include_heatmap}.csv", index=False)
-
-if __name__ == "__main__":
-    # === Experiment ===
-    # levels = ["position_level_0", "position_level_1", "position_level_2"]
-    # for level in levels[1:]:
-    #     run_modeling(target=level, include_heatmap=True)
-    #     run_modeling(target=level, include_heatmap=False)
+    out_path = PROJECT_ROOT_DIR / "experiment_results" / f"modeling_{target}"
+    out_path.mkdir(parents=True, exist_ok=True)
+    results_df.to_csv(out_path / f"{data_flag}_results.csv", index=False)
 
 
-    # === Experiment ===
-    levels = ["position_level_0", "position_level_1", "position_level_2"]
-    for level in levels:
-        run_modeling_v2(
-            target=level, 
-            include_heatmap=True,
-            match_played=4,
-            minutes_played=360,
-            data_flag="automated"
+def get_manual_selected_features_data() -> pd.DataFrame:
+    # define dimensions
+    dimensions = ["defending","possession", "passing", "shooting", "goal_keeping"]
+    
+    # load standard stats
+    df_standard_stats = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/standard_stats_all_test.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
+    df = df_standard_stats[["player_id", "position_level_0", "position_level_1","position_level_2", "match_played", "minutes_played"]].copy()
+    
+    # load and merge all dimensions
+    for dim in dimensions:
+        # load
+        df_dimension = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
+        print(f"Full dimension '{dim}' shape {df_dimension.shape}")
+
+        # merge and update base df
+        df = pd.merge(
+            left=df,
+            right=df_dimension.loc[:, df_dimension.columns != "player"],
+            left_on="player_id", 
+            right_on="player_id",
+            how="left"
         )
 
-    
+    # keep only manually selected columns
+    columns_to_keep = ["player_id", "position_level_0", "position_level_1","position_level_2"]
+    for dim in dimensions:
+        path = f"{PROJECT_ROOT_DIR}/experiment_results/feature_selection_manual/manual_{dim}.json"
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        columns_to_keep.extend(data["selected_columns"])
+    print(f"Number of selected manual selected features: {len(columns_to_keep)}")
+    df = df.loc[:, columns_to_keep]
+    return df
+
+if __name__ == "__main__":
+
+    # === Experiment ===
+    # levels = ["position_level_0", "position_level_1", "position_level_2"]
+    # for level in levels:
+    #     run_modeling_v2(
+    #         target=level, 
+    #         include_heatmap=True,
+    #         match_played=2,
+    #         minutes_played=90,
+    #         data_flag="automated"
+    #     )
+
+
+    get_manual_selected_features_data()
