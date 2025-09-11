@@ -1,104 +1,103 @@
 {
   "conf_1": {
+    "experiment_name": "absolute_values",
     "scores": {
       "Defender": {
-        "precision": 0.5380116959064327,
-        "recall": 0.5714285714285714,
-        "f1-score": 0.5542168674698795,
-        "support": 161.0
+        "precision": 0.6569767441860465,
+        "recall": 0.6848484848484848,
+        "f1-score": 0.6706231454005934,
+        "support": 165.0
       },
       "Forward": {
-        "precision": 0.6956521739130435,
-        "recall": 0.5517241379310345,
-        "f1-score": 0.6153846153846154,
-        "support": 116.0
+        "precision": 0.6857142857142857,
+        "recall": 0.6545454545454545,
+        "f1-score": 0.6697674418604651,
+        "support": 110.0
       },
       "Goalkeeper": {
-        "precision": 0.5483870967741935,
-        "recall": 0.9444444444444444,
-        "f1-score": 0.6938775510204082,
-        "support": 36.0
+        "precision": 0.5606060606060606,
+        "recall": 1.0,
+        "f1-score": 0.7184466019417476,
+        "support": 37.0
       },
       "Midfielder": {
-        "precision": 0.5684931506849316,
-        "recall": 0.5253164556962026,
-        "f1-score": 0.5460526315789473,
-        "support": 158.0
+        "precision": 0.609375,
+        "recall": 0.49056603773584906,
+        "f1-score": 0.5435540069686411,
+        "support": 159.0
       },
-      "accuracy": 0.5796178343949044,
+      "accuracy": 0.6369426751592356,
       "macro avg": {
-        "precision": 0.5876360293196503,
-        "recall": 0.6482284023750633,
-        "f1-score": 0.6023829163634626,
+        "precision": 0.6281680226265982,
+        "recall": 0.7074899942824471,
+        "f1-score": 0.6505977990428619,
         "support": 471.0
       },
       "weighted avg": {
-        "precision": 0.58785432804021,
-        "recall": 0.5796178343949044,
-        "f1-score": 0.5772174918757418,
+        "precision": 0.6400483725301345,
+        "recall": 0.6369426751592356,
+        "f1-score": 0.6312841804153029,
         "support": 471.0
       }
     },
     "selected_columns": [
-      "goals_left_foot",
+      "goals_penalty",
       "goals_in_penalty_area",
-      "goals_avg_distance",
       "shots_on_target",
-      "shots_from_penalty",
+      "shots_from_freekick",
       "shots_on_target_right_foot",
       "shots_with_first_touch",
       "shots_in_penalty_area",
-      "shots_in_middle_third",
+      "shots_in_attacking_third",
       "shots_mid_distance",
       "shots_short_distance",
       "shots_avg_distance",
       "xG",
       "up_shots_on_target",
       "up_shots_on_target_right_foot",
-      "up_shots_in_goal_area",
       "up_shots_in_penalty_area",
-      "up_shots_short_distance",
-      "up_shots_avg_distance"
+      "up_shots_short_distance"
     ],
-    "n_features": 19
+    "n_features": 16
   },
   "conf_2": {
+    "experiment_name": "relative_values",
     "scores": {
       "Defender": {
-        "precision": 0.5493827160493827,
-        "recall": 0.5527950310559007,
-        "f1-score": 0.5510835913312694,
-        "support": 161.0
+        "precision": 0.6153846153846154,
+        "recall": 0.5818181818181818,
+        "f1-score": 0.5981308411214953,
+        "support": 165.0
       },
       "Forward": {
-        "precision": 0.5304347826086957,
-        "recall": 0.5258620689655172,
-        "f1-score": 0.5281385281385281,
-        "support": 116.0
+        "precision": 0.5609756097560976,
+        "recall": 0.6272727272727273,
+        "f1-score": 0.592274678111588,
+        "support": 110.0
       },
       "Goalkeeper": {
-        "precision": 0.6071428571428571,
-        "recall": 0.9444444444444444,
-        "f1-score": 0.7391304347826086,
-        "support": 36.0
+        "precision": 0.6727272727272727,
+        "recall": 1.0,
+        "f1-score": 0.8043478260869565,
+        "support": 37.0
       },
       "Midfielder": {
-        "precision": 0.5434782608695652,
-        "recall": 0.47468354430379744,
-        "f1-score": 0.5067567567567568,
-        "support": 158.0
+        "precision": 0.5255474452554745,
+        "recall": 0.4528301886792453,
+        "f1-score": 0.4864864864864865,
+        "support": 159.0
       },
-      "accuracy": 0.5498938428874734,
+      "accuracy": 0.5817409766454352,
       "macro avg": {
-        "precision": 0.5576096541676252,
-        "recall": 0.6244462721924149,
-        "f1-score": 0.5812773277522907,
+        "precision": 0.5936587357808651,
+        "recall": 0.6654802744425385,
+        "f1-score": 0.6203099579516316,
         "support": 471.0
       },
       "weighted avg": {
-        "precision": 0.5471502338452091,
-        "recall": 0.5498938428874734,
-        "f1-score": 0.5449358613336414,
+        "precision": 0.5768550562593668,
+        "recall": 0.5817409766454352,
+        "f1-score": 0.5752739369297031,
         "support": 471.0
       }
     },
@@ -107,6 +106,7 @@
       "shots_outside_the_box_%",
       "shots_long_distance_%",
       "shots_mid_distance_%",
+      "shots_short_distance_%",
       "shots_avg_distance_%",
       "goals_outside_penalty_area_%",
       "goals_long_distance_%",
@@ -114,6 +114,71 @@
       "goals_short_distance_%",
       "goals_avg_distance_%"
     ],
-    "n_features": 10
+    "n_features": 11
+  },
+  "conf_3": {
+    "experiment_name": "all_values",
+    "scores": {
+      "Defender": {
+        "precision": 0.625,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.6451612903225806,
+        "support": 165.0
+      },
+      "Forward": {
+        "precision": 0.6818181818181818,
+        "recall": 0.6818181818181818,
+        "f1-score": 0.6818181818181818,
+        "support": 110.0
+      },
+      "Goalkeeper": {
+        "precision": 0.6727272727272727,
+        "recall": 1.0,
+        "f1-score": 0.8043478260869565,
+        "support": 37.0
+      },
+      "Midfielder": {
+        "precision": 0.6,
+        "recall": 0.49056603773584906,
+        "f1-score": 0.5397923875432526,
+        "support": 159.0
+      },
+      "accuracy": 0.6369426751592356,
+      "macro avg": {
+        "precision": 0.6448863636363636,
+        "recall": 0.7097627215551744,
+        "f1-score": 0.6677799214427429,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.633579424821463,
+        "recall": 0.6369426751592356,
+        "f1-score": 0.6306570532650113,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "goals_penalty",
+      "goals_left_foot",
+      "goals_with_first_touch",
+      "goals_in_penalty_area",
+      "shots_on_target",
+      "shots_from_freekick",
+      "shots_on_target_right_foot",
+      "shots_with_first_touch",
+      "shots_in_penalty_area",
+      "shots_avg_distance",
+      "xG",
+      "up_shots_on_target_left_foot",
+      "up_shots_on_target_right_foot",
+      "up_shots_with_first_touch",
+      "up_shots_in_penalty_area",
+      "up_shots_short_distance",
+      "shots_on_target_%",
+      "shots_outside_the_box_%",
+      "shots_long_distance_%",
+      "shots_avg_distance_%"
+    ],
+    "n_features": 20
   }
 }

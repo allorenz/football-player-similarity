@@ -1,0 +1,33 @@
+{
+  "selected_columns": [
+    "actions_total",
+
+    "saved_shots",
+    "saved_shots_%",
+
+    "shots_faced",
+    "shots_on_target_faced",
+    "dangerous_shots_%",
+
+    "goals_conceded", 
+    "goals_conceded_%",
+
+    "dives_total",
+    "dives_%", "dives_saved_%",
+
+    "standings_total",
+    "standings_%", "standing_saved_%",
+
+    "penalty_total",
+    "penalty_saved_%",
+
+    "punch_total",
+    "punch_%", "punch_clears_%",  
+
+    "collecting_ball_total",
+    "collecting_ball_%",
+
+    "tackling_total",
+    "tackling_successful_%"
+    ]
+}

@@ -1,105 +1,107 @@
 {
   "conf_1": {
+    "experiment_name": "absolute_values",
     "scores": {
       "Defender": {
-        "precision": 0.8831168831168831,
-        "recall": 0.84472049689441,
-        "f1-score": 0.8634920634920635,
-        "support": 161.0
+        "precision": 0.9520958083832335,
+        "recall": 0.9636363636363636,
+        "f1-score": 0.9578313253012049,
+        "support": 165.0
       },
       "Forward": {
-        "precision": 0.7796610169491526,
-        "recall": 0.7931034482758621,
-        "f1-score": 0.7863247863247863,
-        "support": 116.0
+        "precision": 0.7092198581560284,
+        "recall": 0.9090909090909091,
+        "f1-score": 0.796812749003984,
+        "support": 110.0
       },
       "Goalkeeper": {
-        "precision": 0.8571428571428571,
-        "recall": 1.0,
-        "f1-score": 0.9230769230769231,
-        "support": 36.0
+        "precision": 1.0,
+        "recall": 0.972972972972973,
+        "f1-score": 0.9863013698630136,
+        "support": 37.0
       },
       "Midfielder": {
-        "precision": 0.7770700636942676,
-        "recall": 0.7721518987341772,
-        "f1-score": 0.7746031746031746,
-        "support": 158.0
+        "precision": 0.905511811023622,
+        "recall": 0.7232704402515723,
+        "f1-score": 0.8041958041958042,
+        "support": 159.0
       },
-      "accuracy": 0.8195329087048833,
+      "accuracy": 0.8704883227176221,
       "macro avg": {
-        "precision": 0.8242477052257902,
-        "recall": 0.8524939609761123,
-        "f1-score": 0.8368742368742368,
+        "precision": 0.8917068693907211,
+        "recall": 0.8922426714879546,
+        "f1-score": 0.8862853120910017,
         "support": 471.0
       },
       "weighted avg": {
-        "precision": 0.8200779385748557,
-        "recall": 0.8195329087048833,
-        "f1-score": 0.8192228625349645,
+        "precision": 0.8834105535735722,
+        "recall": 0.8704883227176221,
+        "f1-score": 0.8705984174462875,
         "support": 471.0
       }
     },
     "selected_columns": [
       "passes_from_middle_third",
       "passes_from_defending_third",
-      "passes_from_the_box",
+      "passes_from_attacking_third_completed",
       "passes_from_defending_third_completed",
-      "passes_into_middle_third",
       "passes_into_defending_third_completed",
-      "passes_into_middle_third_completed",
-      "passes_short_completed",
       "passes_medium_total",
-      "passes_switch",
-      "passes_progressive",
+      "passes_long_completed",
+      "passes_progressive_completed",
+      "passes_vertical",
       "passes_vertical_completed",
       "passes_backward",
+      "passes_backward_completed",
       "passes_long_vertical",
       "passes_long_vertical_from_defending_third",
       "passes_long_vertical_from_mid_third",
       "up_passes_from_middle_third",
+      "up_passes_from_defending_third",
       "up_passes_into_attacking_third",
       "up_passes_short_total",
-      "up_passes_medium_total"
+      "up_passes_progressive_completed"
     ],
     "n_features": 20
   },
   "conf_2": {
+    "experiment_name": "relative_values",
     "scores": {
       "Defender": {
-        "precision": 0.852760736196319,
-        "recall": 0.8633540372670807,
-        "f1-score": 0.8580246913580247,
-        "support": 161.0
+        "precision": 0.9349112426035503,
+        "recall": 0.9575757575757575,
+        "f1-score": 0.9461077844311377,
+        "support": 165.0
       },
       "Forward": {
-        "precision": 0.8230088495575221,
-        "recall": 0.8017241379310345,
-        "f1-score": 0.8122270742358079,
-        "support": 116.0
+        "precision": 0.8015873015873016,
+        "recall": 0.9181818181818182,
+        "f1-score": 0.8559322033898306,
+        "support": 110.0
       },
       "Goalkeeper": {
-        "precision": 0.8780487804878049,
+        "precision": 0.925,
         "recall": 1.0,
-        "f1-score": 0.935064935064935,
-        "support": 36.0
+        "f1-score": 0.961038961038961,
+        "support": 37.0
       },
       "Midfielder": {
-        "precision": 0.8051948051948052,
-        "recall": 0.7848101265822784,
-        "f1-score": 0.7948717948717948,
-        "support": 158.0
+        "precision": 0.9117647058823529,
+        "recall": 0.779874213836478,
+        "f1-score": 0.8406779661016949,
+        "support": 159.0
       },
-      "accuracy": 0.832271762208068,
+      "accuracy": 0.89171974522293,
       "macro avg": {
-        "precision": 0.8397532928591128,
-        "recall": 0.8624720754450983,
-        "f1-score": 0.8500471238826406,
+        "precision": 0.8933158125183013,
+        "recall": 0.9139079473985134,
+        "f1-score": 0.9009392287404061,
         "support": 471.0
       },
       "weighted avg": {
-        "precision": 0.8314098522178772,
-        "recall": 0.832271762208068,
-        "f1-score": 0.8314488262676794,
+        "precision": 0.8951816272600492,
+        "recall": 0.89171974522293,
+        "f1-score": 0.8906296496234186,
         "support": 471.0
       }
     },
@@ -110,20 +112,85 @@
       "pass_from_middle_third_%",
       "pass_from_defending_third_%",
       "pass_from_box_%",
+      "up_pass_from_defending_third_%",
+      "up_pass_from_box_%",
       "pass_into_defending_third_%",
-      "pass_into_middle_third_%",
+      "pass_into_attacking_third_%",
       "pass_accuracy_into_middle_third_%",
-      "pass_accuracy_into_attacking_third_%",
       "pass_horizontal_accuracy_%",
+      "pass_vertical_accuracy_%",
       "pass_accuracy_backward_%",
-      "pass_accuaracy_medium_%",
       "pass_vertical_%",
       "pass_progressive_%",
       "pass_cross_%",
-      "pass_vertical_into_the_box_%",
+      "pass_long_vertical_from_defending_third_%",
       "pass_long_vertical_from_mid_third_%",
-      "pass_high_horizontal_into_edge_of_the_box_%",
-      "pass_high_horizontal_into_the_box_%"
+      "pass_high_horizontal_into_edge_of_the_box_%"
+    ],
+    "n_features": 20
+  },
+  "conf_3": {
+    "experiment_name": "all_values",
+    "scores": {
+      "Defender": {
+        "precision": 0.9248554913294798,
+        "recall": 0.9696969696969697,
+        "f1-score": 0.9467455621301775,
+        "support": 165.0
+      },
+      "Forward": {
+        "precision": 0.753968253968254,
+        "recall": 0.8636363636363636,
+        "f1-score": 0.8050847457627118,
+        "support": 110.0
+      },
+      "Goalkeeper": {
+        "precision": 0.9736842105263158,
+        "recall": 1.0,
+        "f1-score": 0.9866666666666667,
+        "support": 37.0
+      },
+      "Midfielder": {
+        "precision": 0.8805970149253731,
+        "recall": 0.7421383647798742,
+        "f1-score": 0.8054607508532423,
+        "support": 159.0
+      },
+      "accuracy": 0.8704883227176221,
+      "macro avg": {
+        "precision": 0.8832762426873557,
+        "recall": 0.8938679245283019,
+        "f1-score": 0.8859894313531996,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.8738405629904036,
+        "recall": 0.8704883227176221,
+        "f1-score": 0.8691024752392988,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "passes_from_defending_third",
+      "passes_from_middle_third_completed",
+      "passes_into_goal_area",
+      "passes_into_defending_third_completed",
+      "passes_medium_total",
+      "passes_cross",
+      "passes_backward_completed",
+      "up_passes_from_middle_third",
+      "up_passes_from_defending_third",
+      "up_passes_from_middle_third_completed",
+      "up_passes_into_attacking_third",
+      "pass_mean_distance_%",
+      "up_pass_accuracy_%",
+      "pass_from_middle_third_%",
+      "up_pass_from_defending_third_%",
+      "pass_horizontal_accuracy_%",
+      "pass_accuracy_backward_%",
+      "pass_vertical_%",
+      "pass_progressive_%",
+      "pass_long_vertical_from_mid_third_%"
     ],
     "n_features": 20
   }

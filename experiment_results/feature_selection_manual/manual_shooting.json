@@ -1,0 +1,17 @@
+{
+  "selected_columns": [
+      "goals", "xG", "goals_penalty",
+      "shot_conversion_%", "shot_conversion_on_target_%", 
+      "goals_right_foot_%", "goals_left_foot_%", 
+      "goals_outside_penalty_area_%", 
+      "goals_inside_penalty_area_%",
+      "goals_in_attacking_third_%", "goals_long_distance_%", "goals_mid_distance_%", "goals_short_distance_%", "goals_avg_distance_%",
+
+      "big_chances_total", 
+      "big_chances_conversion_%",
+
+      "shots_total", 
+      "shots_on_target_%", "shots_inside_the_box_%", "shots_outside_the_box_%", "shots_in_attacking_third_%",
+      "up_shots_on_target_%"
+    ]
+}

@@ -1,0 +1,156 @@
+{
+  "conf_1": {
+    "scores": {
+      "Central Midfielder": {
+        "precision": 0.2890995260663507,
+        "recall": 0.6421052631578947,
+        "f1-score": 0.39869281045751637,
+        "support": 95.0
+      },
+      "Defensive Midfielder": {
+        "precision": 0.37037037037037035,
+        "recall": 0.1694915254237288,
+        "f1-score": 0.23255813953488372,
+        "support": 59.0
+      },
+      "Goalkeeper": {
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1-score": 0.9473684210526315,
+        "support": 36.0
+      },
+      "Offensive Defender": {
+        "precision": 0.5588235294117647,
+        "recall": 0.5277777777777778,
+        "f1-score": 0.5428571428571428,
+        "support": 72.0
+      },
+      "Offensive Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 37.0
+      },
+      "Regular Defender": {
+        "precision": 0.6575342465753424,
+        "recall": 0.676056338028169,
+        "f1-score": 0.6666666666666666,
+        "support": 71.0
+      },
+      "Striker": {
+        "precision": 0.34615384615384615,
+        "recall": 0.32142857142857145,
+        "f1-score": 0.3333333333333333,
+        "support": 56.0
+      },
+      "Winger": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 45.0
+      },
+      "accuracy": 0.44798301486199577,
+      "macro avg": {
+        "precision": 0.3902476898222093,
+        "recall": 0.4171074344770177,
+        "f1-score": 0.3901845642377718,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.39919564296659643,
+        "recall": 0.44798301486199577,
+        "f1-score": 0.4050694791287287,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "touches_total",
+      "touches_in_defending_penalty",
+      "touches_in_middle_third",
+      "touches_in_attacking_third",
+      "carry_into_attacking_third",
+      "carry_distance",
+      "progressive_carry_distance",
+      "balls_received",
+      "up_touches_total",
+      "up_touches_in_defending_penalty",
+      "up_touches_in_defending_third",
+      "up_touches_in_middle_third",
+      "up_progressive_carry_total",
+      "up_progressive_carry_distance",
+      "up_balls_received_successful"
+    ],
+    "n_features": 15
+  },
+  "conf_2": {
+    "scores": {
+      "Central Midfielder": {
+        "precision": 0.2742616033755274,
+        "recall": 0.6842105263157895,
+        "f1-score": 0.39156626506024095,
+        "support": 95.0
+      },
+      "Defensive Midfielder": {
+        "precision": 0.32142857142857145,
+        "recall": 0.15254237288135594,
+        "f1-score": 0.20689655172413793,
+        "support": 59.0
+      },
+      "Goalkeeper": {
+        "precision": 0.9473684210526315,
+        "recall": 1.0,
+        "f1-score": 0.972972972972973,
+        "support": 36.0
+      },
+      "Offensive Defender": {
+        "precision": 0.7222222222222222,
+        "recall": 0.18055555555555555,
+        "f1-score": 0.28888888888888886,
+        "support": 72.0
+      },
+      "Offensive Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 37.0
+      },
+      "Regular Defender": {
+        "precision": 0.5955056179775281,
+        "recall": 0.7464788732394366,
+        "f1-score": 0.6625,
+        "support": 71.0
+      },
+      "Striker": {
+        "precision": 0.3442622950819672,
+        "recall": 0.375,
+        "f1-score": 0.358974358974359,
+        "support": 56.0
+      },
+      "Winger": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 45.0
+      },
+      "accuracy": 0.4182590233545648,
+      "macro avg": {
+        "precision": 0.400631091392306,
+        "recall": 0.3923484159990172,
+        "f1-score": 0.360224879702575,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.4090955171843953,
+        "recall": 0.4182590233545648,
+        "f1-score": 0.3659719381359621,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "touches_in_defending_penalty_%",
+      "touches_in_middle_third_%",
+      "touches_in_attacking_third_%"
+    ],
+    "n_features": 3
+  }
+}

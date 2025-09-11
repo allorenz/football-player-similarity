@@ -1,0 +1,32 @@
+{
+  "selected_columns": [
+      "touches_total",
+      "touches_in_defending_penalty_%", "touches_in_defending_third_%","touches_in_middle_third_%", "touches_in_attacking_third_%","touches_in_attacking_penalty_%",
+      
+      "distance_per_progressive_carry", 
+      "progressive_carry_distance_defending_third_%", "progressive_carry_distance_middle_third_%", "progressive_carry_distance_attacking_third_%",
+      
+      "progressive_carry_total",
+      "progressive_carry_defending_third_%", "progressive_carry_middle_third_%", "progressive_carry_attacking_third_%",
+
+      "carries_made_under_pressure_%",
+
+      "carry_distance",
+      "distance_per_carry_%","carries_into_attacking_third_%", "carries_into_penalty_area_%","carries_into_edge_of_the_box_%", 
+      
+      "up_carry_distance", 
+      "up_distance_per_carry_%", "up_carries_in_attacking_third_%", "up_carries_in_middle_third_%", "up_carries_in_defending_third_%", "up_carry_distance",
+      
+      "dribbling_total",
+      "dribblings_successful_%", "dribblings_from_attacking_third_%", "dribblings_from_middle_third_%", "dribblings_from_defending_third_%",
+      
+      "balls_received",
+      "ball_reception_%", "balls_received_in_defending_penalty_area_%", "balls_received_in_defending_third_%","balls_received_in_middle_third_%", "balls_received_in_attacking_third_%", "balls_received_in_penalty_area_%", "balls_received_in_edge_of_the_box_%",
+
+      "up_balls_received",
+      "up_balls_received_in_defending_penalty_area_%", "up_balls_received_in_defending_third_%", "up_balls_received_in_middle_third_%", "up_balls_received_in_attacking_third_%", "up_balls_received_in_penalty_area_%", "up_balls_received_in_edge_of_the_box_%",
+
+      "dispossessed_total",
+      "dispossessed_per_carry_%", "dispossessed_in_defending_third_%", "dispossessed_in_middle_third_%", "dispossessed_in_attacking_third_%"
+    ]
+}

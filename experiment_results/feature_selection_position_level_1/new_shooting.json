@@ -1,0 +1,162 @@
+{
+  "conf_1": {
+    "scores": {
+      "Central Midfielder": {
+        "precision": 0.2647058823529412,
+        "recall": 0.47368421052631576,
+        "f1-score": 0.33962264150943394,
+        "support": 95.0
+      },
+      "Defensive Midfielder": {
+        "precision": 0.2727272727272727,
+        "recall": 0.05084745762711865,
+        "f1-score": 0.08571428571428572,
+        "support": 59.0
+      },
+      "Goalkeeper": {
+        "precision": 0.5833333333333334,
+        "recall": 0.9722222222222222,
+        "f1-score": 0.7291666666666666,
+        "support": 36.0
+      },
+      "Offensive Defender": {
+        "precision": 0.2391304347826087,
+        "recall": 0.3055555555555556,
+        "f1-score": 0.2682926829268293,
+        "support": 72.0
+      },
+      "Offensive Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 37.0
+      },
+      "Regular Defender": {
+        "precision": 0.449438202247191,
+        "recall": 0.5633802816901409,
+        "f1-score": 0.5,
+        "support": 71.0
+      },
+      "Striker": {
+        "precision": 0.25,
+        "recall": 0.21428571428571427,
+        "f1-score": 0.23076923076923078,
+        "support": 56.0
+      },
+      "Winger": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 45.0
+      },
+      "accuracy": 0.3333333333333333,
+      "macro avg": {
+        "precision": 0.2574168906804184,
+        "recall": 0.32249693023838344,
+        "f1-score": 0.26919568844830577,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.26616872946568343,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.27879287451029233,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "goals_penalty",
+      "goals_with_first_touch",
+      "goals_mid_distance",
+      "goals_avg_distance",
+      "shots_from_penalty",
+      "shots_on_target_left_foot",
+      "shots_on_target_right_foot",
+      "shots_with_first_touch",
+      "shots_in_penalty_area",
+      "shots_long_distance",
+      "shots_short_distance",
+      "shots_avg_distance",
+      "xG",
+      "big_chances_total",
+      "up_goals_short_distance",
+      "up_shots_on_target",
+      "up_shots_on_target_left_foot",
+      "up_shots_on_target_right_foot",
+      "up_shots_short_distance",
+      "up_xG"
+    ],
+    "n_features": 20
+  },
+  "conf_2": {
+    "scores": {
+      "Central Midfielder": {
+        "precision": 0.2511415525114155,
+        "recall": 0.5789473684210527,
+        "f1-score": 0.3503184713375796,
+        "support": 95.0
+      },
+      "Defensive Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 59.0
+      },
+      "Goalkeeper": {
+        "precision": 0.603448275862069,
+        "recall": 0.9722222222222222,
+        "f1-score": 0.7446808510638298,
+        "support": 36.0
+      },
+      "Offensive Defender": {
+        "precision": 0.35135135135135137,
+        "recall": 0.18055555555555555,
+        "f1-score": 0.23853211009174313,
+        "support": 72.0
+      },
+      "Offensive Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 37.0
+      },
+      "Regular Defender": {
+        "precision": 0.24516129032258063,
+        "recall": 0.5352112676056338,
+        "f1-score": 0.336283185840708,
+        "support": 71.0
+      },
+      "Striker": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 56.0
+      },
+      "Winger": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 45.0
+      },
+      "accuracy": 0.29936305732484075,
+      "macro avg": {
+        "precision": 0.18138780875592705,
+        "recall": 0.283367051725558,
+        "f1-score": 0.20872682729173256,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.1874444465601263,
+        "recall": 0.29936305732484075,
+        "f1-score": 0.21473287375087832,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "shots_on_target_%",
+      "shots_outside_the_box_%",
+      "goals_right_foot_%",
+      "goals_left_foot_%"
+    ],
+    "n_features": 4
+  }
+}

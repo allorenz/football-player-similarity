@@ -1,0 +1,107 @@
+{
+  "conf_1": {
+    "scores": {
+      "Defender": {
+        "precision": 0.371824480369515,
+        "recall": 1.0,
+        "f1-score": 0.5420875420875421,
+        "support": 161.0
+      },
+      "Forward": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 116.0
+      },
+      "Goalkeeper": {
+        "precision": 0.9473684210526315,
+        "recall": 1.0,
+        "f1-score": 0.972972972972973,
+        "support": 36.0
+      },
+      "Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 158.0
+      },
+      "accuracy": 0.4182590233545648,
+      "macro avg": {
+        "precision": 0.3297982253555366,
+        "recall": 0.5,
+        "f1-score": 0.3787651287651288,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.19950956368871897,
+        "recall": 0.4182590233545648,
+        "f1-score": 0.2596669242104486,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "shots_faced",
+      "saved_shots_chest",
+      "saved_shots_right_foot",
+      "punch_creates_danger",
+      "sweeper_in_middle_third",
+      "collecting_ball_total",
+      "collecting_ball_failed",
+      "collecting_ball_in_second_attempt",
+      "avg_distance_to_goal",
+      "avg_distance_to_goal_saved_shots",
+      "avg_distance_to_goal_goals_conceded"
+    ],
+    "n_features": 11
+  },
+  "conf_2": {
+    "scores": {
+      "Defender": {
+        "precision": 0.371824480369515,
+        "recall": 1.0,
+        "f1-score": 0.5420875420875421,
+        "support": 161.0
+      },
+      "Forward": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 116.0
+      },
+      "Goalkeeper": {
+        "precision": 0.9473684210526315,
+        "recall": 1.0,
+        "f1-score": 0.972972972972973,
+        "support": 36.0
+      },
+      "Midfielder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 158.0
+      },
+      "accuracy": 0.4182590233545648,
+      "macro avg": {
+        "precision": 0.3297982253555366,
+        "recall": 0.5,
+        "f1-score": 0.3787651287651288,
+        "support": 471.0
+      },
+      "weighted avg": {
+        "precision": 0.19950956368871897,
+        "recall": 0.4182590233545648,
+        "f1-score": 0.2596669242104486,
+        "support": 471.0
+      }
+    },
+    "selected_columns": [
+      "dangerous_shots_%",
+      "goals_conceded_%",
+      "saved_shots_%",
+      "standing_saved_%",
+      "punch_%",
+      "collecting_ball_%"
+    ],
+    "n_features": 6
+  }
+}
