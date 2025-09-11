@@ -15,6 +15,7 @@ from statsbombpy import sb
 from pathlib import Path
 from collections import Counter, defaultdict
 
+
 # Run the notebook from inside the notebooks folder
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '..')))
 
@@ -308,6 +309,12 @@ if __name__ == "__main__":
     result_df["position_level_0"] = result_df["positions_played"].apply(get_player_position)
     result_df["posiition_level_2"] = result_df["positions_played"].apply(get_player_role)
     result_df["posiition_level_1"] = result_df["posiition_level_2"].map(reverse_mapping)
+
+    """
+    TODO:
+    FIX: posiition_level_2
+    - last position played has to part of the pool position_level_0
+    """
     
     print(result_df[["player","position_level_0", "posiition_level_1", "posiition_level_2"]])
     

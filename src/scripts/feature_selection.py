@@ -62,14 +62,14 @@ def train_evaluate_model(X, y, model, scale=True, test_size=0.2, random_state=42
 def run_feature_selection(target: str = "new_position"):
     # vars
     dimensions = ["defending","possession", "passing", "shooting", "goal_keeping"]
-    model = LogisticRegression(penalty="l1", solver="liblinear", C=1, class_weight='balanced')
+    model = LogisticRegression(penalty="l1", solver="liblinear", C=1, class_weight='balanced', max_iter=1000, random_state=42)
     results = dict()
 
     for dim in dimensions:
         print(f"Current dimension: {dim}")
         # load
-        df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
-        df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_test.csv",dtype={"player_id":"int32"})
+        df_dimension = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
+        df_standard_stats = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/standard_stats_all_final.csv",dtype={"player_id":"int32"})
 
         # merge and filter
         df_full = pd.merge(
@@ -94,6 +94,10 @@ def run_feature_selection(target: str = "new_position"):
             "conf_2": {
                 "columns_value_type" : "relative_values",
                 "columns" : columns_relative_values,
+            },
+            "conf_3": {
+                "columns_value_type" : "all_values",
+                "columns" : columns_absolute_values + columns_relative_values,
             }
         }
 
@@ -116,6 +120,7 @@ def run_feature_selection(target: str = "new_position"):
 
             prediction_results = train_evaluate_model(X_selected, y, model, scale=True)
             results[c] = {
+                "experiment_name": config[c]['columns_value_type'],
                 "scores": prediction_results,
                 "selected_columns": list(selected_columns),
                 "n_features" : int(len(selected_columns))
@@ -123,7 +128,7 @@ def run_feature_selection(target: str = "new_position"):
             print(f"selected features {dim}-{config[c]['columns_value_type']}: {total_selected_features} out of {X.shape[1]}")
 
         # Create output directory if it doesn't exist
-        dir_ex_results = f"../../experiment_results/feature_selection_{target}"
+        dir_ex_results = f"{PROJECT_ROOT_DIR}/experiment_results/feature_selection_{target}"
         os.makedirs(dir_ex_results, exist_ok=True)    
         with open(f"{dir_ex_results}/automated_{dim}.json", "w") as f:
             json.dump(results, f, indent=2)

@@ -259,7 +259,6 @@ class PossessionFeatureExtractor(BaseDimensionFeatureExtractor):
             ("carry_into_penalty_area","carries_total", "carries_into_penalty_area_%"),
             ("carry_into_edge_of_the_box","carries_total", "carries_into_edge_of_the_box_%"),
             
-            #("up_carry_total", "carries_total", "carries_under_pressure_%"),
             ("up_carry_distance", "up_carry_distance", "up_distance_per_carry_%"),
             ("up_carries_in_attacking_third", "up_carries_total", "up_carries_in_attacking_third_%"),
             ("up_carries_in_middle_third", "up_carries_total", "up_carries_in_middle_third_%"),
