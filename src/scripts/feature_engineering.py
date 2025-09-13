@@ -128,11 +128,11 @@ def run_feature_engineering(standard_stats_path:str , raw_event_data_path: str):
 
     # create pipeline
     pipeline = FeatureEngineeringPipeline()
-    # pipeline.add_dimension(GoalKeepingFeatureExtractor)
+    pipeline.add_dimension(GoalKeepingFeatureExtractor)
     pipeline.add_dimension(DefendingFeatureExtractor)
-    # pipeline.add_dimension(PassingFeatureExtractor)
-    # pipeline.add_dimension(PossessionFeatureExtractor)
-    # pipeline.add_dimension(ShootingFeatureExtractor)
+    pipeline.add_dimension(PassingFeatureExtractor)
+    pipeline.add_dimension(PossessionFeatureExtractor)
+    pipeline.add_dimension(ShootingFeatureExtractor)
 
     # execute pipeline
     pipeline_start_time = time.time()

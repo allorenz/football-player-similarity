@@ -2,12 +2,21 @@ import os
 import json
 import math
 import pandas as pd
+import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from feature_selection import filter_df
 from sklearn.preprocessing import normalize, StandardScaler
+from pathlib import Path
+
+
+
+# === Constants ===
+PROJECT_ROOT_DIR = Path.cwd().parent.parent
+
+
 
 class Recommender:
-    def __init__(self, match_played=2, minutes_played=90):
+    def __init__(self, match_played=2, minutes_played=90, eval_mode=False):
         self.match_played = match_played
         self.minutes_played = minutes_played
         self.dimensions = ["defending", "possession", "passing", "shooting"]
@@ -16,46 +25,58 @@ class Recommender:
         self.query_player_id = None
         self.df_cosine = None
         self.df_result = None
+        self.eval_mode = eval_mode
+        self.train = None
+        self.test = None
         self._load_data()
 
     def _load_data(self):
         # load merge all dimensinos and apply filters
-        self.df, _ = get_data(match_played=self.match_played, minutes_played=self.minutes_played)
+        self.df = get_data(match_played=self.match_played, minutes_played=self.minutes_played)
         self.df = self.df.set_index("player_id", drop=True)
         
         # load standard stats
         self.df_standard_stats = pd.read_csv(
-            "../../data/new_approach/standard_stats_all_test.csv", dtype={"player_id": "int32"}
+            f"{PROJECT_ROOT_DIR}/data/new_approach/standard_stats_all_final.csv", dtype={"player_id": "int32"}
         ).set_index("player_id", drop=True)
+        self.df_standard_stats = self.df_standard_stats.loc[(self.df_standard_stats["match_played"]>=self.match_played) & (self.df_standard_stats["minutes_played"]>=self.minutes_played), : ].copy()#filter_df(df, match_played=match_played, minutes_played=minutes_played)
+        
 
 
-    def compute_cosine_similarities(self):
+    def compute_cosine_similarities(self, query_player_id=None):
         # init 
         df_cosine_list = []
         
-        # get query player id
-        self.query_player_id = self.df_standard_stats.loc[
-            self.df_standard_stats["player"] == self.query_player_name
-        ].index[0]
+       
         
         for dim in self.dimensions:
             # Load selected features
-            path = f"../../experiment_results/feature_selection/{dim}.json"
+            path = f"{PROJECT_ROOT_DIR}/experiment_results/feature_selection_position_level_0/automated_{dim}.json"
             with open(path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            selected_columns = data["conf_1"]["selected_columns"]
+            selected_columns = data["conf_3"]["selected_columns"]
 
             # Extract dimension-specific data
             df_dim = self.df.loc[:, selected_columns].copy()
 
-            # Separate query player
-            query_vector = df_dim.loc[self.query_player_id].values.reshape(1, -1)
-            df_dim_wo_query = df_dim.drop(self.query_player_id, inplace=False)
+            if not self.eval_mode:
+                # Separate query player
+                # get query player id
+                self.query_player_id = self.df_standard_stats.loc[
+                    self.df_standard_stats["player"] == self.query_player_name
+                ].index[0]
+                query_vector: np.ndarray = df_dim.loc[self.query_player_id].values.reshape(1, -1)
+                df_dim_wo_query: np.ndarray = df_dim.drop(self.query_player_id).to_numpy()
+            else:
+                # query from whole df
+                query_vector: np.ndarray = df_dim.loc[query_player_id].values.reshape(1, -1)
+                # matrix of training data
+                df_dim_wo_query: np.ndarray = df_dim.loc[self.train.index].to_numpy()
 
             # Standardize
             scaler = StandardScaler()
             scaler.fit(df_dim_wo_query)
-            df_dim_scaled = pd.DataFrame(scaler.transform(df_dim), index=df_dim.index, columns=df_dim.columns)
+            df_dim_scaled = pd.DataFrame(scaler.transform(df_dim.to_numpy()), index=df_dim.index, columns=df_dim.columns)
             query_vector_scaled = scaler.transform(query_vector)
 
             # Compute similarity
@@ -73,7 +94,7 @@ class Recommender:
     def build_result_dataframe(self):
         """built output dataframe with player information and cosine similarities"""
         self.df_result = pd.merge(
-            self.df_standard_stats[["player", "new_position","position", "team", "country", "match_played"]],
+            self.df_standard_stats[["player","position_level_0", "position_level_1","position_level_2", "match_played", "minutes_played", "team", "country"]],
             self.df_cosine,
             left_index=True,
             right_index=True,
@@ -84,35 +105,37 @@ class Recommender:
         plot_boxplots(self.df_result, self.dimensions)
         plot_distribution_plot(self.df_result, self.dimensions)
 
-    def recommend(self, query_player_name="Thomas Müller", dimensions=["defending", "passing","possession","shooting", "goal_keeping"], weights = None) -> pd.DataFrame:
+    def recommend(self, query_player_name="Thomas Müller", query_player_id = None, dimensions=["goal_keeping", "defending", "passing","possession","shooting"], weights = None) -> pd.DataFrame:
         self.dimensions = dimensions
         self.weights = weights
         # init query player
         self.query_player_name = query_player_name
 
         # compute cosine
-        self.compute_cosine_similarities()
+        self.compute_cosine_similarities(query_player_id=query_player_id)
         
         # build result dataframe
         self.build_result_dataframe()
 
         # create plots
-        self.plot_results()  
+        if not self.eval_mode:
+            self.plot_results()  
 
         return self.df_result
 
-def get_data(match_played=2, minutes_played=90):
+def get_data(target:str = "position_level_0", match_played=2, minutes_played=90):
     """Merges all dimensions and applies filters"""
     # vars
-    dimensions = ["defending","possession", "passing", "shooting", "goal_keeping"]
-    df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_test.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
+    dimensions = ["goal_keeping", "defending","possession", "passing", "shooting"]
+    df_standard_stats = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/standard_stats_all_final.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
 
     # Merge all dimensions
-    df = df_standard_stats[["player_id","position", "match_played", "minutes_played","new_position"]].copy()
+    df = df_standard_stats[["player_id", "position_level_0", "position_level_1","position_level_2", "match_played", "minutes_played"]].copy()
     for dim in dimensions:
         # load
-        df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
-
+        df_dimension = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
+        print(f"Dim {dim} shape{df_dimension.shape}")
+        # print("Columns:", df_dimension.columns.tolist())
         # merge and update base df
         df = pd.merge(
             left=df,
@@ -121,29 +144,31 @@ def get_data(match_played=2, minutes_played=90):
             right_on="player_id",
             how="left"
         )
+    print(f"Merge shape: {df.shape}")
 
     # filter rows
     print(f"Apply filters: match_played={match_played} , minutes_player={minutes_played}")
-    df_filtered = filter_df(df, match_played=match_played, minutes_played=minutes_played)
+    df_filtered = df.loc[(df["match_played"]>=match_played) & (df["minutes_played"]>=minutes_played), : ].copy()#filter_df(df, match_played=match_played, minutes_played=minutes_played)
 
     # filter columns
-    config_1_columns = ["player_id","position"]
-    config_2_columns = ["player_id","position"]
+    ex_config_all_values_columns = ["player_id", "position_level_0", "position_level_1","position_level_2"]
 
+    # load and merge selected features
     for dim in dimensions:
-        path = f"../../experiment_results/feature_selection/{dim}.json"
+        path = f"{PROJECT_ROOT_DIR}/experiment_results/feature_selection_{target}/automated_{dim}.json"
+        # print(f"Load features from: {path}")
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+        # print("---")
+        # print(dim)
+        ex_config_all_values_columns.extend(data["conf_3"]["selected_columns"])
+    
+    # remove duplicates 
+    ex_config_all_values_columns = list(set(ex_config_all_values_columns))
 
-        config_1_columns.extend(data["conf_1"]["selected_columns"])
-        config_2_columns.extend(data["conf_2"]["selected_columns"])
+    print("Config 3 columns:", len(ex_config_all_values_columns))
 
-    # Optionally remove duplicates if needed
-    config_1_columns = list(set(config_1_columns))
-    config_2_columns = list(set(config_2_columns))
-
-
-    return (df_filtered.loc[:,config_1_columns].copy(), df_filtered.loc[:,config_2_columns].copy())
+    return df_filtered.loc[:,ex_config_all_values_columns].copy()
 
 def weighted_avg(row, dimensions, weights):
     if weights is None:
@@ -153,7 +178,7 @@ def weighted_avg(row, dimensions, weights):
     return (values * weights).sum() / sum(weights)
 
 
-def plot_boxplots(df, dimensions, save_path="../../out/plots/boxplot.png"):
+def plot_boxplots(df, dimensions, save_path=f"{PROJECT_ROOT_DIR}/out/plots/boxplot.png"):
     import matplotlib.pyplot as plt
 
     columns_to_plot = [f"sim_{d}"for d in dimensions]
@@ -174,7 +199,7 @@ def plot_boxplots(df, dimensions, save_path="../../out/plots/boxplot.png"):
     plt.close()
 
 
-def plot_distribution_plot(df, dimensions, save_path="../../out/plots/distribution_plot.png"):
+def plot_distribution_plot(df, dimensions, save_path=f"{PROJECT_ROOT_DIR}/out/plots/distribution_plot.png"):
     import seaborn as sns
     import matplotlib.pyplot as plt
     # Set up plot style
@@ -203,12 +228,14 @@ def plot_distribution_plot(df, dimensions, save_path="../../out/plots/distributi
     plt.savefig(save_path)
     plt.close()
 
+
+"""
 def dev():
     scaler = StandardScaler()
     # Get data
     df, _ = get_data(match_played=2, minutes_played=90)
     df = df.set_index("player_id", drop=True)
-    df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv", dtype={"player_id": "int32"})
+    df_standard_stats = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/standard_stats_all.csv", dtype={"player_id": "int32"})
     df_standard_stats = df_standard_stats.set_index("player_id", drop=True)
     
     # Set query player
@@ -222,7 +249,7 @@ def dev():
 
     for dim in dimensions:
         # load dimension selected features
-        dimension_selected_features_path = f"../../experiment_results/feature_selection/{dim}.json"
+        dimension_selected_features_path = f"{PROJECT_ROOT_DIR}/experiment_results/feature_selection/{dim}.json"
         with open(dimension_selected_features_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
@@ -271,10 +298,10 @@ def dev():
     plot_boxplots(df_result)
 
     plot_distribution_plot(df_result)
-
+"""
 
 if __name__ == "__main__":
-    rec = Recommender(match_played=2, minutes_played=90)
+    rec = Recommender(match_played=2, minutes_played=90, eval_mode=False)
     players = rec.df_standard_stats["player"].to_list()
     output_df = rec.recommend(query_player_name="Eden Hazard")
     print(output_df)
