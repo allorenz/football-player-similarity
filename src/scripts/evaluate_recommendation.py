@@ -107,32 +107,12 @@ def precision_at_k(y_true: str, y_pred: List[str], k: int = 10) -> float:
     relevant_hits = sum(1 for item in y_pred_k if item == y_true)
     return relevant_hits / k
 
-def recall_at_k(y_true: Union[List[str], Set[str]], y_pred: List[str], k: int = 10) -> float:
-    """
-    Recall@k
-
-    Args:
-        y_true: Set or list of relevant items (ground truth).
-        y_pred: Ranked list of predicted items.
-        k: Cutoff rank.
-
-    Returns:
-        Recall at k (float).
-    """
-    y_true = set(y_true)  # ensure it's a set
-    if not y_true:
-        return 0.0
-
-    y_pred_k = set(y_pred[:k])
-    retrieved_relevant = len(y_true.intersection(y_pred_k))
-
-    return retrieved_relevant / len(y_true)
 
 # === Main Method ===
 def main():
     # setup
     recommender = Recommender(match_played=2, minutes_played=90, eval_mode=True)
-    K = 10
+    K = 30
     final_results = {}
     ex_results = {}
     
@@ -182,7 +162,6 @@ def main():
                 ap = average_precision_k(y_true, y_pred)
                 rr = reciprocal_rank(y_true, y_pred)
                 precision_k = precision_at_k(y_true, y_pred, k=K)
-                recall_k = recall_at_k([y_true], y_pred, k=K)
 
                 # handle results
                 average_precision_scores.append(ap)
@@ -191,7 +170,6 @@ def main():
                     f"AP@{K}" : ap,
                     f"RR@{K}" : rr,
                     f"P@{K}" : precision_k,
-                    f"R@{K}" : recall_k,
                     "y_true": y_true,
                     "y_pred": list(y_pred[:K]),
                 }
@@ -205,7 +183,6 @@ def main():
             f"MAP@{K}" : np.mean(average_precision_scores),
             f"MRR@{K}" : np.mean(reciprocal_ranks),
             f"AP@{K}" : np.mean(precision_k),
-            f"R@{K}" : np.mean(recall_k),
         }
 
     # Output
@@ -222,6 +199,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
     # recommender = Recommender(match_played=2, minutes_played=90)
     # print(recommender.df_standard_stats.head())
     

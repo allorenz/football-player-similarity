@@ -300,9 +300,13 @@ def dev():
     plot_distribution_plot(df_result)
 """
 
-if __name__ == "__main__":
+
+def main():
     rec = Recommender(match_played=2, minutes_played=90, eval_mode=False)
-    players = rec.df_standard_stats["player"].to_list()
     output_df = rec.recommend(query_player_name="Eden Hazard")
     print(output_df)
+
+
+if __name__ == "__main__":
+    main()
     
