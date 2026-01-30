@@ -21,7 +21,7 @@ selected_player = st.sidebar.selectbox(
 )
 
 # Define dimensions
-dimension_options = ["defending", "passing", "possession", "shooting"]
+dimension_options = ["goal_keeping", "defending", "passing", "possession", "shooting"]
 
 # --- Initialize session state for sliders ---
 for dim in dimension_options:
@@ -57,6 +57,7 @@ for dim in dimension_options:
 # Main content
 if selected_player and selected_dimensions:
     output_df = rec.recommend(selected_player, selected_dimensions, weights=dimension_weights_list)
+    output_df = output_df.loc[:, output_df.columns != "position_level_1"]
     st.subheader(f"Recommendations for {selected_player} based on weighted dimensions:")
     st.dataframe(output_df, use_container_width=True)
     

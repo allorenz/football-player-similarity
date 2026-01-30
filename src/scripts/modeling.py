@@ -32,13 +32,13 @@ def get_data(target:str = "position_level_0", match_played=2, minutes_played=90)
     """Merges all dimensions and applies filters"""
     # vars
     dimensions = ["defending","possession", "passing", "shooting", "goal_keeping"]
-    df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_final.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
+    df_standard_stats = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/standard_stats_all_final.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
 
     # Merge all dimensions
     df = df_standard_stats[["player_id", "position_level_0", "position_level_1","position_level_2", "match_played", "minutes_played"]].copy()
     for dim in dimensions:
         # load
-        df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
+        df_dimension = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})
         print(f"Dim {dim} shape{df_dimension.shape}")
         print("Columns:", df_dimension.columns.tolist())
         # merge and update base df
@@ -85,6 +85,7 @@ def get_data(target:str = "position_level_0", match_played=2, minutes_played=90)
     return (df_filtered.loc[:,config_1_columns].copy(), df_filtered.loc[:,config_2_columns].copy(), df_filtered.loc[:,config_3_columns].copy())
 
 # === Modeling ===
+"""
 def run_modeling(target: str = "position_level_0", include_heatmap=False, match_played=2, minutes_played=90):
     print("Get data for experiments")
     experiments_tuple = get_data(target=target, match_played=match_played, minutes_played=minutes_played)
@@ -143,9 +144,12 @@ def run_modeling(target: str = "position_level_0", include_heatmap=False, match_
             print(f"Results saved to {result_path}")
 
 
+"""
+
+
 def run_modeling_v2(df: pd.DataFrame, target: str = "position_level_0", include_heatmap=False, data_flag="automated", df_name="manual_selected"):
     # load heatmap data
-    df_heatmap = pd.read_csv("../../data/new_approach/feature_multichannel_heatmap.csv")
+    df_heatmap = pd.read_csv(f"{PROJECT_ROOT_DIR}/data/new_approach/feature_multichannel_heatmap_final_test.csv")
     df_heatmap = df_heatmap.set_index("player_id")
 
     # -----------------
@@ -159,14 +163,14 @@ def run_modeling_v2(df: pd.DataFrame, target: str = "position_level_0", include_
     pipelines = {
         "LogReg": Pipeline([
             ("scaler", StandardScaler()),
-            ("pca", PCA()),  # param grid can control n_components or disable
+            ("pca", PCA(n_components=.95, random_state=42)),  # param grid can control n_components or disable
             ("clf", LogisticRegression(
                 penalty="l1", solver="saga", max_iter=2000, random_state=42
             ))
         ]),
         "RandomForest": Pipeline([
             ("scaler", StandardScaler()),
-            ("pca", PCA()),
+            ("pca", PCA(n_components=.95, random_state=42)),
             ("clf", RandomForestClassifier(
                         n_estimators=200,    # more stable than 100
                         max_depth=None,      # let it grow, but monitor overfitting
@@ -177,7 +181,7 @@ def run_modeling_v2(df: pd.DataFrame, target: str = "position_level_0", include_
         ]),
         "LightGBM": Pipeline([
             ("scaler", StandardScaler()),
-            ("pca", PCA()),
+            ("pca", PCA(n_components=.95, random_state=42)),
             ("clf", LGBMClassifier(
                         objective="multiclass",
                         n_estimators=200,    # baseline boosting rounds
@@ -190,7 +194,7 @@ def run_modeling_v2(df: pd.DataFrame, target: str = "position_level_0", include_
         ]),
         "XGBoost": Pipeline([
             ("scaler", StandardScaler()),
-            ("pca", PCA()),
+            ("pca", PCA(n_components=.95, random_state=42)),
             ("clf", XGBClassifier(
                 objective="multi:softprob",   # probabilities for multiclass
                 eval_metric="mlogloss",       # stable multiclass metric
@@ -326,7 +330,7 @@ if __name__ == "__main__":
     levels = ["position_level_0", "position_level_1", "position_level_2"]
     
     # === Experiment Automated Selected Feautures ===
-    for level in levels:
+    for level in levels[:1]:
         # load data
         experiments_tuple = get_data(target=level, match_played=match_played, minutes_played=minutes_played)
         df_1, df_2, df_3 = experiments_tuple
@@ -342,7 +346,7 @@ if __name__ == "__main__":
             )
 
     # === Experiment Manual Selected Features ===
-    for level in levels:
+    for level in levels[:1]:
         # load data
         df = get_manual_selected_features_data(match_played=match_played, minutes_played=minutes_played)
         # run experiment

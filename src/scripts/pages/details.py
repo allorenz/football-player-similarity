@@ -30,14 +30,14 @@ df = pd.DataFrame(data).set_index("player_id")
 def load_data():
     scaler = MinMaxScaler()
     df_standard_stats = pd.read_csv(
-            "../../data/new_approach/standard_stats_all.csv", dtype={"player_id": "int32"}
+            "../../data/new_approach/standard_stats_all_final.csv", dtype={"player_id": "int32"}
     ).set_index("player_id", drop=True)
     # vars
     dimensions = ["defending","possession", "passing", "shooting"] # "goal_keeping"]
-    df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
+    df_standard_stats = pd.read_csv("../../data/new_approach/standard_stats_all_final.csv",dtype={"player_id":"int32"}) # load_standard_stats(unique_index=True)
 
     # Merge all dimensions
-    df = df_standard_stats[["player_id","player","position", "match_played", "minutes_played"]].copy()
+    df = df_standard_stats[["player_id","player", "match_played", "minutes_played"]].copy()
     for dim in dimensions:
         # load
         df_dimension = pd.read_csv(f"../../data/new_approach/{dim}_ex.csv",dtype={"player_id":"int32"})

@@ -19,7 +19,7 @@ class Recommender:
     def __init__(self, match_played=2, minutes_played=90, eval_mode=False):
         self.match_played = match_played
         self.minutes_played = minutes_played
-        self.dimensions = ["defending", "possession", "passing", "shooting"]
+        self.dimensions = ["goal_keeping", "defending", "possession", "passing", "shooting"]
         self.df = None
         self.df_standard_stats = None
         self.query_player_id = None
@@ -307,6 +307,37 @@ def main():
     print(output_df)
 
 
+def dev():
+
+
+    rec = Recommender(match_played=2, minutes_played=90, eval_mode=False)
+    output_df = rec.recommend(query_player_name="Thomas Müller")
+
+    # df_merged = pd.merge(
+    #     output_df,
+    #     rec.df_standard_stats[["country"]],
+    #     left_index=True,
+    #     right_index=True,
+    #     how="left"
+    # )
+    
+    df_de = output_df[(output_df["country"] == "Germany") & (output_df["player"] != "Thomas Müller")].head(30)
+    df_not_de = output_df[output_df["country"] != "Germany"].head(30)
+
+
+    import matplotlib.pyplot as plt
+
+    # prepare data for boxplot
+    d = [df_de["avg_sim"], df_not_de["avg_sim"]]
+
+    # plot
+    plt.figure(figsize=(8, 6))
+    plt.boxplot(d, labels=["Germany", "Non-Germany"])
+    plt.ylabel("Average Similarity")
+    plt.title("Similarity Distribution by Nationality")
+    plt.show()
+
+
 if __name__ == "__main__":
-    main()
+    dev()
     

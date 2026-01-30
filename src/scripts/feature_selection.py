@@ -102,7 +102,7 @@ def run_feature_selection(target: str = "new_position"):
         }
 
         # do feature selection
-        model = LogisticRegression(penalty="l1", solver="liblinear", C=1, class_weight='balanced')
+        model = LogisticRegression(penalty="l1", solver="liblinear", C=1, class_weight='balanced', random_state=42)
         results = dict()
         
 
